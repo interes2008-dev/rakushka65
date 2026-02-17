@@ -1,0 +1,128 @@
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location]);
+
+  const navLinks = [
+    { to: "/", label: "Главная" },
+    { to: "/catalog", label: "Каталог" },
+    { to: "/#about", label: "О нас" },
+    { to: "/#reviews", label: "Отзывы" },
+    { to: "/#contact", label: "Контакты" },
+  ];
+
+  const handleAnchorClick = (to: string) => {
+    if (to.startsWith("/#")) {
+      const id = to.substring(2);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+    }
+  };
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "bg-ocean-glass py-3" : "bg-transparent py-5"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2 group">
+          <span className="text-2xl md:text-3xl font-heading font-bold text-foreground group-hover:text-primary transition-colors">
+            Rakushka
+            <span className="text-primary">65</span>
+          </span>
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              onClick={() => handleAnchorClick(link.to)}
+              className="font-body text-sm tracking-wide text-muted-foreground hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* CTA + Mobile toggle */}
+        <div className="flex items-center gap-4">
+          <a
+            href="tel:+79001234567"
+            className="hidden md:flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            <span>Приём заказов 24/7</span>
+          </a>
+          <Link
+            to="/catalog"
+            className="hidden sm:inline-flex px-5 py-2.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
+          >
+            Заказать
+          </Link>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
+            aria-label="Menu"
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-ocean-glass overflow-hidden"
+          >
+            <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => handleAnchorClick(link.to)}
+                  className="font-body text-lg text-foreground hover:text-primary transition-colors py-2 border-b border-border/30"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                to="/catalog"
+                className="mt-2 inline-flex justify-center px-5 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg"
+              >
+                Заказать
+              </Link>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+};
+
+export default Header;
