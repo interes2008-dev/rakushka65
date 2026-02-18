@@ -69,7 +69,7 @@ const Header = () => {
         {/* CTA + Mobile toggle */}
         <div className="flex items-center gap-4">
           <a
-            href="tel:+79001234567"
+            href="tel:+79147690097"
             className="hidden md:flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             <Phone className="w-4 h-4" />
