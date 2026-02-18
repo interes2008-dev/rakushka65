@@ -36,10 +36,10 @@ export const products: Product[] = [
   },
   {
     id: "oysters",
-    name: "Устрицы Фин де Клер",
+    name: "Устрицы Сахалинские",
     image: oystersImg,
-    price: "450",
-    unit: "шт",
+    price: "650",
+    unit: "кг",
     rating: 5,
     description: "Благородные устрицы с морским, чуть солоноватым вкусом. Живые.",
     category: "Устрицы",
