@@ -60,9 +60,9 @@ const Footer = () => {
                 <Send className="w-4 h-4 text-primary" />
                 Telegram
               </a>
-              <a href="https://m.me/+79147690097" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://max.ru/+79147690097" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
                 <MessageCircle className="w-4 h-4 text-primary" />
-                Messenger
+                Max
               </a>
             </div>
           </div>
