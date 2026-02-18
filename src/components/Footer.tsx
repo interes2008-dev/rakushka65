@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -44,9 +44,9 @@ const Footer = () => {
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">Контакты</h4>
             <div className="space-y-3">
-              <a href="tel:+79001234567" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+79147690097" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-4 h-4 text-primary" />
-                +7 (900) 123-45-67
+                +7 (914) 769-00-97
               </a>
               <a href="mailto:info@rakushka65.ru" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 text-primary" />
@@ -56,6 +56,14 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 text-primary mt-0.5" />
                 Сахалинская область, Россия
               </div>
+              <a href="https://t.me/+79147690097" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Send className="w-4 h-4 text-primary" />
+                Telegram
+              </a>
+              <a href="https://m.me/+79147690097" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
+                <MessageCircle className="w-4 h-4 text-primary" />
+                Messenger
+              </a>
             </div>
           </div>
         </div>
