@@ -107,11 +107,11 @@ const ProductsSection = () => {
                 to={`/catalog/${product.id}`}
                 className="block bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/5"
               >
-                <div className="relative overflow-hidden aspect-square">
+                <div className="relative overflow-hidden aspect-[4/3]">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -129,7 +129,7 @@ const Catalog = () => {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115"
                       loading="lazy"
                     />
                   </div>
