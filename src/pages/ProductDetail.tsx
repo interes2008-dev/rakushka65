@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Star, ShoppingCart, Truck, Thermometer, Shell } from "lucide-react";
 import Header from "@/components/Header";
@@ -8,6 +9,10 @@ import { products } from "@/components/ProductsSection";
 
 const ProductDetail = () => {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [id]);
   const product = products.find((p) => p.id === id);
 
   if (!product) {
