@@ -38,7 +38,7 @@ const AboutSection = () => {
           >
             <p className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4">О нас и нашем деле</p>
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Море — наша <span className="text-gradient-teal">страсть</span>
+              Rakushka65 — <span className="text-gradient-teal">Территория живых морепродуктов</span>
             </h2>
             <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
               <p>
