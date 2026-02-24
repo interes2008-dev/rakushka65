@@ -23,10 +23,16 @@ const AboutSection = () => {
               />
             </div>
             {/* Floating card */}
-            <div className="absolute -bottom-6 -right-4 md:right-8 bg-ocean-glass rounded-xl p-5 max-w-[200px]">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+              className="absolute -bottom-6 -right-4 md:right-8 bg-ocean-glass rounded-xl p-5 max-w-[200px]"
+            >
               <p className="font-heading text-3xl font-bold text-primary">10+</p>
               <p className="font-body text-sm text-muted-foreground">лет на рынке</p>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Text */}
