@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -8,7 +8,6 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would send to a backend
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
     setForm({ name: "", phone: "", comment: "" });
@@ -17,29 +16,115 @@ const ContactForm = () => {
   return (
     <section id="contact" className="relative py-24 md:py-32">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center mb-12"
+        >
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+            Хотите попробовать <span className="text-gradient-teal">лучшие морепродукты?</span>
+          </h2>
+          <p className="text-muted-foreground font-body">
+            Готовы ответить на ваши вопросы и помочь с выбором морепродуктов
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 max-w-5xl mx-auto">
+          {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="text-center mb-12"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="flex flex-col justify-center space-y-8"
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Хотите попробовать <span className="text-gradient-teal">лучшие морепродукты?</span>
-            </h2>
-            <p className="text-muted-foreground font-body">
-              Оставьте заявку — мы свяжемся с вами и поможем подобрать идеальный заказ
-            </p>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <Phone className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-body text-sm text-muted-foreground mb-1">Телефон</p>
+                <a href="tel:+79147690097" className="font-heading text-lg font-semibold hover:text-primary transition-colors">
+                  +7 (914) 769-00-97
+                </a>
+                <p className="font-body text-sm text-muted-foreground mt-1">Ежедневно с 9:00 до 21:00</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <Mail className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-body text-sm text-muted-foreground mb-1">Email</p>
+                <a href="mailto:info@rakushka65.ru" className="font-heading text-lg font-semibold hover:text-primary transition-colors">
+                  info@rakushka65.ru
+                </a>
+                <p className="font-body text-sm text-muted-foreground mt-1">Ответим в течение часа</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <MapPin className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-body text-sm text-muted-foreground mb-1">Адрес</p>
+                <p className="font-heading text-lg font-semibold">Сахалинская область</p>
+                <p className="font-body text-sm text-muted-foreground mt-1">Доставка по всей России</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <Clock className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-body text-sm text-muted-foreground mb-1">Время работы</p>
+                <p className="font-heading text-lg font-semibold">Пн-Вс: 9:00 – 21:00</p>
+                <p className="font-body text-sm text-muted-foreground mt-1">Доставка в день заказа</p>
+              </div>
+            </div>
+
+            <div className="border-t border-border/30 pt-6">
+              <p className="font-body text-sm text-muted-foreground mb-4">Мы в мессенджерах:</p>
+              <div className="flex gap-3">
+                <a
+                  href="https://t.me/+79147690097"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-border/50 font-body text-sm hover:border-primary/50 hover:text-primary transition-colors"
+                >
+                  <Send className="w-4 h-4" />
+                  Telegram
+                </a>
+                <a
+                  href="https://max.ru/+79147690097"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-border/50 font-body text-sm hover:border-primary/50 hover:text-primary transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Max
+                </a>
+              </div>
+            </div>
           </motion.div>
 
+          {/* Form */}
           <motion.form
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             onSubmit={handleSubmit}
             className="bg-sand-glass rounded-2xl p-8 md:p-10 space-y-6"
           >
+            <div>
+              <h3 className="font-heading text-2xl font-bold mb-1">Оставить заявку</h3>
+              <p className="font-body text-sm text-muted-foreground">Заполните форму и мы перезвоним вам в течение 15 минут</p>
+            </div>
             <div>
               <label className="font-body text-sm text-muted-foreground block mb-2">Ваше имя</label>
               <input
