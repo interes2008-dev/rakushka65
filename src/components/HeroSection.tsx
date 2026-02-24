@@ -32,9 +32,9 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8"
           >
-            Свежесть океана
+            Живые морепродукты Сахалина
             <br />
-            <span className="text-gradient-teal">с доставкой за 24 часа</span>
+            <span className="text-gradient-teal">Добываем. Отправляем. Доставляем.</span>
           </motion.h1>
 
           <motion.p
@@ -43,8 +43,8 @@ const HeroSection = () => {
             transition={{ delay: 0.7 }}
             className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Живые устрицы, морской гребешок и другие деликатесы
-            прямо с берега — для тех, кто ценит настоящий вкус моря
+            Живые сахалинские устрицы, морской гребешок, вонголе,
+            спизула, морской еж и другие дары дальневосточных морей.
           </motion.p>
 
           <motion.div
