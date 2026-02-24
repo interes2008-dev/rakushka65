@@ -17,7 +17,7 @@ const AboutSection = () => {
             <div className="rounded-2xl overflow-hidden">
               <img
                 src={aboutImg}
-                alt="Рыбацкая лодка на побережье"
+                alt="Дикое скалистое побережье Сахалина"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
                 loading="lazy"
               />
