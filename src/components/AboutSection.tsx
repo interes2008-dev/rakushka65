@@ -32,7 +32,7 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
               className="absolute -bottom-6 -right-4 md:right-8 bg-ocean-glass rounded-xl p-5 max-w-[200px]"
             >
-              <p className="font-body text-xs font-bold text-primary">10+</p>
+              <p className="font-body text-base font-bold text-primary">10+</p>
               <p className="font-body text-xs text-muted-foreground">лет на рынке</p>
               <p className="font-body text-xs text-primary/70">качество — вне времени</p>
             </motion.div>
