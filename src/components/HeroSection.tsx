@@ -30,11 +30,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-8"
+            className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8"
           >
-            Живые морепродукты Сахалина
-            <br />
-            <span className="text-gradient-teal">Добываем. Отправляем. Доставляем.</span>
+            <span className="block">Живые морепродукты Сахалина</span>
+            <span className="block text-gradient-teal">Добываем. Отправляем. Доставляем.</span>
           </motion.h1>
 
           <motion.p
