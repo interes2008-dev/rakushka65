@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import logoShell from "@/assets/logo-shell.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-block mb-4">
+            <Link to="/" className="inline-flex items-center gap-2 mb-4">
+              <img src={logoShell} alt="Rakushka65" className="w-8 h-8 object-contain" />
               <span className="font-heading text-2xl font-bold">
                 Rakushka<span className="text-primary">65</span>
               </span>
