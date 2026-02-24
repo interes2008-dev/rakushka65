@@ -46,25 +46,32 @@ const HeroSection = () => {
             спизула, морской еж и другие дары дальневосточных морей.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              to="/catalog"
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 1, duration: 0.5, type: "spring", stiffness: 200 }}
             >
-              Перейти в каталог
-            </Link>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 border border-secondary/30 text-foreground font-body font-semibold text-lg rounded-lg hover:border-primary/50 hover:text-primary transition-all duration-300"
+              <Link
+                to="/catalog"
+                className="inline-flex items-center justify-center w-full px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
+              >
+                Перейти в каталог
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ delay: 1.2, duration: 0.5, type: "spring", stiffness: 200 }}
             >
-              Узнать наличие
-            </a>
-          </motion.div>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center w-full px-8 py-4 border border-secondary/30 text-foreground font-body font-semibold text-lg rounded-lg hover:border-primary/50 hover:text-primary transition-all duration-300"
+              >
+                Узнать наличие
+              </a>
+            </motion.div>
+          </div>
         </div>
       </div>
 
