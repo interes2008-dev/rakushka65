@@ -34,7 +34,7 @@ const HeroSection = () => {
           >
             Живые морепродукты Сахалина
             <br />
-            Добываем. Отправляем. Доставляем.
+            <span className="text-gradient-teal">Добываем. Отправляем. Доставляем.</span>
           </motion.h1>
 
           <motion.p
