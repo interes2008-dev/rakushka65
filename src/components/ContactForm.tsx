@@ -71,7 +71,7 @@ const ContactForm = () => {
               </div>
               <div>
                 <p className="font-body text-sm text-muted-foreground mb-1">Адрес</p>
-                <p className="font-heading text-lg font-semibold">Сахалинская область</p>
+                <p className="font-heading text-lg font-semibold leading-snug">Сахалинская область, г. Южно-Сахалинск, ул. 4-Железнодорожная 18 стр 1</p>
                 <p className="font-body text-sm text-muted-foreground mt-1">Доставка по всей России</p>
               </div>
             </div>
