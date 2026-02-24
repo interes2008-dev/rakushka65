@@ -24,7 +24,7 @@ const AboutSection = () => {
             </div>
             {/* Floating card */}
             <div className="absolute -bottom-6 -right-4 md:right-8 bg-ocean-glass rounded-xl p-5 max-w-[200px]">
-              <p className="font-heading text-3xl font-bold text-primary">5+</p>
+              <p className="font-heading text-3xl font-bold text-primary">25+</p>
               <p className="font-body text-sm text-muted-foreground">лет на рынке</p>
             </div>
           </motion.div>
