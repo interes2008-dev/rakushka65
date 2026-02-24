@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import aboutImg from "@/assets/about-coast.jpg";
 
 const AboutSection = () => {
@@ -64,6 +66,21 @@ const AboutSection = () => {
                 Без посредников, без заморозки — только живой продукт, который ещё вчера был в море.
               </p>
             </div>
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-8"
+            >
+              <Link
+                to="/catalog"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
+              >
+                Смотреть каталог
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </div>
