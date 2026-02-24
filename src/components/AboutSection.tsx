@@ -34,6 +34,7 @@ const AboutSection = () => {
             >
               <p className="font-heading text-3xl font-bold text-primary">10+</p>
               <p className="font-body text-sm text-muted-foreground">лет на рынке</p>
+              <p className="font-body text-xs text-primary/80 mt-1 italic">качество — вне времени</p>
             </motion.div>
           </motion.div>
 
