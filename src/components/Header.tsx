@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoShell from "@/assets/logo-shell.png";
+import WaveLogo from "@/components/WaveLogo";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,7 +47,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <img src={logoShell} alt="Rakushka65" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+          <WaveLogo className="w-8 h-8 md:w-10 md:h-10" />
           <span className="text-2xl md:text-3xl font-heading font-bold text-foreground group-hover:text-primary transition-colors">
             Rakushka
             <span className="text-primary">65</span>
