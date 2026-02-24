@@ -40,15 +40,7 @@ const AboutSection = () => {
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Море — наша <span className="text-gradient-teal">страсть</span>
             </h2>
-            <p className="font-heading text-lg md:text-xl text-foreground/80 italic mb-6">
-              Всё началось с воды и воздуха.
-            </p>
             <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
-              <p>
-                Мы начали свой путь из простой любви к морю и его дарам. С 2000 года наши водолазы 
-                трудятся у берегов Сахалина и Курильских островов — там, где холодный Тихий океан 
-                встречается с дикой природой.
-              </p>
               <p>
                 Мы живём на Сахалине и добываем морепродукты в чистых водах у берегов острова — там, 
                 где океан только набирает силу.
