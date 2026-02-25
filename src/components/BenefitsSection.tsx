@@ -51,12 +51,17 @@ const BenefitsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="bg-sand-glass rounded-xl p-8 text-center group hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="bg-sand-glass rounded-xl p-8 text-center group hover:border-primary/30 hover:shadow-[0_0_30px_hsl(168_72%_50%/0.15)] transition-all duration-300 cursor-default"
             >
-              <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <b.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="font-heading text-xl font-semibold mb-3">{b.title}</h3>
+              <motion.div
+                className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors"
+                whileHover={{ rotate: [0, -10, 10, 0] }}
+                transition={{ duration: 0.5 }}
+              >
+                <b.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300" />
+              </motion.div>
+              <h3 className="font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{b.title}</h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
             </motion.div>
           ))}
