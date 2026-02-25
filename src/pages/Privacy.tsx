@@ -31,7 +31,9 @@ const Privacy = () => {
             <section className="space-y-3">
               <h2 className="font-heading text-xl font-semibold text-foreground">1. Общие положения</h2>
               <p>
-                Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта rakushka65.lovable.app (далее — «Сайт»), принадлежащего компании Rakushka65 (далее — «Компания»).
+                Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта{" "}
+                <a href="https://rakushka65.ru" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">rakushka65.ru</a>{" "}
+                (далее — «Сайт»), принадлежащего ИП Шаманаев Игорь Геннадьевич (ИНН 650107445280, ОГРНИП 318650100013172) (далее — «Компания»).
               </p>
               <p>
                 Используя Сайт и предоставляя свои персональные данные, вы соглашаетесь с условиями данной Политики конфиденциальности.
@@ -123,8 +125,12 @@ const Privacy = () => {
               <h2 className="font-heading text-xl font-semibold text-foreground">9. Контактная информация</h2>
               <p>По вопросам, связанным с обработкой персональных данных, обращайтесь:</p>
               <ul className="list-none space-y-1">
-                <li><strong className="text-foreground">Компания:</strong> Rakushka65</li>
-                <li><strong className="text-foreground">Адрес:</strong> г. Южно-Сахалинск, ул. 4-Железнодорожная, 18, стр. 1</li>
+                <li><strong className="text-foreground">Компания:</strong> ИП Шаманаев Игорь Геннадьевич</li>
+                <li><strong className="text-foreground">ИНН:</strong> 650107445280</li>
+                <li><strong className="text-foreground">ОГРНИП:</strong> 318650100013172</li>
+                <li><strong className="text-foreground">Сайт:</strong>{" "}
+                  <a href="https://rakushka65.ru" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">rakushka65.ru</a>
+                </li>
                 <li><strong className="text-foreground">Email:</strong>{" "}
                   <a href="mailto:info@rakushka65.ru" className="text-primary hover:underline">info@rakushka65.ru</a>
                 </li>
