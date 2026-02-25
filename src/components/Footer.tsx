@@ -71,8 +71,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-body text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Rakushka65. Все права защищены.
+          <p className="font-body text-xs text-muted-foreground flex items-center gap-1">
+            Сделано с <span className="text-primary">💚</span> к морепродуктам
           </p>
           <Link to="/privacy" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">
             Политика конфиденциальности
