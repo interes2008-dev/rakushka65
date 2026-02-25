@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
@@ -182,7 +183,10 @@ const ContactForm = () => {
             </button>
 
             <p className="text-center text-xs text-muted-foreground font-body">
-              Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+              Нажимая кнопку, вы соглашаетесь с{" "}
+              <Link to="/privacy" className="text-primary hover:underline">
+                политикой конфиденциальности
+              </Link>
             </p>
           </motion.form>
         </div>
