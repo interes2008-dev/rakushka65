@@ -56,7 +56,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-3 font-body text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <span>г. Южно-Сахалинск,<br />ул. 4-Железнодорожная, 18, стр. 1</span>
+                <span>г. Южно-Сахалинск,<br />ул. 4-Железнодорожная, 18, стр. 1<br />Самовывоз<br />Яндекс-доставка</span>
               </div>
               <a href="https://t.me/+79147690097" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Send className="w-4 h-4 text-primary" />
