@@ -16,7 +16,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Премиальные морепродукты с доставкой. Свежесть океана прямо к вашему столу.
+              Сахалинские морепродукты с доставкой. Свежесть океана прямо к вашему столу.
             </p>
           </div>
 
