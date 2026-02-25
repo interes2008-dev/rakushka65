@@ -75,7 +75,7 @@ const renderTextWithBrand = (text: string) => {
   const parts = text.split(/(Rakushka65)/g);
   return parts.map((part, i) =>
     part === "Rakushka65" ? (
-      <span key={i} className="font-heading font-bold text-[1.1em]">
+      <span key={i} className="font-heading font-bold">
         Rakushka<span className="text-primary">65</span>
       </span>
     ) : (
