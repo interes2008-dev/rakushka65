@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Catalog from "./pages/Catalog";
 import ProductDetail from "./pages/ProductDetail";
 import Privacy from "./pages/Privacy";
+import Offer from "./pages/Offer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/catalog/:id" element={<ProductDetail />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/offer" element={<Offer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -74,9 +74,14 @@ const Footer = () => {
           <p className="font-body text-xs text-muted-foreground">
             © {new Date().getFullYear()} Rakushka65. Сделано с 💚 к морепродуктам
           </p>
-          <Link to="/privacy" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">
-            Политика конфиденциальности
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/privacy" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">
+              Политика конфиденциальности
+            </Link>
+            <Link to="/offer" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">
+              Оферта
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
