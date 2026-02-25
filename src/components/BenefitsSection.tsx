@@ -39,7 +39,7 @@ const BenefitsSection = () => {
             Почему <span className="text-gradient-teal">выбирают нас</span>
           </h2>
           <p className="text-muted-foreground font-body max-w-lg mx-auto">
-            Мы делаем всё, чтобы вы получили морепродукты наивысшего качества
+            Мы делаем всё, чтобы вы получили живые морепродукты наивысшего качества
           </p>
         </motion.div>
 
