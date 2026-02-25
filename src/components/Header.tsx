@@ -30,10 +30,11 @@ const Header = () => {
   const handleAnchorClick = (to: string) => {
     if (to.startsWith("/#")) {
       const id = to.substring(2);
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-        return;
+      if (location.pathname === "/") {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }
   };
@@ -78,7 +79,8 @@ const Header = () => {
             <span>Приём заказов 24/7</span>
           </a>
           <Link
-            to="/catalog"
+            to="/#contact"
+            onClick={() => handleAnchorClick("/#contact")}
             className="hidden sm:inline-flex px-5 py-2.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
           >
             Заказать
@@ -114,7 +116,8 @@ const Header = () => {
                 </Link>
               ))}
               <Link
-                to="/catalog"
+                to="/#contact"
+                onClick={() => handleAnchorClick("/#contact")}
                 className="mt-2 inline-flex justify-center px-5 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg"
               >
                 Заказать
