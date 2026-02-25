@@ -90,7 +90,7 @@ const ProductsSection = () => {
             Хиты <span className="text-gradient-teal">продаж</span>
           </h2>
           <p className="text-muted-foreground font-body max-w-lg mx-auto">
-            Самые популярные деликатесы, которые заказывают наши клиенты
+            Самые популярные Сахалинские морские деликатесы, которые заказывают наши клиенты
           </p>
         </motion.div>
 
