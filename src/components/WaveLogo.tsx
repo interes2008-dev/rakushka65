@@ -10,14 +10,14 @@ const WaveLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
     initial="idle"
   >
     {[
-      { y: 16, delay: 0 },
-      { y: 24, delay: 0.1 },
-      { y: 32, delay: 0.2 },
-    ].map(({ y, delay }) => (
+      { y: 16, delay: 0, color: "hsl(168 72% 50%)" },
+      { y: 24, delay: 0.1, color: "hsl(168 72% 70%)" },
+      { y: 32, delay: 0.2, color: "hsl(168 72% 50%)" },
+    ].map(({ y, delay, color }) => (
       <motion.path
         key={y}
         d={`M6 ${y}c4-4 8-4 12 0s8 4 12 0 8-4 12 0`}
-        stroke="hsl(168 72% 50%)"
+        stroke={color}
         strokeWidth="3.5"
         strokeLinecap="round"
         variants={{
