@@ -71,6 +71,19 @@ const reviews = [
   },
 ];
 
+const renderTextWithBrand = (text: string) => {
+  const parts = text.split(/(Rakushka65)/g);
+  return parts.map((part, i) =>
+    part === "Rakushka65" ? (
+      <span key={i}>
+        Rakushka<span className="text-gradient-teal font-semibold">65</span>
+      </span>
+    ) : (
+      part
+    )
+  );
+};
+
 const ReviewsSection = () => {
   const [current, setCurrent] = useState(0);
 
@@ -102,7 +115,7 @@ const ReviewsSection = () => {
           >
             <Quote className="w-10 h-10 text-primary/30 mx-auto mb-6" />
             <p className="font-body text-lg md:text-xl text-foreground leading-relaxed mb-8">
-              "{reviews[current].text}"
+              "{renderTextWithBrand(reviews[current].text)}"
             </p>
             <div className="flex flex-col items-center gap-2">
               <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-heading text-xl font-bold">
