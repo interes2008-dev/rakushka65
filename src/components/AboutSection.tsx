@@ -5,7 +5,7 @@ import aboutImg from "@/assets/about-coast.jpg";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const AboutSection = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section id="about" className="relative py-24 md:py-32">
@@ -18,7 +18,7 @@ const AboutSection = () => {
             <motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }} className="absolute -bottom-6 -right-4 md:right-8 bg-ocean-glass rounded-xl p-5 max-w-[200px]">
               <p className="font-body text-base font-bold text-primary">{t.about.yearsLabel}</p>
               <p className="font-body text-xs text-muted-foreground">{t.about.yearsDesc}</p>
-              <p className="font-body text-xs text-primary/70">quality beyond time</p>
+              <p className="font-body text-xs text-primary/70">{lang === "ru" ? "качество — вне времени" : "quality beyond time"}</p>
             </motion.div>
           </motion.div>
 
