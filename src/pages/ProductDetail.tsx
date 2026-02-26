@@ -102,12 +102,12 @@ const ProductDetail = () => {
               <div className="bg-sand-glass rounded-xl p-6 mb-8 space-y-4">
                 <div className="flex justify-between font-body text-sm">
                   <span className="text-muted-foreground">{t.productDetail.sizeWeight}</span>
-                  <span className="font-medium">{product.weight}</span>
+                  <span className="font-medium">{t.productWeights[product.id] || product.weight}</span>
                 </div>
                 <div className="border-t border-border/20" />
                 <div className="flex justify-between font-body text-sm">
                   <span className="text-muted-foreground">{t.productDetail.taste}</span>
-                  <span className="font-medium">{product.taste}</span>
+                  <span className="font-medium">{t.productTastes[product.id] || product.taste}</span>
                 </div>
                 <div className="border-t border-border/20" />
                 <div className="flex justify-between font-body text-sm">
@@ -117,7 +117,7 @@ const ProductDetail = () => {
               </div>
 
               <div className="flex items-center gap-6 mb-8">
-                <span className="font-heading text-4xl font-bold">{product.price} ₽<span className="text-lg text-muted-foreground font-normal">/{product.unit}</span></span>
+                <span className="font-heading text-4xl font-bold">{product.price} ₽<span className="text-lg text-muted-foreground font-normal">/{t.unitKg}</span></span>
               </div>
 
               <Link to="/#contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105">
@@ -152,7 +152,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="p-4">
                       <h3 className="font-heading text-lg font-semibold group-hover:text-primary transition-colors">{t.productNames[rp.id] || rp.name}</h3>
-                      <span className="font-body font-bold">{rp.price} ₽<span className="text-sm text-muted-foreground font-normal">/{rp.unit}</span></span>
+                      <span className="font-body font-bold">{rp.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span></span>
                     </div>
                   </Link>
                 ))}

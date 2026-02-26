@@ -86,7 +86,7 @@ const ProductsSection = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="font-body font-bold text-lg">
-                      {product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{product.unit}</span>
+                      {product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span>
                     </span>
                     <span className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                       <ShoppingCart className="w-4 h-4" />

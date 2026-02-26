@@ -121,4 +121,7 @@ export interface Translations {
   productDescriptions: Record<string, string>;
   productFullDescriptions: Record<string, string>;
   productCategories: Record<string, string>;
+  productWeights: Record<string, string>;
+  productTastes: Record<string, string>;
+  unitKg: string;
 }
