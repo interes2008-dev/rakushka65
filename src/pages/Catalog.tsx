@@ -7,12 +7,27 @@ import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import { products } from "@/components/ProductsSection";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import SEOHead from "@/components/SEOHead";
+import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 
 const Catalog = () => {
   const [activeCategory, setActiveCategory] = useState("Все");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [sortBy, setSortBy] = useState("default");
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+
+  const title = lang === "ru"
+    ? "Каталог морепродуктов Сахалина — Rakushka65"
+    : "Sakhalin Seafood Catalog — Rakushka65";
+
+  const description = lang === "ru"
+    ? "Полный каталог живых морепродуктов Сахалина: устрицы, гребешок, вонголе, рапаны, морской ёж. Цены и доставка от Rakushka65."
+    : "Full catalog of live Sakhalin seafood: oysters, scallops, vongole, rapana, sea urchin. Prices and delivery from Rakushka65.";
+
+  const breadcrumb = getBreadcrumbSchema([
+    { name: lang === "ru" ? "Главная" : "Home", url: "/" },
+    { name: lang === "ru" ? "Каталог" : "Catalog", url: "/catalog" },
+  ]);
 
   const categories = [
     { key: "Все", label: t.catalog.all },
@@ -33,6 +48,7 @@ const Catalog = () => {
 
   return (
     <div className="relative min-h-screen">
+      <SEOHead title={title} description={description} jsonLd={breadcrumb} />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">

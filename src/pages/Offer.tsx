@@ -3,10 +3,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WaveBackground from "@/components/WaveBackground";
 import { ArrowLeft } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const Offer = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      <SEOHead
+        title="Публичная оферта — Rakushka65"
+        description="Публичная оферта ИП Шаманаев И.Г. на покупку морепродуктов через сайт Rakushka65.ru. Условия заказа, доставки и оплаты."
+        noindex
+      />
       <WaveBackground />
       <Header />
       <main className="relative z-10 pt-32 pb-24">
