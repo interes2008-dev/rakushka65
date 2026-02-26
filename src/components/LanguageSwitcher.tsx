@@ -11,7 +11,7 @@ const LanguageSwitcher = () => {
       aria-label="Switch language"
     >
       <Globe className="w-3.5 h-3.5" />
-      <span>{lang === "ru" ? "EN" : "RU"}</span>
+      <span>{lang === "ru" ? "RU" : "EN"}</span>
     </button>
   );
 };
