@@ -7,6 +7,7 @@ import vongoleImg from "@/assets/product-vongole.jpg";
 import spizulaImg from "@/assets/product-spizula.jpg";
 import seaurchinImg from "@/assets/product-seaurchin.png";
 import rapanyImg from "@/assets/product-rapany.png";
+import snailsImg from "@/assets/product-snails.png";
 
 export interface Product {
   id: string;
