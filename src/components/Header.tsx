@@ -3,11 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import WaveLogo from "@/components/WaveLogo";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -20,11 +23,11 @@ const Header = () => {
   }, [location]);
 
   const navLinks = [
-    { to: "/", label: "Главная" },
-    { to: "/catalog", label: "Каталог" },
-    { to: "/#about", label: "О нас" },
-    { to: "/#reviews", label: "Отзывы" },
-    { to: "/#contact", label: "Контакты" },
+    { to: "/", label: t.nav.home },
+    { to: "/catalog", label: t.nav.catalog },
+    { to: "/#about", label: t.nav.about },
+    { to: "/#reviews", label: t.nav.reviews },
+    { to: "/#contact", label: t.nav.contacts },
   ];
 
   const handleAnchorClick = (to: string) => {
@@ -46,7 +49,6 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <WaveLogo className="w-8 h-8 md:w-10 md:h-10" />
           <span className="text-2xl md:text-3xl font-heading font-bold text-foreground group-hover:text-primary transition-colors">
@@ -55,7 +57,6 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -69,21 +70,21 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* CTA + Mobile toggle */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
           <a
             href="tel:+79147690097"
             className="hidden md:flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             <Phone className="w-4 h-4" />
-            <span>Приём заказов 24/7</span>
+            <span>{t.nav.ordersLine}</span>
           </a>
           <Link
             to="/#contact"
             onClick={() => handleAnchorClick("/#contact")}
             className="hidden sm:inline-flex px-5 py-2.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
           >
-            Заказать
+            {t.nav.order}
           </Link>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -95,7 +96,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -120,7 +120,7 @@ const Header = () => {
                 onClick={() => handleAnchorClick("/#contact")}
                 className="mt-2 inline-flex justify-center px-5 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg"
               >
-                Заказать
+                {t.nav.order}
               </Link>
             </nav>
           </motion.div>

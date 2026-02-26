@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Star, ShoppingCart } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 import scallopImg from "@/assets/product-scallop.jpg";
 import oystersImg from "@/assets/product-oysters.jpg";
 import vongoleImg from "@/assets/product-vongole.jpg";
@@ -25,139 +26,34 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  {
-    id: "scallop",
-    name: "Морской гребешок",
-    image: scallopImg,
-    price: "750",
-    unit: "кг",
-    rating: 5,
-    description: "Сахалинский морской гребешок — славится своей нежнейшей, сладковатой мякотью и крупным размером.",
-    category: "Моллюски",
-    weight: "от 200 г / шт",
-    taste: "Нежный, сладковатый",
-    fullDescription: "Сахалинский морской гребешок — славится своей нежнейшей, сладковатой мякотью и крупным размером. Настоящий деликатес с невероятно нежной текстурой и сладковатым послевкусием. Идеален для тартара, севиче или быстрого обжаривания на гриле.",
-  },
-  {
-    id: "oysters",
-    name: "Устрицы Сахалинские",
-    image: oystersImg,
-    price: "650",
-    unit: "кг",
-    rating: 5,
-    description: "Изысканные сахалинские устрицы — деликатес для истинных гурманов.",
-    category: "Устрицы",
-    weight: "150-350 г / шт",
-    taste: "Морской, солоноватый",
-    fullDescription: "Изысканные сахалинские устрицы — деликатес для истинных гурманов. Выращенные в чистейших водах Сахалина, они обладают насыщенным морским вкусом с лёгкой солоноватостью и нежной текстурой.",
-  },
-  {
-    id: "vongole",
-    name: "Вонголе",
-    image: vongoleImg,
-    price: "600",
-    unit: "кг",
-    rating: 4,
-    description: "Маленькие ракушки с насыщенным морским вкусом для пасты и супов.",
-    category: "Моллюски",
-    weight: "мелкие, 2-5 см",
-    taste: "Насыщенный, морской",
-    fullDescription: "Вонголе — любимый ингредиент итальянских шефов. Эти маленькие моллюски раскрывают невероятный аромат моря в сочетании с пастой, белым вином и чесноком.",
-  },
-  {
-    id: "spizula",
-    name: "Спизула Сахалинская",
-    image: spizulaImg,
-    price: "600",
-    unit: "кг",
-    rating: 4,
-    description: "Попробуйте один раз — и вы поймёте, почему шефы называют её «жемчужиной Сахалина». Мясистая, сочная, с ярким океанским послевкусием.",
-    category: "Моллюски",
-    weight: "200-400 г / шт",
-    taste: "Плотный, яркий",
-    fullDescription: "Спизула Сахалинская — настоящая находка для гурманов. Её плотная, упругая мякоть буквально тает во рту, раскрывая глубокий вкус холодного океана. Попробуйте сырой с каплей лимона — и вы больше не сможете остановиться. Идеальна для севиче, тартара или лёгкого обжаривания на сковороде с маслом и травами.",
-  },
-  {
-    id: "sea-urchin",
-    name: "Ёж морской Сахалинский",
-    image: seaurchinImg,
-    price: "500",
-    unit: "кг",
-    rating: 5,
-    description: "Золотая икра океана — сливочная, тающая во рту, с утончённым йодистым послевкусием. Деликатес, ради которого стоит попробовать море на вкус.",
-    category: "Моллюски",
-    weight: "90-200 г / шт",
-    taste: "Сливочный, йодистый",
-    fullDescription: "Сахалинский морской ёж — один из самых изысканных даров холодного океана. Внутри колючей скорлупы скрывается нежнейшая икра с бархатистой текстурой и глубоким сливочно-йодистым вкусом. Японцы называют её «уни» и считают королевой суши. Подавайте свежей с каплей лимона или юдзу — и каждый кусочек перенесёт вас на берег Сахалина.",
-  },
-  {
-    id: "rapany",
-    name: "Рапаны Сахалинские",
-    image: rapanyImg,
-    price: "600",
-    unit: "кг",
-    rating: 4,
-    description: "Морские улитки с характерным упругим мясом и глубоким, чуть дымным вкусом океана. Редкий деликатес для настоящих ценителей.",
-    category: "Моллюски",
-    weight: "80-200 г / шт",
-    taste: "Упругий, дымно-морской",
-    fullDescription: "Сахалинские рапаны — загадочные морские улитки, скрывающие под витой раковиной плотное, упругое мясо с ярким океанским характером. Их вкус — это сочетание лёгкой дымности, морской свежести и едва уловимой сладости. Обжарьте на сковороде с чесноком и сливочным маслом или подайте в севиче — и каждый кусочек раскроет глубину холодных сахалинских вод.",
-  },
-  {
-    id: "sea-snails",
-    name: "Морские улитки",
-    image: snailsImg,
-    price: "600",
-    unit: "кг",
-    rating: 5,
-    description: "Хрустящие морские улитки с лимоном — на Востоке их томят в имбирном бульоне с соевым соусом, раскрывая глубокий умами.",
-    category: "Моллюски",
-    weight: "мелкие, 3-5 см",
-    taste: "Упругий, пикантный",
-    fullDescription: "Морские улитки — изысканный деликатес, который веками ценится в кухнях Японии, Кореи и Китая. На Востоке их медленно томят в ароматном бульоне с имбирём, чесноком и соевым соусом, пока мякоть не станет невероятно нежной, сохраняя при этом характерную упругость. Подавайте свежими с долькой лимона и васаби — или обжарьте на воке с кунжутным маслом и зелёным луком для незабываемого ужина в азиатском стиле.",
-  },
-  {
-    id: "corbicula",
-    name: "Корбикула Сахалинская",
-    image: corbiculaImg,
-    price: "600",
-    unit: "кг",
-    rating: 5,
-    description: "Миниатюрная жемчужина сахалинских рек — корбикула богата аминокислотами и веками используется в восточной медицине для очищения организма.",
-    category: "Моллюски",
-    weight: "мелкие, 2-5 см",
-    taste: "Нежный, чуть сладковатый",
-    fullDescription: "Корбикула Сахалинская — маленький моллюск с большой историей. В Японии её называют «шиджими» и готовят из неё легендарный мисо-суп, который считается лучшим средством для восстановления печени и бодрости духа. Корейцы томят корбикулу в пряном бульоне с перцем чили и тофу, превращая скромную ракушку в согревающее блюдо с глубоким умами. Этот моллюск — природный кладезь таурина, витаминов группы B и незаменимых аминокислот. Подавайте в горячем бульоне с зелёным луком и каплей саке — и каждая ложка подарит вам силу холодных сахалинских вод.",
-  },
+  { id: "scallop", name: "Морской гребешок", image: scallopImg, price: "750", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "от 200 г / шт", taste: "Нежный, сладковатый" },
+  { id: "oysters", name: "Устрицы Сахалинские", image: oystersImg, price: "650", unit: "кг", rating: 5, description: "", category: "Устрицы", weight: "150-350 г / шт", taste: "Морской, солоноватый" },
+  { id: "vongole", name: "Вонголе", image: vongoleImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Насыщенный, морской" },
+  { id: "spizula", name: "Спизула Сахалинская", image: spizulaImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "200-400 г / шт", taste: "Плотный, яркий" },
+  { id: "sea-urchin", name: "Ёж морской Сахалинский", image: seaurchinImg, price: "500", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "90-200 г / шт", taste: "Сливочный, йодистый" },
+  { id: "rapany", name: "Рапаны Сахалинские", image: rapanyImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "80-200 г / шт", taste: "Упругий, дымно-морской" },
+  { id: "sea-snails", name: "Морские улитки", image: snailsImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 3-5 см", taste: "Упругий, пикантный" },
+  { id: "corbicula", name: "Корбикула Сахалинская", image: corbiculaImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Нежный, чуть сладковатый" },
 ];
 
 const ProductsSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative py-24 md:py-32">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            Хиты <span className="text-gradient-teal">продаж</span>
+            {t.products.title}<span className="text-gradient-teal">{t.products.titleAccent}</span>
           </h2>
-          <p className="text-muted-foreground font-body max-w-lg mx-auto">
-            Самые популярные Сахалинские морские деликатесы, которые заказывают наши клиенты
-          </p>
+          <p className="text-muted-foreground font-body max-w-lg mx-auto">{t.products.subtitle}</p>
         </motion.div>
 
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.15 } },
-          }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {products.map((product) => (
@@ -173,30 +69,20 @@ const ProductsSection = () => {
                 className="block bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/5"
               >
                 <div className="relative overflow-hidden aspect-[4/3]">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115"
-                    loading="lazy"
-                  />
+                  <img src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-1 mb-2">
                     {Array.from({ length: 5 }).map((_, si) => (
-                      <Star
-                        key={si}
-                        className={`w-3.5 h-3.5 ${
-                          si < product.rating ? "fill-primary text-primary" : "text-muted"
-                        }`}
-                      />
+                      <Star key={si} className={`w-3.5 h-3.5 ${si < product.rating ? "fill-primary text-primary" : "text-muted"}`} />
                     ))}
                   </div>
                   <h3 className="font-heading text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
-                    {product.name}
+                    {t.productNames[product.id] || product.name}
                   </h3>
                   <p className="font-body text-xs text-muted-foreground mb-3 line-clamp-2">
-                    {product.description}
+                    {t.productDescriptions[product.id] || product.description}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="font-body font-bold text-lg">
@@ -212,17 +98,9 @@ const ProductsSection = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Link
-            to="/catalog"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-primary/40 text-primary font-body font-semibold rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-          >
-            Весь каталог
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-12">
+          <Link to="/catalog" className="inline-flex items-center gap-2 px-8 py-3.5 border border-primary/40 text-primary font-body font-semibold rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+            {t.products.catalogBtn}
           </Link>
         </motion.div>
       </div>

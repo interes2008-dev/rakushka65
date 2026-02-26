@@ -2,86 +2,44 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import aboutImg from "@/assets/about-coast.jpg";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="relative py-24 md:py-32">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
-            className="relative"
-          >
+          <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.7 }} className="relative">
             <div className="rounded-2xl overflow-hidden">
-              <img
-                src={aboutImg}
-                alt="Дикое скалистое побережье Сахалина"
-                className="w-full h-[400px] lg:h-[500px] object-cover"
-                loading="lazy"
-              />
+              <img src={aboutImg} alt="Sakhalin coastline" className="w-full h-[400px] lg:h-[500px] object-cover" loading="lazy" />
             </div>
-            {/* Floating card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-              className="absolute -bottom-6 -right-4 md:right-8 bg-ocean-glass rounded-xl p-5 max-w-[200px]"
-            >
-              <p className="font-body text-base font-bold text-primary">10+</p>
-              <p className="font-body text-xs text-muted-foreground">лет на рынке</p>
-              <p className="font-body text-xs text-primary/70">качество — вне времени</p>
+            <motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }} className="absolute -bottom-6 -right-4 md:right-8 bg-ocean-glass rounded-xl p-5 max-w-[200px]">
+              <p className="font-body text-base font-bold text-primary">{t.about.yearsLabel}</p>
+              <p className="font-body text-xs text-muted-foreground">{t.about.yearsDesc}</p>
+              <p className="font-body text-xs text-primary/70">quality beyond time</p>
             </motion.div>
           </motion.div>
 
-          {/* Text */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            <p className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4">О нас и нашем деле</p>
+          <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.7, delay: 0.2 }}>
+            <p className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4">{t.about.badge}</p>
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Rakushka<span className="text-primary">65</span> — <span className="text-gradient-teal">Территория живых морепродуктов</span>
+              {t.about.title}<span className="text-gradient-teal">{t.about.titleAccent}</span>
             </h2>
             <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
+              {t.about.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
               <p>
-                Мы живём на Сахалине и добываем морепродукты в чистых водах у берегов острова — там, 
-                где океан только набирает силу.
-              </p>
-              <p>
-                Устриц, гребешок, вонголе, спизулу и морского ежа собирают вручную. Только так можно 
-                сохранить и природу, и качество каждого экземпляра.
-              </p>
-              <p>
-                С нами работают местные хозяйства аквакультуры, которым мы доверяем. Вместе мы закрываем 
-                спрос и на дикую продукцию, и на ту, что выращена людьми с заботой.
-              </p>
-              <p>
-                Доставляем по Сахалину со своего склада. Отправляем авиа в любую точку России. 
-                Без посредников, без заморозки — только живой продукт, который ещё вчера был в море.
-              </p>
-              <p>
-                Предоставляем полный пакет документов, включая оформление в системе «Меркурий» и сертификат <Link to="/certificate" className="text-primary hover:underline">«Сделано в России»</Link>.
+                {t.about.paragraphs.length > 0 && ""}
+                Предоставляем полный пакет документов, включая оформление в системе «Меркурий» и сертификат{" "}
+                <Link to="/certificate" className="text-primary hover:underline">{t.about.certificateLink}</Link>.
               </p>
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-8"
-            >
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
-              >
-                Связаться с нами
+            <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5, delay: 0.5 }} className="mt-8">
+              <a href="#contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105">
+                {t.about.ctaBtn}
                 <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>
