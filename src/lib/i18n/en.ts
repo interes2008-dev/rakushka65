@@ -49,6 +49,7 @@ export const en: Translations = {
       "We deliver across Sakhalin from our own warehouse. We ship by air anywhere in Russia. No middlemen, no freezing — only live product that was in the sea just yesterday.",
     ],
     certificateLink: "'Made in Russia'",
+    certificateLine: "We provide a full set of documents, including Mercury system registration and a",
     ctaBtn: "Contact us",
   },
   reviews: {
