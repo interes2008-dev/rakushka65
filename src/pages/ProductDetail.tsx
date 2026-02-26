@@ -120,9 +120,9 @@ const ProductDetail = () => {
                 <span className="font-heading text-4xl font-bold">{product.price} ₽<span className="text-lg text-muted-foreground font-normal">/{product.unit}</span></span>
               </div>
 
-              <button className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105">
+              <Link to="/#contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105">
                 <ShoppingCart className="w-5 h-5" />{t.productDetail.orderBtn}
-              </button>
+              </Link>
 
               <div className="flex flex-wrap gap-6 mt-8">
                 {[
