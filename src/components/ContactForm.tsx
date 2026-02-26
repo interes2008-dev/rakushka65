@@ -79,7 +79,7 @@ const ContactForm = () => {
             </div>
           </motion.div>
 
-          <motion.form initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} onSubmit={handleSubmit} className="bg-sand-glass rounded-2xl p-8 md:p-10 space-y-6">
+          <motion.form initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} onSubmit={handleSubmit} className="bg-sand-glass rounded-2xl p-6 md:p-8 space-y-4 self-start">
             <div>
               <h3 className="font-heading text-2xl font-bold mb-1">{t.contact.formTitle}</h3>
               <p className="font-body text-sm text-muted-foreground">{t.contact.formSubtitle}</p>
