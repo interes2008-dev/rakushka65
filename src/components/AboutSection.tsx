@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import aboutImg from "@/assets/about-coast.jpg";
 
@@ -67,7 +67,7 @@ const AboutSection = () => {
                 Без посредников, без заморозки — только живой продукт, который ещё вчера был в море.
               </p>
               <p>
-                Предоставляем полный пакет документов, включая оформление в системе «Меркурий» и сертификат «Сделано в России».
+                Предоставляем полный пакет документов, включая оформление в системе «Меркурий» и сертификат <Link to="/certificate" className="text-primary hover:underline">«Сделано в России»</Link>.
               </p>
             </div>
             <motion.div
