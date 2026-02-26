@@ -28,7 +28,7 @@ const Footer = () => {
 
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">{t.footer.navigation}</h4>
-            <nav className="flex flex-col gap-3">
+            <nav aria-label="Footer navigation" className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <Link key={link.to} to={link.to} className="font-body text-sm text-muted-foreground hover:text-primary transition-colors">{link.label}</Link>
               ))}

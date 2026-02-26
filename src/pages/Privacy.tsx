@@ -3,10 +3,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WaveBackground from "@/components/WaveBackground";
 import { ArrowLeft } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const Privacy = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      <SEOHead
+        title="Политика конфиденциальности — Rakushka65"
+        description="Политика конфиденциальности и обработки персональных данных сайта Rakushka65.ru. Защита данных клиентов."
+        noindex
+      />
       <WaveBackground />
       <Header />
       <main className="relative z-10 pt-32 pb-24">
@@ -104,13 +110,9 @@ const Privacy = () => {
               </ul>
               <p>
                 Для реализации указанных прав свяжитесь с нами по электронной почте:{" "}
-                <a href="mailto:info@rakushka65.ru" className="text-primary hover:underline">
-                  info@rakushka65.ru
-                </a>{" "}
+                <a href="mailto:info@rakushka65.ru" className="text-primary hover:underline">info@rakushka65.ru</a>{" "}
                 или по телефону{" "}
-                <a href="tel:+79147690097" className="text-primary hover:underline">
-                  +7 (914) 769-00-97
-                </a>.
+                <a href="tel:+79147690097" className="text-primary hover:underline">+7 (914) 769-00-97</a>.
               </p>
             </section>
 

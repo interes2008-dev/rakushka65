@@ -4,12 +4,22 @@ import Footer from "@/components/Footer";
 import WaveBackground from "@/components/WaveBackground";
 import { ArrowLeft, FileCheck } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const Certificate = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+
+  const title = lang === "ru"
+    ? "Сертификат «Сделано в России» — Rakushka65"
+    : "'Made in Russia' Certificate — Rakushka65";
+
+  const description = lang === "ru"
+    ? "Сертификат качества «Сделано в России» подтверждает премиальное качество морепродуктов Rakushka65 с Сахалина."
+    : "The 'Made in Russia' quality certificate confirms premium quality of Rakushka65 Sakhalin seafood.";
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      <SEOHead title={title} description={description} />
       <WaveBackground />
       <Header />
       <main className="relative z-10 pt-32 pb-24">
@@ -23,7 +33,7 @@ const Certificate = () => {
           </div>
           <p className="font-body text-muted-foreground leading-relaxed mb-10 max-w-2xl">{t.certificate.description}</p>
           <div className="bg-sand-glass rounded-2xl p-4 md:p-8">
-            <img src="/documents/certificate-page1.jpg" alt={t.certificate.title} className="w-full rounded-xl border border-border/30" />
+            <img src="/documents/certificate-page1.jpg" alt={`${t.certificate.title} — Rakushka65`} className="w-full rounded-xl border border-border/30" />
           </div>
         </div>
       </main>
