@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -45,13 +45,57 @@ const renderTextWithBrand = (text: string) => {
   );
 };
 
+const slideVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 120 : -120,
+    opacity: 0,
+    scale: 0.95,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    scale: 1,
+  },
+  exit: (direction: number) => ({
+    x: direction > 0 ? -120 : 120,
+    opacity: 0,
+    scale: 0.95,
+  }),
+};
+
 const ReviewsSection = () => {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
   const { lang, t } = useLanguage();
   const reviews = reviewsData[lang];
 
-  const next = () => setCurrent((c) => (c + 1) % reviews.length);
-  const prev = () => setCurrent((c) => (c - 1 + reviews.length) % reviews.length);
+  const next = useCallback(() => {
+    setDirection(1);
+    setCurrent((c) => (c + 1) % reviews.length);
+  }, [reviews.length]);
+
+  const prev = useCallback(() => {
+    setDirection(-1);
+    setCurrent((c) => (c - 1 + reviews.length) % reviews.length);
+  }, [reviews.length]);
+
+  const goTo = useCallback((i: number) => {
+    setDirection(i > current ? 1 : -1);
+    setCurrent(i);
+  }, [current]);
+
+  // Auto-scroll every 6 seconds
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(next, 6000);
+    return () => clearInterval(timer);
+  }, [next, isPaused]);
+
+  // Reset current when language changes
+  useEffect(() => {
+    setCurrent(0);
+  }, [lang]);
 
   return (
     <section id="reviews" className="relative py-24 md:py-32">
@@ -62,20 +106,48 @@ const ReviewsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto relative">
-          <motion.div key={`${lang}-${current}`} initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.4 }} className="bg-sand-glass rounded-2xl p-8 md:p-12 text-center">
-            <Quote className="w-10 h-10 text-primary/30 mx-auto mb-6" />
-            <p className="font-body text-lg md:text-xl text-foreground leading-relaxed mb-8">
-              "{renderTextWithBrand(reviews[current].text)}"
-            </p>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-heading text-xl font-bold">
-                {reviews[current].initials}
-              </div>
-              <p className="font-heading text-lg font-semibold">{reviews[current].name}</p>
-              <p className="font-body text-sm text-muted-foreground">{reviews[current].role}</p>
-            </div>
-          </motion.div>
+        <div
+          className="max-w-3xl mx-auto relative"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Progress bar */}
+          <div className="absolute -top-4 left-0 right-0 h-0.5 bg-muted/30 rounded-full overflow-hidden">
+            <motion.div
+              key={`${lang}-${current}-${isPaused}`}
+              className="h-full bg-primary/60 rounded-full"
+              initial={{ width: "0%" }}
+              animate={{ width: isPaused ? undefined : "100%" }}
+              transition={{ duration: 6, ease: "linear" }}
+            />
+          </div>
+
+          <div className="relative overflow-hidden min-h-[320px] md:min-h-[280px] flex items-center">
+            <AnimatePresence mode="wait" custom={direction}>
+              <motion.div
+                key={`${lang}-${current}`}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                className="w-full bg-sand-glass rounded-2xl p-8 md:p-12 text-center"
+              >
+                <Quote className="w-10 h-10 text-primary/30 mx-auto mb-6" />
+                <p className="font-body text-lg md:text-xl text-foreground leading-relaxed mb-8">
+                  "{renderTextWithBrand(reviews[current].text)}"
+                </p>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-heading text-xl font-bold">
+                    {reviews[current].initials}
+                  </div>
+                  <p className="font-heading text-lg font-semibold">{reviews[current].name}</p>
+                  <p className="font-body text-sm text-muted-foreground">{reviews[current].role}</p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           <div className="flex justify-center gap-4 mt-8">
             <button onClick={prev} className="w-12 h-12 rounded-full border border-border/50 flex items-center justify-center hover:border-primary hover:text-primary transition-colors" aria-label="Previous">
@@ -83,7 +155,7 @@ const ReviewsSection = () => {
             </button>
             <div className="flex items-center gap-2">
               {reviews.map((_, i) => (
-                <button key={i} onClick={() => setCurrent(i)} className={`w-2.5 h-2.5 rounded-full transition-all ${i === current ? "bg-primary w-8" : "bg-muted"}`} aria-label={`Review ${i + 1}`} />
+                <button key={i} onClick={() => goTo(i)} className={`h-2.5 rounded-full transition-all duration-300 ${i === current ? "bg-primary w-8" : "bg-muted w-2.5 hover:bg-primary/40"}`} aria-label={`Review ${i + 1}`} />
               ))}
             </div>
             <button onClick={next} className="w-12 h-12 rounded-full border border-border/50 flex items-center justify-center hover:border-primary hover:text-primary transition-colors" aria-label="Next">
