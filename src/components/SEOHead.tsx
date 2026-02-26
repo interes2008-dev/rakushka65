@@ -15,7 +15,7 @@ const SEOHead = ({
   description,
   canonical,
   ogType = "website",
-  ogImage = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7fd4a382-c751-420b-9a5e-f1216ea8e77f/id-preview-85e7ec21--62930829-695c-4888-a3fa-2e8697f33ba6.lovable.app-1771302850814.png",
+  ogImage = "https://rakushka65.lovable.app/og-image.jpg",
   noindex = false,
   jsonLd,
 }: SEOHeadProps) => {
