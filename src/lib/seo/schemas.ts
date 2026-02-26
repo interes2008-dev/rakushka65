@@ -35,7 +35,7 @@ export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Rakushka65",
-  alternateName: "Ракушка65 — Премиальные морепродукты Сахалина",
+  alternateName: "Ракушка65 — Живые морепродукты Сахалина",
   url: SITE_URL,
   publisher: { "@id": SITE_URL },
 };
