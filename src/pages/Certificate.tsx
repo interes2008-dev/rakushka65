@@ -31,23 +31,12 @@ const Certificate = () => {
             Ниже представлен сертификат соответствия, подтверждающий происхождение и качество наших морепродуктов.
           </p>
 
-          <div className="bg-sand-glass rounded-2xl p-4 md:p-6">
-            <iframe
-              src="/documents/certificate.pdf"
+          <div className="bg-sand-glass rounded-2xl p-4 md:p-8">
+            <img
+              src="/documents/certificate-page1.jpg"
+              alt="Сертификат соответствия — Сделано в России"
               className="w-full rounded-xl border border-border/30"
-              style={{ height: "80vh", minHeight: "600px" }}
-              title="Сертификат соответствия — Сделано в России"
             />
-          </div>
-
-          <div className="mt-6 text-center">
-            <a
-              href="/documents/certificate.pdf"
-              download
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform"
-            >
-              Скачать сертификат (PDF)
-            </a>
           </div>
         </div>
       </main>
