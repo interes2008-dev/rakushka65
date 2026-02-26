@@ -5,6 +5,7 @@ import scallopImg from "@/assets/product-scallop.jpg";
 import oystersImg from "@/assets/product-oysters.jpg";
 import vongoleImg from "@/assets/product-vongole.jpg";
 import spizulaImg from "@/assets/product-spizula.jpg";
+import seaurchinImg from "@/assets/product-seaurchin.png";
 
 export interface Product {
   id: string;
@@ -72,6 +73,19 @@ export const products: Product[] = [
     weight: "200-400 г / шт",
     taste: "Плотный, яркий",
     fullDescription: "Спизула Сахалинская — настоящая находка для гурманов. Её плотная, упругая мякоть буквально тает во рту, раскрывая глубокий вкус холодного океана. Попробуйте сырой с каплей лимона — и вы больше не сможете остановиться. Идеальна для севиче, тартара или лёгкого обжаривания на сковороде с маслом и травами.",
+  },
+  {
+    id: "sea-urchin",
+    name: "Ёж морской Сахалинский",
+    image: seaurchinImg,
+    price: "500",
+    unit: "кг",
+    rating: 5,
+    description: "Золотая икра океана — сливочная, тающая во рту, с утончённым йодистым послевкусием. Деликатес, ради которого стоит попробовать море на вкус.",
+    category: "Моллюски",
+    weight: "100-250 г / шт",
+    taste: "Сливочный, йодистый",
+    fullDescription: "Сахалинский морской ёж — один из самых изысканных даров холодного океана. Внутри колючей скорлупы скрывается нежнейшая икра с бархатистой текстурой и глубоким сливочно-йодистым вкусом. Японцы называют её «уни» и считают королевой суши. Подавайте свежей с каплей лимона или юдзу — и каждый кусочек перенесёт вас на берег Сахалина.",
   },
 ];
 
