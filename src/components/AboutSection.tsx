@@ -32,8 +32,7 @@ const AboutSection = () => {
                 <p key={i}>{p}</p>
               ))}
               <p>
-                {t.about.paragraphs.length > 0 && ""}
-                Предоставляем полный пакет документов, включая оформление в системе «Меркурий» и сертификат{" "}
+                {t.about.certificateLine}{" "}
                 <Link to="/certificate" className="text-primary hover:underline">{t.about.certificateLink}</Link>.
               </p>
             </div>

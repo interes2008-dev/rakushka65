@@ -39,6 +39,7 @@ export interface Translations {
     yearsDesc: string;
     paragraphs: string[];
     certificateLink: string;
+    certificateLine: string;
     ctaBtn: string;
   };
   reviews: {
