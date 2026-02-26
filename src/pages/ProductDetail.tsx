@@ -55,9 +55,20 @@ const ProductDetail = () => {
     { name, url: `/catalog/${product.id}` },
   ]);
 
+  const ogImageMap: Record<string, string> = {
+    scallop: "https://rakushka65.lovable.app/og-scallop.jpg",
+    oysters: "https://rakushka65.lovable.app/og-oysters.jpg",
+    vongole: "https://rakushka65.lovable.app/og-vongole.jpg",
+    spizula: "https://rakushka65.lovable.app/og-spizula.jpg",
+    "sea-urchin": "https://rakushka65.lovable.app/og-sea-urchin.jpg",
+    rapany: "https://rakushka65.lovable.app/og-rapany.jpg",
+    "sea-snails": "https://rakushka65.lovable.app/og-sea-snails.jpg",
+    corbicula: "https://rakushka65.lovable.app/og-corbicula.jpg",
+  };
+
   return (
     <div className="relative min-h-screen">
-      <SEOHead title={pageTitle} description={pageDesc} jsonLd={[productJsonLd, breadcrumb]} />
+      <SEOHead title={pageTitle} description={pageDesc} ogImage={ogImageMap[product.id]} jsonLd={[productJsonLd, breadcrumb]} />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
