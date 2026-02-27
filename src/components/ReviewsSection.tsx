@@ -85,12 +85,6 @@ const ReviewsSection = () => {
     setCurrent(i);
   }, [current]);
 
-  // Auto-scroll every 6 seconds
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(next, 6000);
-    return () => clearInterval(timer);
-  }, [next, isPaused]);
 
   // Reset current when language changes
   useEffect(() => {
