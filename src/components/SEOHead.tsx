@@ -15,7 +15,7 @@ const SEOHead = ({
   description,
   canonical,
   ogType = "website",
-  ogImage = "https://rakushka65.lovable.app/og-image.jpg",
+  ogImage = "https://rakushka65.ru/og-image.jpg",
   noindex = false,
   jsonLd,
 }: SEOHeadProps) => {

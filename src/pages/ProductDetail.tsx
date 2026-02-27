@@ -56,14 +56,14 @@ const ProductDetail = () => {
   ]);
 
   const ogImageMap: Record<string, string> = {
-    scallop: "https://rakushka65.lovable.app/og-scallop.jpg",
-    oysters: "https://rakushka65.lovable.app/og-oysters.jpg",
-    vongole: "https://rakushka65.lovable.app/og-vongole.jpg",
-    spizula: "https://rakushka65.lovable.app/og-spizula.jpg",
-    "sea-urchin": "https://rakushka65.lovable.app/og-sea-urchin.jpg",
-    rapany: "https://rakushka65.lovable.app/og-rapany.jpg",
-    "sea-snails": "https://rakushka65.lovable.app/og-sea-snails.jpg",
-    corbicula: "https://rakushka65.lovable.app/og-corbicula.jpg",
+    scallop: "https://rakushka65.ru/og-scallop.jpg",
+    oysters: "https://rakushka65.ru/og-oysters.jpg",
+    vongole: "https://rakushka65.ru/og-vongole.jpg",
+    spizula: "https://rakushka65.ru/og-spizula.jpg",
+    "sea-urchin": "https://rakushka65.ru/og-sea-urchin.jpg",
+    rapany: "https://rakushka65.ru/og-rapany.jpg",
+    "sea-snails": "https://rakushka65.ru/og-sea-snails.jpg",
+    corbicula: "https://rakushka65.ru/og-corbicula.jpg",
   };
 
   return (
