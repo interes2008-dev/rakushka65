@@ -28,13 +28,13 @@ const BenefitsSection = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
                 whileHover={{ y: -6 }}
-                className="bg-sand-glass rounded-xl p-8 text-center group hover:bg-[hsl(168_72%_50%/0.08)] hover:border-primary/30 hover:shadow-[0_0_30px_hsl(168_72%_50%/0.12)] transition-all duration-500 ease-out cursor-default"
+                className="bg-sand-glass rounded-xl p-6 text-center group hover:bg-[hsl(168_72%_50%/0.08)] hover:border-primary/30 hover:shadow-[0_0_30px_hsl(168_72%_50%/0.12)] transition-all duration-500 ease-out cursor-default flex flex-col"
               >
-                <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-500">
-                  <Icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-500" />
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-500 shrink-0">
+                  <Icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-500">{b.title}</h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                <h3 className="font-heading text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-500 min-h-[3.5rem] flex items-center justify-center">{b.title}</h3>
+                <p className="font-body text-sm text-muted-foreground leading-snug mt-auto">{b.desc}</p>
               </motion.div>
             );
           })}
