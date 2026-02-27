@@ -28,7 +28,7 @@ export const en: Translations = {
       { title: "Premium quality", desc: "Only select catch from trusted suppliers. Every batch undergoes strict quality control" },
       { title: "Temperature control", desc: "Unbroken cold chain from sea to your table — guaranteed safety" },
       { title: "Own fishing operations", desc: "We work directly with divers and fishermen — only fresh catch, no middlemen" },
-      { title: "RAS Technology", desc: "We use a professional recirculating aquaculture system to store live seafood. Conditions closely mimic their natural habitat, keeping them stress-free until shipment. This guarantees freshness and high survival rates." },
+      { title: "RAS Technology", desc: "Conditions closely mimic their natural habitat, keeping them stress-free until shipment." },
     ],
   },
   products: {
