@@ -10,6 +10,8 @@ import seaurchinImg from "@/assets/product-seaurchin.png";
 import rapanyImg from "@/assets/product-rapany.png";
 import snailsImg from "@/assets/product-snails.png";
 import corbiculaImg from "@/assets/product-corbicula.png";
+import trepangImg from "@/assets/product-trepang.png";
+import crabImg from "@/assets/product-crab.png";
 
 export interface Product {
   id: string;
@@ -34,6 +36,8 @@ export const products: Product[] = [
   { id: "rapany", name: "Рапаны Сахалинские", image: rapanyImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "80-200 г / шт", taste: "Упругий, дымно-морской" },
   { id: "sea-snails", name: "Морские улитки", image: snailsImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 3-5 см", taste: "Упругий, пикантный" },
   { id: "corbicula", name: "Корбикула Сахалинская", image: corbiculaImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Нежный, чуть сладковатый" },
+  { id: "trepang", name: "Трепанг дальневосточный", image: trepangImg, price: "3 500", unit: "кг", rating: 5, description: "", category: "Деликатесы", weight: "150-500 г / шт", taste: "Нежный, желеобразный" },
+  { id: "crab", name: "Краб колючий", image: crabImg, price: "2 500", unit: "кг", rating: 5, description: "", category: "Ракообразные", weight: "от 1 кг / шт", taste: "Сладковатый, сочный" },
 ];
 
 const ProductsSection = () => {
@@ -54,7 +58,7 @@ const ProductsSection = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"
         >
           {products.map((product) => (
             <motion.div
