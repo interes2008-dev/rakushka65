@@ -102,6 +102,8 @@ export const ru: Translations = {
     all: "Все",
     oysters: "Устрицы",
     mollusks: "Моллюски",
+    delicacies: "Деликатесы",
+    crustaceans: "Ракообразные",
     sortDefault: "По умолчанию",
     sortPriceAsc: "Цена ↑",
     sortPriceDesc: "Цена ↓",

@@ -102,6 +102,8 @@ export const en: Translations = {
     all: "All",
     oysters: "Oysters",
     mollusks: "Mollusks",
+    delicacies: "Delicacies",
+    crustaceans: "Crustaceans",
     sortDefault: "Default",
     sortPriceAsc: "Price ↑",
     sortPriceDesc: "Price ↓",
