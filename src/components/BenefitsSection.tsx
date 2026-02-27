@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Ship, Diamond, Thermometer, Shell } from "lucide-react";
+import { Ship, Diamond, Thermometer, Shell, Droplets } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-const icons = [Ship, Diamond, Thermometer, Shell];
+const icons = [Ship, Diamond, Thermometer, Shell, Droplets];
 
 const BenefitsSection = () => {
   const { t } = useLanguage();
@@ -17,7 +17,7 @@ const BenefitsSection = () => {
           <p className="text-muted-foreground font-body max-w-lg mx-auto">{t.benefits.subtitle}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {t.benefits.items.map((b, i) => {
             const Icon = icons[i];
             return (
