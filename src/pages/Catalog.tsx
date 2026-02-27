@@ -33,6 +33,8 @@ const Catalog = () => {
     { key: "Все", label: t.catalog.all },
     { key: "Устрицы", label: t.catalog.oysters },
     { key: "Моллюски", label: t.catalog.mollusks },
+    { key: "Деликатесы", label: t.catalog.delicacies },
+    { key: "Ракообразные", label: t.catalog.crustaceans },
   ];
 
   const filtered = products.filter(
@@ -83,7 +85,7 @@ const Catalog = () => {
             </div>
           </motion.div>
 
-          <div className={viewMode === "grid" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" : "flex flex-col gap-4"}>
+          <div className={viewMode === "grid" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6" : "flex flex-col gap-4"}>
             {sorted.map((product, i) => (
               <motion.div key={product.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
                 <Link to={`/catalog/${product.id}`} className={`block bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 ${viewMode === "list" ? "flex flex-row" : ""}`}>
