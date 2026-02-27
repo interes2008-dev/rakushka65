@@ -102,7 +102,11 @@ const Catalog = () => {
                     <h3 className="font-heading text-lg font-semibold mb-1 group-hover:text-primary transition-colors">{t.productNames[product.id] || product.name}</h3>
                     <p className="font-body text-xs text-muted-foreground mb-3 line-clamp-2">{t.productDescriptions[product.id] || product.description}</p>
                     <div className="flex items-center justify-between">
-                      <span className="font-body font-bold text-lg">{product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span></span>
+                      {product.price ? (
+                        <span className="font-body font-bold text-lg">{product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span></span>
+                      ) : (
+                        <span className="font-body font-semibold text-sm text-primary">По запросу</span>
+                      )}
                       <span className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all"><ShoppingCart className="w-4 h-4" /></span>
                     </div>
                   </div>

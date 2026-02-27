@@ -36,8 +36,8 @@ export const products: Product[] = [
   { id: "rapany", name: "Рапаны Сахалинские", image: rapanyImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "80-200 г / шт", taste: "Упругий, дымно-морской" },
   { id: "sea-snails", name: "Морские улитки", image: snailsImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 3-5 см", taste: "Упругий, пикантный" },
   { id: "corbicula", name: "Корбикула Сахалинская", image: corbiculaImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Нежный, чуть сладковатый" },
-  { id: "trepang", name: "Трепанг дальневосточный", image: trepangImg, price: "3 500", unit: "кг", rating: 5, description: "", category: "Деликатесы", weight: "150-500 г / шт", taste: "Нежный, желеобразный" },
-  { id: "crab", name: "Краб колючий", image: crabImg, price: "2 500", unit: "кг", rating: 5, description: "", category: "Ракообразные", weight: "от 1 кг / шт", taste: "Сладковатый, сочный" },
+  { id: "trepang", name: "Трепанг дальневосточный", image: trepangImg, price: "", unit: "кг", rating: 5, description: "", category: "Деликатесы", weight: "150-500 г / шт", taste: "Нежный, желеобразный" },
+  { id: "crab", name: "Краб колючий", image: crabImg, price: "", unit: "кг", rating: 5, description: "", category: "Ракообразные", weight: "от 1 кг / шт", taste: "Сладковатый, сочный" },
 ];
 
 const ProductsSection = () => {
@@ -89,9 +89,13 @@ const ProductsSection = () => {
                     {t.productDescriptions[product.id] || product.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="font-body font-bold text-lg">
-                      {product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span>
-                    </span>
+                    {product.price ? (
+                      <span className="font-body font-bold text-lg">
+                        {product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span>
+                      </span>
+                    ) : (
+                      <span className="font-body font-semibold text-sm text-primary">По запросу</span>
+                    )}
                     <span className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                       <ShoppingCart className="w-4 h-4" />
                     </span>
