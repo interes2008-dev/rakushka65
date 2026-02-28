@@ -1,19 +1,42 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle, Loader2 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", comment: "" });
   const { t } = useLanguage();
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: "", phone: "", comment: "" });
+    setLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-telegram", {
+        body: { name: form.name, phone: form.phone, comment: form.comment },
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      setForm({ name: "", phone: "", comment: "" });
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error("Send error:", err);
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить заявку. Попробуйте позже.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
