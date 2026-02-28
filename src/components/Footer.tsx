@@ -42,7 +42,7 @@ const Footer = () => {
               <a href="mailto:info@rakushka65.ru" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors"><Mail className="w-4 h-4 text-primary" />info@rakushka65.ru</a>
               <div className="flex items-start gap-3 font-body text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <span>{t.contact.city},<br />{t.contact.street}<br />{t.contact.pickup}<br />{t.contact.yandexDelivery}</span>
+                <span>{t.contact.city},<br />{t.contact.street}<br />{t.contact.pickup}</span>
               </div>
               <a href="https://t.me/+79147690097" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-[#26A5E4] transition-colors"><Send className="w-4 h-4 text-[#26A5E4]" />Telegram</a>
               <a href="https://max.ru/+79147690097" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-[#8B5CF6] transition-colors"><MessageCircle className="w-4 h-4 text-[#8B5CF6]" />Max</a>
