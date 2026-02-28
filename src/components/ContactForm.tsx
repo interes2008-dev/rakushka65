@@ -95,8 +95,8 @@ const ContactForm = () => {
                 <a href="https://t.me/+79147690097" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-[#26A5E4]/30 font-body text-sm text-[#26A5E4] hover:bg-[#26A5E4]/10 hover:border-[#26A5E4]/60 transition-colors">
                   <Send className="w-4 h-4" /> Telegram
                 </a>
-                <a href="https://max.ru/+79147690097" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-[#0077FF]/30 font-body text-sm text-[#0077FF] hover:bg-[#0077FF]/10 hover:border-[#0077FF]/60 transition-colors">
-                  <MessageCircle className="w-4 h-4" /> Max
+                <a href="https://max.ru/+79147690097" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-[#8B5CF6]/30 font-body text-sm bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] bg-clip-text text-transparent hover:border-[#8B5CF6]/60 transition-colors">
+                  <MessageCircle className="w-4 h-4 text-[#8B5CF6]" /> Max
                 </a>
               </div>
             </div>
