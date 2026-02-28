@@ -119,8 +119,8 @@ const ContactForm = () => {
               <label className="font-body text-sm text-muted-foreground block mb-2">{t.contact.commentLabel}</label>
               <textarea rows={3} maxLength={1000} value={form.comment} onChange={(e) => setForm({ ...form, comment: e.target.value })} placeholder={t.contact.commentPlaceholder} className="w-full px-4 py-3 bg-muted/50 border border-border/50 rounded-lg font-body text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors resize-none" />
             </div>
-            <button type="submit" disabled={submitted} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-[1.02] disabled:opacity-70">
-              {submitted ? (<><CheckCircle className="w-5 h-5" />{t.contact.submitted}</>) : (<><Send className="w-5 h-5" />{t.contact.submitBtn}</>)}
+            <button type="submit" disabled={submitted || loading} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-[1.02] disabled:opacity-70">
+              {loading ? (<><Loader2 className="w-5 h-5 animate-spin" />Отправка...</>) : submitted ? (<><CheckCircle className="w-5 h-5" />{t.contact.submitted}</>) : (<><Send className="w-5 h-5" />{t.contact.submitBtn}</>)}
             </button>
             <p className="text-center text-xs text-muted-foreground font-body">
               {t.contact.privacyText}
