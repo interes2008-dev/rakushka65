@@ -1,45 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle, Loader2 } from "lucide-react";
+import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
-import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", comment: "" });
   const { t } = useLanguage();
-  const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-
-    try {
-      const { data, error } = await supabase.functions.invoke("send-telegram", {
-        body: { name: form.name, phone: form.phone, comment: form.comment },
-      });
-
-      if (error) {
-        console.error("Supabase function error:", error);
-        throw error;
-      }
-
-      setSubmitted(true);
-      setForm({ name: "", phone: "", comment: "" });
-      setTimeout(() => setSubmitted(false), 4000);
-    } catch (err: any) {
-      console.error("Send error:", err);
-      toast({
-        title: "Ошибка",
-        description: "Не удалось отправить заявку. Попробуйте позже.",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
-    }
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 4000);
+    setForm({ name: "", phone: "", comment: "" });
   };
 
   return (
@@ -95,11 +69,11 @@ const ContactForm = () => {
             <div className="border-t border-border/30 pt-6">
               <p className="font-body text-sm text-muted-foreground mb-4">{t.contact.messengers}</p>
               <div className="flex gap-3">
-                <a href="https://t.me/+79147690097" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-[#26A5E4]/30 font-body text-sm text-[#26A5E4] hover:bg-[#26A5E4]/10 hover:border-[#26A5E4]/60 transition-colors">
+                <a href="https://t.me/+79147690097" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-border/50 font-body text-sm hover:border-primary/50 hover:text-primary transition-colors">
                   <Send className="w-4 h-4" /> Telegram
                 </a>
-                <a href="https://max.ru/+79147690097" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-[#8B5CF6]/30 font-body text-sm bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] bg-clip-text text-transparent hover:border-[#8B5CF6]/60 transition-colors">
-                  <MessageCircle className="w-4 h-4 text-[#8B5CF6]" /> Max
+                <a href="https://max.ru/+79147690097" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-border/50 font-body text-sm hover:border-primary/50 hover:text-primary transition-colors">
+                  <MessageCircle className="w-4 h-4" /> Max
                 </a>
               </div>
             </div>
@@ -122,8 +96,8 @@ const ContactForm = () => {
               <label className="font-body text-sm text-muted-foreground block mb-2">{t.contact.commentLabel}</label>
               <textarea rows={3} maxLength={1000} value={form.comment} onChange={(e) => setForm({ ...form, comment: e.target.value })} placeholder={t.contact.commentPlaceholder} className="w-full px-4 py-3 bg-muted/50 border border-border/50 rounded-lg font-body text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors resize-none" />
             </div>
-            <button type="submit" disabled={submitted || loading} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-[1.02] disabled:opacity-70">
-              {loading ? (<><Loader2 className="w-5 h-5 animate-spin" />Отправка...</>) : submitted ? (<><CheckCircle className="w-5 h-5" />{t.contact.submitted}</>) : (<><Send className="w-5 h-5" />{t.contact.submitBtn}</>)}
+            <button type="submit" disabled={submitted} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-[1.02] disabled:opacity-70">
+              {submitted ? (<><CheckCircle className="w-5 h-5" />{t.contact.submitted}</>) : (<><Send className="w-5 h-5" />{t.contact.submitBtn}</>)}
             </button>
             <p className="text-center text-xs text-muted-foreground font-body">
               {t.contact.privacyText}
