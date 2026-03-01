@@ -22,12 +22,15 @@ const ContactForm = () => {
         body: { name: form.name, phone: form.phone, comment: form.comment },
       });
 
-      if (error) throw error;
+      if (error) {
+        console.error("Supabase function error:", error);
+        throw error;
+      }
 
       setSubmitted(true);
       setForm({ name: "", phone: "", comment: "" });
       setTimeout(() => setSubmitted(false), 4000);
-    } catch (err) {
+    } catch (err: any) {
       console.error("Send error:", err);
       toast({
         title: "Ошибка",
