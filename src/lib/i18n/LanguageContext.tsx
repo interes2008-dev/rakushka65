@@ -16,13 +16,17 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLangState] = useState<Language>(() => {
-    const saved = localStorage.getItem("lang") as Language | null;
-    return saved === "en" ? "en" : "ru";
+    try {
+      const saved = localStorage.getItem("lang") as Language | null;
+      return saved === "en" ? "en" : "ru";
+    } catch {
+      return "ru";
+    }
   });
 
   const setLang = useCallback((l: Language) => {
     setLangState(l);
-    localStorage.setItem("lang", l);
+    try { localStorage.setItem("lang", l); } catch { /* ignore */ }
   }, []);
 
   const toggleLang = useCallback(() => {
