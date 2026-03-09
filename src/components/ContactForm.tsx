@@ -1,19 +1,39 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle, Loader2 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", comment: "" });
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: "", phone: "", comment: "" });
+    if (loading) return;
+    setLoading(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-max", {
+        body: { name: form.name, phone: form.phone, comment: form.comment },
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      setForm({ name: "", phone: "", comment: "" });
+      toast.success(lang === "ru" ? "Заявка отправлена!" : "Request sent!");
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error("Send error:", err);
+      toast.error(lang === "ru" ? "Ошибка отправки. Попробуйте позже." : "Failed to send. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
