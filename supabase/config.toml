@@ -1,1 +1,4 @@
 project_id = "wpynydhowoumjeaarjlc"
+
+[functions.send-max]
+verify_jwt = false

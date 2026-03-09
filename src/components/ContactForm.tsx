@@ -1,19 +1,39 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Send, CheckCircle, Phone, Mail, MapPin, Clock, MessageCircle, Loader2 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", comment: "" });
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: "", phone: "", comment: "" });
+    if (loading) return;
+    setLoading(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-max", {
+        body: { name: form.name, phone: form.phone, comment: form.comment },
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      setForm({ name: "", phone: "", comment: "" });
+      toast.success(lang === "ru" ? "Заявка отправлена!" : "Request sent!");
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error("Send error:", err);
+      toast.error(lang === "ru" ? "Ошибка отправки. Попробуйте позже." : "Failed to send. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -96,8 +116,8 @@ const ContactForm = () => {
               <label className="font-body text-sm text-muted-foreground block mb-2">{t.contact.commentLabel}</label>
               <textarea rows={3} maxLength={1000} value={form.comment} onChange={(e) => setForm({ ...form, comment: e.target.value })} placeholder={t.contact.commentPlaceholder} className="w-full px-4 py-3 bg-muted/50 border border-border/50 rounded-lg font-body text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors resize-none" />
             </div>
-            <button type="submit" disabled={submitted} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-[1.02] disabled:opacity-70">
-              {submitted ? (<><CheckCircle className="w-5 h-5" />{t.contact.submitted}</>) : (<><Send className="w-5 h-5" />{t.contact.submitBtn}</>)}
+            <button type="submit" disabled={submitted || loading} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-[1.02] disabled:opacity-70">
+              {loading ? (<><Loader2 className="w-5 h-5 animate-spin" />{lang === "ru" ? "Отправка..." : "Sending..."}</>) : submitted ? (<><CheckCircle className="w-5 h-5" />{t.contact.submitted}</>) : (<><Send className="w-5 h-5" />{t.contact.submitBtn}</>)}
             </button>
             <p className="text-center text-xs text-muted-foreground font-body">
               {t.contact.privacyText}
