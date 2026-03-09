@@ -31,12 +31,15 @@ Deno.serve(async (req) => {
 
     const text = `🐚 Новая заявка с сайта Rakushka65\n\n👤 Имя: ${name.trim()}\n📞 Телефон: ${phone.trim()}${comment ? `\n💬 Комментарий: ${comment.trim()}` : ''}`;
 
-    const response = await fetch(`https://botapi.max.ru/messages?access_token=${MAX_BOT_TOKEN}&chat_id=${MAX_CHAT_ID}`, {
+    const url = `https://platform-api.max.ru/messages?chat_id=${encodeURIComponent(MAX_CHAT_ID)}`;
+
+    const response = await fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        text,
-      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': MAX_BOT_TOKEN,
+      },
+      body: JSON.stringify({ text }),
     });
 
     if (!response.ok) {
@@ -45,6 +48,7 @@ Deno.serve(async (req) => {
       return new Response(JSON.stringify({ error: 'Failed to send message to Max' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
     }
 
+    await response.text();
     return new Response(JSON.stringify({ success: true }), { headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
   } catch (error) {
     console.error('Error:', error);
