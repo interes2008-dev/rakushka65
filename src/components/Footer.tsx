@@ -4,7 +4,7 @@ import WaveLogo from "@/components/WaveLogo";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const navLinks = [
     { to: "/", label: t.nav.home },
