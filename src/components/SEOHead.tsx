@@ -8,6 +8,7 @@ interface SEOHeadProps {
   ogImage?: string;
   noindex?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  lang?: string;
 }
 
 const SEOHead = ({
@@ -18,8 +19,12 @@ const SEOHead = ({
   ogImage = "https://rakushka65.ru/og-image.jpg",
   noindex = false,
   jsonLd,
+  lang = "ru",
 }: SEOHeadProps) => {
   useEffect(() => {
+    // Set html lang attribute
+    document.documentElement.lang = lang;
+
     // Title
     document.title = title;
 
@@ -39,6 +44,9 @@ const SEOHead = ({
     setMeta("property", "og:description", description);
     setMeta("property", "og:type", ogType);
     setMeta("property", "og:image", ogImage);
+    setMeta("property", "og:site_name", "Ракушка65");
+    setMeta("property", "og:locale", lang === "ru" ? "ru_RU" : "en_US");
+    setMeta("property", "og:locale:alternate", lang === "ru" ? "en_US" : "ru_RU");
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
     setMeta("name", "twitter:image", ogImage);
@@ -47,8 +55,8 @@ const SEOHead = ({
     if (noindex) {
       setMeta("name", "robots", "noindex, nofollow");
     } else {
-      const robotsMeta = document.querySelector('meta[name="robots"]');
-      if (robotsMeta) robotsMeta.remove();
+      // Set proper robots directives for indexed pages
+      setMeta("name", "robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
     }
 
     // Canonical
@@ -63,6 +71,21 @@ const SEOHead = ({
 
     // OG URL
     setMeta("property", "og:url", canonicalUrl);
+
+    // hreflang - update dynamically
+    const updateHreflang = (hreflang: string, href: string) => {
+      let el = document.querySelector(`link[hreflang="${hreflang}"]`) as HTMLLinkElement | null;
+      if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", "alternate");
+        el.setAttribute("hreflang", hreflang);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+    };
+    updateHreflang("ru", canonicalUrl);
+    updateHreflang("en", canonicalUrl);
+    updateHreflang("x-default", canonicalUrl);
 
     // JSON-LD
     const existingScripts = document.querySelectorAll('script[data-seo-jsonld]');
@@ -83,7 +106,7 @@ const SEOHead = ({
       const scripts = document.querySelectorAll('script[data-seo-jsonld]');
       scripts.forEach((s) => s.remove());
     };
-  }, [title, description, canonical, ogType, ogImage, noindex, jsonLd]);
+  }, [title, description, canonical, ogType, ogImage, noindex, jsonLd, lang]);
 
   return null;
 };

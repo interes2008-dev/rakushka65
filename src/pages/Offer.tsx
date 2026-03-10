@@ -9,8 +9,8 @@ const Offer = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <SEOHead
-        title="Публичная оферта — Rakushka65"
-        description="Публичная оферта ИП Шаманаев И.Г. на покупку морепродуктов через сайт Rakushka65.ru. Условия заказа, доставки и оплаты."
+        title="Публичная оферта — Ракушка65"
+        description="Публичная оферта ИП Шаманаев И.Г. на покупку морепродуктов через сайт rakushka65.ru. Условия заказа, доставки и оплаты."
         noindex
       />
       <WaveBackground />

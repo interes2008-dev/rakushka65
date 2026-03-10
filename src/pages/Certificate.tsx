@@ -10,16 +10,16 @@ const Certificate = () => {
   const { t, lang } = useLanguage();
 
   const title = lang === "ru"
-    ? "Сертификат «Сделано в России» — Rakushka65"
+    ? "Сертификат «Сделано в России» — Ракушка65"
     : "'Made in Russia' Certificate — Rakushka65";
 
   const description = lang === "ru"
-    ? "Сертификат качества «Сделано в России» подтверждает премиальное качество морепродуктов Rakushka65 с Сахалина."
+    ? "Сертификат качества «Сделано в России» подтверждает премиальное качество морепродуктов Ракушка65 с Сахалина."
     : "The 'Made in Russia' quality certificate confirms premium quality of Rakushka65 Sakhalin seafood.";
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <SEOHead title={title} description={description} />
+      <SEOHead title={title} description={description} lang={lang} />
       <WaveBackground />
       <Header />
       <main className="relative z-10 pt-32 pb-24">

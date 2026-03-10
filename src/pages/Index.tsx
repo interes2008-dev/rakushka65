@@ -16,7 +16,7 @@ const Index = () => {
   const { lang } = useLanguage();
 
   const title = lang === "ru"
-    ? "Rakushka65 — Живые морепродукты Сахалина с доставкой"
+    ? "Ракушка65 — Живые морепродукты Сахалина с доставкой"
     : "Rakushka65 — Premium Sakhalin Seafood with Delivery";
 
   const description = lang === "ru"
@@ -25,7 +25,7 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <SEOHead title={title} description={description} jsonLd={[organizationSchema, websiteSchema, localBusinessSchema]} />
+      <SEOHead title={title} description={description} lang={lang} jsonLd={[organizationSchema, websiteSchema, localBusinessSchema]} />
       <WaveBackground />
       <FloatingParticles />
       <Header />
