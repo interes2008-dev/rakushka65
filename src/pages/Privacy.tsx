@@ -110,7 +110,7 @@ const Privacy = () => {
               </ul>
               <p>
                 Для реализации указанных прав свяжитесь с нами по электронной почте:{" "}
-                <a href="mailto:info@rakushka65.ru" className="text-primary hover:underline">info@rakushka65.ru</a>{" "}
+                <a href="mailto:interes2015@gmail.com" className="text-primary hover:underline">interes2015@gmail.com</a>{" "}
                 или по телефону{" "}
                 <a href="tel:+79147690097" className="text-primary hover:underline">+7 (914) 769-00-97</a>.
               </p>
