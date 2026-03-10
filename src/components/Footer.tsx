@@ -21,7 +21,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="inline-flex items-center gap-2 mb-4">
               <WaveLogo className="w-8 h-8" />
-              <span className="font-heading text-2xl font-bold">Rakushka<span className="text-primary">65</span></span>
+              <span className="font-heading text-2xl font-bold">{lang === "ru" ? "Ракушка" : "Rakushka"}<span className="text-primary">65</span></span>
             </Link>
             <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs">{t.footer.description}</p>
           </div>

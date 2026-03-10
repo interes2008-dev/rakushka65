@@ -91,7 +91,7 @@ export const ru: Translations = {
     description: "Сахалинские морепродукты с доставкой. Свежесть океана прямо к вашему столу.",
     navigation: "Навигация",
     contactsTitle: "Контакты",
-    copyright: `© ${new Date().getFullYear()} Rakushka65. Сделано с 💚 к морепродуктам`,
+    copyright: `© ${new Date().getFullYear()} Ракушка65. Сделано с 💚 к морепродуктам`,
     privacy: "Политика конфиденциальности",
     offer: "Оферта",
   },
