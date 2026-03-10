@@ -29,6 +29,8 @@ const Catalog = () => {
     { name: lang === "ru" ? "Каталог" : "Catalog", url: "/catalog" },
   ]);
 
+  const itemList = getCatalogItemListSchema(products, t.productNames);
+
   const categories = [
     { key: "Все", label: t.catalog.all },
     { key: "Устрицы", label: t.catalog.oysters },
