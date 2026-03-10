@@ -8,7 +8,7 @@ import FloatingParticles from "@/components/FloatingParticles";
 import { products } from "@/components/ProductsSection";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
-import { getBreadcrumbSchema } from "@/lib/seo/schemas";
+import { getBreadcrumbSchema, getCatalogItemListSchema } from "@/lib/seo/schemas";
 
 const Catalog = () => {
   const [activeCategory, setActiveCategory] = useState("Все");
