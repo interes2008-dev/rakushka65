@@ -134,7 +134,7 @@ const Privacy = () => {
                   <a href="https://rakushka65.ru" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">rakushka65.ru</a>
                 </li>
                 <li><strong className="text-foreground">Email:</strong>{" "}
-                  <a href="mailto:info@rakushka65.ru" className="text-primary hover:underline">info@rakushka65.ru</a>
+                  <a href="mailto:interes2015@gmail.com" className="text-primary hover:underline">interes2015@gmail.com</a>
                 </li>
                 <li><strong className="text-foreground">Телефон:</strong>{" "}
                   <a href="tel:+79147690097" className="text-primary hover:underline">+7 (914) 769-00-97</a>

@@ -47,7 +47,7 @@ export const localBusinessSchema = {
   image: LOGO_URL,
   url: SITE_URL,
   telephone: "+79147690097",
-  email: "info@rakushka65.ru",
+  email: "interes2015@gmail.com",
   priceRange: "₽₽",
   address: {
     "@type": "PostalAddress",
