@@ -39,7 +39,7 @@ export const ru: Translations = {
   },
   about: {
     badge: "О нас и нашем деле",
-    title: "Rakushka65 — ",
+    title: "Ракушка65 — ",
     titleAccent: "Территория живых морепродуктов",
     yearsLabel: "10+",
     yearsDesc: "лет на рынке",
