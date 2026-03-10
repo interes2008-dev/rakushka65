@@ -16,8 +16,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: t.contact.emailLabel,
-      main: "info@rakushka65.ru",
-      href: "mailto:info@rakushka65.ru",
+      main: "interes2015@gmail.com",
+      href: "mailto:interes2015@gmail.com",
       sub: t.contact.emailResponse,
     },
     {
