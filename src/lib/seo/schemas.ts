@@ -12,7 +12,7 @@ export const organizationSchema = {
   logo: LOGO_URL,
   description: "Премиальные живые морепродукты Сахалина с доставкой по России за 24 часа",
   telephone: "+79147690097",
-  email: "info@rakushka65.ru",
+  email: "interes2015@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "ул. 4-Железнодорожная, 18, стр. 1",

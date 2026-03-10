@@ -39,7 +39,7 @@ const Footer = () => {
             <h4 className="font-heading text-lg font-semibold mb-4">{t.footer.contactsTitle}</h4>
             <div className="space-y-3">
               <a href="tel:+79147690097" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors"><Phone className="w-4 h-4 text-primary" />+7 (914) 769-00-97</a>
-              <a href="mailto:info@rakushka65.ru" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors"><Mail className="w-4 h-4 text-primary" />info@rakushka65.ru</a>
+              <a href="mailto:interes2015@gmail.com" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors"><Mail className="w-4 h-4 text-primary" />interes2015@gmail.com</a>
               <div className="flex items-start gap-3 font-body text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <span>{t.contact.city},<br />{t.contact.street}<br />{t.contact.pickup}<br />{t.contact.yandexDelivery}</span>
