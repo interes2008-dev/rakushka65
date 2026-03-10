@@ -16,7 +16,7 @@ const Index = () => {
   const { lang } = useLanguage();
 
   const title = lang === "ru"
-    ? "Rakushka65 — Живые морепродукты Сахалина с доставкой"
+    ? "Ракушка65 — Живые морепродукты Сахалина с доставкой"
     : "Rakushka65 — Premium Sakhalin Seafood with Delivery";
 
   const description = lang === "ru"
