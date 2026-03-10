@@ -10,7 +10,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -52,7 +52,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-2 group">
           <WaveLogo className="w-8 h-8 md:w-10 md:h-10" />
           <span className="text-2xl md:text-3xl font-heading font-bold text-foreground group-hover:text-primary transition-colors">
-            Rakushka
+            {lang === "ru" ? "Ракушка" : "Rakushka"}
             <span className="text-primary">65</span>
           </span>
         </Link>
