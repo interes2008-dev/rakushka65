@@ -6,49 +6,86 @@ const LOGO_URL = `${SITE_URL}/favicon.svg`;
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Rakushka65",
-  alternateName: "Ракушка65",
+  "@id": `${SITE_URL}/#organization`,
+  name: "Ракушка65",
+  alternateName: "Rakushka65",
   url: SITE_URL,
-  logo: LOGO_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: LOGO_URL,
+    width: 512,
+    height: 512,
+  },
   description: "Премиальные живые морепродукты Сахалина с доставкой по России за 24 часа",
   telephone: "+79147690097",
   email: "interes2015@gmail.com",
+  foundingDate: "2014",
   address: {
     "@type": "PostalAddress",
     streetAddress: "ул. 4-Железнодорожная, 18, стр. 1",
     addressLocality: "Южно-Сахалинск",
     addressRegion: "Сахалинская область",
+    postalCode: "693000",
     addressCountry: "RU",
   },
   sameAs: [
     "https://t.me/+79147690097",
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+79147690097",
-    contactType: "sales",
-    availableLanguage: ["Russian", "English"],
-  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+79147690097",
+      contactType: "sales",
+      areaServed: "RU",
+      availableLanguage: ["Russian", "English"],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "09:00",
+        closes: "21:00",
+      },
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email: "interes2015@gmail.com",
+      availableLanguage: ["Russian", "English"],
+    },
+  ],
 };
 
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Rakushka65",
-  alternateName: "Ракушка65 — Живые морепродукты Сахалина",
+  "@id": `${SITE_URL}/#website`,
+  name: "Ракушка65",
+  alternateName: "Rakushka65 — Живые морепродукты Сахалина",
   url: SITE_URL,
-  publisher: { "@id": SITE_URL },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: ["ru", "en"],
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/catalog?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "FishStore",
-  name: "Rakushka65",
+  "@id": `${SITE_URL}/#localbusiness`,
+  name: "Ракушка65",
+  alternateName: "Rakushka65",
   image: LOGO_URL,
   url: SITE_URL,
   telephone: "+79147690097",
   email: "interes2015@gmail.com",
   priceRange: "₽₽",
+  paymentAccepted: "Cash, Credit Card, Bank Transfer",
+  currenciesAccepted: "RUB",
   address: {
     "@type": "PostalAddress",
     streetAddress: "ул. 4-Железнодорожная, 18, стр. 1",
@@ -94,19 +131,21 @@ export function getProductSchema(product: typeof products[0], productName: strin
     description: productDescription,
     image: `${SITE_URL}${product.image}`,
     url: `${SITE_URL}/catalog/${product.id}`,
+    sku: product.id,
     brand: {
       "@type": "Brand",
-      name: "Rakushka65",
+      name: "Ракушка65",
     },
     offers: {
       "@type": "Offer",
-      price: product.price,
+      price: product.price || undefined,
       priceCurrency: "RUB",
       unitCode: "KGM",
       availability: "https://schema.org/InStock",
       seller: {
         "@type": "Organization",
-        name: "Rakushka65",
+        name: "Ракушка65",
+        "@id": `${SITE_URL}/#organization`,
       },
       shippingDetails: {
         "@type": "OfferShippingDetails",
@@ -125,9 +164,25 @@ export function getProductSchema(product: typeof products[0], productName: strin
       "@type": "AggregateRating",
       ratingValue: product.rating,
       bestRating: 5,
+      worstRating: 1,
       ratingCount: 24 + Math.floor(product.rating * 7),
     },
     category: product.category,
+  };
+}
+
+export function getCatalogItemListSchema(productItems: typeof products, translations: Record<string, string>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Каталог морепродуктов Сахалина",
+    numberOfItems: productItems.length,
+    itemListElement: productItems.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `${SITE_URL}/catalog/${p.id}`,
+      name: translations[p.id] || p.name,
+    })),
   };
 }
 

@@ -25,7 +25,7 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <SEOHead title={title} description={description} jsonLd={[organizationSchema, websiteSchema, localBusinessSchema]} />
+      <SEOHead title={title} description={description} lang={lang} jsonLd={[organizationSchema, websiteSchema, localBusinessSchema]} />
       <WaveBackground />
       <FloatingParticles />
       <Header />

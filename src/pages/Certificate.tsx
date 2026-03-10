@@ -19,7 +19,7 @@ const Certificate = () => {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <SEOHead title={title} description={description} />
+      <SEOHead title={title} description={description} lang={lang} />
       <WaveBackground />
       <Header />
       <main className="relative z-10 pt-32 pb-24">

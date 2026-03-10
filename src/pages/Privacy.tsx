@@ -9,8 +9,8 @@ const Privacy = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <SEOHead
-        title="Политика конфиденциальности — Rakushka65"
-        description="Политика конфиденциальности и обработки персональных данных сайта Rakushka65.ru. Защита данных клиентов."
+        title="Политика конфиденциальности — Ракушка65"
+        description="Политика конфиденциальности и обработки персональных данных сайта rakushka65.ru. Защита данных клиентов."
         noindex
       />
       <WaveBackground />

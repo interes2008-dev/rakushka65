@@ -68,7 +68,7 @@ const ProductDetail = () => {
 
   return (
     <div className="relative min-h-screen">
-      <SEOHead title={pageTitle} description={pageDesc} ogImage={ogImageMap[product.id]} jsonLd={[productJsonLd, breadcrumb]} />
+      <SEOHead title={pageTitle} description={pageDesc} lang={lang} ogImage={ogImageMap[product.id]} jsonLd={[productJsonLd, breadcrumb]} />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">

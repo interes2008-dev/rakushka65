@@ -52,7 +52,7 @@ const Catalog = () => {
 
   return (
     <div className="relative min-h-screen">
-      <SEOHead title={title} description={description} ogImage="https://rakushka65.ru/og-catalog.jpg" jsonLd={breadcrumb} />
+      <SEOHead title={title} description={description} lang={lang} ogImage="https://rakushka65.ru/og-catalog.jpg" jsonLd={[breadcrumb, itemList]} />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
