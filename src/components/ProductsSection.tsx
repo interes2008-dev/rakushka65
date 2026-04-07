@@ -28,10 +28,10 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  { id: "scallop", name: "Морской гребешок", image: scallopImg, price: "750", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "от 200 г / шт", taste: "Нежный, сладковатый" },
-  { id: "oysters", name: "Устрицы Сахалинские", image: oystersImg, price: "650", unit: "кг", rating: 5, description: "", category: "Устрицы", weight: "150-350 г / шт", taste: "Морской, солоноватый" },
-  { id: "vongole", name: "Вонголе", image: vongoleImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Насыщенный, морской" },
-  { id: "spizula", name: "Спизула Сахалинская", image: spizulaImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "200-400 г / шт", taste: "Плотный, яркий" },
+  { id: "scallop", name: "Морской гребешок", image: scallopImg, price: "700", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "от 200 г / шт", taste: "Нежный, сладковатый" },
+  { id: "oysters", name: "Устрицы Сахалинские", image: oystersImg, price: "500", unit: "кг", rating: 5, description: "", category: "Устрицы", weight: "150-350 г / шт", taste: "Морской, солоноватый" },
+  { id: "vongole", name: "Вонголе", image: vongoleImg, price: "500", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Насыщенный, морской" },
+  { id: "spizula", name: "Спизула Сахалинская", image: spizulaImg, price: "500", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "200-400 г / шт", taste: "Плотный, яркий" },
   { id: "sea-urchin", name: "Ёж морской Сахалинский", image: seaurchinImg, price: "500", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "90-200 г / шт", taste: "Сливочный, йодистый" },
   { id: "rapany", name: "Рапаны Сахалинские", image: rapanyImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "80-200 г / шт", taste: "Упругий, дымно-морской" },
   { id: "sea-snails", name: "Морские улитки", image: snailsImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 3-5 см", taste: "Упругий, пикантный" },
