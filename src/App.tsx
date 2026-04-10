@@ -12,6 +12,11 @@ import Privacy from "./pages/Privacy";
 import Offer from "./pages/Offer";
 import Certificate from "./pages/Certificate";
 import NotFound from "./pages/NotFound";
+import VongoleWhatIs from "./pages/articles/VongoleWhatIs";
+import VongoleCooking from "./pages/articles/VongoleCooking";
+import VongolePasta from "./pages/articles/VongolePasta";
+import VongoleChoose from "./pages/articles/VongoleChoose";
+import VongoleRestaurant from "./pages/articles/VongoleRestaurant";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +35,11 @@ const App = () => (
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/offer" element={<Offer />} />
             <Route path="/certificate" element={<Certificate />} />
+            <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
+            <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />
+            <Route path="/articles/pasta-s-vongole" element={<VongolePasta />} />
+            <Route path="/articles/kak-vybrat-vongole" element={<VongoleChoose />} />
+            <Route path="/articles/vongole-kak-v-restorane" element={<VongoleRestaurant />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
