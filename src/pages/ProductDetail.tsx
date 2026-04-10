@@ -41,12 +41,12 @@ const ProductDetail = () => {
   const related = products.filter((p) => p.id !== product.id).slice(0, 3);
 
   const pageTitle = lang === "ru"
-    ? `${name} — купить с доставкой | Ракушка65`
-    : `${name} — Buy with Delivery | Rakushka65`;
+    ? `${name} — купить с Сахалина с доставкой | Ракушка65`
+    : `${name} — Buy from Sakhalin with Delivery | Rakushka65`;
 
   const pageDesc = lang === "ru"
-    ? `Купить ${name.toLowerCase()} с Сахалина. ${shortDesc}. Цена от ${product.price} ₽/кг. Доставка за 24 часа от Ракушка65.`
-    : `Buy ${name} from Sakhalin. ${shortDesc}. Price from ${product.price} ₽/kg. 24-hour delivery from Rakushka65.`;
+    ? `Купить ${name.toLowerCase()} — прямые поставки с Сахалина. ${shortDesc}. Цена от ${product.price} ₽/кг. Свежие морепродукты с Сахалина, доставка за 24 часа от Ракушка65.`
+    : `Buy ${name} — direct from Sakhalin. ${shortDesc}. Price from ${product.price} ₽/kg. Fresh Sakhalin seafood, 24-hour delivery from Rakushka65.`;
 
   const productJsonLd = getProductSchema(product, name, desc || shortDesc);
   const breadcrumb = getBreadcrumbSchema([
