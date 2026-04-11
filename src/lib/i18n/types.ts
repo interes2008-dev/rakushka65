@@ -4,6 +4,7 @@ export interface Translations {
   nav: {
     home: string;
     catalog: string;
+    blog: string;
     about: string;
     reviews: string;
     contacts: string;

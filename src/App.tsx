@@ -12,6 +12,7 @@ import Privacy from "./pages/Privacy";
 import Offer from "./pages/Offer";
 import Certificate from "./pages/Certificate";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
 import VongoleWhatIs from "./pages/articles/VongoleWhatIs";
 import VongoleCooking from "./pages/articles/VongoleCooking";
 import VongolePasta from "./pages/articles/VongolePasta";
@@ -35,6 +36,13 @@ const App = () => (
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/offer" element={<Offer />} />
             <Route path="/certificate" element={<Certificate />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/chto-takoe-vongole" element={<VongoleWhatIs />} />
+            <Route path="/blog/kak-prigotovit-vongole" element={<VongoleCooking />} />
+            <Route path="/blog/pasta-s-vongole" element={<VongolePasta />} />
+            <Route path="/blog/kak-vybrat-vongole" element={<VongoleChoose />} />
+            <Route path="/blog/vongole-kak-v-restorane" element={<VongoleRestaurant />} />
+            {/* Redirect old article URLs */}
             <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
             <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />
             <Route path="/articles/pasta-s-vongole" element={<VongolePasta />} />

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
+import { blogArticles } from "@/lib/blog/articles";
+import { Calendar } from "lucide-react";
 
 interface ArticleLayoutProps {
   title: string;
@@ -20,11 +21,13 @@ interface ArticleLayoutProps {
 const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd }: ArticleLayoutProps) => {
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
-    { name: "Статьи", url: "/articles" },
-    { name: breadcrumbName, url: `/articles/${slug}` },
+    { name: "Блог", url: "/blog" },
+    { name: breadcrumbName, url: `/blog/${slug}` },
   ]);
 
   const allJsonLd = jsonLd ? [breadcrumb, ...(Array.isArray(jsonLd) ? jsonLd : [jsonLd])] : [breadcrumb];
+
+  const relatedArticles = blogArticles.filter((a) => a.slug !== slug).slice(0, 3);
 
   return (
     <div className="relative min-h-screen">
@@ -37,7 +40,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
             <ol className="flex items-center gap-2 text-sm font-body text-muted-foreground">
               <li><Link to="/" className="hover:text-primary transition-colors">Главная</Link></li>
               <li>/</li>
-              <li><Link to="/catalog" className="hover:text-primary transition-colors">Каталог</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Блог</Link></li>
               <li>/</li>
               <li className="text-foreground">{breadcrumbName}</li>
             </ol>
@@ -49,6 +52,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
               {children}
             </div>
 
+            {/* CTA */}
             <div className="mt-12 pt-8 border-t border-border/30">
               <p className="text-sm text-muted-foreground mb-4">
                 Хотите попробовать свежие морепродукты прямо с Сахалина? Мы доставляем живые вонголе, устрицы, гребешок и другие редкие деликатесы по всей России за 24 часа.
@@ -62,6 +66,42 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
                 </Link>
               </div>
             </div>
+
+            {/* Read also */}
+            {relatedArticles.length > 0 && (
+              <div className="mt-16 pt-8 border-t border-border/30">
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Читайте также</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {relatedArticles.map((article) => (
+                    <Link
+                      key={article.slug}
+                      to={article.routePath}
+                      className="group block rounded-lg overflow-hidden border border-border/30 bg-card/50 hover:border-primary/40 transition-all duration-300"
+                    >
+                      <div className="aspect-[3/2] overflow-hidden">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="p-3">
+                        <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-2">
+                          <Calendar className="w-3 h-3" />
+                          <time dateTime={article.date}>
+                            {new Date(article.date).toLocaleDateString("ru-RU", { day: "numeric", month: "short", year: "numeric" })}
+                          </time>
+                        </div>
+                        <h3 className="font-heading text-sm font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                          {article.title}
+                        </h3>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.article>
         </div>
       </main>
