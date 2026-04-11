@@ -18,6 +18,10 @@ import VongoleCooking from "./pages/articles/VongoleCooking";
 import VongolePasta from "./pages/articles/VongolePasta";
 import VongoleChoose from "./pages/articles/VongoleChoose";
 import VongoleRestaurant from "./pages/articles/VongoleRestaurant";
+import OystersWhatIs from "./pages/articles/OystersWhatIs";
+import OystersChoose from "./pages/articles/OystersChoose";
+import OystersOpen from "./pages/articles/OystersOpen";
+import OystersRecipes from "./pages/articles/OystersRecipes";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +46,10 @@ const App = () => (
             <Route path="/blog/pasta-s-vongole" element={<VongolePasta />} />
             <Route path="/blog/kak-vybrat-vongole" element={<VongoleChoose />} />
             <Route path="/blog/vongole-kak-v-restorane" element={<VongoleRestaurant />} />
+            <Route path="/blog/ustritsy-sahalin" element={<OystersWhatIs />} />
+            <Route path="/blog/kak-vybrat-ustritsy" element={<OystersChoose />} />
+            <Route path="/blog/kak-otkryt-ustritsu" element={<OystersOpen />} />
+            <Route path="/blog/retsepty-s-ustritsami" element={<OystersRecipes />} />
             {/* Redirect old article URLs */}
             <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
             <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />
