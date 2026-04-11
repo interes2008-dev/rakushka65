@@ -4,6 +4,7 @@ export const ru: Translations = {
   nav: {
     home: "Главная",
     catalog: "Каталог",
+    blog: "Блог",
     about: "О нас",
     reviews: "Отзывы",
     contacts: "Контакты",

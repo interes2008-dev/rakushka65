@@ -73,34 +73,40 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rakushka65.ru/articles/chto-takoe-vongole</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://rakushka65.ru/blog</loc>
+    <lastmod>2026-04-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rakushka65.ru/articles/kak-prigotovit-vongole</loc>
-    <lastmod>2026-04-10</lastmod>
+    <loc>https://rakushka65.ru/blog/chto-takoe-vongole</loc>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rakushka65.ru/articles/pasta-s-vongole</loc>
-    <lastmod>2026-04-10</lastmod>
+    <loc>https://rakushka65.ru/blog/kak-prigotovit-vongole</loc>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rakushka65.ru/articles/kak-vybrat-vongole</loc>
-    <lastmod>2026-04-10</lastmod>
+    <loc>https://rakushka65.ru/blog/pasta-s-vongole</loc>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://rakushka65.ru/articles/vongole-kak-v-restorane</loc>
-    <lastmod>2026-04-10</lastmod>
+    <loc>https://rakushka65.ru/blog/kak-vybrat-vongole</loc>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rakushka65.ru/blog/vongole-kak-v-restorane</loc>
+    <lastmod>2026-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://rakushka65.ru/certificate</loc>
