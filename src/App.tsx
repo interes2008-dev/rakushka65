@@ -13,15 +13,31 @@ import Offer from "./pages/Offer";
 import Certificate from "./pages/Certificate";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
+// Vongole cluster
 import VongoleWhatIs from "./pages/articles/VongoleWhatIs";
 import VongoleCooking from "./pages/articles/VongoleCooking";
 import VongolePasta from "./pages/articles/VongolePasta";
 import VongoleChoose from "./pages/articles/VongoleChoose";
 import VongoleRestaurant from "./pages/articles/VongoleRestaurant";
+import VongoleBenefits from "./pages/articles/VongoleBenefits";
+import VongoleStorage from "./pages/articles/VongoleStorage";
+// Oysters cluster
 import OystersWhatIs from "./pages/articles/OystersWhatIs";
 import OystersChoose from "./pages/articles/OystersChoose";
 import OystersOpen from "./pages/articles/OystersOpen";
 import OystersRecipes from "./pages/articles/OystersRecipes";
+// Sea urchin cluster
+import SeaUrchinWhat from "./pages/articles/SeaUrchinWhat";
+import SeaUrchinChoose from "./pages/articles/SeaUrchinChoose";
+import SeaUrchinBenefits from "./pages/articles/SeaUrchinBenefits";
+// Scallop cluster
+import ScallopWhat from "./pages/articles/ScallopWhat";
+import ScallopCooking from "./pages/articles/ScallopCooking";
+import ScallopChoose from "./pages/articles/ScallopChoose";
+// Spisula cluster
+import SpisulaWhat from "./pages/articles/SpisulaWhat";
+import SpisulaCooking from "./pages/articles/SpisulaCooking";
+import SpisulaCompare from "./pages/articles/SpisulaCompare";
 
 const queryClient = new QueryClient();
 
@@ -41,16 +57,32 @@ const App = () => (
             <Route path="/offer" element={<Offer />} />
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/blog" element={<Blog />} />
+            {/* Sea urchin */}
+            <Route path="/blog/morskoj-ezh-sahalin" element={<SeaUrchinWhat />} />
+            <Route path="/blog/kak-vybrat-morskogo-ezha" element={<SeaUrchinChoose />} />
+            <Route path="/blog/polza-morskogo-ezha" element={<SeaUrchinBenefits />} />
+            {/* Scallop */}
+            <Route path="/blog/morskoj-grebeshok-sahalin" element={<ScallopWhat />} />
+            <Route path="/blog/kak-prigotovit-grebeshok" element={<ScallopCooking />} />
+            <Route path="/blog/kak-vybrat-grebeshok" element={<ScallopChoose />} />
+            {/* Vongole */}
             <Route path="/blog/chto-takoe-vongole" element={<VongoleWhatIs />} />
             <Route path="/blog/kak-prigotovit-vongole" element={<VongoleCooking />} />
             <Route path="/blog/pasta-s-vongole" element={<VongolePasta />} />
             <Route path="/blog/kak-vybrat-vongole" element={<VongoleChoose />} />
             <Route path="/blog/vongole-kak-v-restorane" element={<VongoleRestaurant />} />
+            <Route path="/blog/polza-vongole" element={<VongoleBenefits />} />
+            <Route path="/blog/kak-hranit-vongole" element={<VongoleStorage />} />
+            {/* Spisula */}
+            <Route path="/blog/spisula-sahalinskaya" element={<SpisulaWhat />} />
+            <Route path="/blog/kak-prigotovit-spisulu" element={<SpisulaCooking />} />
+            <Route path="/blog/spisula-vs-vongole" element={<SpisulaCompare />} />
+            {/* Oysters */}
             <Route path="/blog/ustritsy-sahalin" element={<OystersWhatIs />} />
             <Route path="/blog/kak-vybrat-ustritsy" element={<OystersChoose />} />
             <Route path="/blog/kak-otkryt-ustritsu" element={<OystersOpen />} />
             <Route path="/blog/retsepty-s-ustritsami" element={<OystersRecipes />} />
-            {/* Redirect old article URLs */}
+            {/* Legacy redirects */}
             <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
             <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />
             <Route path="/articles/pasta-s-vongole" element={<VongolePasta />} />

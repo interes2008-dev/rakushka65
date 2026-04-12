@@ -8,6 +8,57 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  // === Морской ёж ===
+  {
+    slug: "morskoj-ezh-sahalin",
+    title: "Сахалинский морской ёж — что это за деликатес и почему он так ценится",
+    description: "Полный гид по сахалинскому морскому ежу: происхождение, вкус, польза, как добывается и почему считается одним из лучших в мире.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-sea-urchin.jpg",
+    routePath: "/blog/morskoj-ezh-sahalin",
+  },
+  {
+    slug: "kak-vybrat-morskogo-ezha",
+    title: "Как выбрать свежего морского ежа — советы от поставщика с Сахалина",
+    description: "На что обращать внимание при покупке живого морского ежа: признаки свежести, правила хранения, ошибки покупателей.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-sea-urchin.jpg",
+    routePath: "/blog/kak-vybrat-morskogo-ezha",
+  },
+  {
+    slug: "polza-morskogo-ezha",
+    title: "Польза морского ежа — уникальный состав и свойства для здоровья",
+    description: "Научно обоснованный обзор полезных свойств икры морского ежа: витамины, минералы, омега-3, эхинохром А.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-sea-urchin.jpg",
+    routePath: "/blog/polza-morskogo-ezha",
+  },
+  // === Морской гребешок ===
+  {
+    slug: "morskoj-grebeshok-sahalin",
+    title: "Сахалинский морской гребешок — королевский деликатес Дальнего Востока",
+    description: "Полный гид по морскому гребешку с Сахалина: происхождение, вкус, текстура, польза и ценообразование.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-scallop.jpg",
+    routePath: "/blog/morskoj-grebeshok-sahalin",
+  },
+  {
+    slug: "kak-prigotovit-grebeshok",
+    title: "Как приготовить морской гребешок дома — рецепты от шеф-поваров",
+    description: "Пошаговые рецепты приготовления морского гребешка с Сахалина: обжарка, гриль, карпаччо, паста.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-scallop.jpg",
+    routePath: "/blog/kak-prigotovit-grebeshok",
+  },
+  {
+    slug: "kak-vybrat-grebeshok",
+    title: "Как выбрать свежий морской гребешок — советы от поставщика с Сахалина",
+    description: "На что обращать внимание при выборе морского гребешка: свежий vs замороженный, признаки качества, правила хранения.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-scallop.jpg",
+    routePath: "/blog/kak-vybrat-grebeshok",
+  },
+  // === Вонголе ===
   {
     slug: "chto-takoe-vongole",
     title: "Что такое вонголе (морской петушок) — редкий деликатес с Сахалина",
@@ -35,7 +86,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "kak-vybrat-vongole",
     title: "Как выбрать свежие вонголе — советы от поставщика с Сахалина",
-    description: "На что обращать внимание при покупке живых вонголе, признаки качества и правила хранения. Советы от прямого поставщика с Сахалина.",
+    description: "На что обращать внимание при покупке живых вонголе, признаки качества и правила хранения.",
     date: "2026-04-10",
     image: "https://images.unsplash.com/photo-1590759668628-05b0fc34bb70?w=600&h=400&fit=crop",
     routePath: "/blog/kak-vybrat-vongole",
@@ -43,11 +94,53 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "vongole-kak-v-restorane",
     title: "Вонголе как в ресторане — готовим сахалинский деликатес дома",
-    description: "Секреты ресторанного приготовления вонголе в домашних условиях. Подача, сочетания и профессиональные приёмы шефов.",
+    description: "Секреты ресторанного приготовления вонголе в домашних условиях.",
     date: "2026-04-10",
     image: "https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=600&h=400&fit=crop",
     routePath: "/blog/vongole-kak-v-restorane",
   },
+  {
+    slug: "polza-vongole",
+    title: "Польза вонголе — состав и полезные свойства сахалинских моллюсков",
+    description: "Чем полезны вонголе с Сахалина: витамины B12, железо, омега-3. Научный обзор пищевой ценности морского петушка.",
+    date: "2026-04-12",
+    image: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=600&h=400&fit=crop",
+    routePath: "/blog/polza-vongole",
+  },
+  {
+    slug: "kak-hranit-vongole",
+    title: "Как хранить вонголе — правила хранения живых моллюсков с Сахалина",
+    description: "Подробная инструкция по хранению живых вонголе дома: температура, сроки, подготовка к приготовлению.",
+    date: "2026-04-12",
+    image: "https://images.unsplash.com/photo-1590759668628-05b0fc34bb70?w=600&h=400&fit=crop",
+    routePath: "/blog/kak-hranit-vongole",
+  },
+  // === Спизула ===
+  {
+    slug: "spisula-sahalinskaya",
+    title: "Спизула сахалинская — что это за моллюск и почему он набирает популярность",
+    description: "Полный гид по спизуле сахалинской: происхождение, вкус, текстура, способы приготовления и сравнение с другими моллюсками.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-spisula.jpg",
+    routePath: "/blog/spisula-sahalinskaya",
+  },
+  {
+    slug: "kak-prigotovit-spisulu",
+    title: "Как приготовить спизулу сахалинскую — рецепты и техники",
+    description: "Пошаговые рецепты приготовления спизулы: сашими, гриль, суп, жарка в воке.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-spisula.jpg",
+    routePath: "/blog/kak-prigotovit-spisulu",
+  },
+  {
+    slug: "spisula-vs-vongole",
+    title: "Спизула vs вонголе — чем отличаются сахалинские моллюски",
+    description: "Подробное сравнение спизулы и вонголе: вкус, текстура, размер, цена, способы приготовления.",
+    date: "2026-04-12",
+    image: "/src/assets/blog-spisula.jpg",
+    routePath: "/blog/spisula-vs-vongole",
+  },
+  // === Устрицы ===
   {
     slug: "ustritsy-sahalin",
     title: "Устрицы с Сахалина — что это за деликатес и чем он уникален",
@@ -59,7 +152,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "kak-vybrat-ustritsy",
     title: "Как выбрать свежие устрицы — советы от поставщика с Сахалина",
-    description: "Как отличить свежую устрицу от несвежей, на что обращать внимание при покупке и как хранить. Экспертные советы от Ракушка65.",
+    description: "Как отличить свежую устрицу от несвежей, на что обращать внимание при покупке и как хранить.",
     date: "2026-04-11",
     image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=600&h=400&fit=crop",
     routePath: "/blog/kak-vybrat-ustritsy",
@@ -67,7 +160,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "kak-otkryt-ustritsu",
     title: "Как открыть устрицу дома — пошаговая инструкция",
-    description: "Пошаговое руководство, как правильно открыть устрицу в домашних условиях. Какой нож использовать, техника безопасности и подача.",
+    description: "Пошаговое руководство, как правильно открыть устрицу в домашних условиях.",
     date: "2026-04-11",
     image: "https://images.unsplash.com/photo-1586993451228-09818021e309?w=600&h=400&fit=crop",
     routePath: "/blog/kak-otkryt-ustritsu",
@@ -75,7 +168,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "retsepty-s-ustritsami",
     title: "Рецепты с устрицами — как приготовить сахалинские устрицы дома",
-    description: "Лучшие рецепты с устрицами с Сахалина: запечённые, в кляре, суп и классическая подача. Пошаговые инструкции от Ракушка65.",
+    description: "Лучшие рецепты с устрицами с Сахалина: запечённые, в кляре, суп и классическая подача.",
     date: "2026-04-11",
     image: "https://images.unsplash.com/photo-1590759668628-05b0fc34bb70?w=600&h=400&fit=crop",
     routePath: "/blog/retsepty-s-ustritsami",
