@@ -14,7 +14,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Сахалинский морской ёж — что это за деликатес и почему он так ценится",
     description: "Полный гид по сахалинскому морскому ежу: происхождение, вкус, польза, как добывается и почему считается одним из лучших в мире.",
     date: "2026-04-12",
-    image: "/src/assets/blog-sea-urchin-new.jpg",
+    image: "/src/assets/blog-urchin-1.jpg",
     routePath: "/blog/morskoj-ezh-sahalin",
   },
   {
@@ -22,7 +22,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как выбрать свежего морского ежа — советы от поставщика с Сахалина",
     description: "На что обращать внимание при покупке живого морского ежа: признаки свежести, правила хранения, ошибки покупателей.",
     date: "2026-04-12",
-    image: "/src/assets/blog-sea-urchin-new.jpg",
+    image: "/src/assets/blog-urchin-2.jpg",
     routePath: "/blog/kak-vybrat-morskogo-ezha",
   },
   {
@@ -30,7 +30,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Польза морского ежа — уникальный состав и свойства для здоровья",
     description: "Научно обоснованный обзор полезных свойств икры морского ежа: витамины, минералы, омега-3, эхинохром А.",
     date: "2026-04-12",
-    image: "/src/assets/blog-sea-urchin-new.jpg",
+    image: "/src/assets/blog-urchin-3.jpg",
     routePath: "/blog/polza-morskogo-ezha",
   },
   // === Морской гребешок ===
@@ -39,7 +39,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Сахалинский морской гребешок — королевский деликатес Дальнего Востока",
     description: "Полный гид по морскому гребешку с Сахалина: происхождение, вкус, текстура, польза и ценообразование.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-new.jpg",
+    image: "/src/assets/blog-scallop-v2.jpg",
     routePath: "/blog/morskoj-grebeshok-sahalin",
   },
   {
@@ -47,7 +47,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как приготовить морской гребешок дома — рецепты от шеф-поваров",
     description: "Пошаговые рецепты приготовления морского гребешка с Сахалина: обжарка, гриль, карпаччо, паста.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-new.jpg",
+    image: "/src/assets/blog-scallop-v2.jpg",
     routePath: "/blog/kak-prigotovit-grebeshok",
   },
   {
@@ -55,7 +55,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как выбрать свежий морской гребешок — советы от поставщика с Сахалина",
     description: "На что обращать внимание при выборе морского гребешка: свежий vs замороженный, признаки качества, правила хранения.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-new.jpg",
+    image: "/src/assets/blog-scallop-v2.jpg",
     routePath: "/blog/kak-vybrat-grebeshok",
   },
   // === Вонголе ===
