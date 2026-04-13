@@ -14,7 +14,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Сахалинский морской ёж — что это за деликатес и почему он так ценится",
     description: "Полный гид по сахалинскому морскому ежу: происхождение, вкус, польза, как добывается и почему считается одним из лучших в мире.",
     date: "2026-04-12",
-    image: "/src/assets/blog-sea-urchin-new.jpg",
+    image: "/src/assets/blog-urchin-1.jpg",
     routePath: "/blog/morskoj-ezh-sahalin",
   },
   {
@@ -22,7 +22,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как выбрать свежего морского ежа — советы от поставщика с Сахалина",
     description: "На что обращать внимание при покупке живого морского ежа: признаки свежести, правила хранения, ошибки покупателей.",
     date: "2026-04-12",
-    image: "/src/assets/blog-sea-urchin-new.jpg",
+    image: "/src/assets/blog-urchin-2.jpg",
     routePath: "/blog/kak-vybrat-morskogo-ezha",
   },
   {
@@ -30,7 +30,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Польза морского ежа — уникальный состав и свойства для здоровья",
     description: "Научно обоснованный обзор полезных свойств икры морского ежа: витамины, минералы, омега-3, эхинохром А.",
     date: "2026-04-12",
-    image: "/src/assets/blog-sea-urchin-new.jpg",
+    image: "/src/assets/blog-urchin-3.jpg",
     routePath: "/blog/polza-morskogo-ezha",
   },
   // === Морской гребешок ===
@@ -39,7 +39,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Сахалинский морской гребешок — королевский деликатес Дальнего Востока",
     description: "Полный гид по морскому гребешку с Сахалина: происхождение, вкус, текстура, польза и ценообразование.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-new.jpg",
+    image: "/src/assets/blog-scallop-v2.jpg",
     routePath: "/blog/morskoj-grebeshok-sahalin",
   },
   {
@@ -47,7 +47,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как приготовить морской гребешок дома — рецепты от шеф-поваров",
     description: "Пошаговые рецепты приготовления морского гребешка с Сахалина: обжарка, гриль, карпаччо, паста.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-new.jpg",
+    image: "/src/assets/blog-scallop-v2.jpg",
     routePath: "/blog/kak-prigotovit-grebeshok",
   },
   {
@@ -55,7 +55,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как выбрать свежий морской гребешок — советы от поставщика с Сахалина",
     description: "На что обращать внимание при выборе морского гребешка: свежий vs замороженный, признаки качества, правила хранения.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-new.jpg",
+    image: "/src/assets/blog-scallop-v2.jpg",
     routePath: "/blog/kak-vybrat-grebeshok",
   },
   // === Вонголе ===
@@ -64,7 +64,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Что такое вонголе (морской петушок) — редкий деликатес с Сахалина",
     description: "Подробный гид по вонголе: что это за моллюск, почему его называют морским петушком, где добывается на Сахалине и чем полезен для здоровья.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-new.jpg",
+    image: "/src/assets/blog-vongole-v2.jpg",
     routePath: "/blog/chto-takoe-vongole",
   },
   {
@@ -72,7 +72,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как приготовить вонголе дома — простые рецепты с Сахалинскими моллюсками",
     description: "Пошаговые рецепты приготовления вонголе дома. Советы по очистке, хранению и подаче свежих сахалинских моллюсков.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-new.jpg",
+    image: "/src/assets/blog-vongole-v2.jpg",
     routePath: "/blog/kak-prigotovit-vongole",
   },
   {
@@ -80,7 +80,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Паста с вонголе — классический рецепт с сахалинскими моллюсками",
     description: "Классический итальянский рецепт Spaghetti alle Vongole из свежих сахалинских моллюсков. Пошаговая инструкция с фото.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-new.jpg",
+    image: "/src/assets/blog-vongole-v2.jpg",
     routePath: "/blog/pasta-s-vongole",
   },
   {
@@ -88,7 +88,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как выбрать свежие вонголе — советы от поставщика с Сахалина",
     description: "На что обращать внимание при покупке живых вонголе, признаки качества и правила хранения.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-new.jpg",
+    image: "/src/assets/blog-vongole-v2.jpg",
     routePath: "/blog/kak-vybrat-vongole",
   },
   {
@@ -96,7 +96,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Вонголе как в ресторане — готовим сахалинский деликатес дома",
     description: "Секреты ресторанного приготовления вонголе в домашних условиях.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-new.jpg",
+    image: "/src/assets/blog-vongole-v2.jpg",
     routePath: "/blog/vongole-kak-v-restorane",
   },
   {
@@ -104,7 +104,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Польза вонголе — состав и полезные свойства сахалинских моллюсков",
     description: "Чем полезны вонголе с Сахалина: витамины B12, железо, омега-3. Научный обзор пищевой ценности морского петушка.",
     date: "2026-04-12",
-    image: "/src/assets/blog-vongole-new.jpg",
+    image: "/src/assets/blog-vongole-v2.jpg",
     routePath: "/blog/polza-vongole",
   },
   {
@@ -112,7 +112,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как хранить вонголе — правила хранения живых моллюсков с Сахалина",
     description: "Подробная инструкция по хранению живых вонголе дома: температура, сроки, подготовка к приготовлению.",
     date: "2026-04-12",
-    image: "/src/assets/blog-vongole-new.jpg",
+    image: "/src/assets/blog-vongole-v2.jpg",
     routePath: "/blog/kak-hranit-vongole",
   },
   // === Спизула ===
@@ -121,7 +121,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Спизула сахалинская — что это за моллюск и почему он набирает популярность",
     description: "Полный гид по спизуле сахалинской: происхождение, вкус, текстура, способы приготовления и сравнение с другими моллюсками.",
     date: "2026-04-12",
-    image: "/src/assets/blog-spisula-new.jpg",
+    image: "/src/assets/blog-spisula-v2.jpg",
     routePath: "/blog/spisula-sahalinskaya",
   },
   {
@@ -129,7 +129,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как приготовить спизулу сахалинскую — рецепты и техники",
     description: "Пошаговые рецепты приготовления спизулы: сашими, гриль, суп, жарка в воке.",
     date: "2026-04-12",
-    image: "/src/assets/blog-spisula-new.jpg",
+    image: "/src/assets/blog-spisula-v2.jpg",
     routePath: "/blog/kak-prigotovit-spisulu",
   },
   {
@@ -137,7 +137,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Спизула vs вонголе — чем отличаются сахалинские моллюски",
     description: "Подробное сравнение спизулы и вонголе: вкус, текстура, размер, цена, способы приготовления.",
     date: "2026-04-12",
-    image: "/src/assets/blog-spisula-new.jpg",
+    image: "/src/assets/blog-spisula-v2.jpg",
     routePath: "/blog/spisula-vs-vongole",
   },
   // === Устрицы ===
