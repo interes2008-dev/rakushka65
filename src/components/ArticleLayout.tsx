@@ -6,6 +6,7 @@ import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { blogArticles } from "@/lib/blog/articles";
+import { getBlogImage } from "@/lib/blog/images";
 import { Calendar } from "lucide-react";
 
 interface ArticleLayoutProps {
