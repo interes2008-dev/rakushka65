@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
 import { blogArticles } from "@/lib/blog/articles";
+import { getBlogImage } from "@/lib/blog/images";
 import { Calendar } from "lucide-react";
 
 const Blog = () => {
