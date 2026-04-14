@@ -6,6 +6,7 @@ import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { blogArticles } from "@/lib/blog/articles";
+import { getBlogImage } from "@/lib/blog/images";
 import { Calendar } from "lucide-react";
 
 interface ArticleLayoutProps {
@@ -80,7 +81,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
                     >
                       <div className="aspect-[3/2] overflow-hidden">
                         <img
-                          src={article.image}
+                          src={getBlogImage(article.image)}
                           alt={article.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           loading="lazy"
