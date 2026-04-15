@@ -19,6 +19,23 @@ interface ArticleLayoutProps {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
+function getProductCta(slug: string): { text: string; link: string; description: string } {
+  if (slug.includes("spisula") || slug.includes("spisulu")) {
+    return { text: "Купить спизулу с Сахалина", link: "/catalog/spizula", description: "Хотите попробовать свежую спизулу прямо с Сахалина? Мы доставляем живые моллюски по всей России за 24 часа." };
+  }
+  if (slug.includes("grebeshok") || slug.includes("scallop")) {
+    return { text: "Купить гребешок с Сахалина", link: "/catalog/grebeshok", description: "Хотите попробовать свежий морской гребешок прямо с Сахалина? Мы доставляем живые морепродукты по всей России за 24 часа." };
+  }
+  if (slug.includes("ezh") || slug.includes("urchin")) {
+    return { text: "Купить морского ежа с Сахалина", link: "/catalog/morskoj-ezh", description: "Хотите попробовать свежего морского ежа прямо с Сахалина? Мы доставляем живые морепродукты по всей России за 24 часа." };
+  }
+  if (slug.includes("ustri") || slug.includes("oyster")) {
+    return { text: "Купить устрицы с Сахалина", link: "/catalog/ustritsy", description: "Хотите попробовать свежие устрицы прямо с Сахалина? Мы доставляем живые морепродукты по всей России за 24 часа." };
+  }
+  // default: vongole
+  return { text: "Купить вонголе с Сахалина", link: "/catalog/vongole", description: "Хотите попробовать свежие морепродукты прямо с Сахалина? Мы доставляем живые вонголе, устрицы, гребешок и другие редкие деликатесы по всей России за 24 часа." };
+}
+
 const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd }: ArticleLayoutProps) => {
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
@@ -29,6 +46,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
   const allJsonLd = jsonLd ? [breadcrumb, ...(Array.isArray(jsonLd) ? jsonLd : [jsonLd])] : [breadcrumb];
 
   const relatedArticles = blogArticles.filter((a) => a.slug !== slug).slice(0, 3);
+  const cta = getProductCta(slug);
 
   return (
     <div className="relative min-h-screen">
@@ -56,13 +74,13 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
             {/* CTA */}
             <div className="mt-12 pt-8 border-t border-border/30">
               <p className="text-sm text-muted-foreground mb-4">
-                Хотите попробовать свежие морепродукты прямо с Сахалина? Мы доставляем живые вонголе, устрицы, гребешок и другие редкие деликатесы по всей России за 24 часа.
+                {cta.description}
               </p>
               <div className="flex gap-4 flex-wrap">
-                <Link to="/catalog/vongole" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-                  Купить вонголе с Сахалина
+                <Link to={cta.link} className="inline-flex items-center gap-2 px-6 py-3 bg-primary !text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform no-underline hover:no-underline">
+                  {cta.text}
                 </Link>
-                <Link to="/catalog" className="inline-flex items-center gap-2 px-6 py-3 border border-primary/40 text-primary font-body font-semibold rounded-lg hover:bg-primary hover:text-primary-foreground transition-all">
+                <Link to="/catalog" className="inline-flex items-center gap-2 px-6 py-3 border border-primary/40 !text-primary font-body font-semibold rounded-lg hover:bg-primary hover:!text-primary-foreground transition-all no-underline hover:no-underline">
                   Весь каталог
                 </Link>
               </div>
@@ -77,7 +95,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
                     <Link
                       key={article.slug}
                       to={article.routePath}
-                      className="group block rounded-lg overflow-hidden border border-border/30 bg-card/50 hover:border-primary/40 transition-all duration-300"
+                      className="group block rounded-lg overflow-hidden border border-border/30 bg-card/50 hover:border-primary/40 transition-all duration-300 no-underline"
                     >
                       <div className="aspect-[3/2] overflow-hidden">
                         <img
