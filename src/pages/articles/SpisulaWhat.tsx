@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import spisulaImg from "@/assets/blog-spisula.jpg";
+import spisulaImg from "@/assets/blog-spisula-real.png";
 
 const SpisulaWhat = () => {
   const articleJsonLd = {
@@ -176,11 +176,6 @@ const SpisulaWhat = () => {
         <strong>Ракушка65</strong> стоит у истоков этого тренда, предлагая свежую спизулу с Сахалина с доставкой по всей России. Попробуйте — и вы поймёте, почему этот моллюск заслуживает места на вашем столе рядом с устрицами и гребешком.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/spizula" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить спизулу сахалинскую
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };
