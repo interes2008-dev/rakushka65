@@ -1,5 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
+import oystersImg from "@/assets/blog-oysters-real.png";
 
 const articleSchema = {
   "@context": "https://schema.org",
