@@ -133,11 +133,6 @@ const SeaUrchinChoose = () => {
         <strong>Ракушка65</strong> — прямой поставщик живых морепродуктов с Сахалина. Мы работаем без посредников, контролируем процесс от вылова до доставки и гарантируем свежесть каждого ежа. Узнайте больше о нашем ассортименте в <Link to="/catalog">каталоге</Link>, а также читайте о других сахалинских деликатесах: <Link to="/blog/morskoj-ezh-sahalin">что такое морской ёж</Link> и <Link to="/blog/polza-morskogo-ezha">польза морского ежа</Link>.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/sea-urchin" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить морской ёж с Сахалина
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };

@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import spisulaImg from "@/assets/blog-spisula.jpg";
+import spisulaImg from "@/assets/blog-spisula-real.png";
 
 const SpisulaCompare = () => {
   const articleJsonLd = {
@@ -135,14 +135,6 @@ const SpisulaCompare = () => {
         Спизула и вонголе прекрасно дополняют друг друга на одном столе. Контраст текстур и вкусов создаёт интересную гастрономическую историю. Закажите оба вида моллюсков у <strong>Ракушка65</strong> — и устройте настоящую дегустацию сахалинских даров океана. Дополните стол <Link to="/blog/morskoj-grebeshok-sahalin">морским гребешком</Link> и <Link to="/blog/morskoj-ezh-sahalin">морским ежом</Link> — и получите полный сет дальневосточных деликатесов.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30 flex gap-4 flex-wrap">
-        <Link to="/catalog/spizula" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить спизулу сахалинскую
-        </Link>
-        <Link to="/catalog/vongole" className="inline-flex items-center gap-2 px-6 py-3 border border-primary/40 text-primary font-body font-semibold rounded-lg hover:bg-primary hover:text-primary-foreground transition-all">
-          Купить вонголе
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };

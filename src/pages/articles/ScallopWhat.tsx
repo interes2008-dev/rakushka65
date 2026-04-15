@@ -158,11 +158,6 @@ const ScallopWhat = () => {
         Откройте для себя весь ассортимент сахалинских деликатесов: <Link to="/blog/morskoj-ezh-sahalin">морской ёж</Link>, <Link to="/blog/chto-takoe-vongole">вонголе</Link> и <Link to="/blog/spisula-sahalinskaya">спизула сахалинская</Link>.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/scallop" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить морской гребешок с Сахалина
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };

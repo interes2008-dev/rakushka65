@@ -161,11 +161,6 @@ const VongoleBenefits = () => {
         Узнайте больше о вонголе: <Link to="/blog/chto-takoe-vongole">что такое вонголе</Link>, <Link to="/blog/kak-prigotovit-vongole">как приготовить вонголе дома</Link> и <Link to="/blog/kak-vybrat-vongole">как выбрать свежие вонголе</Link>.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/vongole" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить вонголе с Сахалина
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };

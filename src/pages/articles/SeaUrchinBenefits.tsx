@@ -204,11 +204,6 @@ const SeaUrchinBenefits = () => {
         Откройте для себя и другие полезные деликатесы с Сахалина: <Link to="/blog/morskoj-grebeshok-sahalin">морской гребешок</Link>, <Link to="/blog/ustritsy-sahalin">устрицы</Link> и <Link to="/blog/chto-takoe-vongole">вонголе</Link>.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/sea-urchin" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить морской ёж с Сахалина
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };

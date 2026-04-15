@@ -162,11 +162,6 @@ const VongoleStorage = () => {
         Теперь вы готовы к приготовлению! Рекомендуем попробовать <Link to="/blog/pasta-s-vongole">классическую пасту с вонголе</Link> или <Link to="/blog/vongole-kak-v-restorane">ресторанный рецепт</Link>. А если вы ещё не заказали моллюсков — узнайте, <Link to="/blog/kak-vybrat-vongole">как выбрать свежие вонголе</Link>, и ознакомьтесь с <Link to="/blog/polza-vongole">полезными свойствами</Link> этого уникального деликатеса.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/vongole" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить вонголе с Сахалина
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };

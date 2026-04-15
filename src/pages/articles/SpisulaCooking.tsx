@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import spisulaImg from "@/assets/blog-spisula.jpg";
+import spisulaImg from "@/assets/blog-spisula-real.png";
 
 const SpisulaCooking = () => {
   const recipeJsonLd = {
@@ -191,11 +191,6 @@ const SpisulaCooking = () => {
         Откройте для себя мир сахалинских моллюсков: <Link to="/blog/spisula-sahalinskaya">что такое спизула</Link>, <Link to="/blog/chto-takoe-vongole">вонголе</Link> и <Link to="/blog/morskoj-grebeshok-sahalin">морской гребешок</Link>. Все продукты доступны с доставкой от <strong>Ракушка65</strong>.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/spizula" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить спизулу сахалинскую
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };
