@@ -1,5 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
+import oystersImg from "@/assets/blog-oysters-real.png";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -48,6 +49,8 @@ const OystersRecipes = () => (
     slug="retsepty-s-ustritsami"
     jsonLd={[articleSchema, recipeSchema]}
   >
+    <img src={oystersImg} alt="Рецепты с сахалинскими устрицами — блюда из живых устриц" className="w-full rounded-xl mb-8" width={1200} height={800} />
+
     <p>
       <strong>Сахалинские устрицы</strong> — невероятно универсальный деликатес. Их можно есть сырыми, запекать, жарить и добавлять в супы. Мы в <Link to="/">Ракушка65</Link> собрали лучшие рецепты, которые легко повторить дома с нашими свежими устрицами прямо с Сахалина.
     </p>

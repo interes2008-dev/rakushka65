@@ -1,5 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
+import oystersImg from "@/assets/blog-oysters-real.png";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -37,6 +38,8 @@ const OystersOpen = () => (
     slug="kak-otkryt-ustritsu"
     jsonLd={[articleSchema, faqSchema]}
   >
+    <img src={oystersImg} alt="Как открыть устрицу дома — пошаговая инструкция" className="w-full rounded-xl mb-8" width={1200} height={800} />
+
     <p>
       Открыть устрицу дома — проще, чем кажется. Достаточно правильного инструмента и немного практики. Мы в <Link to="/">Ракушка65</Link> доставляем <strong>живые устрицы с Сахалина</strong> и знаем: удовольствие начинается с ритуала вскрытия.
     </p>
