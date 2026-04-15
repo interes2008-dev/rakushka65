@@ -209,11 +209,6 @@ const SeaUrchinWhat = () => {
         Попробуйте настоящий сахалинский морской ёж — и вы поймёте, почему этот деликатес вызывает восхищение гурманов по всему миру. Ознакомьтесь также с другими нашими деликатесами: <Link to="/blog/morskoj-grebeshok-sahalin">морской гребешок</Link> и <Link to="/blog/spisula-sahalinskaya">спизула сахалинская</Link>.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/sea-urchin" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить морской ёж с Сахалина
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };

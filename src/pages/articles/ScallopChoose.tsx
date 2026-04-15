@@ -144,11 +144,6 @@ const ScallopChoose = () => {
         <strong>Ракушка65</strong> — ваш надёжный проводник в мир настоящих сахалинских морепродуктов. Мы доставляем живой морской гребешок напрямую с побережья Сахалина с полным пакетом документов и гарантией качества. Узнайте больше о <Link to="/blog/morskoj-grebeshok-sahalin">сахалинском гребешке</Link> и попробуйте <Link to="/blog/kak-prigotovit-grebeshok">приготовить его дома</Link>.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/scallop" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить морской гребешок с Сахалина
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };

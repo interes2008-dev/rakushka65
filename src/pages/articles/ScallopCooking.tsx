@@ -189,11 +189,6 @@ const ScallopCooking = () => {
         Для приготовления лучших блюд нужны лучшие ингредиенты. Свежий морской гребешок от <strong>Ракушка65</strong> — ваш гарант успеха на кухне. Также рекомендуем узнать, <Link to="/blog/kak-vybrat-grebeshok">как выбрать свежий гребешок</Link>.
       </p>
 
-      <div className="mt-12 pt-8 border-t border-border/30">
-        <Link to="/catalog/scallop" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform">
-          Купить морской гребешок с Сахалина
-        </Link>
-      </div>
     </ArticleLayout>
   );
 };
