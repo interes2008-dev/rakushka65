@@ -21,6 +21,8 @@ const OystersChoose = () => (
     slug="kak-vybrat-ustritsy"
     jsonLd={articleSchema}
   >
+    <img src={oystersImg} alt="Как выбрать свежие устрицы с Сахалина — советы от Ракушка65" className="w-full rounded-xl mb-8" width={1200} height={800} />
+
     <p>
       Правильный выбор устриц — это залог безопасного и восхитительного гастрономического опыта. Мы в <Link to="/">Ракушка65</Link> работаем с <strong>живыми устрицами с Сахалина</strong> и знаем все секреты, как отличить действительно свежий продукт.
     </p>
