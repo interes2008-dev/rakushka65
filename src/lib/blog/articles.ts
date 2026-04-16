@@ -39,7 +39,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Сахалинский морской гребешок — королевский деликатес Дальнего Востока",
     description: "Полный гид по морскому гребешку с Сахалина: происхождение, вкус, текстура, польза и ценообразование.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-card-1.jpg",
+    image: "/src/assets/blog-scallop-card-3.jpg",
     routePath: "/blog/morskoj-grebeshok-sahalin",
   },
   {
