@@ -47,7 +47,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как приготовить морской гребешок дома — рецепты от шеф-поваров",
     description: "Пошаговые рецепты приготовления морского гребешка с Сахалина: обжарка, гриль, карпаччо, паста.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-card-2.jpg",
+    image: "/src/assets/blog-scallop-card-1.jpg",
     routePath: "/blog/kak-prigotovit-grebeshok",
   },
   {
