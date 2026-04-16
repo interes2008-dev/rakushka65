@@ -64,7 +64,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Что такое вонголе (морской петушок) — редкий деликатес с Сахалина",
     description: "Подробный гид по вонголе: что это за моллюск, почему его называют морским петушком, где добывается на Сахалине и чем полезен для здоровья.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-v2.jpg",
+    image: "/src/assets/blog-vongole-real-1.jpg",
     routePath: "/blog/chto-takoe-vongole",
   },
   {
@@ -72,7 +72,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как приготовить вонголе дома — простые рецепты с Сахалинскими моллюсками",
     description: "Пошаговые рецепты приготовления вонголе дома. Советы по очистке, хранению и подаче свежих сахалинских моллюсков.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-v2.jpg",
+    image: "/src/assets/blog-vongole-real-2.jpg",
     routePath: "/blog/kak-prigotovit-vongole",
   },
   {
@@ -80,7 +80,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Паста с вонголе — классический рецепт с сахалинскими моллюсками",
     description: "Классический итальянский рецепт Spaghetti alle Vongole из свежих сахалинских моллюсков. Пошаговая инструкция с фото.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-v2.jpg",
+    image: "/src/assets/blog-vongole-real-3.jpg",
     routePath: "/blog/pasta-s-vongole",
   },
   {
@@ -88,7 +88,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как выбрать свежие вонголе — советы от поставщика с Сахалина",
     description: "На что обращать внимание при покупке живых вонголе, признаки качества и правила хранения.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-v2.jpg",
+    image: "/src/assets/blog-vongole-real-4.jpg",
     routePath: "/blog/kak-vybrat-vongole",
   },
   {
@@ -96,7 +96,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Вонголе как в ресторане — готовим сахалинский деликатес дома",
     description: "Секреты ресторанного приготовления вонголе в домашних условиях.",
     date: "2026-04-10",
-    image: "/src/assets/blog-vongole-v2.jpg",
+    image: "/src/assets/blog-vongole-real-5.jpg",
     routePath: "/blog/vongole-kak-v-restorane",
   },
   {
@@ -104,7 +104,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Польза вонголе — состав и полезные свойства сахалинских моллюсков",
     description: "Чем полезны вонголе с Сахалина: витамины B12, железо, омега-3. Научный обзор пищевой ценности морского петушка.",
     date: "2026-04-12",
-    image: "/src/assets/blog-vongole-v2.jpg",
+    image: "/src/assets/blog-vongole-real-6.jpg",
     routePath: "/blog/polza-vongole",
   },
   {
@@ -112,7 +112,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как хранить вонголе — правила хранения живых моллюсков с Сахалина",
     description: "Подробная инструкция по хранению живых вонголе дома: температура, сроки, подготовка к приготовлению.",
     date: "2026-04-12",
-    image: "/src/assets/blog-vongole-v2.jpg",
+    image: "/src/assets/blog-vongole-real-1.jpg",
     routePath: "/blog/kak-hranit-vongole",
   },
   // === Спизула ===
