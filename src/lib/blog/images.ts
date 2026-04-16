@@ -11,6 +11,10 @@ import blogVongoleReal5 from "@/assets/blog-vongole-real-5.jpg";
 import blogVongoleReal6 from "@/assets/blog-vongole-real-6.jpg";
 import blogSpisula from "@/assets/blog-spisula-v2.jpg";
 import blogOysters from "@/assets/blog-oysters-new.jpg";
+import blogOystersReal1 from "@/assets/blog-oysters-real-1.jpg";
+import blogOystersReal2 from "@/assets/blog-oysters-real-2.jpg";
+import blogOystersReal3 from "@/assets/blog-oysters-real-3.jpg";
+import blogOystersReal4 from "@/assets/blog-oysters-real-4.jpg";
 
 export const blogImages: Record<string, string> = {
   "/src/assets/blog-urchin-1.jpg": blogUrchin1,
@@ -26,6 +30,10 @@ export const blogImages: Record<string, string> = {
   "/src/assets/blog-vongole-real-6.jpg": blogVongoleReal6,
   "/src/assets/blog-spisula-v2.jpg": blogSpisula,
   "/src/assets/blog-oysters-new.jpg": blogOysters,
+  "/src/assets/blog-oysters-real-1.jpg": blogOystersReal1,
+  "/src/assets/blog-oysters-real-2.jpg": blogOystersReal2,
+  "/src/assets/blog-oysters-real-3.jpg": blogOystersReal3,
+  "/src/assets/blog-oysters-real-4.jpg": blogOystersReal4,
 };
 
 export function getBlogImage(path: string): string {

@@ -146,7 +146,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Устрицы с Сахалина — что это за деликатес и чем он уникален",
     description: "Всё о сахалинских устрицах: виды, вкус, польза, где добываются и почему считаются одними из лучших в мире.",
     date: "2026-04-11",
-    image: "/src/assets/blog-oysters-new.jpg",
+    image: "/src/assets/blog-oysters-real-1.jpg",
     routePath: "/blog/ustritsy-sahalin",
   },
   {
@@ -154,7 +154,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как выбрать свежие устрицы — советы от поставщика с Сахалина",
     description: "Как отличить свежую устрицу от несвежей, на что обращать внимание при покупке и как хранить.",
     date: "2026-04-11",
-    image: "/src/assets/blog-oysters-new.jpg",
+    image: "/src/assets/blog-oysters-real-2.jpg",
     routePath: "/blog/kak-vybrat-ustritsy",
   },
   {
@@ -162,7 +162,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как открыть устрицу дома — пошаговая инструкция",
     description: "Пошаговое руководство, как правильно открыть устрицу в домашних условиях.",
     date: "2026-04-11",
-    image: "/src/assets/blog-oysters-new.jpg",
+    image: "/src/assets/blog-oysters-real-3.jpg",
     routePath: "/blog/kak-otkryt-ustritsu",
   },
   {
@@ -170,7 +170,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Рецепты с устрицами — как приготовить сахалинские устрицы дома",
     description: "Лучшие рецепты с устрицами с Сахалина: запечённые, в кляре, суп и классическая подача.",
     date: "2026-04-11",
-    image: "/src/assets/blog-oysters-new.jpg",
+    image: "/src/assets/blog-oysters-real-4.jpg",
     routePath: "/blog/retsepty-s-ustritsami",
   },
 ];
