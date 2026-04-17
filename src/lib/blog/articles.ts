@@ -55,7 +55,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как выбрать свежий морской гребешок — советы от поставщика с Сахалина",
     description: "На что обращать внимание при выборе морского гребешка: свежий vs замороженный, признаки качества, правила хранения.",
     date: "2026-04-12",
-    image: "/src/assets/blog-scallop-card-1.jpg",
+    image: "/src/assets/blog-scallop-choose.jpg",
     routePath: "/blog/kak-vybrat-grebeshok",
   },
   // === Вонголе ===
