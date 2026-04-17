@@ -1,5 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
+import vongoleStorageImg from "@/assets/blog-vongole-storage.jpg";
 
 const VongoleStorage = () => {
   const articleJsonLd = {
@@ -40,7 +41,7 @@ const VongoleStorage = () => {
       jsonLd={[articleJsonLd, faqJsonLd]}
     >
       <img
-        src="https://images.unsplash.com/photo-1590759668628-05b0fc34bb70?w=1200&h=800&fit=crop"
+        src={vongoleStorageImg}
         alt="Свежие живые вонголе с Сахалина — правила хранения"
         className="w-full rounded-xl mb-8"
         width={1200}
