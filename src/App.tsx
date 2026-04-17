@@ -38,6 +38,7 @@ import ScallopChoose from "./pages/articles/ScallopChoose";
 import SpisulaWhat from "./pages/articles/SpisulaWhat";
 import SpisulaCooking from "./pages/articles/SpisulaCooking";
 import SpisulaCompare from "./pages/articles/SpisulaCompare";
+import DynamicArticle from "./pages/DynamicArticle";
 
 const queryClient = new QueryClient();
 
@@ -88,6 +89,8 @@ const App = () => (
             <Route path="/articles/pasta-s-vongole" element={<VongolePasta />} />
             <Route path="/articles/kak-vybrat-vongole" element={<VongoleChoose />} />
             <Route path="/articles/vongole-kak-v-restorane" element={<VongoleRestaurant />} />
+            {/* Auto-generated articles (fallback for any /blog/:slug not matched above) */}
+            <Route path="/blog/:slug" element={<DynamicArticle />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

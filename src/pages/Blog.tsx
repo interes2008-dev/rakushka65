@@ -1,14 +1,44 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
-import { blogArticles } from "@/lib/blog/articles";
+import { blogArticles, type BlogArticle } from "@/lib/blog/articles";
 import { getBlogImage } from "@/lib/blog/images";
+import { supabase } from "@/integrations/supabase/client";
 import { Calendar } from "lucide-react";
 
+const FALLBACK_IMG: Record<string, string> = {
+  vongole: "/src/assets/blog-vongole-real-1.jpg",
+  scallop: "/src/assets/blog-scallop-royal.jpg",
+  oysters: "/src/assets/blog-oysters-real-1.jpg",
+  spisula: "/src/assets/blog-spisula-v2.jpg",
+  urchin: "/src/assets/blog-urchin-1.jpg",
+};
+
 const Blog = () => {
+  const [allArticles, setAllArticles] = useState<BlogArticle[]>(blogArticles);
+
+  useEffect(() => {
+    supabase
+      .from("articles" as any)
+      .select("slug, title, description, category, published_at")
+      .order("published_at", { ascending: false })
+      .then(({ data }: any) => {
+        if (!data) return;
+        const dbArticles: BlogArticle[] = data.map((a: any) => ({
+          slug: a.slug,
+          title: a.title,
+          description: a.description,
+          date: a.published_at,
+          image: FALLBACK_IMG[a.category] || FALLBACK_IMG.vongole,
+          routePath: `/blog/${a.slug}`,
+        }));
+        setAllArticles([...dbArticles, ...blogArticles]);
+      });
+  }, []);
   return (
     <div className="relative min-h-screen">
       <SEOHead
@@ -34,7 +64,7 @@ const Blog = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogArticles.map((article, index) => (
+            {allArticles.map((article, index) => (
               <motion.div
                 key={article.slug}
                 initial={{ opacity: 0, y: 30 }}
