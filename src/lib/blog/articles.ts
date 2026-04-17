@@ -112,7 +112,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как хранить вонголе — правила хранения живых моллюсков с Сахалина",
     description: "Подробная инструкция по хранению живых вонголе дома: температура, сроки, подготовка к приготовлению.",
     date: "2026-04-12",
-    image: "/src/assets/blog-vongole-real-1.jpg",
+    image: "/src/assets/blog-vongole-storage.jpg",
     routePath: "/blog/kak-hranit-vongole",
   },
   // === Спизула ===
