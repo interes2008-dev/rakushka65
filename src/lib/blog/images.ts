@@ -9,6 +9,7 @@ import blogVongoleReal3 from "@/assets/blog-vongole-real-3.jpg";
 import blogVongoleReal4 from "@/assets/blog-vongole-real-4.jpg";
 import blogVongoleReal5 from "@/assets/blog-vongole-real-5.jpg";
 import blogVongoleReal6 from "@/assets/blog-vongole-real-6.jpg";
+import blogVongoleReal7 from "@/assets/blog-vongole-real-7.jpg";
 import blogSpisula from "@/assets/blog-spisula-v2.jpg";
 import blogOysters from "@/assets/blog-oysters-new.jpg";
 import blogOystersReal1 from "@/assets/blog-oysters-real-1.jpg";
@@ -28,6 +29,7 @@ export const blogImages: Record<string, string> = {
   "/src/assets/blog-vongole-real-4.jpg": blogVongoleReal4,
   "/src/assets/blog-vongole-real-5.jpg": blogVongoleReal5,
   "/src/assets/blog-vongole-real-6.jpg": blogVongoleReal6,
+  "/src/assets/blog-vongole-real-7.jpg": blogVongoleReal7,
   "/src/assets/blog-spisula-v2.jpg": blogSpisula,
   "/src/assets/blog-oysters-new.jpg": blogOysters,
   "/src/assets/blog-oysters-real-1.jpg": blogOystersReal1,
