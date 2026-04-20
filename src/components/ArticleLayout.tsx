@@ -4,9 +4,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
+import ArticleCTA from "@/components/ArticleCTA";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { blogArticles } from "@/lib/blog/articles";
 import { getBlogImage } from "@/lib/blog/images";
+import { detectProductTag } from "@/lib/blog/productCategories";
 import { Calendar } from "lucide-react";
 
 interface ArticleLayoutProps {
@@ -19,23 +21,6 @@ interface ArticleLayoutProps {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-function getProductCta(slug: string): { text: string; link: string; description: string } {
-  if (slug.includes("spisula") || slug.includes("spisulu")) {
-    return { text: "Купить спизулу с Сахалина", link: "/catalog/spizula", description: "Хотите попробовать свежую спизулу прямо с Сахалина? Мы доставляем живые моллюски по всей России за 24 часа." };
-  }
-  if (slug.includes("grebeshok") || slug.includes("scallop")) {
-    return { text: "Купить гребешок с Сахалина", link: "/catalog/grebeshok", description: "Хотите попробовать свежий морской гребешок прямо с Сахалина? Мы доставляем живые морепродукты по всей России за 24 часа." };
-  }
-  if (slug.includes("ezh") || slug.includes("urchin")) {
-    return { text: "Купить морского ежа с Сахалина", link: "/catalog/morskoj-ezh", description: "Хотите попробовать свежего морского ежа прямо с Сахалина? Мы доставляем живые морепродукты по всей России за 24 часа." };
-  }
-  if (slug.includes("ustri") || slug.includes("oyster")) {
-    return { text: "Купить устрицы с Сахалина", link: "/catalog/ustritsy", description: "Хотите попробовать свежие устрицы прямо с Сахалина? Мы доставляем живые морепродукты по всей России за 24 часа." };
-  }
-  // default: vongole
-  return { text: "Купить вонголе с Сахалина", link: "/catalog/vongole", description: "Хотите попробовать свежие морепродукты прямо с Сахалина? Мы доставляем живые вонголе, устрицы, гребешок и другие редкие деликатесы по всей России за 24 часа." };
-}
-
 const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd }: ArticleLayoutProps) => {
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
@@ -45,8 +30,10 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
 
   const allJsonLd = jsonLd ? [breadcrumb, ...(Array.isArray(jsonLd) ? jsonLd : [jsonLd])] : [breadcrumb];
 
-  const relatedArticles = blogArticles.filter((a) => a.slug !== slug).slice(0, 3);
-  const cta = getProductCta(slug);
+  const tag = detectProductTag(slug);
+  const sameTag = blogArticles.filter((a) => a.slug !== slug && a.productTag === tag).slice(0, 3);
+  const fallback = blogArticles.filter((a) => a.slug !== slug).slice(0, 3);
+  const related = sameTag.length >= 2 ? sameTag : fallback;
 
   return (
     <div className="relative min-h-screen">
@@ -54,7 +41,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-[720px]">
           <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-2 text-sm font-body text-muted-foreground">
               <li><Link to="/" className="hover:text-primary transition-colors">Главная</Link></li>
@@ -66,32 +53,18 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
           </motion.nav>
 
           <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="prose prose-invert max-w-none">
-            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-8 text-foreground">{title}</h1>
-            <div className="font-body text-muted-foreground leading-relaxed space-y-6 [&_h2]:text-foreground [&_h2]:font-heading [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-foreground [&_h3]:font-heading [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-8 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_strong]:text-foreground [&_a]:text-primary [&_a]:hover:underline">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-10 text-foreground leading-[1.1]">{title}</h1>
+            <div className="font-body text-muted-foreground text-[1.05rem] leading-[1.8] space-y-6 [&_h2]:text-foreground [&_h2]:font-heading [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:mt-14 [&_h2]:mb-5 [&_h3]:text-foreground [&_h3]:font-heading [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-10 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-2 [&_strong]:text-foreground [&_a]:text-primary [&_a]:hover:underline [&_blockquote]:border-l-4 [&_blockquote]:border-primary [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-foreground/90 [&_blockquote]:my-8">
               {children}
             </div>
 
-            {/* CTA */}
-            <div className="mt-12 pt-8 border-t border-border/30">
-              <p className="text-sm text-muted-foreground mb-4">
-                {cta.description}
-              </p>
-              <div className="flex gap-4 flex-wrap">
-                <Link to={cta.link} className="inline-flex items-center gap-2 px-6 py-3 bg-primary !text-primary-foreground font-body font-semibold rounded-lg hover:scale-105 transition-transform no-underline hover:no-underline">
-                  {cta.text}
-                </Link>
-                <Link to="/catalog" className="inline-flex items-center gap-2 px-6 py-3 border border-primary/40 !text-primary font-body font-semibold rounded-lg hover:bg-primary hover:!text-primary-foreground transition-all no-underline hover:no-underline">
-                  Весь каталог
-                </Link>
-              </div>
-            </div>
+            <ArticleCTA tag={tag} />
 
-            {/* Read also */}
-            {relatedArticles.length > 0 && (
-              <div className="mt-16 pt-8 border-t border-border/30">
+            {related.length > 0 && (
+              <div className="mt-16 pt-8 border-t border-border/30 not-prose">
                 <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Читайте также</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  {relatedArticles.map((article) => (
+                  {related.map((article) => (
                     <Link
                       key={article.slug}
                       to={article.routePath}
