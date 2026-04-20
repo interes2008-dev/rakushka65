@@ -7,7 +7,7 @@ import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
 import ArticleCTA from "@/components/ArticleCTA";
 import NotFound from "./NotFound";
-import { Calendar, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { detectProductTag } from "@/lib/blog/productCategories";
 
 interface DbArticle {
