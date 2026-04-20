@@ -52,11 +52,13 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
             </ol>
           </motion.nav>
 
-          <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="prose prose-invert max-w-none">
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-10 text-foreground leading-[1.1]">{title}</h1>
-            <div className="font-body text-muted-foreground text-[1.05rem] leading-[1.8] space-y-6 [&_h2]:text-foreground [&_h2]:font-heading [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:mt-14 [&_h2]:mb-5 [&_h3]:text-foreground [&_h3]:font-heading [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-10 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-2 [&_strong]:text-foreground [&_a]:text-primary [&_a]:hover:underline [&_blockquote]:border-l-4 [&_blockquote]:border-primary [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:text-foreground/90 [&_blockquote]:my-8">
+          <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+            <div className="editorial-eyebrow">Журнал Ракушка65 · {breadcrumbName}</div>
+            <h1 className="editorial-title">{title}</h1>
+            <div className="editorial">
               {children}
             </div>
+            <div className="editorial-divider">✦ ✦ ✦</div>
 
             <ArticleCTA tag={tag} />
 
