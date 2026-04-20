@@ -73,25 +73,32 @@ const DynamicArticle = () => {
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
-        <div className="container mx-auto px-4 max-w-[720px]">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-6">
+        <div className="container mx-auto px-4 max-w-[680px]">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-8 font-body">
             <ArrowLeft className="w-4 h-4" /> Все статьи
           </Link>
-          <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
-            <Calendar className="w-3.5 h-3.5" />
+
+          <div className="editorial-eyebrow">
+            Журнал Ракушка65 ·{" "}
             <time dateTime={article.published_at}>
               {new Date(article.published_at).toLocaleDateString("ru-RU", {
                 day: "numeric", month: "long", year: "numeric",
               })}
             </time>
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-10 leading-[1.1]">
-            {article.title}
-          </h1>
+
+          <h1 className="editorial-title">{article.title}</h1>
+
+          {article.description && (
+            <p className="editorial-deck">{article.description}</p>
+          )}
+
           <article
-            className="prose prose-invert max-w-none text-[1.05rem] leading-[1.8] prose-headings:font-heading prose-headings:text-foreground prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-5 prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground prose-a:text-primary prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-foreground/90"
+            className="editorial"
             dangerouslySetInnerHTML={{ __html: article.content_html }}
           />
+
+          <div className="editorial-divider">✦ ✦ ✦</div>
 
           <ArticleCTA tag={tag} />
         </div>
