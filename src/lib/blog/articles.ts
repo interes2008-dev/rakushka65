@@ -1,4 +1,4 @@
-import type { ProductTag } from "./productCategories";
+import { detectProductTag, type ProductTag } from "./productCategories";
 
 export interface BlogArticle {
   slug: string;
@@ -176,4 +176,4 @@ export const blogArticles: BlogArticle[] = [
     image: "/src/assets/blog-oysters-real-4.jpg",
     routePath: "/blog/retsepty-s-ustritsami",
   },
-];
+].map((a): BlogArticle => ({ ...a, productTag: detectProductTag(a.slug) }));
