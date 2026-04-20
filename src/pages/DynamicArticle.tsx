@@ -5,8 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
+import ArticleCTA from "@/components/ArticleCTA";
 import NotFound from "./NotFound";
 import { Calendar, ArrowLeft } from "lucide-react";
+import { detectProductTag } from "@/lib/blog/productCategories";
 
 interface DbArticle {
   slug: string;
@@ -48,6 +50,8 @@ const DynamicArticle = () => {
 
   if (!article) return <NotFound />;
 
+  const tag = detectProductTag(article.category || article.slug);
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -69,7 +73,7 @@ const DynamicArticle = () => {
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-[720px]">
           <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-6">
             <ArrowLeft className="w-4 h-4" /> Все статьи
           </Link>
@@ -81,13 +85,15 @@ const DynamicArticle = () => {
               })}
             </time>
           </div>
-          <h1 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-10 leading-[1.1]">
             {article.title}
           </h1>
           <article
-            className="prose prose-invert max-w-none prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground prose-a:text-primary"
+            className="prose prose-invert max-w-none text-[1.05rem] leading-[1.8] prose-headings:font-heading prose-headings:text-foreground prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-5 prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground prose-a:text-primary prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-foreground/90"
             dangerouslySetInnerHTML={{ __html: article.content_html }}
           />
+
+          <ArticleCTA tag={tag} />
         </div>
       </main>
       <Footer />
