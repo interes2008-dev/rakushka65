@@ -234,9 +234,9 @@ const Blog = () => {
                           })}
                         </time>
                       </div>
-                      <h2 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                      <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
                         {article.title}
-                      </h2>
+                      </h3>
                       <p className="font-body text-sm text-muted-foreground line-clamp-3">
                         {article.description}
                       </p>
