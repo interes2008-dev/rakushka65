@@ -5,8 +5,12 @@ import vongoleImg from "@/assets/product-vongole.jpg";
 import spizulaImg from "@/assets/product-spizula.jpg";
 import seaurchinImg from "@/assets/product-seaurchin.png";
 import crabImg from "@/assets/product-crab.png";
+import rapanyImg from "@/assets/product-rapany.png";
+import snailsImg from "@/assets/product-snails.png";
+import corbiculaImg from "@/assets/product-corbicula.png";
+import trepangImg from "@/assets/product-trepang.jpg";
 
-export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab";
+export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang";
 
 export interface ProductCategory {
   tag: ProductTag;
