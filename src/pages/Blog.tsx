@@ -25,6 +25,7 @@ const Blog = () => {
   const [allArticles, setAllArticles] = useState<BlogArticle[]>(blogArticles);
   const [activeTag, setActiveTag] = useState<ProductTag | "all">("all");
   const [search, setSearch] = useState("");
+  const [sortBy, setSortBy] = useState<"newest" | "oldest">("newest");
 
   useEffect(() => {
     supabase
@@ -48,7 +49,7 @@ const Blog = () => {
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return allArticles.filter((a) => {
+    const list = allArticles.filter((a) => {
       if (activeTag !== "all" && a.productTag !== activeTag) return false;
       if (!q) return true;
       return (
@@ -56,7 +57,12 @@ const Blog = () => {
         a.description.toLowerCase().includes(q)
       );
     });
-  }, [allArticles, activeTag, search]);
+    return list.sort((a, b) => {
+      const da = new Date(a.date).getTime();
+      const db = new Date(b.date).getTime();
+      return sortBy === "newest" ? db - da : da - db;
+    });
+  }, [allArticles, activeTag, search, sortBy]);
 
   return (
     <div className="relative min-h-screen">
@@ -134,20 +140,44 @@ const Blog = () => {
             </div>
           </motion.section>
 
-          {/* === ПОИСК === */}
+          {/* === ПОИСК + СОРТИРОВКА === */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="max-w-2xl mx-auto mb-12 relative"
+            className="max-w-2xl mx-auto mb-12 flex gap-3 items-center"
           >
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
-            <Input
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Найти статью (например: как открыть устрицу)"
-              className="pl-11 h-12 bg-card/50 border-border/40 focus-visible:border-primary/60"
-            />
+            <div className="relative flex-1">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              <Input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Найти статью (например: как открыть устрицу)"
+                className="pl-11 h-12 bg-card/50 border-border/40 focus-visible:border-primary/60"
+              />
+            </div>
+            <div className="flex shrink-0 rounded-lg border border-border/40 overflow-hidden h-12">
+              <button
+                onClick={() => setSortBy("newest")}
+                className={`px-4 font-body text-sm transition-colors ${
+                  sortBy === "newest"
+                    ? "bg-primary/15 text-primary"
+                    : "bg-card/50 text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Новые
+              </button>
+              <button
+                onClick={() => setSortBy("oldest")}
+                className={`px-4 font-body text-sm transition-colors border-l border-border/40 ${
+                  sortBy === "oldest"
+                    ? "bg-primary/15 text-primary"
+                    : "bg-card/50 text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Старые
+              </button>
+            </div>
           </motion.div>
 
           {/* === СТАТЬИ === */}
