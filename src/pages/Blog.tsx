@@ -15,7 +15,7 @@ import { Calendar, Search } from "lucide-react";
 const FALLBACK_IMG: Record<string, string> = {
   vongole: "/src/assets/blog-vongole-real-1.jpg",
   scallop: "/src/assets/blog-scallop-royal.jpg",
-  oysters: "/src/assets/blog-oysters-real-1.jpg",
+  oysters: "/src/assets/blog-oysters-real-5.jpg",
   spisula: "/src/assets/blog-spisula-v2.jpg",
   urchin: "/src/assets/blog-urchin-1.jpg",
   crab: "/src/assets/blog-vongole-real-1.jpg",

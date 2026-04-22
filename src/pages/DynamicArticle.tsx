@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
+import { getBlogImage } from "@/lib/blog/images";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
@@ -52,6 +53,16 @@ const DynamicArticle = () => {
 
   const tag = detectProductTag(article.category || article.slug);
 
+  const FALLBACK_IMG: Record<string, string> = {
+    vongole: "/src/assets/blog-vongole-real-1.jpg",
+    scallop: "/src/assets/blog-scallop-royal.jpg",
+    oysters: "/src/assets/blog-oysters-real-5.jpg",
+    spisula: "/src/assets/blog-spisula-v2.jpg",
+    urchin: "/src/assets/blog-urchin-1.jpg",
+    crab: "/src/assets/blog-vongole-real-1.jpg",
+  };
+  const heroImage = getBlogImage(FALLBACK_IMG[tag || ""] || FALLBACK_IMG.vongole);
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -88,6 +99,14 @@ const DynamicArticle = () => {
           </div>
 
           <h1 className="editorial-title">{article.title}</h1>
+
+          <img
+            src={heroImage}
+            alt={article.title}
+            className="w-full rounded-xl mb-8"
+            width={1200}
+            height={800}
+          />
 
           {article.description && (
             <p className="editorial-deck">{article.description}</p>
