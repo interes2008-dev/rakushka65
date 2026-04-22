@@ -52,6 +52,8 @@ const SEOHead = ({
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
     setMeta("name", "twitter:image", ogImage);
+    setMeta("name", "twitter:image:width", "1200");
+    setMeta("name", "twitter:image:height", "630");
     setMeta("name", "twitter:card", "summary_large_image");
 
     if (noindex) {
