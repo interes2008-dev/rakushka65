@@ -71,6 +71,20 @@ const Blog = () => {
         title="Блог о морепродуктах с Сахалина — рецепты, советы, гиды | Ракушка65"
         description="Блог Ракушка65: статьи о вонголе, устрицах, гребешке и других морепродуктах с Сахалина. Рецепты, советы по выбору и приготовлению деликатесов."
         lang="ru"
+        jsonLd={[
+          getBreadcrumbSchema([
+            { name: "Главная", url: "/" },
+            { name: "Блог", url: "/blog" },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Блог Ракушка65 — статьи о морепродуктах с Сахалина",
+            description: "Экспертные статьи о вонголе, устрицах, гребешке, морском еже и других деликатесах Сахалина.",
+            url: "https://rakushka65.ru/blog",
+            isPartOf: { "@type": "WebSite", name: "Ракушка65", url: "https://rakushka65.ru" },
+          },
+        ]}
       />
       <FloatingParticles />
       <Header />
