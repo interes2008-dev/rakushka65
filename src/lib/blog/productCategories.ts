@@ -8,7 +8,7 @@ import crabImg from "@/assets/product-crab.png";
 import rapanyImg from "@/assets/product-rapany.png";
 import snailsImg from "@/assets/product-snails.png";
 import corbiculaImg from "@/assets/product-corbicula.png";
-import trepangImg from "@/assets/product-trepang.jpg";
+import trepangImg from "@/assets/product-trepang.png";
 
 export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang";
 
