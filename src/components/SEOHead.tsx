@@ -44,6 +44,8 @@ const SEOHead = ({
     setMeta("property", "og:description", description);
     setMeta("property", "og:type", ogType);
     setMeta("property", "og:image", ogImage);
+    setMeta("property", "og:image:width", "1200");
+    setMeta("property", "og:image:height", "630");
     setMeta("property", "og:site_name", "Ракушка65");
     setMeta("property", "og:locale", lang === "ru" ? "ru_RU" : "en_US");
     setMeta("property", "og:locale:alternate", lang === "ru" ? "en_US" : "ru_RU");
