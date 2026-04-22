@@ -92,7 +92,7 @@ const Blog = () => {
             <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center">
               Выберите продукт
             </h2>
-            <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-7 md:gap-4 md:overflow-visible scrollbar-hide">
+            <div className="flex gap-3 overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible scrollbar-hide">
               <button
                 onClick={() => setActiveTag("all")}
                 className={`shrink-0 group flex flex-col items-center gap-2 p-3 rounded-xl border transition-all ${
