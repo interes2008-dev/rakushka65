@@ -10,6 +10,7 @@ import { blogArticles, type BlogArticle } from "@/lib/blog/articles";
 import { getBlogImage } from "@/lib/blog/images";
 import { PRODUCT_CATEGORIES, detectProductTag, type ProductTag } from "@/lib/blog/productCategories";
 import { supabase } from "@/integrations/supabase/client";
+import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { Calendar, Search } from "lucide-react";
 
 const FALLBACK_IMG: Record<string, string> = {

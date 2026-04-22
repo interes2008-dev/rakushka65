@@ -10,6 +10,7 @@ import ArticleCTA from "@/components/ArticleCTA";
 import NotFound from "./NotFound";
 import { ArrowLeft } from "lucide-react";
 import { detectProductTag } from "@/lib/blog/productCategories";
+import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 
 interface DbArticle {
   slug: string;
@@ -21,6 +22,8 @@ interface DbArticle {
   seo_description: string | null;
   published_at: string;
 }
+
+const SITE_URL = "https://rakushka65.ru";
 
 const DynamicArticle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -63,31 +66,64 @@ const DynamicArticle = () => {
   };
   const heroImage = getBlogImage(FALLBACK_IMG[tag || ""] || FALLBACK_IMG.vongole);
 
+  const breadcrumb = getBreadcrumbSchema([
+    { name: "Главная", url: "/" },
+    { name: "Блог", url: "/blog" },
+    { name: article.title, url: `/blog/${article.slug}` },
+  ]);
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
-    description: article.description,
+    description: article.seo_description || article.description,
     datePublished: article.published_at,
-    author: { "@type": "Organization", name: "Ракушка65" },
-    publisher: { "@type": "Organization", name: "Ракушка65" },
+    dateModified: article.published_at,
+    image: heroImage.startsWith("/") ? `${SITE_URL}${heroImage}` : heroImage,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/blog/${article.slug}`,
+    },
+    author: {
+      "@type": "Organization",
+      name: "Ракушка65",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ракушка65",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/favicon.svg`,
+      },
+    },
   };
+
+  const seoTitle = article.seo_title || `${article.title} | Ракушка65`;
+  const seoDesc = article.seo_description || article.description;
 
   return (
     <div className="relative min-h-screen">
       <SEOHead
-        title={article.seo_title || article.title}
-        description={article.seo_description || article.description}
+        title={seoTitle}
+        description={seoDesc}
         lang="ru"
-        jsonLd={articleJsonLd}
+        ogType="article"
+        jsonLd={[breadcrumb, articleJsonLd]}
       />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
         <div className="container mx-auto px-4 max-w-[680px]">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-8 font-body">
-            <ArrowLeft className="w-4 h-4" /> Все статьи
-          </Link>
+          <nav className="mb-8" aria-label="Breadcrumb">
+            <ol className="flex items-center gap-2 text-sm font-body text-muted-foreground">
+              <li><Link to="/" className="hover:text-primary transition-colors">Главная</Link></li>
+              <li>/</li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Блог</Link></li>
+              <li>/</li>
+              <li className="text-foreground line-clamp-1">{article.title}</li>
+            </ol>
+          </nav>
 
           <div className="editorial-eyebrow">
             Журнал Ракушка65 ·{" "}
@@ -102,10 +138,11 @@ const DynamicArticle = () => {
 
           <img
             src={heroImage}
-            alt={article.title}
+            alt={`${article.title} — Ракушка65, морепродукты с Сахалина`}
             className="w-full rounded-xl mb-8"
             width={1200}
             height={800}
+            loading="eager"
           />
 
           {article.description && (
