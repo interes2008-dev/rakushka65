@@ -10,6 +10,7 @@ import { blogArticles, type BlogArticle } from "@/lib/blog/articles";
 import { getBlogImage } from "@/lib/blog/images";
 import { PRODUCT_CATEGORIES, detectProductTag, type ProductTag } from "@/lib/blog/productCategories";
 import { supabase } from "@/integrations/supabase/client";
+import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { Calendar, Search } from "lucide-react";
 
 const FALLBACK_IMG: Record<string, string> = {
@@ -70,6 +71,20 @@ const Blog = () => {
         title="Блог о морепродуктах с Сахалина — рецепты, советы, гиды | Ракушка65"
         description="Блог Ракушка65: статьи о вонголе, устрицах, гребешке и других морепродуктах с Сахалина. Рецепты, советы по выбору и приготовлению деликатесов."
         lang="ru"
+        jsonLd={[
+          getBreadcrumbSchema([
+            { name: "Главная", url: "/" },
+            { name: "Блог", url: "/blog" },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Блог Ракушка65 — статьи о морепродуктах с Сахалина",
+            description: "Экспертные статьи о вонголе, устрицах, гребешке, морском еже и других деликатесах Сахалина.",
+            url: "https://rakushka65.ru/blog",
+            isPartOf: { "@type": "WebSite", name: "Ракушка65", url: "https://rakushka65.ru" },
+          },
+        ]}
       />
       <FloatingParticles />
       <Header />
@@ -125,11 +140,13 @@ const Blog = () => {
                   }`}
                 >
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-1 ring-border/40 group-hover:ring-primary/40 transition-all">
-                    <img
+                     <img
                       src={cat.image}
-                      alt={cat.label}
+                      alt={`${cat.label} — купить с Сахалина, Ракушка65`}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
+                      width={80}
+                      height={80}
                     />
                   </div>
                   <span className="font-body text-xs md:text-sm text-foreground whitespace-nowrap">
@@ -199,9 +216,11 @@ const Blog = () => {
                     <div className="aspect-[3/2] overflow-hidden">
                       <img
                         src={getBlogImage(article.image)}
-                        alt={article.title}
+                        alt={`${article.title} — статья в блоге Ракушка65`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
+                        width={600}
+                        height={400}
                       />
                     </div>
                     <div className="p-5">
@@ -215,9 +234,9 @@ const Blog = () => {
                           })}
                         </time>
                       </div>
-                      <h2 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                      <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
                         {article.title}
-                      </h2>
+                      </h3>
                       <p className="font-body text-sm text-muted-foreground line-clamp-3">
                         {article.description}
                       </p>
