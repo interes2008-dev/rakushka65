@@ -120,6 +120,10 @@ export function detectProductTag(input: string): ProductTag {
   if (s.includes("spisul") || s.includes("spizul")) return "spisula";
   if (s.includes("ezh") || s.includes("urchin")) return "urchin";
   if (s.includes("krab") || s.includes("crab")) return "crab";
+  if (s.includes("rapan")) return "rapany";
+  if (s.includes("ulitk") || s.includes("snail")) return "snails";
+  if (s.includes("corbicul") || s.includes("korbikul")) return "corbicula";
+  if (s.includes("trepang") || s.includes("трепанг")) return "trepang";
   if (s.includes("vongol")) return "vongole";
   return "vongole";
 }
