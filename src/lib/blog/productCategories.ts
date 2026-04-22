@@ -73,6 +73,39 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     cta: "Купить краба с Сахалина",
     ctaDescription: "Дальневосточный краб — сочное мясо с морским сладковатым вкусом.",
   },
+  {
+    tag: "rapany",
+    label: "Рапаны",
+    productLink: "/catalog/rapany",
+    image: rapanyImg,
+    cta: "Купить рапаны с Сахалина",
+    ctaDescription: "Сахалинские рапаны — упругая мякоть с дымно-морским вкусом.",
+  },
+  {
+    tag: "snails",
+    label: "Морские улитки",
+    productLink: "/catalog/sea-snails",
+    image: snailsImg,
+    cta: "Купить морские улитки с Сахалина",
+    ctaDescription: "Морские улитки с Сахалина — пикантный деликатес Тихого океана.",
+  },
+  {
+    tag: "corbicula",
+    label: "Корбикула",
+    productLink: "/catalog/corbicula",
+    image: corbiculaImg,
+    cta: "Купить корбикулу с Сахалина",
+    ctaDescription: "Сахалинская корбикула — нежный, чуть сладковатый моллюск.",
+  },
+  {
+    tag: "trepang",
+    label: "Трепанг",
+    productLink: "/catalog/trepang",
+    image: trepangImg,
+    cta: "Купить трепанг с Сахалина",
+    ctaDescription: "Дальневосточный трепанг — уникальный деликатес с целебными свойствами.",
+  },
+  },
 ];
 
 const BY_TAG: Record<ProductTag, ProductCategory> = PRODUCT_CATEGORIES.reduce((acc, c) => {
