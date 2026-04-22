@@ -65,6 +65,7 @@ const DynamicArticle = () => {
     crab: "/src/assets/blog-vongole-real-1.jpg",
   };
   const heroImage = getBlogImage(FALLBACK_IMG[tag || ""] || FALLBACK_IMG.vongole);
+  const ogImageUrl = heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`;
 
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
@@ -109,6 +110,7 @@ const DynamicArticle = () => {
         description={seoDesc}
         lang="ru"
         ogType="article"
+        ogImage={ogImageUrl}
         jsonLd={[breadcrumb, articleJsonLd]}
       />
       <FloatingParticles />
