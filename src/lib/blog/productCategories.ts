@@ -105,7 +105,6 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     cta: "Купить трепанг с Сахалина",
     ctaDescription: "Дальневосточный трепанг — уникальный деликатес с целебными свойствами.",
   },
-  },
 ];
 
 const BY_TAG: Record<ProductTag, ProductCategory> = PRODUCT_CATEGORIES.reduce((acc, c) => {
