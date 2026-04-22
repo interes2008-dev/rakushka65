@@ -140,11 +140,13 @@ const Blog = () => {
                   }`}
                 >
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-1 ring-border/40 group-hover:ring-primary/40 transition-all">
-                    <img
+                     <img
                       src={cat.image}
-                      alt={cat.label}
+                      alt={`${cat.label} — купить с Сахалина, Ракушка65`}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
+                      width={80}
+                      height={80}
                     />
                   </div>
                   <span className="font-body text-xs md:text-sm text-foreground whitespace-nowrap">
@@ -214,9 +216,11 @@ const Blog = () => {
                     <div className="aspect-[3/2] overflow-hidden">
                       <img
                         src={getBlogImage(article.image)}
-                        alt={article.title}
+                        alt={`${article.title} — статья в блоге Ракушка65`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
+                        width={600}
+                        height={400}
                       />
                     </div>
                     <div className="p-5">
