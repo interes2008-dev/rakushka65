@@ -89,27 +89,27 @@ const Catalog = () => {
 
           <div className={viewMode === "grid" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6" : "flex flex-col gap-4"}>
             {sorted.map((product, i) => (
-              <motion.div key={product.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
-                <Link to={`/catalog/${product.id}`} className={`block bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 ${viewMode === "list" ? "flex flex-row" : ""}`}>
+              <motion.div key={product.id} className="h-full" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
+                <Link to={`/catalog/${product.id}`} className={`bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 ${viewMode === "list" ? "flex flex-row" : "flex flex-col h-full"}`}>
                   <div className={`relative overflow-hidden ${viewMode === "list" ? "w-40 h-40 flex-shrink-0" : "aspect-square"}`}>
-                    <img src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" />
+                    <img src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" width={400} height={400} />
                   </div>
-                  <div className="p-5 flex-1">
+                  <div className="p-5 flex-1 flex flex-col">
                     <div className="flex items-center gap-1 mb-2">
                       {Array.from({ length: 5 }).map((_, si) => (
-                        <Star key={si} className={`w-3.5 h-3.5 ${si < product.rating ? "fill-primary text-primary" : "text-muted"}`} />
+                        <Star key={si} className={`w-4 h-4 ${si < product.rating ? "fill-primary text-primary" : "text-muted"}`} />
                       ))}
                       <span className="ml-2 text-xs text-muted-foreground font-body">{t.productCategories[product.category] || product.category}</span>
                     </div>
-                    <h3 className="font-heading text-lg font-semibold mb-1 group-hover:text-primary transition-colors">{t.productNames[product.id] || product.name}</h3>
-                    <p className="font-body text-xs text-muted-foreground mb-3 line-clamp-2">{t.productDescriptions[product.id] || product.description}</p>
-                    <div className="flex items-center justify-between">
+                    <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-primary transition-colors leading-tight min-h-[3.2rem]">{t.productNames[product.id] || product.name}</h3>
+                    <p className="font-body text-sm text-muted-foreground mb-4 line-clamp-2 flex-1">{t.productDescriptions[product.id] || product.description}</p>
+                    <div className="flex items-center justify-between mt-auto">
                       {product.price ? (
-                        <span className="font-body font-bold text-lg">{product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span></span>
+                        <span className="font-body font-bold text-xl">{product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span></span>
                       ) : (
-                        <span className="font-body font-semibold text-sm text-primary">По запросу</span>
+                        <span className="font-body font-semibold text-base text-primary">По запросу</span>
                       )}
-                      <span className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all"><ShoppingCart className="w-4 h-4" /></span>
+                      <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all"><ShoppingCart className="w-5 h-5" /></span>
                     </div>
                   </div>
                 </Link>
