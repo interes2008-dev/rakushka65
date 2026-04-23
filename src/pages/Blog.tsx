@@ -223,9 +223,9 @@ const Blog = () => {
                         height={400}
                       />
                     </div>
-                    <div className="p-5">
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
-                        <Calendar className="w-3.5 h-3.5" />
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                        <Calendar className="w-4 h-4" />
                         <time dateTime={article.date}>
                           {new Date(article.date).toLocaleDateString("ru-RU", {
                             day: "numeric",
@@ -234,10 +234,10 @@ const Blog = () => {
                           })}
                         </time>
                       </div>
-                      <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                      <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors mb-3 line-clamp-2 leading-tight">
                         {article.title}
                       </h3>
-                      <p className="font-body text-sm text-muted-foreground line-clamp-3">
+                      <p className="font-body text-base text-muted-foreground line-clamp-3 leading-relaxed">
                         {article.description}
                       </p>
                     </div>
