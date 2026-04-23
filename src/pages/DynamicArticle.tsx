@@ -116,7 +116,7 @@ const DynamicArticle = () => {
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
-        <div className="container mx-auto px-4 max-w-[680px]">
+        <div className="container mx-auto px-4 max-w-[740px]">
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-2 text-sm font-body text-muted-foreground">
               <li><Link to="/" className="hover:text-primary transition-colors">Главная</Link></li>
