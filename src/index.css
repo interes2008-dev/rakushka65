@@ -133,10 +133,10 @@
 @layer components {
   .editorial {
     font-family: 'Cormorant Garamond', 'Source Serif 4', Georgia, serif;
-    font-size: 1.235rem;          /* ~19.7px */
-    line-height: 1.78;
+    font-size: 1.375rem;          /* ~22px — комфортный размер для чтения */
+    line-height: 1.82;
     letter-spacing: 0.005em;
-    color: hsl(var(--foreground) / 0.86);
+    color: hsl(var(--foreground) / 0.9);
     font-weight: 400;
     font-feature-settings: "kern", "liga", "onum", "pnum";
     text-rendering: optimizeLegibility;
@@ -148,9 +148,9 @@
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 1.45rem;
+    font-size: 1.55rem;
     line-height: 1.55;
-    color: hsl(var(--foreground) / 0.72);
+    color: hsl(var(--foreground) / 0.75);
     margin-bottom: 2.5rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid hsl(var(--border) / 0.5);
@@ -201,11 +201,11 @@
   .editorial h3 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
+    font-size: 0.875rem;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: hsl(var(--primary));
-    margin: 2.75rem 0 1rem;
+    margin: 3rem 0 1.25rem;
   }
 
   /* Цитата — большая, центрированная, "магазинная" */
@@ -312,8 +312,8 @@
   /* META — дата/категория над заголовком */
   .editorial-eyebrow {
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.28em;
+    font-size: 0.8rem;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     color: hsl(var(--primary));
     text-align: center;
