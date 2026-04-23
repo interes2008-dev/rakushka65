@@ -63,6 +63,7 @@ const ProductsSection = () => {
           {products.map((product) => (
             <motion.div
               key={product.id}
+              className="h-full"
               variants={{
                 hidden: { opacity: 0, y: 50, scale: 0.92 },
                 visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 120, damping: 14 } },
@@ -70,34 +71,34 @@ const ProductsSection = () => {
             >
               <Link
                 to={`/catalog/${product.id}`}
-                className="block bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/5"
+                className="flex flex-col h-full bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/5"
               >
                 <div className="relative overflow-hidden aspect-[4/3]">
-                  <img src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" />
+                  <img src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" width={400} height={300} />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <div className="p-5">
+                <div className="flex flex-col flex-1 p-5">
                   <div className="flex items-center gap-1 mb-2">
                     {Array.from({ length: 5 }).map((_, si) => (
-                      <Star key={si} className={`w-3.5 h-3.5 ${si < product.rating ? "fill-primary text-primary" : "text-muted"}`} />
+                      <Star key={si} className={`w-4 h-4 ${si < product.rating ? "fill-primary text-primary" : "text-muted"}`} />
                     ))}
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
+                  <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-primary transition-colors leading-tight min-h-[3.2rem]">
                     {t.productNames[product.id] || product.name}
                   </h3>
-                  <p className="font-body text-xs text-muted-foreground mb-3 line-clamp-2">
+                  <p className="font-body text-sm text-muted-foreground mb-4 line-clamp-2 flex-1">
                     {t.productDescriptions[product.id] || product.description}
                   </p>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-auto">
                     {product.price ? (
-                      <span className="font-body font-bold text-lg">
+                      <span className="font-body font-bold text-xl">
                         {product.price} ₽<span className="text-sm text-muted-foreground font-normal">/{t.unitKg}</span>
                       </span>
                     ) : (
-                      <span className="font-body font-semibold text-sm text-primary">По запросу</span>
+                      <span className="font-body font-semibold text-base text-primary">По запросу</span>
                     )}
-                    <span className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                      <ShoppingCart className="w-4 h-4" />
+                    <span className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                      <ShoppingCart className="w-5 h-5" />
                     </span>
                   </div>
                 </div>
