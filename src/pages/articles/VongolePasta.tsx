@@ -38,7 +38,7 @@ const recipeSchema = {
 const VongolePasta = () => (
   <ArticleLayout
     title="Паста с вонголе — рецепт с сахалинскими моллюсками"
-    seoTitle="Паста с вонголе — рецепт Spaghetti alle Vongole с Сахалинскими моллюсками | Ракушка65"
+    seoTitle="Паста с вонголе — Spaghetti alle Vongole | Ракушка65"
     seoDescription="Рецепт пасты с вонголе (Spaghetti alle Vongole) из свежих сахалинских моллюсков. Пошаговая инструкция, ингредиенты и секреты приготовления от Ракушка65."
     breadcrumbName="Паста с вонголе"
     slug="pasta-s-vongole"

@@ -100,8 +100,17 @@ const DynamicArticle = () => {
     },
   };
 
-  const seoTitle = article.seo_title || `${article.title} | Ракушка65`;
-  const seoDesc = article.seo_description || article.description;
+  // Build a concise SEO title (target ~55-60 chars)
+  const buildShortTitle = (raw: string) => {
+    const brand = " | Ракушка65";
+    const maxLen = 60;
+    const base = raw.replace(/\s*[—\-–|]\s*Ракушка65\s*$/i, "").trim();
+    if (base.length + brand.length <= maxLen) return base + brand;
+    const trimmed = base.slice(0, maxLen - brand.length - 1).replace(/[\s,;:.\-—]+$/, "");
+    return trimmed + "…" + brand;
+  };
+  const seoTitle = article.seo_title || buildShortTitle(article.title);
+  const seoDesc = (article.seo_description || article.description || "").slice(0, 160);
 
   return (
     <div className="relative min-h-screen">
