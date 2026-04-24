@@ -105,6 +105,7 @@ export const en: Translations = {
     mollusks: "Mollusks",
     delicacies: "Delicacies",
     crustaceans: "Crustaceans",
+    tinctures: "Tinctures",
     sortDefault: "Default",
     sortPriceAsc: "Price ↑",
     sortPriceDesc: "Price ↓",
@@ -140,6 +141,7 @@ export const en: Translations = {
     "sea-snails": "Sea Snails",
     corbicula: "Sakhalin Corbicula",
     trepang: "Far Eastern Sea Cucumber",
+    "trepang-tincture": "Sea Cucumber Tincture",
     crab: "Spiny King Crab",
   },
   productDescriptions: {
@@ -152,6 +154,7 @@ export const en: Translations = {
     "sea-snails": "Crunchy sea snails with lemon — in the East they're simmered in ginger broth with soy sauce, unlocking deep umami.",
     corbicula: "A miniature pearl of Sakhalin rivers — corbicula is rich in amino acids and has been used in Eastern medicine for centuries.",
     trepang: "The 'sea ginseng' — treasured in China worth its weight in gold. For centuries it's been considered an elixir of youth, a source of collagen and rare trace elements.",
+    "trepang-tincture": "Sea cucumber tincture with raw honey — a traditional Far Eastern elixir. A natural source of collagen, iodine and 40+ trace elements.",
     crab: "Sakhalin spiny crab — powerful claws conceal incredibly tender, sweet meat with a delicate aroma of the cold ocean. The true king of Far Eastern cuisine.",
   },
   productFullDescriptions: {
@@ -164,6 +167,7 @@ export const en: Translations = {
     "sea-snails": "Sea snails — an exquisite delicacy treasured for centuries in Japanese, Korean, and Chinese cuisines. In the East they're slowly simmered in aromatic broth with ginger, garlic, and soy sauce until the flesh becomes incredibly tender while maintaining its characteristic springiness. Serve fresh with a wedge of lemon and wasabi — or stir-fry in a wok with sesame oil and green onions for an unforgettable Asian-style dinner.",
     corbicula: "Sakhalin Corbicula — a small mollusk with a grand history. In Japan it's called 'shijimi' and used to make the legendary miso soup, considered the best remedy for liver health and vitality. Koreans simmer corbicula in spicy broth with chili and tofu, transforming a humble shell into a warming dish rich in umami. This mollusk is a natural treasure of taurine, B vitamins, and essential amino acids. Serve in hot broth with green onion and a dash of sake — and every spoonful will bring you the strength of cold Sakhalin waters.",
     trepang: "Far Eastern sea cucumber — the legendary 'sea ginseng' that China values above gold. For millennia, emperors and healers used it as a source of eternal youth. Sea cucumber contains a unique blend of collagen, chondroitin, vitamins, and over 50 trace elements. In Chinese cuisine it's braised with shiitake mushrooms and oyster sauce, creating a luxurious banquet dish. Serve lightly seared with ginger and green onion — and you'll understand why gourmets worldwide hunt for this treasure.",
+    "trepang-tincture": "Sea cucumber tincture with natural honey — a traditional Far Eastern elixir, known in Eastern medicine for over 2,000 years. Made from fresh Sakhalin sea cucumber through long maceration in alcohol with the addition of taiga honey. Rich in collagen, chondroitin, iodine, selenium, echinochrome and more than 40 biologically active trace elements. Used as a general tonic to boost immunity, restore energy, normalize metabolism and support cardiovascular health. Has contraindications — consult your doctor before use.",
     crab: "Sakhalin spiny crab — one of the most coveted delicacies of the Far Eastern seas. Its powerful shell, covered in spines, conceals remarkably tender and juicy meat with natural sweetness. Every claw is a concentrate of pure oceanic flavor. Serve with melted butter and a wedge of lemon — or steam to preserve all the pristine juiciness of cold Sakhalin waters.",
   },
   productCategories: {
@@ -171,6 +175,7 @@ export const en: Translations = {
     "Устрицы": "Oysters",
     "Деликатесы": "Delicacies",
     "Ракообразные": "Crustaceans",
+    "Настойки": "Tinctures",
   },
   productWeights: {
     scallop: "from 200 g / pc",
@@ -182,6 +187,7 @@ export const en: Translations = {
     "sea-snails": "small, 3-5 cm",
     corbicula: "small, 2-5 cm",
     trepang: "150-500 g / pc",
+    "trepang-tincture": "250-500 ml",
     crab: "from 1 kg / pc",
   },
   productTastes: {
@@ -194,6 +200,7 @@ export const en: Translations = {
     "sea-snails": "Springy, piquant",
     corbicula: "Delicate, slightly sweet",
     trepang: "Delicate, gelatinous",
+    "trepang-tincture": "Rich, oceanic with honey",
     crab: "Sweet, juicy",
   },
   unitKg: "kg",
