@@ -19,6 +19,9 @@ import blogOystersReal2 from "@/assets/blog-oysters-real-2.jpg";
 import blogOystersReal3 from "@/assets/blog-oysters-real-3.jpg";
 import blogOystersReal4 from "@/assets/blog-oysters-real-4.jpg";
 import blogOystersReal5 from "@/assets/blog-oysters-real-5.jpg";
+import blogTrepangFresh from "@/assets/blog-trepang-fresh.jpg";
+import blogTrepangTincturePour from "@/assets/blog-trepang-tincture-pour.jpg";
+import blogTrepangHoney from "@/assets/blog-trepang-honey.jpg";
 
 export const blogImages: Record<string, string> = {
   "/src/assets/blog-urchin-1.jpg": blogUrchin1,
@@ -42,6 +45,9 @@ export const blogImages: Record<string, string> = {
   "/src/assets/blog-oysters-real-3.jpg": blogOystersReal3,
   "/src/assets/blog-oysters-real-4.jpg": blogOystersReal4,
   "/src/assets/blog-oysters-real-5.jpg": blogOystersReal5,
+  "/src/assets/blog-trepang-fresh.jpg": blogTrepangFresh,
+  "/src/assets/blog-trepang-tincture-pour.jpg": blogTrepangTincturePour,
+  "/src/assets/blog-trepang-honey.jpg": blogTrepangHoney,
 };
 
 export function getBlogImage(path: string): string {

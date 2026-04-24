@@ -38,6 +38,10 @@ import ScallopChoose from "./pages/articles/ScallopChoose";
 import SpisulaWhat from "./pages/articles/SpisulaWhat";
 import SpisulaCooking from "./pages/articles/SpisulaCooking";
 import SpisulaCompare from "./pages/articles/SpisulaCompare";
+// Trepang cluster
+import TrepangWhat from "./pages/articles/TrepangWhat";
+import TrepangTinctureRecipe from "./pages/articles/TrepangTinctureRecipe";
+import TrepangBenefits from "./pages/articles/TrepangBenefits";
 import DynamicArticle from "./pages/DynamicArticle";
 
 const queryClient = new QueryClient();
@@ -83,6 +87,10 @@ const App = () => (
             <Route path="/blog/kak-vybrat-ustritsy" element={<OystersChoose />} />
             <Route path="/blog/kak-otkryt-ustritsu" element={<OystersOpen />} />
             <Route path="/blog/retsepty-s-ustritsami" element={<OystersRecipes />} />
+            {/* Trepang */}
+            <Route path="/blog/trepang-sahalinskij" element={<TrepangWhat />} />
+            <Route path="/blog/nastojka-na-trepange-recept" element={<TrepangTinctureRecipe />} />
+            <Route path="/blog/trepang-primenenie" element={<TrepangBenefits />} />
             {/* Legacy redirects */}
             <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
             <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />
