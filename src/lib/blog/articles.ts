@@ -176,4 +176,29 @@ export const blogArticles: BlogArticle[] = [
     image: "/src/assets/blog-oysters-real-4.jpg",
     routePath: "/blog/retsepty-s-ustritsami",
   },
+  // === Трепанг ===
+  {
+    slug: "trepang-sahalinskij",
+    title: "Трепанг дальневосточный — что это за деликатес и чем он уникален",
+    description: "Полный гид по дальневосточному трепангу: что это за животное, где обитает на Сахалине, состав, польза и применение «морского женьшеня».",
+    date: "2026-04-24",
+    image: "/src/assets/blog-trepang-fresh.jpg",
+    routePath: "/blog/trepang-sahalinskij",
+  },
+  {
+    slug: "nastojka-na-trepange-recept",
+    title: "Настойка на трепанге — классический рецепт с мёдом и применение",
+    description: "Как приготовить настойку на трепанге дома: пропорции, технология, схема приёма. Дальневосточный эликсир молодости из свежего сахалинского трепанга.",
+    date: "2026-04-24",
+    image: "/src/assets/blog-trepang-tincture-pour.jpg",
+    routePath: "/blog/nastojka-na-trepange-recept",
+  },
+  {
+    slug: "trepang-primenenie",
+    title: "Применение трепанга — польза, оздоровительные свойства и противопоказания",
+    description: "Полезные свойства трепанга и настойки из него: иммунитет, сердце, регенерация. Научный обзор состава, показания, схема приёма и противопоказания.",
+    date: "2026-04-24",
+    image: "/src/assets/blog-trepang-honey.jpg",
+    routePath: "/blog/trepang-primenenie",
+  },
 ].map((a): BlogArticle => ({ ...a, productTag: detectProductTag(a.slug) }));

@@ -94,6 +94,7 @@ export interface Translations {
     mollusks: string;
     delicacies: string;
     crustaceans: string;
+    tinctures: string;
     sortDefault: string;
     sortPriceAsc: string;
     sortPriceDesc: string;
