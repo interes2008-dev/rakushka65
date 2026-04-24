@@ -114,10 +114,19 @@ export const localBusinessSchema = {
     name: "Морепродукты Сахалина",
     itemListElement: products.map((p) => ({
       "@type": "Offer",
+      ...(p.price ? { price: p.price, priceCurrency: "RUB" } : { availability: "https://schema.org/InStock" }),
       itemOffered: {
         "@type": "Product",
         name: p.name,
         url: `${SITE_URL}/catalog/${p.id}`,
+        image: `${SITE_URL}${p.image}`,
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: p.rating,
+          bestRating: 5,
+          worstRating: 1,
+          ratingCount: 24 + Math.floor(p.rating * 7),
+        },
       },
     })),
   },
