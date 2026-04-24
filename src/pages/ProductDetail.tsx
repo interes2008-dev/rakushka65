@@ -68,6 +68,7 @@ const ProductDetail = () => {
     "sea-snails": "https://rakushka65.ru/og-sea-snails.jpg",
     corbicula: "https://rakushka65.ru/og-corbicula.jpg",
     trepang: "https://rakushka65.ru/og-image.jpg",
+    "trepang-tincture": "https://rakushka65.ru/og-image.jpg",
     crab: "https://rakushka65.ru/og-image.jpg",
   };
 
@@ -122,7 +123,11 @@ const ProductDetail = () => {
               </div>
 
               <div className="flex items-center gap-6 mb-8">
-                <span className="font-heading text-4xl font-bold">{product.price} ₽<span className="text-lg text-muted-foreground font-normal">/{t.unitKg}</span></span>
+                {product.price ? (
+                  <span className="font-heading text-4xl font-bold">{product.price} ₽<span className="text-lg text-muted-foreground font-normal">/{t.unitKg}</span></span>
+                ) : (
+                  <span className="font-heading text-3xl font-bold text-primary">{lang === "ru" ? "Цена по запросу" : "Price on request"}</span>
+                )}
               </div>
 
               <Link to="/#contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105">
