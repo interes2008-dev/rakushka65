@@ -19,6 +19,7 @@ const SEOHead = ({
   canonical,
   ogType = "website",
   ogImage = "https://rakushka65.ru/og-image.jpg",
+  ogImageAlt,
   noindex = false,
   jsonLd,
   lang = "ru",
