@@ -154,7 +154,7 @@ const Blog = () => {
                   Все статьи
                 </span>
               </button>
-              {PRODUCT_CATEGORIES.map((cat) => (
+              {PRODUCT_CATEGORIES.filter((c) => c.tag !== "trepang-honey-tincture").map((cat) => (
                 <button
                   key={cat.tag}
                   onClick={() => setActiveTag(cat.tag)}
