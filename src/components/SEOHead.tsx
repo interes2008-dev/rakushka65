@@ -6,6 +6,8 @@ interface SEOHeadProps {
   canonical?: string;
   ogType?: string;
   ogImage?: string;
+  /** Альт-текст для OG/Twitter изображения — повышает доступность превью при шаринге */
+  ogImageAlt?: string;
   noindex?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   lang?: string;
@@ -17,6 +19,7 @@ const SEOHead = ({
   canonical,
   ogType = "website",
   ogImage = "https://rakushka65.ru/og-image.jpg",
+  ogImageAlt,
   noindex = false,
   jsonLd,
   lang = "ru",
@@ -44,8 +47,11 @@ const SEOHead = ({
     setMeta("property", "og:description", description);
     setMeta("property", "og:type", ogType);
     setMeta("property", "og:image", ogImage);
+    setMeta("property", "og:image:secure_url", ogImage);
+    setMeta("property", "og:image:type", ogImage.endsWith(".png") ? "image/png" : "image/jpeg");
     setMeta("property", "og:image:width", "1200");
     setMeta("property", "og:image:height", "630");
+    if (ogImageAlt) setMeta("property", "og:image:alt", ogImageAlt);
     setMeta("property", "og:site_name", "Ракушка65");
     setMeta("property", "og:locale", lang === "ru" ? "ru_RU" : "en_US");
     setMeta("property", "og:locale:alternate", lang === "ru" ? "en_US" : "ru_RU");
@@ -54,6 +60,7 @@ const SEOHead = ({
     setMeta("name", "twitter:image", ogImage);
     setMeta("name", "twitter:image:width", "1200");
     setMeta("name", "twitter:image:height", "630");
+    if (ogImageAlt) setMeta("name", "twitter:image:alt", ogImageAlt);
     setMeta("name", "twitter:card", "summary_large_image");
 
     if (noindex) {

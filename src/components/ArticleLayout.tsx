@@ -19,9 +19,13 @@ interface ArticleLayoutProps {
   slug: string;
   children: React.ReactNode;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Абсолютный URL обложки 1200×630 для OG/Twitter Card. Если не указан — используется дефолтная. */
+  ogImage?: string;
+  /** Альт-текст обложки для шаринга */
+  ogImageAlt?: string;
 }
 
-const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd }: ArticleLayoutProps) => {
+const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd, ogImage, ogImageAlt }: ArticleLayoutProps) => {
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
     { name: "Блог", url: "/blog" },
@@ -37,7 +41,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
 
   return (
     <div className="relative min-h-screen">
-      <SEOHead title={seoTitle} description={seoDescription} lang="ru" jsonLd={allJsonLd} />
+      <SEOHead title={seoTitle} description={seoDescription} lang="ru" jsonLd={allJsonLd} ogImage={ogImage} ogImageAlt={ogImageAlt} ogType="article" />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
