@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import liveScallopImg from "@/assets/blog-scallop-live-hero.jpg";
+import liveScallopImg from "@/assets/blog-scallop-live-delivery.jpg";
 
 const ScallopLiveDelivery = () => {
   const articleJsonLd = {
