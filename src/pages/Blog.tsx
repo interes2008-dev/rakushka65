@@ -26,6 +26,8 @@ const FALLBACK_IMG: Record<string, string> = {
 };
 
 const Blog = () => {
+  const { lang } = useLanguage();
+  const isEn = lang === "en";
   const [allArticles, setAllArticles] = useState<BlogArticle[]>(blogArticles);
   const [activeTag, setActiveTag] = useState<ProductTag | "all">("all");
   const [search, setSearch] = useState("");
