@@ -21,6 +21,8 @@ interface ArticleLayoutProps {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   /** Абсолютный URL обложки 1200×630 для OG/Twitter Card. Если не указан — используется дефолтная. */
   ogImage?: string;
+  /** Альт-текст обложки для шаринга */
+  ogImageAlt?: string;
 }
 
 const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd, ogImage }: ArticleLayoutProps) => {
