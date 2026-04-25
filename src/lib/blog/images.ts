@@ -49,6 +49,7 @@ export const blogImages: Record<string, string> = {
   "/src/assets/blog-trepang-fresh.jpg": blogTrepangFresh,
   "/src/assets/blog-trepang-tincture-pour.jpg": blogTrepangTincturePour,
   "/src/assets/blog-trepang-honey.jpg": blogTrepangHoney,
+  "/src/assets/blog-trepang-honey-tincture.jpg": blogTrepangHoneyTincture,
 };
 
 export function getBlogImage(path: string): string {
