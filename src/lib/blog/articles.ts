@@ -208,6 +208,6 @@ export const blogArticles: BlogArticle[] = [
     date: "2026-04-25",
     image: "/src/assets/blog-trepang-honey-tincture.jpg",
     routePath: "/blog/medovaya-nastojka-trepanga",
-    productTag: "trepang-tincture",
+    productTag: "trepang-tincture" as ProductTag,
   },
 ].map((a): BlogArticle => ({ ...a, productTag: a.productTag ?? detectProductTag(a.slug) }));
