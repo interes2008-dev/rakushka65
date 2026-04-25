@@ -20,6 +20,8 @@ const FALLBACK_IMG: Record<string, string> = {
   spisula: "/src/assets/blog-spisula-v2.jpg",
   urchin: "/src/assets/blog-urchin-1.jpg",
   crab: "/src/assets/blog-vongole-real-1.jpg",
+  trepang: "/src/assets/blog-trepang-fresh.jpg",
+  "trepang-tincture": "/src/assets/blog-trepang-honey-tincture.jpg",
 };
 
 const Blog = () => {
