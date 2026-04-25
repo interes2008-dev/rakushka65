@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, Star, ShoppingCart, Truck, Thermometer, Shell } from "lucide-react";
+import { ArrowLeft, Star, ShoppingCart, Truck, Thermometer, Shell, ChefHat, Clock, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
@@ -156,6 +156,124 @@ const ProductDetail = () => {
               </div>
             </motion.div>
           </div>
+
+          {product.id === "trepang-tincture" && (
+            <motion.section
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="mt-20 rounded-2xl p-6 md:p-10 border border-primary/30 bg-gradient-to-br from-primary/5 via-card to-card"
+              aria-labelledby="recipe-heading"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <ChefHat className="w-6 h-6 text-primary" />
+                <span className="text-primary font-body text-sm tracking-widest uppercase">
+                  {lang === "ru" ? "Рецепт" : "Recipe"}
+                </span>
+              </div>
+              <h2 id="recipe-heading" className="font-heading text-2xl md:text-3xl font-bold mb-4">
+                {lang === "ru"
+                  ? "Медовая настойка с трепангом — без спирта"
+                  : "Honey sea cucumber tincture — alcohol-free"}
+              </h2>
+              <p className="font-body text-muted-foreground mb-6 max-w-2xl">
+                {lang === "ru"
+                  ? "Мягкая безалкогольная альтернатива классической настойке. Подходит детям с 6 лет, пожилым и тем, кому противопоказан спирт."
+                  : "A gentle alcohol-free alternative to the classic tincture. Suitable for children 6+, seniors and those who must avoid alcohol."}
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-sand-glass border border-border/40">
+                  <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+                  <div>
+                    <div className="font-body text-xs text-muted-foreground">{lang === "ru" ? "Подготовка" : "Prep"}</div>
+                    <div className="font-body font-semibold text-sm">{lang === "ru" ? "40 минут" : "40 minutes"}</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-sand-glass border border-border/40">
+                  <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+                  <div>
+                    <div className="font-body text-xs text-muted-foreground">{lang === "ru" ? "Настаивание" : "Maceration"}</div>
+                    <div className="font-body font-semibold text-sm">{lang === "ru" ? "21 день" : "21 days"}</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-sand-glass border border-border/40">
+                  <Shell className="w-5 h-5 text-primary flex-shrink-0" />
+                  <div>
+                    <div className="font-body text-xs text-muted-foreground">{lang === "ru" ? "Выход" : "Yield"}</div>
+                    <div className="font-body font-semibold text-sm">{lang === "ru" ? "≈ 1 литр" : "≈ 1 litre"}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h3 className="font-heading text-lg font-semibold mb-3">
+                    {lang === "ru" ? "Ингредиенты" : "Ingredients"}
+                  </h3>
+                  <ul className="space-y-2 font-body text-sm text-muted-foreground">
+                    {(lang === "ru"
+                      ? [
+                          "500 г свежего трепанга (или 80 г сушёного)",
+                          "1 кг натурального жидкого мёда",
+                          "Стеклянная банка 1,5 л с плотной крышкой",
+                        ]
+                      : [
+                          "500 g fresh sea cucumber (or 80 g dried)",
+                          "1 kg natural liquid honey",
+                          "1.5 l glass jar with tight lid",
+                        ]
+                    ).map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-heading text-lg font-semibold mb-3">
+                    {lang === "ru" ? "Краткий план" : "Quick steps"}
+                  </h3>
+                  <ol className="space-y-2 font-body text-sm text-muted-foreground">
+                    {(lang === "ru"
+                      ? [
+                          "Подготовить трепанг: очистить и промыть (сушёный — замочить на 24–36 ч).",
+                          "Нарезать кусочками 1–2 см.",
+                          "В стерильную банку слоями уложить мёд и трепанг, верхний слой — мёд.",
+                          "Настаивать 21 день в тёмном месте при 18–22 °C, переворачивая раз в 3–4 дня.",
+                          "Хранить в холодильнике до 6 месяцев.",
+                        ]
+                      : [
+                          "Clean and rinse the sea cucumber (soak dried for 24–36 h).",
+                          "Cut into 1–2 cm pieces.",
+                          "Layer honey and sea cucumber in a sterile jar, finishing with honey.",
+                          "Macerate for 21 days in a dark place at 18–22 °C, turning every 3–4 days.",
+                          "Keep refrigerated for up to 6 months.",
+                        ]
+                    ).map((step, i) => (
+                      <li key={step} className="flex gap-3">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/15 text-primary text-xs font-semibold flex items-center justify-center">
+                          {i + 1}
+                        </span>
+                        <span>{step}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </div>
+
+              <Link
+                to="/blog/medovaya-nastojka-trepanga"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
+              >
+                {lang === "ru" ? "Полный рецепт и схема приёма" : "Full recipe and dosing schedule"}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.section>
+          )}
+
 
           {relatedArticles.length > 0 && (
             <motion.section
