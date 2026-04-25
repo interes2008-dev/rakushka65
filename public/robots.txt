@@ -4,6 +4,7 @@
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
+Disallow: /seo-check
 
 User-agent: Googlebot-Image
 Allow: /
@@ -11,10 +12,12 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
+Disallow: /seo-check
 
 User-agent: Yandex
 Allow: /
 Disallow: /api/
+Disallow: /seo-check
 Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gclid&yclid
 
 User-agent: YandexImages
