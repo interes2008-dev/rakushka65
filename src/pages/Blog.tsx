@@ -51,7 +51,12 @@ const Blog = () => {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     const list = allArticles.filter((a) => {
-      if (activeTag !== "all" && a.productTag !== activeTag) return false;
+      // «Настойка трепанга» агрегирует свои статьи + общие материалы о трепанге (контекст для читателя)
+      if (activeTag === "trepang-tincture") {
+        if (a.productTag !== "trepang-tincture" && a.productTag !== "trepang") return false;
+      } else if (activeTag !== "all" && a.productTag !== activeTag) {
+        return false;
+      }
       if (!q) return true;
       return (
         a.title.toLowerCase().includes(q) ||
