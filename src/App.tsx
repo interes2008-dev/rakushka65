@@ -34,6 +34,9 @@ import SeaUrchinBenefits from "./pages/articles/SeaUrchinBenefits";
 import ScallopWhat from "./pages/articles/ScallopWhat";
 import ScallopCooking from "./pages/articles/ScallopCooking";
 import ScallopChoose from "./pages/articles/ScallopChoose";
+import ScallopLiveSakhalin from "./pages/articles/ScallopLiveSakhalin";
+import ScallopLiveStorage from "./pages/articles/ScallopLiveStorage";
+import ScallopLiveDelivery from "./pages/articles/ScallopLiveDelivery";
 // Spisula cluster
 import SpisulaWhat from "./pages/articles/SpisulaWhat";
 import SpisulaCooking from "./pages/articles/SpisulaCooking";
@@ -73,6 +76,9 @@ const App = () => (
             <Route path="/blog/morskoj-grebeshok-sahalin" element={<ScallopWhat />} />
             <Route path="/blog/kak-prigotovit-grebeshok" element={<ScallopCooking />} />
             <Route path="/blog/kak-vybrat-grebeshok" element={<ScallopChoose />} />
+            <Route path="/blog/zhivoj-morskoj-grebeshok-sahalin" element={<ScallopLiveSakhalin />} />
+            <Route path="/blog/kak-hranit-zhivogo-grebeshka" element={<ScallopLiveStorage />} />
+            <Route path="/blog/dostavka-zhivogo-grebeshka-rossiya" element={<ScallopLiveDelivery />} />
             {/* Vongole */}
             <Route path="/blog/chto-takoe-vongole" element={<VongoleWhatIs />} />
             <Route path="/blog/kak-prigotovit-vongole" element={<VongoleCooking />} />

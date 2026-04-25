@@ -61,6 +61,30 @@ export const blogArticles: BlogArticle[] = [
     image: "/src/assets/blog-scallop-choose.jpg",
     routePath: "/blog/kak-vybrat-grebeshok",
   },
+  {
+    slug: "zhivoj-morskoj-grebeshok-sahalin",
+    title: "Живой морской гребешок с Сахалина — почему это лучший выбор",
+    description: "Чем живой сахалинский морской гребешок отличается от замороженного: вкус, текстура, польза, документы и логистика прямой поставки.",
+    date: "2026-04-25",
+    image: "/src/assets/blog-scallop-live-hero.jpg",
+    routePath: "/blog/zhivoj-morskoj-grebeshok-sahalin",
+  },
+  {
+    slug: "kak-hranit-zhivogo-grebeshka",
+    title: "Как хранить живого морского гребешка дома — пошаговая инструкция",
+    description: "Сроки и температура хранения живого сахалинского гребешка, признаки свежести, правильная заморозка и частые ошибки покупателей.",
+    date: "2026-04-25",
+    image: "/src/assets/blog-scallop-live-hero.jpg",
+    routePath: "/blog/kak-hranit-zhivogo-grebeshka",
+  },
+  {
+    slug: "dostavka-zhivogo-grebeshka-rossiya",
+    title: "Доставка живого морского гребешка с Сахалина по России",
+    description: "Как мы доставляем живого сахалинского гребешка в Москву, СПб и регионы за 24–48 часов: упаковка, документы Меркурий, гарантии.",
+    date: "2026-04-25",
+    image: "/src/assets/blog-scallop-live-hero.jpg",
+    routePath: "/blog/dostavka-zhivogo-grebeshka-rossiya",
+  },
   // === Вонголе ===
   {
     slug: "chto-takoe-vongole",
