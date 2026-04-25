@@ -12,6 +12,7 @@ import snailsImg from "@/assets/product-snails.png";
 import corbiculaImg from "@/assets/product-corbicula.png";
 import trepangImg from "@/assets/product-trepang.png";
 import trepangTinctureImg from "@/assets/product-trepang-tincture.png";
+import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.jpg";
 import crabImg from "@/assets/product-crab.png";
 
 export interface Product {
@@ -39,6 +40,7 @@ export const products: Product[] = [
   { id: "corbicula", name: "Корбикула Сахалинская", image: corbiculaImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Нежный, чуть сладковатый" },
   { id: "trepang", name: "Трепанг дальневосточный", image: trepangImg, price: "", unit: "кг", rating: 5, description: "", category: "Деликатесы", weight: "150-500 г / шт", taste: "Нежный, желеобразный" },
   { id: "trepang-tincture", name: "Настойка на трепанге", image: trepangTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Насыщенный, морской с мёдом" },
+  { id: "trepang-honey-tincture", name: "Медовая настойка с трепангом без спирта", image: trepangHoneyTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Сладко-медовый, мягкий" },
   { id: "crab", name: "Краб колючий", image: crabImg, price: "", unit: "кг", rating: 5, description: "", category: "Ракообразные", weight: "от 1 кг / шт", taste: "Сладковатый, сочный" },
 ];
 

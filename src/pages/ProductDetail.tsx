@@ -9,6 +9,9 @@ import { products } from "@/components/ProductsSection";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import { getProductSchema, getBreadcrumbSchema } from "@/lib/seo/schemas";
+import { blogArticles } from "@/lib/blog/articles";
+import { detectProductTag } from "@/lib/blog/productCategories";
+import { BookOpen } from "lucide-react";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -69,8 +72,13 @@ const ProductDetail = () => {
     corbicula: "https://rakushka65.ru/og-corbicula.jpg",
     trepang: "https://rakushka65.ru/og-image.jpg",
     "trepang-tincture": "https://rakushka65.ru/og-image.jpg",
+    "trepang-honey-tincture": "https://rakushka65.ru/og/blog-trepang-honey-tincture.jpg",
     crab: "https://rakushka65.ru/og-image.jpg",
   };
+
+  // Подбираем статьи блога для этого товара по productTag
+  const productTag = detectProductTag(product.id);
+  const relatedArticles = blogArticles.filter((a) => a.productTag === productTag).slice(0, 4);
 
   return (
     <div className="relative min-h-screen">
@@ -148,6 +156,61 @@ const ProductDetail = () => {
               </div>
             </motion.div>
           </div>
+
+          {relatedArticles.length > 0 && (
+            <motion.section
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="mt-20 bg-sand-glass rounded-2xl p-6 md:p-10 border border-border/40"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <BookOpen className="w-6 h-6 text-primary" />
+                <h2 className="font-heading text-2xl md:text-3xl font-bold">
+                  {lang === "ru" ? "Статьи о продукте" : "Articles about this product"}
+                </h2>
+              </div>
+              <p className="font-body text-muted-foreground mb-8 max-w-2xl">
+                {lang === "ru"
+                  ? "Полезные материалы блога: что это, как выбрать, как готовить и применять — перед оформлением заказа."
+                  : "Useful blog reads: what it is, how to choose, cook and use — before ordering."}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {relatedArticles.map((a) => (
+                  <Link
+                    key={a.slug}
+                    to={a.routePath}
+                    className="group flex gap-4 p-4 rounded-xl bg-card border border-border/50 hover:border-primary/40 transition-all duration-300 hover:-translate-y-0.5"
+                  >
+                    <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden">
+                      <img
+                        src={a.image}
+                        alt={a.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                        width={80}
+                        height={80}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-heading text-base font-semibold leading-snug mb-1 group-hover:text-primary transition-colors line-clamp-2">
+                        {a.title}
+                      </h3>
+                      <p className="font-body text-xs text-muted-foreground line-clamp-2">{a.description}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-6">
+                <Link
+                  to="/blog"
+                  className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary hover:underline"
+                >
+                  {lang === "ru" ? "Все статьи в блоге" : "All blog articles"} →
+                </Link>
+              </div>
+            </motion.section>
+          )}
 
           {related.length > 0 && (
             <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-24">

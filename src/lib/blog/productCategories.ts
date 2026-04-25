@@ -10,8 +10,9 @@ import snailsImg from "@/assets/product-snails.png";
 import corbiculaImg from "@/assets/product-corbicula.png";
 import trepangImg from "@/assets/product-trepang.png";
 import trepangTinctureImg from "@/assets/product-trepang-tincture.png";
+import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.jpg";
 
-export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture";
+export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture" | "trepang-honey-tincture";
 
 export interface ProductCategory {
   tag: ProductTag;
@@ -114,6 +115,14 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     cta: "Купить настойку на трепанге",
     ctaDescription: "Готовая медовая настойка трепанга — дальневосточный эликсир для иммунитета и тонуса.",
   },
+  {
+    tag: "trepang-honey-tincture",
+    label: "Медовая настойка с трепангом без спирта",
+    productLink: "/catalog/trepang-honey-tincture",
+    image: trepangHoneyTinctureImg,
+    cta: "Купить медовую настойку трепанга без спирта",
+    ctaDescription: "Безалкогольный медовый эликсир из сахалинского трепанга — мягкая поддержка иммунитета без спирта.",
+  },
 ];
 
 const BY_TAG: Record<ProductTag, ProductCategory> = PRODUCT_CATEGORIES.reduce((acc, c) => {
@@ -132,8 +141,9 @@ export function detectProductTag(input: string): ProductTag {
   if (s.includes("rapan")) return "rapany";
   if (s.includes("ulitk") || s.includes("snail")) return "snails";
   if (s.includes("corbicul") || s.includes("korbikul")) return "corbicula";
-  // Сначала проверяем настойку (содержит "trepang"), потом сам трепанг
-  if (s.includes("nastojk") || s.includes("tincture") || s.includes("настойк") || s.includes("medov")) return "trepang-tincture";
+  // Сначала проверяем безалкогольную медовую настойку, потом обычную настойку, потом сам трепанг
+  if (s.includes("medov") || s.includes("honey") || s.includes("медов") || s.includes("bez-spirt") || s.includes("alcohol-free")) return "trepang-honey-tincture";
+  if (s.includes("nastojk") || s.includes("tincture") || s.includes("настойк")) return "trepang-tincture";
   if (s.includes("trepang") || s.includes("трепанг")) return "trepang";
   if (s.includes("vongol")) return "vongole";
   return "vongole";
