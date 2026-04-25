@@ -57,6 +57,7 @@ const Footer = () => {
             <Link to="/privacy" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">{t.footer.privacy}</Link>
             <Link to="/offer" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">{t.footer.offer}</Link>
           </div>
+          <AgroserverCounter />
         </div>
       </div>
     </footer>
