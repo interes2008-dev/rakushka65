@@ -328,7 +328,7 @@ const Blog = () => {
 
           {filtered.length === 0 && (
             <p className="text-center text-muted-foreground font-body mt-10">
-              Ничего не найдено. Попробуйте другой запрос или категорию.
+              {isEn ? "Nothing found. Try another query or category." : "Ничего не найдено. Попробуйте другой запрос или категорию."}
             </p>
           )}
         </div>
