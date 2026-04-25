@@ -236,7 +236,7 @@ const Blog = () => {
                     : "bg-card/50 text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Новые
+                {isEn ? "Newest" : "Новые"}
               </button>
               <button
                 onClick={() => setSortBy("oldest")}
