@@ -6,6 +6,8 @@ interface SEOHeadProps {
   canonical?: string;
   ogType?: string;
   ogImage?: string;
+  /** Альт-текст для OG/Twitter изображения — повышает доступность превью при шаринге */
+  ogImageAlt?: string;
   noindex?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   lang?: string;
