@@ -25,6 +25,21 @@ const FALLBACK_IMG: Record<string, string> = {
   "trepang-tincture": "/src/assets/blog-trepang-honey-tincture.jpg",
 };
 
+const CATEGORY_LABELS_EN: Partial<Record<ProductTag, string>> = {
+  oysters: "Oysters",
+  scallop: "Scallop",
+  vongole: "Vongole",
+  spisula: "Spisula",
+  urchin: "Sea urchin",
+  crab: "Crab",
+  rapany: "Rapana",
+  snails: "Sea snails",
+  corbicula: "Corbicula",
+  trepang: "Trepang",
+  "trepang-tincture": "Trepang tincture",
+  "trepang-honey-tincture": "Trepang honey tincture",
+};
+
 const Blog = () => {
   const { lang } = useLanguage();
   const isEn = lang === "en";
@@ -133,10 +148,12 @@ const Blog = () => {
             className="text-center mb-14"
           >
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Блог <span className="text-primary">Ракушка65</span>
+              {isEn ? <>The <span className="text-primary">Rakushka65</span> Blog</> : <>Блог <span className="text-primary">Ракушка65</span></>}
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-              Статьи о морепродуктах с Сахалина: рецепты, гиды по выбору и приготовлению редких деликатесов Тихого океана
+              {isEn
+                ? "Articles about Sakhalin seafood: recipes, selection guides and cooking tips for rare Pacific delicacies"
+                : "Статьи о морепродуктах с Сахалина: рецепты, гиды по выбору и приготовлению редких деликатесов Тихого океана"}
             </p>
           </motion.div>
 
@@ -148,7 +165,7 @@ const Blog = () => {
             className="max-w-6xl mx-auto mb-10"
           >
             <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center">
-              Выберите продукт
+              {isEn ? "Choose a product" : "Выберите продукт"}
             </h2>
             <div className="flex gap-3 overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible scrollbar-hide">
               <button
@@ -160,10 +177,10 @@ const Blog = () => {
                 }`}
               >
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center font-heading text-xl font-bold text-primary">
-                  Все
+                  {isEn ? "All" : "Все"}
                 </div>
                 <span className="font-body text-xs md:text-sm text-foreground whitespace-nowrap">
-                  Все статьи
+                  {isEn ? "All articles" : "Все статьи"}
                 </span>
               </button>
               {PRODUCT_CATEGORIES.filter((c) => c.tag !== "trepang-honey-tincture").map((cat) => (
@@ -179,7 +196,7 @@ const Blog = () => {
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-1 ring-border/40 group-hover:ring-primary/40 transition-all">
                      <img
                       src={cat.image}
-                      alt={`${cat.label} — купить с Сахалина, Ракушка65`}
+                      alt={`${isEn ? CATEGORY_LABELS_EN[cat.tag] ?? cat.label : cat.label} — Sakhalin seafood, Rakushka65`}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
                       width={80}
@@ -187,7 +204,7 @@ const Blog = () => {
                     />
                   </div>
                   <span className="font-body text-xs md:text-sm text-foreground whitespace-nowrap">
-                    {cat.label}
+                    {isEn ? CATEGORY_LABELS_EN[cat.tag] ?? cat.label : cat.label}
                   </span>
                 </button>
               ))}
@@ -206,7 +223,7 @@ const Blog = () => {
               <Input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Найти статью (например: как открыть устрицу)"
+                placeholder={isEn ? "Find an article (e.g.: how to open an oyster)" : "Найти статью (например: как открыть устрицу)"}
                 className="pl-11 h-12 bg-card/50 border-border/40 focus-visible:border-primary/60"
               />
             </div>
@@ -219,7 +236,7 @@ const Blog = () => {
                     : "bg-card/50 text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Новые
+                {isEn ? "Newest" : "Новые"}
               </button>
               <button
                 onClick={() => setSortBy("oldest")}
@@ -229,7 +246,7 @@ const Blog = () => {
                     : "bg-card/50 text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Старые
+                {isEn ? "Oldest" : "Старые"}
               </button>
             </div>
           </motion.div>
@@ -271,7 +288,7 @@ const Blog = () => {
                     <div className="aspect-[3/2] overflow-hidden">
                       <img
                         src={getBlogImage(article.image)}
-                        alt={`${article.title} — статья в блоге Ракушка65`}
+                        alt={`${article.title} — ${isEn ? "Rakushka65 blog article" : "статья в блоге Ракушка65"}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                         width={1200}
@@ -283,7 +300,7 @@ const Blog = () => {
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                         <Calendar className="w-4 h-4" />
                         <time dateTime={article.date} itemProp="datePublished">
-                          {new Date(article.date).toLocaleDateString("ru-RU", {
+                          {new Date(article.date).toLocaleDateString(isEn ? "en-US" : "ru-RU", {
                             day: "numeric",
                             month: "long",
                             year: "numeric",
@@ -311,7 +328,7 @@ const Blog = () => {
 
           {filtered.length === 0 && (
             <p className="text-center text-muted-foreground font-body mt-10">
-              Ничего не найдено. Попробуйте другой запрос или категорию.
+              {isEn ? "Nothing found. Try another query or category." : "Ничего не найдено. Попробуйте другой запрос или категорию."}
             </p>
           )}
         </div>
