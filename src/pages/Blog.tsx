@@ -223,7 +223,7 @@ const Blog = () => {
               <Input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Найти статью (например: как открыть устрицу)"
+                placeholder={isEn ? "Find an article (e.g.: how to open an oyster)" : "Найти статью (например: как открыть устрицу)"}
                 className="pl-11 h-12 bg-card/50 border-border/40 focus-visible:border-primary/60"
               />
             </div>
