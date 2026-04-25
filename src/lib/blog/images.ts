@@ -5,6 +5,9 @@ import blogScallopCard1 from "@/assets/blog-scallop-card-1.jpg";
 import blogScallopChoose from "@/assets/blog-scallop-choose.jpg";
 import blogScallopCard3 from "@/assets/blog-scallop-card-3.jpg";
 import blogScallopRoyal from "@/assets/blog-scallop-royal.jpg";
+import blogScallopLiveHero from "@/assets/blog-scallop-live-hero.jpg";
+import blogScallopLiveStorage from "@/assets/blog-scallop-live-storage.jpg";
+import blogScallopLiveDelivery from "@/assets/blog-scallop-live-delivery.jpg";
 import blogVongoleReal1 from "@/assets/blog-vongole-real-1.jpg";
 import blogVongoleReal2 from "@/assets/blog-vongole-real-2.jpg";
 import blogVongoleReal3 from "@/assets/blog-vongole-real-3.jpg";
@@ -32,6 +35,9 @@ export const blogImages: Record<string, string> = {
   "/src/assets/blog-scallop-choose.jpg": blogScallopChoose,
   "/src/assets/blog-scallop-card-3.jpg": blogScallopCard3,
   "/src/assets/blog-scallop-royal.jpg": blogScallopRoyal,
+  "/src/assets/blog-scallop-live-hero.jpg": blogScallopLiveHero,
+  "/src/assets/blog-scallop-live-storage.jpg": blogScallopLiveStorage,
+  "/src/assets/blog-scallop-live-delivery.jpg": blogScallopLiveDelivery,
   "/src/assets/blog-vongole-real-1.jpg": blogVongoleReal1,
   "/src/assets/blog-vongole-real-2.jpg": blogVongoleReal2,
   "/src/assets/blog-vongole-real-3.jpg": blogVongoleReal3,
