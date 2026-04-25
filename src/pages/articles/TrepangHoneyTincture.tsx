@@ -23,7 +23,7 @@ const TrepangHoneyTincture = () => {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: "Медовая настойка с трепангом (без спирта)",
-    image: "https://rakushka65.ru/og-image.jpg",
+    image: ogImageUrl,
     author: { "@type": "Organization", name: "Ракушка65" },
     recipeCategory: "Лечебная настойка",
     recipeCuisine: "Дальневосточная",
