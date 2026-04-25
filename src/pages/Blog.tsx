@@ -300,7 +300,7 @@ const Blog = () => {
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                         <Calendar className="w-4 h-4" />
                         <time dateTime={article.date} itemProp="datePublished">
-                          {new Date(article.date).toLocaleDateString("ru-RU", {
+                          {new Date(article.date).toLocaleDateString(isEn ? "en-US" : "ru-RU", {
                             day: "numeric",
                             month: "long",
                             year: "numeric",
