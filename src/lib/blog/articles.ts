@@ -201,4 +201,13 @@ export const blogArticles: BlogArticle[] = [
     image: "/src/assets/blog-trepang-honey.jpg",
     routePath: "/blog/trepang-primenenie",
   },
-].map((a): BlogArticle => ({ ...a, productTag: detectProductTag(a.slug) }));
+  {
+    slug: "medovaya-nastojka-trepanga",
+    title: "Медовая настойка с трепангом без спирта — рецепт и польза",
+    description: "Безалкогольная настойка трепанга на мёде: пошаговый рецепт, технология, схема приёма, польза для иммунитета и противопоказания. Мягкий вариант дальневосточного эликсира.",
+    date: "2026-04-25",
+    image: "/src/assets/blog-trepang-honey-tincture.jpg",
+    routePath: "/blog/medovaya-nastojka-trepanga",
+    productTag: "trepang-tincture",
+  },
+].map((a): BlogArticle => ({ ...a, productTag: a.productTag ?? detectProductTag(a.slug) }));
