@@ -10,8 +10,9 @@ import snailsImg from "@/assets/product-snails.png";
 import corbiculaImg from "@/assets/product-corbicula.png";
 import trepangImg from "@/assets/product-trepang.png";
 import trepangTinctureImg from "@/assets/product-trepang-tincture.png";
+import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.jpg";
 
-export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture";
+export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture" | "trepang-honey-tincture";
 
 export interface ProductCategory {
   tag: ProductTag;
@@ -113,6 +114,14 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     image: trepangTinctureImg,
     cta: "Купить настойку на трепанге",
     ctaDescription: "Готовая медовая настойка трепанга — дальневосточный эликсир для иммунитета и тонуса.",
+  },
+  {
+    tag: "trepang-honey-tincture",
+    label: "Медовая настойка с трепангом без спирта",
+    productLink: "/catalog/trepang-honey-tincture",
+    image: trepangHoneyTinctureImg,
+    cta: "Купить медовую настойку трепанга без спирта",
+    ctaDescription: "Безалкогольный медовый эликсир из сахалинского трепанга — мягкая поддержка иммунитета без спирта.",
   },
 ];
 
