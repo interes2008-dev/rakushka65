@@ -9,6 +9,9 @@ import { products } from "@/components/ProductsSection";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import { getProductSchema, getBreadcrumbSchema } from "@/lib/seo/schemas";
+import { blogArticles } from "@/lib/blog/articles";
+import { detectProductTag } from "@/lib/blog/productCategories";
+import { BookOpen } from "lucide-react";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -69,8 +72,13 @@ const ProductDetail = () => {
     corbicula: "https://rakushka65.ru/og-corbicula.jpg",
     trepang: "https://rakushka65.ru/og-image.jpg",
     "trepang-tincture": "https://rakushka65.ru/og-image.jpg",
+    "trepang-honey-tincture": "https://rakushka65.ru/og/blog-trepang-honey-tincture.jpg",
     crab: "https://rakushka65.ru/og-image.jpg",
   };
+
+  // Подбираем статьи блога для этого товара по productTag
+  const productTag = detectProductTag(product.id);
+  const relatedArticles = blogArticles.filter((a) => a.productTag === productTag).slice(0, 4);
 
   return (
     <div className="relative min-h-screen">
