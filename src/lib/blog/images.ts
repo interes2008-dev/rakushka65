@@ -22,6 +22,7 @@ import blogOystersReal5 from "@/assets/blog-oysters-real-5.jpg";
 import blogTrepangFresh from "@/assets/blog-trepang-fresh.jpg";
 import blogTrepangTincturePour from "@/assets/blog-trepang-tincture-pour.jpg";
 import blogTrepangHoney from "@/assets/blog-trepang-honey.jpg";
+import blogTrepangHoneyTincture from "@/assets/blog-trepang-honey-tincture.jpg";
 
 export const blogImages: Record<string, string> = {
   "/src/assets/blog-urchin-1.jpg": blogUrchin1,
