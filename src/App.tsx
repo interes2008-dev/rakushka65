@@ -44,6 +44,7 @@ import TrepangTinctureRecipe from "./pages/articles/TrepangTinctureRecipe";
 import TrepangBenefits from "./pages/articles/TrepangBenefits";
 import TrepangHoneyTincture from "./pages/articles/TrepangHoneyTincture";
 import DynamicArticle from "./pages/DynamicArticle";
+import SeoCheck from "./pages/SeoCheck";
 
 const queryClient = new QueryClient();
 
