@@ -106,6 +106,14 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     cta: "Купить трепанг с Сахалина",
     ctaDescription: "Дальневосточный трепанг — уникальный деликатес с целебными свойствами.",
   },
+  {
+    tag: "trepang-tincture",
+    label: "Настойка трепанга",
+    productLink: "/catalog/trepang-tincture",
+    image: trepangTinctureImg,
+    cta: "Купить настойку на трепанге",
+    ctaDescription: "Готовая медовая настойка трепанга — дальневосточный эликсир для иммунитета и тонуса.",
+  },
 ];
 
 const BY_TAG: Record<ProductTag, ProductCategory> = PRODUCT_CATEGORIES.reduce((acc, c) => {
