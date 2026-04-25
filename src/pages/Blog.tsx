@@ -25,6 +25,21 @@ const FALLBACK_IMG: Record<string, string> = {
   "trepang-tincture": "/src/assets/blog-trepang-honey-tincture.jpg",
 };
 
+const CATEGORY_LABELS_EN: Partial<Record<ProductTag, string>> = {
+  oysters: "Oysters",
+  scallop: "Scallop",
+  vongole: "Vongole",
+  spisula: "Spisula",
+  urchin: "Sea urchin",
+  crab: "Crab",
+  rapany: "Rapana",
+  snails: "Sea snails",
+  corbicula: "Corbicula",
+  trepang: "Trepang",
+  "trepang-tincture": "Trepang tincture",
+  "trepang-honey-tincture": "Trepang honey tincture",
+};
+
 const Blog = () => {
   const { lang } = useLanguage();
   const isEn = lang === "en";
