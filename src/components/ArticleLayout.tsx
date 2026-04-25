@@ -39,7 +39,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
 
   return (
     <div className="relative min-h-screen">
-      <SEOHead title={seoTitle} description={seoDescription} lang="ru" jsonLd={allJsonLd} />
+      <SEOHead title={seoTitle} description={seoDescription} lang="ru" jsonLd={allJsonLd} ogImage={ogImage} ogType="article" />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
