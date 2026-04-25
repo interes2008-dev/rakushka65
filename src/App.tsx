@@ -64,6 +64,7 @@ const App = () => (
             <Route path="/offer" element={<Offer />} />
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/seo-check" element={<SeoCheck />} />
             {/* Sea urchin */}
             <Route path="/blog/morskoj-ezh-sahalin" element={<SeaUrchinWhat />} />
             <Route path="/blog/kak-vybrat-morskogo-ezha" element={<SeaUrchinChoose />} />
