@@ -4,16 +4,19 @@ import heroImg from "@/assets/blog-trepang-honey-tincture.jpg";
 import freshImg from "@/assets/blog-trepang-fresh.jpg";
 
 const TrepangHoneyTincture = () => {
+  const ogImageUrl = "https://rakushka65.ru/og/blog-trepang-honey-tincture.jpg";
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Медовая настойка с трепангом без спирта — рецепт и польза",
     description: "Безалкогольная настойка трепанга на мёде: классический дальневосточный рецепт, пошаговая технология, схема приёма, польза и противопоказания.",
-    image: "https://rakushka65.ru/og-image.jpg",
+    image: [ogImageUrl],
     datePublished: "2026-04-25",
     dateModified: "2026-04-25",
     author: { "@type": "Organization", name: "Ракушка65" },
-    publisher: { "@type": "Organization", name: "Ракушка65" },
+    publisher: { "@type": "Organization", name: "Ракушка65", logo: { "@type": "ImageObject", url: "https://rakushka65.ru/favicon.svg" } },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://rakushka65.ru/blog/medovaya-nastojka-trepanga" },
   };
 
   const recipeJsonLd = {
