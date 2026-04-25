@@ -12,7 +12,7 @@ const ScallopLiveStorage = () => {
     dateModified: "2026-04-25",
     author: { "@type": "Organization", name: "Ракушка65" },
     publisher: { "@type": "Organization", name: "Ракушка65" },
-    image: "https://rakushka65.ru/src/assets/blog-scallop-live-hero.jpg",
+    image: "https://rakushka65.ru/src/assets/blog-scallop-live-storage.jpg",
   };
 
   return (
@@ -23,7 +23,7 @@ const ScallopLiveStorage = () => {
       breadcrumbName="Хранение живого гребешка"
       slug="kak-hranit-zhivogo-grebeshka"
       jsonLd={articleJsonLd}
-      ogImage="https://rakushka65.ru/src/assets/blog-scallop-live-hero.jpg"
+      ogImage="https://rakushka65.ru/src/assets/blog-scallop-live-storage.jpg"
       ogImageAlt="Живые морские гребешки на льду — правильное хранение"
     >
       <img src={liveScallopImg} alt="Живой сахалинский гребешок — правила хранения дома" className="w-full rounded-xl mb-8" width={1200} height={800} />

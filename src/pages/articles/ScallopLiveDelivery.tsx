@@ -12,7 +12,7 @@ const ScallopLiveDelivery = () => {
     dateModified: "2026-04-25",
     author: { "@type": "Organization", name: "Ракушка65" },
     publisher: { "@type": "Organization", name: "Ракушка65" },
-    image: "https://rakushka65.ru/src/assets/blog-scallop-live-hero.jpg",
+    image: "https://rakushka65.ru/src/assets/blog-scallop-live-delivery.jpg",
   };
 
   return (
@@ -23,7 +23,7 @@ const ScallopLiveDelivery = () => {
       breadcrumbName="Доставка живого гребешка"
       slug="dostavka-zhivogo-grebeshka-rossiya"
       jsonLd={articleJsonLd}
-      ogImage="https://rakushka65.ru/src/assets/blog-scallop-live-hero.jpg"
+      ogImage="https://rakushka65.ru/src/assets/blog-scallop-live-delivery.jpg"
       ogImageAlt="Доставка живого морского гребешка с Сахалина по России"
     >
       <img src={liveScallopImg} alt="Живой сахалинский морской гребешок — доставка по России" className="w-full rounded-xl mb-8" width={1200} height={800} />
