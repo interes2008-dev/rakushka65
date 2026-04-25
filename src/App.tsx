@@ -42,6 +42,7 @@ import SpisulaCompare from "./pages/articles/SpisulaCompare";
 import TrepangWhat from "./pages/articles/TrepangWhat";
 import TrepangTinctureRecipe from "./pages/articles/TrepangTinctureRecipe";
 import TrepangBenefits from "./pages/articles/TrepangBenefits";
+import TrepangHoneyTincture from "./pages/articles/TrepangHoneyTincture";
 import DynamicArticle from "./pages/DynamicArticle";
 
 const queryClient = new QueryClient();
@@ -91,6 +92,7 @@ const App = () => (
             <Route path="/blog/trepang-sahalinskij" element={<TrepangWhat />} />
             <Route path="/blog/nastojka-na-trepange-recept" element={<TrepangTinctureRecipe />} />
             <Route path="/blog/trepang-primenenie" element={<TrepangBenefits />} />
+            <Route path="/blog/medovaya-nastojka-trepanga" element={<TrepangHoneyTincture />} />
             {/* Legacy redirects */}
             <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
             <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />

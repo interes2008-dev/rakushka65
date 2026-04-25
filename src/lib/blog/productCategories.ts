@@ -9,8 +9,9 @@ import rapanyImg from "@/assets/product-rapany.png";
 import snailsImg from "@/assets/product-snails.png";
 import corbiculaImg from "@/assets/product-corbicula.png";
 import trepangImg from "@/assets/product-trepang.png";
+import trepangTinctureImg from "@/assets/product-trepang-tincture.png";
 
-export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang";
+export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture";
 
 export interface ProductCategory {
   tag: ProductTag;
@@ -105,6 +106,14 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     cta: "Купить трепанг с Сахалина",
     ctaDescription: "Дальневосточный трепанг — уникальный деликатес с целебными свойствами.",
   },
+  {
+    tag: "trepang-tincture",
+    label: "Настойка трепанга",
+    productLink: "/catalog/trepang-tincture",
+    image: trepangTinctureImg,
+    cta: "Купить настойку на трепанге",
+    ctaDescription: "Готовая медовая настойка трепанга — дальневосточный эликсир для иммунитета и тонуса.",
+  },
 ];
 
 const BY_TAG: Record<ProductTag, ProductCategory> = PRODUCT_CATEGORIES.reduce((acc, c) => {
@@ -123,6 +132,8 @@ export function detectProductTag(input: string): ProductTag {
   if (s.includes("rapan")) return "rapany";
   if (s.includes("ulitk") || s.includes("snail")) return "snails";
   if (s.includes("corbicul") || s.includes("korbikul")) return "corbicula";
+  // Сначала проверяем настойку (содержит "trepang"), потом сам трепанг
+  if (s.includes("nastojk") || s.includes("tincture") || s.includes("настойк") || s.includes("medov")) return "trepang-tincture";
   if (s.includes("trepang") || s.includes("трепанг")) return "trepang";
   if (s.includes("vongol")) return "vongole";
   return "vongole";
