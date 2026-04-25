@@ -74,7 +74,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как хранить живого морского гребешка дома — пошаговая инструкция",
     description: "Сроки и температура хранения живого сахалинского гребешка, признаки свежести, правильная заморозка и частые ошибки покупателей.",
     date: "2026-04-25",
-    image: "/src/assets/blog-scallop-live-hero.jpg",
+    image: "/src/assets/blog-scallop-live-storage.jpg",
     routePath: "/blog/kak-hranit-zhivogo-grebeshka",
   },
   {
@@ -82,7 +82,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Доставка живого морского гребешка с Сахалина по России",
     description: "Как мы доставляем живого сахалинского гребешка в Москву, СПб и регионы за 24–48 часов: упаковка, документы Меркурий, гарантии.",
     date: "2026-04-25",
-    image: "/src/assets/blog-scallop-live-hero.jpg",
+    image: "/src/assets/blog-scallop-live-delivery.jpg",
     routePath: "/blog/dostavka-zhivogo-grebeshka-rossiya",
   },
   // === Вонголе ===
