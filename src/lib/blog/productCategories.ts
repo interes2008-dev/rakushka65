@@ -9,8 +9,9 @@ import rapanyImg from "@/assets/product-rapany.png";
 import snailsImg from "@/assets/product-snails.png";
 import corbiculaImg from "@/assets/product-corbicula.png";
 import trepangImg from "@/assets/product-trepang.png";
+import trepangTinctureImg from "@/assets/product-trepang-tincture.png";
 
-export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang";
+export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture";
 
 export interface ProductCategory {
   tag: ProductTag;
