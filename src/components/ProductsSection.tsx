@@ -27,6 +27,8 @@ export interface Product {
   weight?: string;
   taste?: string;
   fullDescription?: string;
+  /** Скрыть карточку из каталога и главной, но оставить страницу товара доступной по прямой ссылке */
+  hidden?: boolean;
 }
 
 export const products: Product[] = [
@@ -40,7 +42,7 @@ export const products: Product[] = [
   { id: "corbicula", name: "Корбикула Сахалинская", image: corbiculaImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Нежный, чуть сладковатый" },
   { id: "trepang", name: "Трепанг дальневосточный", image: trepangImg, price: "", unit: "кг", rating: 5, description: "", category: "Деликатесы", weight: "150-500 г / шт", taste: "Нежный, желеобразный" },
   { id: "trepang-tincture", name: "Настойка на трепанге", image: trepangTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Насыщенный, морской с мёдом" },
-  { id: "trepang-honey-tincture", name: "Медовая настойка с трепангом без спирта", image: trepangHoneyTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Сладко-медовый, мягкий" },
+  { id: "trepang-honey-tincture", name: "Медовая настойка с трепангом без спирта", image: trepangHoneyTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Сладко-медовый, мягкий", hidden: true },
   { id: "crab", name: "Краб колючий", image: crabImg, price: "", unit: "кг", rating: 5, description: "", category: "Ракообразные", weight: "от 1 кг / шт", taste: "Сладковатый, сочный" },
 ];
 
@@ -64,7 +66,7 @@ const ProductsSection = () => {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"
         >
-          {products.filter((p) => p.id !== "crab").slice(0, 10).map((product) => (
+          {products.filter((p) => p.id !== "crab" && !p.hidden).slice(0, 10).map((product) => (
             <motion.div
               key={product.id}
               className="h-full"
