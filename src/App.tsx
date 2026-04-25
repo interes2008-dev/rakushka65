@@ -92,6 +92,7 @@ const App = () => (
             <Route path="/blog/trepang-sahalinskij" element={<TrepangWhat />} />
             <Route path="/blog/nastojka-na-trepange-recept" element={<TrepangTinctureRecipe />} />
             <Route path="/blog/trepang-primenenie" element={<TrepangBenefits />} />
+            <Route path="/blog/medovaya-nastojka-trepanga" element={<TrepangHoneyTincture />} />
             {/* Legacy redirects */}
             <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
             <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />
