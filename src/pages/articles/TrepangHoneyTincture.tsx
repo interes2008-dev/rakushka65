@@ -82,6 +82,7 @@ const TrepangHoneyTincture = () => {
       slug="medovaya-nastojka-trepanga"
       jsonLd={[articleJsonLd, recipeJsonLd, faqJsonLd]}
       ogImage={ogImageUrl}
+      ogImageAlt="Медовая настойка с трепангом без спирта — банка с золотым мёдом, кусочки трепанга и соты"
     >
       <img
         src={heroImg}
