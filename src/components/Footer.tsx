@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import WaveLogo from "@/components/WaveLogo";
+import AgroserverCounter from "@/components/AgroserverCounter";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const Footer = () => {
@@ -56,6 +57,7 @@ const Footer = () => {
             <Link to="/privacy" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">{t.footer.privacy}</Link>
             <Link to="/offer" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">{t.footer.offer}</Link>
           </div>
+          <AgroserverCounter />
         </div>
       </div>
     </footer>
