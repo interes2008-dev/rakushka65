@@ -141,8 +141,9 @@ export function detectProductTag(input: string): ProductTag {
   if (s.includes("rapan")) return "rapany";
   if (s.includes("ulitk") || s.includes("snail")) return "snails";
   if (s.includes("corbicul") || s.includes("korbikul")) return "corbicula";
-  // Сначала проверяем настойку (содержит "trepang"), потом сам трепанг
-  if (s.includes("nastojk") || s.includes("tincture") || s.includes("настойк") || s.includes("medov")) return "trepang-tincture";
+  // Сначала проверяем безалкогольную медовую настойку, потом обычную настойку, потом сам трепанг
+  if (s.includes("medov") || s.includes("honey") || s.includes("медов") || s.includes("bez-spirt") || s.includes("alcohol-free")) return "trepang-honey-tincture";
+  if (s.includes("nastojk") || s.includes("tincture") || s.includes("настойк")) return "trepang-tincture";
   if (s.includes("trepang") || s.includes("трепанг")) return "trepang";
   if (s.includes("vongol")) return "vongole";
   return "vongole";
