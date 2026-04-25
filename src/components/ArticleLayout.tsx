@@ -9,6 +9,7 @@ import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { blogArticles } from "@/lib/blog/articles";
 import { getBlogImage } from "@/lib/blog/images";
 import { detectProductTag } from "@/lib/blog/productCategories";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { Calendar } from "lucide-react";
 
 interface ArticleLayoutProps {
@@ -26,9 +27,12 @@ interface ArticleLayoutProps {
 }
 
 const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd, ogImage, ogImageAlt }: ArticleLayoutProps) => {
+  const { lang } = useLanguage();
+  const isEn = lang === "en";
+
   const breadcrumb = getBreadcrumbSchema([
-    { name: "Главная", url: "/" },
-    { name: "Блог", url: "/blog" },
+    { name: isEn ? "Home" : "Главная", url: "/" },
+    { name: isEn ? "Blog" : "Блог", url: "/blog" },
     { name: breadcrumbName, url: `/blog/${slug}` },
   ]);
 
@@ -41,23 +45,23 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
 
   return (
     <div className="relative min-h-screen">
-      <SEOHead title={seoTitle} description={seoDescription} lang="ru" jsonLd={allJsonLd} ogImage={ogImage} ogImageAlt={ogImageAlt} ogType="article" />
+      <SEOHead title={seoTitle} description={seoDescription} lang={lang} jsonLd={allJsonLd} ogImage={ogImage} ogImageAlt={ogImageAlt} ogType="article" />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
         <div className="container mx-auto px-4 max-w-[720px]">
           <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-2 text-sm font-body text-muted-foreground">
-              <li><Link to="/" className="hover:text-primary transition-colors">Главная</Link></li>
+              <li><Link to="/" className="hover:text-primary transition-colors">{isEn ? "Home" : "Главная"}</Link></li>
               <li>/</li>
-              <li><Link to="/blog" className="hover:text-primary transition-colors">Блог</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">{isEn ? "Blog" : "Блог"}</Link></li>
               <li>/</li>
               <li className="text-foreground">{breadcrumbName}</li>
             </ol>
           </motion.nav>
 
           <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <div className="editorial-eyebrow">Журнал Ракушка65 · {breadcrumbName}</div>
+            <div className="editorial-eyebrow">{isEn ? "Rakushka65 Journal" : "Журнал Ракушка65"} · {breadcrumbName}</div>
             <h1 className="editorial-title">{title}</h1>
             <div className="editorial">
               {children}
@@ -68,7 +72,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
 
             {related.length > 0 && (
               <div className="mt-16 pt-8 border-t border-border/30 not-prose">
-                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Читайте также</h2>
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">{isEn ? "Read also" : "Читайте также"}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {related.map((article) => (
                     <Link
