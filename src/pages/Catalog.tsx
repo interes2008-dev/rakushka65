@@ -41,7 +41,7 @@ const Catalog = () => {
   ];
 
   const filtered = products.filter(
-    (p) => activeCategory === "Все" || p.category === activeCategory
+    (p) => !p.hidden && (activeCategory === "Все" || p.category === activeCategory)
   );
 
   const sorted = [...filtered].sort((a, b) => {
