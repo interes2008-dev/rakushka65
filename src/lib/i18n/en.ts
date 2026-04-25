@@ -142,6 +142,7 @@ export const en: Translations = {
     corbicula: "Sakhalin Corbicula",
     trepang: "Far Eastern Sea Cucumber",
     "trepang-tincture": "Sea Cucumber Tincture",
+    "trepang-honey-tincture": "Honey Sea Cucumber Elixir (Alcohol-Free)",
     crab: "Spiny King Crab",
   },
   productDescriptions: {
@@ -188,6 +189,7 @@ export const en: Translations = {
     corbicula: "small, 2-5 cm",
     trepang: "150-500 g / pc",
     "trepang-tincture": "250-500 ml",
+    "trepang-honey-tincture": "250-500 ml",
     crab: "from 1 kg / pc",
   },
   productTastes: {
@@ -201,6 +203,7 @@ export const en: Translations = {
     corbicula: "Delicate, slightly sweet",
     trepang: "Delicate, gelatinous",
     "trepang-tincture": "Rich, oceanic with honey",
+    "trepang-honey-tincture": "Sweet honey, gentle",
     crab: "Sweet, juicy",
   },
   unitKg: "kg",

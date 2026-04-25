@@ -142,6 +142,7 @@ export const ru: Translations = {
     corbicula: "Корбикула Сахалинская",
     trepang: "Трепанг дальневосточный",
     "trepang-tincture": "Настойка на трепанге",
+    "trepang-honey-tincture": "Медовая настойка с трепангом без спирта",
     crab: "Краб колючий Сахалинский",
   },
   productDescriptions: {
@@ -188,6 +189,7 @@ export const ru: Translations = {
     corbicula: "мелкие, 2-5 см",
     trepang: "150-500 г / шт",
     "trepang-tincture": "250-500 мл",
+    "trepang-honey-tincture": "250-500 мл",
     crab: "от 1 кг / шт",
   },
   productTastes: {
@@ -201,6 +203,7 @@ export const ru: Translations = {
     corbicula: "Нежный, чуть сладковатый",
     trepang: "Нежный, желеобразный",
     "trepang-tincture": "Насыщенный, морской с мёдом",
+    "trepang-honey-tincture": "Сладко-медовый, мягкий",
     crab: "Сладковатый, сочный",
   },
   unitKg: "кг",
