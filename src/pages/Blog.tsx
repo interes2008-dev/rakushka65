@@ -246,7 +246,7 @@ const Blog = () => {
                     : "bg-card/50 text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Старые
+                {isEn ? "Oldest" : "Старые"}
               </button>
             </div>
           </motion.div>
