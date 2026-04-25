@@ -71,6 +71,11 @@ const Blog = () => {
         title="Блог о морепродуктах с Сахалина — рецепты, советы, гиды | Ракушка65"
         description="Блог Ракушка65: статьи о вонголе, устрицах, гребешке и других морепродуктах с Сахалина. Рецепты, советы по выбору и приготовлению деликатесов."
         lang="ru"
+        ogImage={
+          filtered[0]
+            ? `https://rakushka65.ru${getBlogImage(filtered[0].image)}`
+            : "https://rakushka65.ru/og-image.jpg"
+        }
         jsonLd={[
           getBreadcrumbSchema([
             { name: "Главная", url: "/" },
@@ -83,6 +88,19 @@ const Blog = () => {
             description: "Экспертные статьи о вонголе, устрицах, гребешке, морском еже и других деликатесах Сахалина.",
             url: "https://rakushka65.ru/blog",
             isPartOf: { "@type": "WebSite", name: "Ракушка65", url: "https://rakushka65.ru" },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Статьи блога Ракушка65",
+            numberOfItems: filtered.length,
+            itemListElement: filtered.slice(0, 30).map((a, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://rakushka65.ru${a.routePath}`,
+              name: a.title,
+              image: `https://rakushka65.ru${getBlogImage(a.image)}`,
+            })),
           },
         ]}
       />
@@ -212,21 +230,40 @@ const Blog = () => {
                   <Link
                     to={article.routePath}
                     className="group block rounded-xl overflow-hidden border border-border/30 bg-card/50 backdrop-blur-sm hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 h-full"
+                    itemScope
+                    itemType="https://schema.org/BlogPosting"
                   >
+                    {/* Microdata + Twitter/OG hints per card — позволяют соцсетям и парсерам подхватывать обложку конкретной карточки при шаринге её URL */}
+                    <meta itemProp="url" content={`https://rakushka65.ru${article.routePath}`} />
+                    <meta itemProp="headline" content={article.title} />
+                    <meta itemProp="description" content={article.description} />
+                    <meta itemProp="datePublished" content={article.date} />
+                    <meta itemProp="image" content={`https://rakushka65.ru${getBlogImage(article.image)}`} />
+                    <meta itemProp="twitter:card" content="summary_large_image" />
+                    <meta itemProp="twitter:image" content={`https://rakushka65.ru${getBlogImage(article.image)}`} />
+                    <meta itemProp="twitter:image:width" content="1200" />
+                    <meta itemProp="twitter:image:height" content="630" />
+                    <meta itemProp="twitter:title" content={article.title} />
+                    <meta itemProp="twitter:description" content={article.description} />
+                    <meta itemProp="og:image" content={`https://rakushka65.ru${getBlogImage(article.image)}`} />
+                    <meta itemProp="og:image:width" content="1200" />
+                    <meta itemProp="og:image:height" content="630" />
+
                     <div className="aspect-[3/2] overflow-hidden">
                       <img
                         src={getBlogImage(article.image)}
                         alt={`${article.title} — статья в блоге Ракушка65`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
-                        width={600}
-                        height={400}
+                        width={1200}
+                        height={630}
+                        itemProp="image"
                       />
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                         <Calendar className="w-4 h-4" />
-                        <time dateTime={article.date}>
+                        <time dateTime={article.date} itemProp="datePublished">
                           {new Date(article.date).toLocaleDateString("ru-RU", {
                             day: "numeric",
                             month: "long",
@@ -234,10 +271,16 @@ const Blog = () => {
                           })}
                         </time>
                       </div>
-                      <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors mb-3 line-clamp-2 leading-tight">
+                      <h3
+                        className="font-heading text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors mb-3 line-clamp-2 leading-tight"
+                        itemProp="headline"
+                      >
                         {article.title}
                       </h3>
-                      <p className="font-body text-base text-muted-foreground line-clamp-3 leading-relaxed">
+                      <p
+                        className="font-body text-base text-muted-foreground line-clamp-3 leading-relaxed"
+                        itemProp="description"
+                      >
                         {article.description}
                       </p>
                     </div>
