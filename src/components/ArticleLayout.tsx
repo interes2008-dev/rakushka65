@@ -25,7 +25,7 @@ interface ArticleLayoutProps {
   ogImageAlt?: string;
 }
 
-const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd, ogImage }: ArticleLayoutProps) => {
+const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, children, jsonLd, ogImage, ogImageAlt }: ArticleLayoutProps) => {
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
     { name: "Блог", url: "/blog" },
