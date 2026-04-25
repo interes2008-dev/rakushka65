@@ -81,6 +81,7 @@ const TrepangHoneyTincture = () => {
       breadcrumbName="Медовая настойка трепанга"
       slug="medovaya-nastojka-trepanga"
       jsonLd={[articleJsonLd, recipeJsonLd, faqJsonLd]}
+      ogImage={ogImageUrl}
     >
       <img
         src={heroImg}
