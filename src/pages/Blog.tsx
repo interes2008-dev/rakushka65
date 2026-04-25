@@ -78,9 +78,13 @@ const Blog = () => {
   return (
     <div className="relative min-h-screen">
       <SEOHead
-        title="Блог о морепродуктах с Сахалина — рецепты, советы, гиды | Ракушка65"
-        description="Блог Ракушка65: статьи о вонголе, устрицах, гребешке и других морепродуктах с Сахалина. Рецепты, советы по выбору и приготовлению деликатесов."
-        lang="ru"
+        title={isEn
+          ? "Sakhalin seafood blog — recipes, guides, tips | Rakushka65"
+          : "Блог о морепродуктах с Сахалина — рецепты, советы, гиды | Ракушка65"}
+        description={isEn
+          ? "Rakushka65 blog: articles about vongole, oysters, scallop and other Sakhalin seafood. Recipes, selection and cooking guides."
+          : "Блог Ракушка65: статьи о вонголе, устрицах, гребешке и других морепродуктах с Сахалина. Рецепты, советы по выбору и приготовлению деликатесов."}
+        lang={lang}
         ogImage={
           filtered[0]
             ? `https://rakushka65.ru${getBlogImage(filtered[0].image)}`
@@ -88,21 +92,26 @@ const Blog = () => {
         }
         jsonLd={[
           getBreadcrumbSchema([
-            { name: "Главная", url: "/" },
-            { name: "Блог", url: "/blog" },
+            { name: isEn ? "Home" : "Главная", url: "/" },
+            { name: isEn ? "Blog" : "Блог", url: "/blog" },
           ]),
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Блог Ракушка65 — статьи о морепродуктах с Сахалина",
-            description: "Экспертные статьи о вонголе, устрицах, гребешке, морском еже и других деликатесах Сахалина.",
+            name: isEn
+              ? "Rakushka65 Blog — articles about Sakhalin seafood"
+              : "Блог Ракушка65 — статьи о морепродуктах с Сахалина",
+            description: isEn
+              ? "Expert articles about vongole, oysters, scallop, sea urchin and other Sakhalin delicacies."
+              : "Экспертные статьи о вонголе, устрицах, гребешке, морском еже и других деликатесах Сахалина.",
             url: "https://rakushka65.ru/blog",
+            inLanguage: isEn ? "en" : "ru",
             isPartOf: { "@type": "WebSite", name: "Ракушка65", url: "https://rakushka65.ru" },
           },
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: "Статьи блога Ракушка65",
+            name: isEn ? "Rakushka65 blog articles" : "Статьи блога Ракушка65",
             numberOfItems: filtered.length,
             itemListElement: filtered.slice(0, 30).map((a, i) => ({
               "@type": "ListItem",
