@@ -133,10 +133,12 @@ const Blog = () => {
             className="text-center mb-14"
           >
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Блог <span className="text-primary">Ракушка65</span>
+              {isEn ? <>The <span className="text-primary">Rakushka65</span> Blog</> : <>Блог <span className="text-primary">Ракушка65</span></>}
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-              Статьи о морепродуктах с Сахалина: рецепты, гиды по выбору и приготовлению редких деликатесов Тихого океана
+              {isEn
+                ? "Articles about Sakhalin seafood: recipes, selection guides and cooking tips for rare Pacific delicacies"
+                : "Статьи о морепродуктах с Сахалина: рецепты, гиды по выбору и приготовлению редких деликатесов Тихого океана"}
             </p>
           </motion.div>
 
@@ -148,7 +150,7 @@ const Blog = () => {
             className="max-w-6xl mx-auto mb-10"
           >
             <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center">
-              Выберите продукт
+              {isEn ? "Choose a product" : "Выберите продукт"}
             </h2>
             <div className="flex gap-3 overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible scrollbar-hide">
               <button
@@ -160,10 +162,10 @@ const Blog = () => {
                 }`}
               >
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center font-heading text-xl font-bold text-primary">
-                  Все
+                  {isEn ? "All" : "Все"}
                 </div>
                 <span className="font-body text-xs md:text-sm text-foreground whitespace-nowrap">
-                  Все статьи
+                  {isEn ? "All articles" : "Все статьи"}
                 </span>
               </button>
               {PRODUCT_CATEGORIES.filter((c) => c.tag !== "trepang-honey-tincture").map((cat) => (
@@ -179,7 +181,7 @@ const Blog = () => {
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-1 ring-border/40 group-hover:ring-primary/40 transition-all">
                      <img
                       src={cat.image}
-                      alt={`${cat.label} — купить с Сахалина, Ракушка65`}
+                      alt={`${isEn ? CATEGORY_LABELS_EN[cat.tag] ?? cat.label : cat.label} — Sakhalin seafood, Rakushka65`}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
                       width={80}
@@ -187,7 +189,7 @@ const Blog = () => {
                     />
                   </div>
                   <span className="font-body text-xs md:text-sm text-foreground whitespace-nowrap">
-                    {cat.label}
+                    {isEn ? CATEGORY_LABELS_EN[cat.tag] ?? cat.label : cat.label}
                   </span>
                 </button>
               ))}
