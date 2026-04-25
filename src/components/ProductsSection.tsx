@@ -62,7 +62,7 @@ const ProductsSection = () => {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"
         >
-          {products.map((product) => (
+          {products.filter((p) => p.id !== "crab").slice(0, 10).map((product) => (
             <motion.div
               key={product.id}
               className="h-full"
