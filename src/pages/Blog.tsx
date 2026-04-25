@@ -288,7 +288,7 @@ const Blog = () => {
                     <div className="aspect-[3/2] overflow-hidden">
                       <img
                         src={getBlogImage(article.image)}
-                        alt={`${article.title} — статья в блоге Ракушка65`}
+                        alt={`${article.title} — ${isEn ? "Rakushka65 blog article" : "статья в блоге Ракушка65"}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                         width={1200}
