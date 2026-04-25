@@ -44,6 +44,7 @@ import TrepangTinctureRecipe from "./pages/articles/TrepangTinctureRecipe";
 import TrepangBenefits from "./pages/articles/TrepangBenefits";
 import TrepangHoneyTincture from "./pages/articles/TrepangHoneyTincture";
 import DynamicArticle from "./pages/DynamicArticle";
+import SeoCheck from "./pages/SeoCheck";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +64,7 @@ const App = () => (
             <Route path="/offer" element={<Offer />} />
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/seo-check" element={<SeoCheck />} />
             {/* Sea urchin */}
             <Route path="/blog/morskoj-ezh-sahalin" element={<SeaUrchinWhat />} />
             <Route path="/blog/kak-vybrat-morskogo-ezha" element={<SeaUrchinChoose />} />
