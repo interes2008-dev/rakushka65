@@ -12,6 +12,7 @@ import { PRODUCT_CATEGORIES, detectProductTag, type ProductTag } from "@/lib/blo
 import { supabase } from "@/integrations/supabase/client";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { Calendar, Search } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const FALLBACK_IMG: Record<string, string> = {
   vongole: "/src/assets/blog-vongole-real-1.jpg",
