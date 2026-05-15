@@ -44,15 +44,15 @@ const ProductDetail = () => {
   const related = products.filter((p) => p.id !== product.id).slice(0, 3);
 
   const pageTitle = lang === "ru"
-    ? `${name} с Сахалина — купить с доставкой | Ракушка65`
-    : `${name} from Sakhalin — Buy with Delivery | Rakushka65`;
+    ? `${name} с Сахалина — купить | Ракушка65`
+    : `${name} from Sakhalin — Buy | Rakushka65`;
 
-  const priceFragmentRu = product.price ? `Цена от ${product.price} ₽/кг. ` : "Цена по запросу. ";
-  const priceFragmentEn = product.price ? `Price from ${product.price} ₽/kg. ` : "Price on request. ";
+  const priceFragmentRu = product.price ? `От ${product.price} ₽/кг. ` : "Цена по запросу. ";
+  const priceFragmentEn = product.price ? `From ${product.price} ₽/kg. ` : "Price on request. ";
 
-  const pageDesc = lang === "ru"
-    ? `Купить ${name.toLowerCase()} — прямые поставки с Сахалина. ${shortDesc}. ${priceFragmentRu}Свежие морепродукты, доставка за 24 часа от Ракушка65.`
-    : `Buy ${name} — direct from Sakhalin. ${shortDesc}. ${priceFragmentEn}Fresh Sakhalin seafood, 24-hour delivery from Rakushka65.`;
+  const rawDescRu = `Купить ${name.toLowerCase()} с Сахалина. ${priceFragmentRu}Прямые поставки, доставка за 24 часа от Ракушка65.`;
+  const rawDescEn = `Buy ${name} direct from Sakhalin. ${priceFragmentEn}Fresh seafood, 24h delivery by Rakushka65.`;
+  const pageDesc = (lang === "ru" ? rawDescRu : rawDescEn).slice(0, 160);
 
   const productJsonLd = getProductSchema(product, name, desc || shortDesc);
   const breadcrumb = getBreadcrumbSchema([

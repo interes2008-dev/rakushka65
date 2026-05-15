@@ -1,0 +1,38 @@
+# Rakushka65
+
+> Rakushka65 — direct supplier of live seafood from Sakhalin, Russia. Live oysters, vongole (Manila clams), scallops, spisula, sea urchin, rapana, trepang and other premium delicacies. Russia-wide delivery within 24 hours.
+
+The site is bilingual (Russian default, English) and includes a product catalog, an editorial blog, and a contact form. All deliveries originate from Sakhalin.
+
+## Catalog
+
+- [Catalog](/catalog): Full product list with prices and categories.
+- [Live oysters](/catalog/oysters): Sakhalin live Pacific oysters.
+- [Vongole](/catalog/vongole): Live Manila clams (Ruditapes philippinarum).
+- [Scallops](/catalog/scallop): Live Sakhalin sea scallops.
+- [Spisula](/catalog/spisula): Sakhalin spisula clams.
+- [Sea urchin](/catalog/sea-urchin): Live Sakhalin sea urchin.
+- [Rapana](/catalog/rapany): Sea snail rapana.
+- [Sea snails](/catalog/sea-snails): Edible sea snails.
+- [Corbicula](/catalog/corbicula): Freshwater clam corbicula.
+- [Trepang](/catalog/trepang): Sea cucumber trepang.
+- [Crab](/catalog/crab): Sakhalin crab.
+- [Trepang tincture](/catalog/trepang-tincture): Honey-based trepang tincture.
+
+## Blog
+
+- [Blog](/blog): Editorial articles on Sakhalin seafood — selection, storage, recipes, seasons.
+- [What is vongole](/blog/chto-takoe-vongole): Manila clam explainer.
+- [Vongole pasta](/blog/pasta-s-vongole): Classic spaghetti alle vongole recipe.
+- [Live scallop from Sakhalin](/blog/zhivoj-morskoj-grebeshok-sahalin): Origin and seasonality.
+- [How to store live scallop](/blog/kak-hranit-zhivogo-grebeshka): Step-by-step storage guide.
+- [Live scallop delivery across Russia](/blog/dostavka-zhivogo-grebeshka-rossiya): Logistics and packaging.
+- [Sakhalin oysters](/blog/ustritsy-sahalin): About Sakhalin Pacific oysters.
+- [How to open an oyster](/blog/kak-otkryt-ustritsu): Shucking guide.
+- [Trepang honey tincture](/blog/medovaya-nastojka-trepanga): Recipe and benefits.
+
+## Optional
+
+- [Certificate](/certificate): Quality certificates.
+- [Privacy](/privacy): Privacy policy.
+- [Offer](/offer): Public offer / terms.
