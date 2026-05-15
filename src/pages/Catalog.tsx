@@ -17,12 +17,12 @@ const Catalog = () => {
   const { t, lang } = useLanguage();
 
   const title = lang === "ru"
-    ? "Каталог морепродуктов с Сахалина — вонголе, устрицы, гребешок | Ракушка65"
-    : "Sakhalin Seafood Catalog — Vongole, Oysters, Scallops | Rakushka65";
+    ? "Каталог морепродуктов с Сахалина | Ракушка65"
+    : "Sakhalin Seafood Catalog | Rakushka65";
 
   const description = lang === "ru"
-    ? "Купить морепродукты с Сахалина: вонголе (морской петушок), живые устрицы, гребешок, рапаны, морской ёж. Прямые поставки, цены от производителя. Доставка по России от Ракушка65."
-    : "Buy seafood from Sakhalin: vongole, live oysters, scallops, rapana, sea urchin. Direct supply, prices from producer. Delivery across Russia from Rakushka65.";
+    ? "Вонголе, живые устрицы, гребешок, рапаны, морской ёж с Сахалина. Прямые поставки, доставка по России от Ракушка65."
+    : "Vongole, live oysters, scallops, rapana, sea urchin from Sakhalin. Direct supply, Russia-wide delivery by Rakushka65.";
 
   const breadcrumb = getBreadcrumbSchema([
     { name: lang === "ru" ? "Главная" : "Home", url: "/" },
