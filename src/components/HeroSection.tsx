@@ -29,9 +29,9 @@ const HeroSection = () => {
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-6">
             {t.hero.badge}
           </motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }} className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8">
-            <span className="block md:whitespace-nowrap">{t.hero.title1}</span>
-            <span className="block text-gradient-teal">{t.hero.title2}</span>
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }} className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 whitespace-pre-line">
+            <span className="block">{t.hero.title1}</span>
+            <span className="block text-gradient-teal text-4xl">{t.hero.title2}</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
             {t.hero.subtitle}
