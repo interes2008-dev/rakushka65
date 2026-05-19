@@ -250,7 +250,7 @@ const CategoryLanding = () => {
                   >
                     <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
                       <img
-                        src={a.image}
+                        src={getBlogImage(a.image)}
                         alt={a.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         loading="lazy"
