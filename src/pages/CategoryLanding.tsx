@@ -10,6 +10,7 @@ import { products } from "@/components/ProductsSection";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { getCategoryLandingBySlug, getRelatedArticles } from "@/lib/seo/categoryLandings";
+import { getBlogImage } from "@/lib/blog/images";
 import {
   Accordion,
   AccordionContent,
