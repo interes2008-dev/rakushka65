@@ -48,6 +48,7 @@ import TrepangBenefits from "./pages/articles/TrepangBenefits";
 import TrepangHoneyTincture from "./pages/articles/TrepangHoneyTincture";
 import DynamicArticle from "./pages/DynamicArticle";
 import SeoCheck from "./pages/SeoCheck";
+import CategoryLanding from "./pages/CategoryLanding";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +64,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/catalog/:id" element={<ProductDetail />} />
+            <Route path="/category/:slug" element={<CategoryLanding />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/offer" element={<Offer />} />
             <Route path="/certificate" element={<Certificate />} />
