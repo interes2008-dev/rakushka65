@@ -102,9 +102,9 @@ const DynamicArticle = () => {
   const buildShortTitle = (raw: string) => {
     const brand = " | Ракушка65";
     const maxLen = 60;
-    const base = raw.replace(/\\s*[-\\-|]\\s*Ракушка65\\s*$/i, "").trim();
+    const base = raw.replace(/\s*[-|]\s*Ракушка65\s*$/i, "").trim();
     if (base.length + brand.length <= maxLen) return base + brand;
-    const trimmed = base.slice(0, maxLen - brand.length - 1).replace(/[\\s,;:.\\--]+$/, "");
+    const trimmed = base.slice(0, maxLen - brand.length - 1).replace(/[\s,;:.-]+$/, "");
     return trimmed + "..." + brand;
   };
   const seoTitle = article.seo_title || buildShortTitle(article.title);
