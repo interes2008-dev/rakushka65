@@ -7,7 +7,7 @@ const SpisulaCooking = () => {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: "Сашими из спизулы сахалинской",
-    description: "Японский рецепт сашими из свежей спизулы с Сахалина — бланширование, нарезка и подача.",
+    description: "Японский рецепт сашими из свежей спизулы с Сахалина - бланширование, нарезка и подача.",
     prepTime: "PT15M",
     cookTime: "PT1M",
     totalTime: "PT16M",

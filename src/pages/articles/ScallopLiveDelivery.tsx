@@ -8,7 +8,7 @@ const ScallopLiveDelivery = () => {
   const isEn = lang === "en";
 
   const titleRu = "Доставка живого морского гребешка с Сахалина по России - как это работает";
-  const titleEn = "Live Sakhalin Sea Scallop Delivery Across Russia — How It Works";
+  const titleEn = "Live Sakhalin Sea Scallop Delivery Across Russia - How It Works";
   const descRu = "Как Ракушка65 доставляет живого сахалинского гребешка в Москву, СПб и регионы: логистика, сроки, упаковка и гарантии.";
   const descEn = "How Rakushka65 delivers live Sakhalin scallop to Moscow, St Petersburg and the regions: logistics, lead times, packaging, documents and guarantees.";
 
@@ -38,7 +38,7 @@ const ScallopLiveDelivery = () => {
     >
       <img
         src={liveScallopImg}
-        alt={isEn ? "Live Sakhalin sea scallop — delivery across Russia" : "Живой сахалинский морской гребешок - доставка по России"}
+        alt={isEn ? "Live Sakhalin sea scallop - delivery across Russia" : "Живой сахалинский морской гребешок - доставка по России"}
         className="w-full rounded-xl mb-8"
         width={1200}
         height={800}
@@ -61,7 +61,7 @@ const ScallopLiveDelivery = () => {
           <h3>Stage 2. Holding (day 0–1)</h3>
 
           <p>
-            The catch is delivered to a coastal holding cage — a tank of flow-through sea water at +2…+4 °C. Here the mollusk spends 12–24 hours purging sand from its mantle and rebuilding glycogen after harvest stress. Without this stage live shipping is impossible — the scallop won't make the trip.
+            The catch is delivered to a coastal holding cage - a tank of flow-through sea water at +2…+4 °C. Here the mollusk spends 12–24 hours purging sand from its mantle and rebuilding glycogen after harvest stress. Without this stage live shipping is impossible - the scallop won't make the trip.
           </p>
 
           <h3>Stage 3. Sorting and packaging (day 1)</h3>
@@ -69,7 +69,7 @@ const ScallopLiveDelivery = () => {
           <p>Each mollusk passes hand selection:</p>
 
           <ul>
-            <li>Tap test on the valve — reflex check</li>
+            <li>Tap test on the valve - reflex check</li>
             <li>Calibration by size (12–15 cm, 15–18 cm, 18+ cm)</li>
             <li>Layered into thermo-boxes between sheets of kelp</li>
             <li>Gel-ice packs around the box perimeter</li>
@@ -85,24 +85,24 @@ const ScallopLiveDelivery = () => {
           <h3>Stage 5. Last mile (day 2)</h3>
 
           <p>
-            In Moscow and Saint Petersburg — our own courier with thermo-bag. In the regions — partner express services (CDEK Express, DPD, local operators) with mandatory cold-chain compliance. From airport to your door: no more than 6–12 hours.
+            In Moscow and Saint Petersburg - our own courier with thermo-bag. In the regions - partner express services (CDEK Express, DPD, local operators) with mandatory cold-chain compliance. From airport to your door: no more than 6–12 hours.
           </p>
 
           <h2>Delivery times by city</h2>
 
           <ul>
-            <li><strong>Moscow, Saint Petersburg</strong> — 24–36 hours from dispatch</li>
-            <li><strong>Vladivostok, Khabarovsk</strong> — 12–18 hours</li>
-            <li><strong>Yekaterinburg, Novosibirsk, Kazan</strong> — 36–48 hours</li>
-            <li><strong>Krasnodar, Rostov-on-Don, Sochi</strong> — 36–48 hours</li>
-            <li><strong>Kaliningrad, Murmansk</strong> — 48–60 hours (via Moscow)</li>
+            <li><strong>Moscow, Saint Petersburg</strong> - 24–36 hours from dispatch</li>
+            <li><strong>Vladivostok, Khabarovsk</strong> - 12–18 hours</li>
+            <li><strong>Yekaterinburg, Novosibirsk, Kazan</strong> - 36–48 hours</li>
+            <li><strong>Krasnodar, Rostov-on-Don, Sochi</strong> - 36–48 hours</li>
+            <li><strong>Kaliningrad, Murmansk</strong> - 48–60 hours (via Moscow)</li>
           </ul>
 
           <h2>Documents you receive</h2>
 
           <ol>
             <li><strong>Veterinary certificate (Form №4)</strong> with Rosselkhoznadzor stamp</li>
-            <li><strong>Mercury (VetIS) electronic record</strong> — full traceability from diver to recipient</li>
+            <li><strong>Mercury (VetIS) electronic record</strong> - full traceability from diver to recipient</li>
             <li><strong>Declaration of conformity TR EAEU 040/2016</strong> "On safety of fish and fish products"</li>
             <li><strong>Certificate of origin</strong> with the harvest area</li>
             <li><strong>Bill of lading</strong> and invoice</li>
@@ -115,9 +115,9 @@ const ScallopLiveDelivery = () => {
           <h2>Minimum order and pricing</h2>
 
           <ul>
-            <li><strong>Retail</strong> — fixed city tariff for delivery</li>
-            <li><strong>HoReCa and wholesale</strong> — from 30 kg, individual price and logistics</li>
-            <li><strong>Recurring shipments</strong> — weekly flights, 10%+ discount</li>
+            <li><strong>Retail</strong> - fixed city tariff for delivery</li>
+            <li><strong>HoReCa and wholesale</strong> - from 30 kg, individual price and logistics</li>
+            <li><strong>Recurring shipments</strong> - weekly flights, 10%+ discount</li>
           </ul>
 
           <p>
@@ -131,7 +131,7 @@ const ScallopLiveDelivery = () => {
           </p>
 
           <p>
-            Condition — photo and video evidence on opening the box in the courier's presence within 30 minutes of delivery.
+            Condition - photo and video evidence on opening the box in the courier's presence within 30 minutes of delivery.
           </p>
 
           <h2>How to place an order</h2>
@@ -140,8 +140,8 @@ const ScallopLiveDelivery = () => {
             <li>Open the <Link to="/catalog/scallop">Sea Scallop</Link> catalog page.</li>
             <li>Pick size and quantity, submit the request.</li>
             <li>Manager calls back within an hour to confirm date and exact delivery time.</li>
-            <li>Dispatch — next morning flight from Yuzhno-Sakhalinsk.</li>
-            <li>Receipt — inspection with the courier and signed documents.</li>
+            <li>Dispatch - next morning flight from Yuzhno-Sakhalinsk.</li>
+            <li>Receipt - inspection with the courier and signed documents.</li>
           </ol>
 
           <p>
@@ -149,7 +149,7 @@ const ScallopLiveDelivery = () => {
           </p>
 
           <p>
-            <strong>Rakushka65</strong> — direct supplier of live Sakhalin seafood. No middlemen, no freezing, full traceability.
+            <strong>Rakushka65</strong> - direct supplier of live Sakhalin seafood. No middlemen, no freezing, full traceability.
           </p>
         </>
       ) : (

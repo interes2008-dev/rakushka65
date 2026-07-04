@@ -8,7 +8,7 @@ const ScallopLiveStorage = () => {
   const isEn = lang === "en";
 
   const titleRu = "Как хранить живого морского гребешка дома - пошаговая инструкция";
-  const titleEn = "How to Store Live Sea Scallops at Home — Step-by-Step Guide";
+  const titleEn = "How to Store Live Sea Scallops at Home - Step-by-Step Guide";
   const descRu = "Сроки и условия хранения живого сахалинского гребешка, признаки свежести и частые ошибки. Гид от Ракушка65.";
   const descEn = "Shelf life and temperature for storing live Sakhalin sea scallop, freshness signs and buyer mistakes. Guide by Rakushka65.";
 
@@ -28,17 +28,17 @@ const ScallopLiveStorage = () => {
   return (
     <ArticleLayout
       title={isEn ? titleEn : titleRu}
-      seoTitle={isEn ? "How to Store Live Sea Scallop at Home — Shelf Life | Rakushka65" : "Как хранить живого морского гребешка дома - сроки и условия | Ракушка65"}
+      seoTitle={isEn ? "How to Store Live Sea Scallop at Home - Shelf Life | Rakushka65" : "Как хранить живого морского гребешка дома - сроки и условия | Ракушка65"}
       seoDescription={isEn ? "Detailed guide: how long and at what temperature to store live Sakhalin scallop, how to extend freshness, signs of spoilage and food safety." : "Инструкция: сколько и как хранить живого сахалинского гребешка, как продлить свежесть, признаки порчи."}
       breadcrumbName={isEn ? "Storing Live Scallop" : "Хранение живого гребешка"}
       slug="kak-hranit-zhivogo-grebeshka"
       jsonLd={articleJsonLd}
       ogImage="https://rakushka65.ru/src/assets/blog-scallop-live-storage.jpg"
-      ogImageAlt={isEn ? "Live sea scallops on ice — proper storage" : "Живые морские гребешки на льду - правильное хранение"}
+      ogImageAlt={isEn ? "Live sea scallops on ice - proper storage" : "Живые морские гребешки на льду - правильное хранение"}
     >
       <img
         src={liveScallopImg}
-        alt={isEn ? "Live Sakhalin scallop — home storage rules" : "Живой сахалинский гребешок - правила хранения дома"}
+        alt={isEn ? "Live Sakhalin scallop - home storage rules" : "Живой сахалинский гребешок - правила хранения дома"}
         className="w-full rounded-xl mb-8"
         width={1200}
         height={800}
@@ -53,7 +53,7 @@ const ScallopLiveStorage = () => {
           <h2>Rule #1: do NOT submerge scallops in water</h2>
 
           <p>
-            The most common buyer mistake is dropping live scallops into a bowl of fresh or even salted water "to keep them alive longer". This kills the mollusk in 2–4 hours. Scallops are marine organisms adapted to stable salinity (30–34 ‰) and temperatures of +2…+6 °C. Tap water — or an incorrectly mixed brine — causes osmotic shock.
+            The most common buyer mistake is dropping live scallops into a bowl of fresh or even salted water "to keep them alive longer". This kills the mollusk in 2–4 hours. Scallops are marine organisms adapted to stable salinity (30–34 ‰) and temperatures of +2…+6 °C. Tap water - or an incorrectly mixed brine - causes osmotic shock.
           </p>
 
           <p>
@@ -65,7 +65,7 @@ const ScallopLiveStorage = () => {
           <ol>
             <li><strong>Unbox immediately.</strong> Open the thermo-box and inspect the mollusks. Valves should be slightly open or close when tapped.</li>
             <li><strong>Quick rinse with cold running water.</strong> 15–20 seconds, no soaking. Goal: remove sand and seaweed from the shell.</li>
-            <li><strong>Place in a container.</strong> Use a perforated tray or a container with drainage holes — shells should sit cup-down so internal moisture is retained.</li>
+            <li><strong>Place in a container.</strong> Use a perforated tray or a container with drainage holes - shells should sit cup-down so internal moisture is retained.</li>
             <li><strong>Cover with damp cotton cloth.</strong> A towel or cheesecloth soaked in cold salted water (1 tbsp salt per 1 L). The cloth keeps the mantle moist.</li>
             <li><strong>Refrigerate.</strong> Best zone: bottom shelf or vegetable drawer. Temperature +2…+4 °C, never freezer.</li>
             <li><strong>Refresh the cloth daily.</strong> Rinse in cold salted water, wring out, return.</li>
@@ -74,10 +74,10 @@ const ScallopLiveStorage = () => {
           <h2>Shelf life</h2>
 
           <ul>
-            <li><strong>Live in shell</strong> — up to 5 days at +2…+4 °C with proper care.</li>
-            <li><strong>Shucked muscle (fresh)</strong> — up to 48 hours at 0…+2 °C in a sealed container on ice.</li>
-            <li><strong>Flash-frozen</strong> — up to 6 months at −18 °C. Freeze right after shucking, single layer.</li>
-            <li><strong>Thawed scallop</strong> — use within 24 hours, refreezing not allowed.</li>
+            <li><strong>Live in shell</strong> - up to 5 days at +2…+4 °C with proper care.</li>
+            <li><strong>Shucked muscle (fresh)</strong> - up to 48 hours at 0…+2 °C in a sealed container on ice.</li>
+            <li><strong>Flash-frozen</strong> - up to 6 months at −18 °C. Freeze right after shucking, single layer.</li>
+            <li><strong>Thawed scallop</strong> - use within 24 hours, refreezing not allowed.</li>
           </ul>
 
           <h2>Freshness vs spoilage signs</h2>
@@ -89,10 +89,10 @@ const ScallopLiveStorage = () => {
             <li>Muscle glossy, cream-white, slightly moist</li>
             <li>Coral bright orange, firm</li>
             <li>Aroma: fresh sea, cucumber, slight sweetness</li>
-            <li>Mantle reacts to touch — moves</li>
+            <li>Mantle reacts to touch - moves</li>
           </ul>
 
-          <p><strong>Signs of spoilage — discard:</strong></p>
+          <p><strong>Signs of spoilage - discard:</strong></p>
 
           <ul>
             <li>Shell wide open and unresponsive to tapping</li>
@@ -114,7 +114,7 @@ const ScallopLiveStorage = () => {
             <li>Spread muscles in a single layer on a parchment-lined tray.</li>
             <li>Freezer for 1–2 hours (flash-freezing at −18…−25 °C).</li>
             <li>Transfer frozen muscles to vacuum or zip bags, expel air.</li>
-            <li>Label with date. Shelf life — 6 months.</li>
+            <li>Label with date. Shelf life - 6 months.</li>
           </ol>
 
           <p>
@@ -128,7 +128,7 @@ const ScallopLiveStorage = () => {
           </p>
 
           <p>
-            <strong>What if some mollusks died in transit?</strong> Open the shell: if the muscle is firm, color natural and smell fresh — it's safe for cooking (pan-fry, grill, soup). Any spoilage signs — discard.
+            <strong>What if some mollusks died in transit?</strong> Open the shell: if the muscle is firm, color natural and smell fresh - it's safe for cooking (pan-fry, grill, soup). Any spoilage signs - discard.
           </p>
 
           <p>
