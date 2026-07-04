@@ -95,8 +95,8 @@ const evaluateReport = (report: PageReport): PageReport => {
   if (ogImage && !ogImage.startsWith("https://")) notes.push("og:image не абсолютный HTTPS URL");
   const w = report.tags["og:image:width"];
   const h = report.tags["og:image:height"];
-  if (w && h && (w !== "1200" || h !== "630")) notes.push(\`Размеры обложки \${w}×\${h}, ожидалось 1200×630\`);
-  if (report.tags["twitter:card"] && report.tags["twitter:card"] !== "summary_large_image") notes.push(\`twitter:card = \${report.tags["twitter:card"]} (ожидалось summary_large_image)\`);
+  if (w && h && (w !== "1200" || h !== "630")) notes.push(`Размеры обложки ${w}×${h}, ожидалось 1200×630`);
+  if (report.tags["twitter:card"] && report.tags["twitter:card"] !== "summary_large_image") notes.push(`twitter:card = ${report.tags["twitter:card"]} (ожидалось summary_large_image)`);
 
   let status: PageReport["status"] = "ok";
   if (missing.length > 0) status = "error";
@@ -181,7 +181,7 @@ const SeoCheck = () => {
           </div>
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <Button onClick={runScan} disabled={running}>
-              {running ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Сканирую \${currentIdx !== null ? currentIdx + 1 : ""}/\${blogArticles.length}</> : "Запустить проверку"}
+              {running ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Сканирую ${currentIdx !== null ? currentIdx + 1 : ""}/${blogArticles.length}</> : "Запустить проверку"}
             </Button>
             <Link to="/blog" className="text-sm text-primary hover:underline ml-auto">← В блог</Link>
           </div>

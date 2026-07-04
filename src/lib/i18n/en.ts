@@ -92,7 +92,7 @@ export const en: Translations = {
     description: "Sakhalin seafood delivered fresh. The taste of the ocean straight to your table.",
     navigation: "Navigation",
     contactsTitle: "Contacts",
-    copyright: \`© \${new Date().getFullYear()} Rakushka65. Made with 💚 for seafood\`,
+    copyright: `© ${new Date().getFullYear()} Rakushka65. Made with 💚 for seafood`,
     privacy: "Privacy policy",
     offer: "Terms of service",
   },

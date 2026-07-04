@@ -31,12 +31,12 @@ const CategoryLanding = () => {
     (p) => !p.hidden && p.category === landing.productCategory,
   );
   const relatedArticles = getRelatedArticles(landing);
-  const canonical = \`\${SITE_URL}/category/\${landing.slug}\`;
+  const canonical = `${SITE_URL}/category/${landing.slug}`;
 
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
     { name: "Каталог", url: "/catalog" },
-    { name: landing.h1, url: \`/category/\${landing.slug}\` },
+    { name: landing.h1, url: `/category/${landing.slug}` },
   ]);
 
   const collectionPage = {
@@ -46,15 +46,15 @@ const CategoryLanding = () => {
     description: landing.seoDescription,
     url: canonical,
     inLanguage: "ru",
-    isPartOf: { "@id": \`\${SITE_URL}/#website\` },
-    about: { "@id": \`\${SITE_URL}/#organization\` },
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${SITE_URL}/#organization` },
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: categoryProducts.length,
       itemListElement: categoryProducts.map((p, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: \`\${SITE_URL}/catalog/\${p.id}\`,
+        url: `${SITE_URL}/catalog/${p.id}`,
         name: t.productNames[p.id] || p.name,
       })),
     },
@@ -144,13 +144,13 @@ const CategoryLanding = () => {
                 {categoryProducts.map((p) => (
                   <Link
                     key={p.id}
-                    to={\`/catalog/\${p.id}\`}
+                    to={`/catalog/${p.id}`}
                     className="bg-card rounded-xl overflow-hidden border border-border/50 hover:border-primary/40 group transition-all duration-300 hover:-translate-y-1"
                   >
                     <div className="aspect-square overflow-hidden">
                       <img
                         src={p.image}
-                        alt={\`\${t.productNames[p.id] || p.name} с Сахалина - купить\`}
+                        alt={`${t.productNames[p.id] || p.name} с Сахалина - купить`}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         loading="lazy"
                         width={400}
@@ -160,7 +160,7 @@ const CategoryLanding = () => {
                     <div className="p-5">
                       <div className="flex items-center gap-1 mb-2">
                         {Array.from({ length: 5 }).map((_, si) => (
-                          <Star key={si} className={\`w-4 h-4 \${si < p.rating ? "fill-primary text-primary" : "text-muted"}\`} />
+                          <Star key={si} className={`w-4 h-4 ${si < p.rating ? "fill-primary text-primary" : "text-muted"}`} />
                         ))}
                       </div>
                       <h3 className="font-heading text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
@@ -210,7 +210,7 @@ const CategoryLanding = () => {
               {landing.faq.map((f, i) => (
                 <AccordionItem
                   key={i}
-                  value={\`item-\${i}\`}
+                  value={`item-${i}`}
                   className="bg-sand-glass rounded-xl border border-border/40 px-5 !border-b"
                 >
                   <AccordionTrigger className="font-heading text-base md:text-lg text-left hover:no-underline">

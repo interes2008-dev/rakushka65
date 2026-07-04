@@ -1,12 +1,12 @@
 import { products } from "@/components/ProductsSection";
 
 const SITE_URL = "https://rakushka65.ru";
-const LOGO_URL = \`\${SITE_URL}/favicon.svg\`;
+const LOGO_URL = `${SITE_URL}/favicon.svg`;
 
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": \`\${SITE_URL}/#organization\`,
+  "@id": `${SITE_URL}/#organization`,
   name: "Ракушка65",
   alternateName: "Rakushka65",
   url: SITE_URL,
@@ -27,17 +27,17 @@ export const organizationSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": \`\${SITE_URL}/#website\`,
+  "@id": `${SITE_URL}/#website`,
   name: "Ракушка65",
   url: SITE_URL,
-  publisher: { "@id": \`\${SITE_URL}/#organization\` },
+  publisher: { "@id": `${SITE_URL}/#organization` },
   inLanguage: ["ru", "en"],
 };
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "FishStore",
-  "@id": \`\${SITE_URL}/#localbusiness\`,
+  "@id": `${SITE_URL}/#localbusiness`,
   name: "Ракушка65",
   image: LOGO_URL,
   url: SITE_URL,
@@ -57,7 +57,7 @@ export function getProductSchema(product: any, productName: string, productDescr
     "@type": "Product",
     name: productName,
     description: productDescription,
-    image: \`\${SITE_URL}\${product.image}\`,
+    image: `${SITE_URL}${product.image}`,
     sku: product.id,
     brand: { "@type": "Brand", name: "Ракушка65" },
     offers: product.price ? {
@@ -65,7 +65,7 @@ export function getProductSchema(product: any, productName: string, productDescr
       price: product.price,
       priceCurrency: "RUB",
       availability: "https://schema.org/InStock",
-      url: \`\${SITE_URL}/catalog/\${product.id}\`,
+      url: `${SITE_URL}/catalog/${product.id}`,
     } : undefined,
   };
 }
@@ -79,7 +79,7 @@ export function getCatalogItemListSchema(productItems: any[], translations: Reco
     itemListElement: productItems.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: \`\${SITE_URL}/catalog/\${p.id}\`,
+      url: `${SITE_URL}/catalog/${p.id}`,
       name: translations[p.id] || p.name,
     })),
   };
@@ -93,7 +93,7 @@ export function getBreadcrumbSchema(items: { name: string; url: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: \`\${SITE_URL}\${item.url}\`,
+      item: `${SITE_URL}${item.url}`,
     })),
   };
 }

@@ -33,7 +33,7 @@ const Certificate = () => {
           </div>
           <p className="font-body text-muted-foreground leading-relaxed mb-10 max-w-2xl">{t.certificate.description}</p>
           <div className="bg-sand-glass rounded-2xl p-4 md:p-8">
-            <img src="/documents/certificate-page1.jpg" alt={\`\${t.certificate.title} - Rakushka65\`} className="w-full rounded-xl border border-border/30" />
+            <img src="/documents/certificate-page1.jpg" alt={`${t.certificate.title} - Rakushka65`} className="w-full rounded-xl border border-border/30" />
           </div>
         </div>
       </main>

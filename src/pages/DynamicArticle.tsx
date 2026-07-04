@@ -64,12 +64,12 @@ const DynamicArticle = () => {
     crab: "/src/assets/blog-vongole-real-1.jpg",
   };
   const heroImage = getBlogImage(FALLBACK_IMG[tag || ""] || FALLBACK_IMG.vongole);
-  const ogImageUrl = heroImage.startsWith("http") ? heroImage : \`\${SITE_URL}\${heroImage}\`;
+  const ogImageUrl = heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`;
 
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
     { name: "Блог", url: "/blog" },
-    { name: article.title, url: \`/blog/\${article.slug}\` },
+    { name: article.title, url: `/blog/${article.slug}` },
   ]);
 
   const articleJsonLd = {
@@ -79,10 +79,10 @@ const DynamicArticle = () => {
     description: article.seo_description || article.description,
     datePublished: article.published_at,
     dateModified: article.published_at,
-    image: heroImage.startsWith("/") ? \`\${SITE_URL}\${heroImage}\` : heroImage,
+    image: heroImage.startsWith("/") ? `${SITE_URL}${heroImage}` : heroImage,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": \`\${SITE_URL}/blog/\${article.slug}\`,
+      "@id": `${SITE_URL}/blog/${article.slug}`,
     },
     author: {
       "@type": "Organization",
@@ -94,7 +94,7 @@ const DynamicArticle = () => {
       name: "Ракушка65",
       logo: {
         "@type": "ImageObject",
-        url: \`\${SITE_URL}/favicon.svg\`,
+        url: `${SITE_URL}/favicon.svg`,
       },
     },
   };
@@ -147,7 +147,7 @@ const DynamicArticle = () => {
 
           <img
             src={heroImage}
-            alt={\`\${article.title} - Ракушка65, морепродукты с Сахалина\`}
+            alt={`${article.title} - Ракушка65, морепродукты с Сахалина`}
             className="w-full rounded-xl mb-8"
             width={1200}
             height={800}
