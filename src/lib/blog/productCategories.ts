@@ -53,7 +53,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/spizula",
     image: spizulaImg,
     cta: "Купить спизулу с Сахалина",
-    ctaDescription: "Сахалинская спизула - плотная сладковатая мякоть, идеальна для сашими и гриля.",
+    ctaDescription: "Сахалинская спизула - плотная сладковатая мякоть для сашими и гриля.",
   },
   {
     tag: "urchin",
@@ -101,7 +101,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/trepang",
     image: trepangImg,
     cta: "Купить трепанг с Сахалина",
-    ctaDescription: "Дальневосточный трепанг - уникальный деликатес с целебными свойствами.",
+    ctaDescription: "Дальневосточный трепанг - морской деликатес, который ценят за состав и плотную текстуру.",
   },
   {
     tag: "trepang-tincture",
