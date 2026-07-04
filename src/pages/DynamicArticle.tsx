@@ -24,6 +24,18 @@ interface DbArticle {
 
 const SITE_URL = "https://rakushka65.ru";
 
+const cleanText = (value: string | null | undefined) =>
+  (value || "")
+    .replace(/[—–−]/g, "-")
+    .replace(/\s+-\s+/g, " - ")
+    .replace(/Важно отметить,?\s*/gi, "")
+    .replace(/Следует учитывать,?\s*/gi, "")
+    .replace(/Стоит отметить,?\s*/gi, "")
+    .replace(/Таким образом,?\s*/gi, "")
+    .replace(/Кроме того,?\s*/gi, "")
+    .replace(/Как правило,?\s*/gi, "")
+    .replace(/При этом\s+/gi, "");
+
 const DynamicArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const [article, setArticle] = useState<DbArticle | null>(null);
@@ -69,14 +81,20 @@ const DynamicArticle = () => {
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
     { name: "Блог", url: "/blog" },
-    { name: article.title, url: `/blog/${article.slug}` },
+    { name: cleanText(article.title), url: `/blog/${article.slug}` },
   ]);
+
+  const cleanTitle = cleanText(article.title);
+  const cleanDescription = cleanText(article.description);
+  const cleanSeoTitle = cleanText(article.seo_title);
+  const cleanSeoDescription = cleanText(article.seo_description);
+  const cleanContentHtml = cleanText(article.content_html);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.title,
-    description: article.seo_description || article.description,
+    headline: cleanTitle,
+    description: cleanSeoDescription || cleanDescription,
     datePublished: article.published_at,
     dateModified: article.published_at,
     image: heroImage.startsWith("/") ? `${SITE_URL}${heroImage}` : heroImage,
@@ -107,8 +125,8 @@ const DynamicArticle = () => {
     const trimmed = base.slice(0, maxLen - brand.length - 1).replace(/[\s,;:.-]+$/, "");
     return trimmed + "..." + brand;
   };
-  const seoTitle = article.seo_title || buildShortTitle(article.title);
-  const seoDesc = (article.seo_description || article.description || "").slice(0, 160);
+  const seoTitle = cleanSeoTitle || buildShortTitle(cleanTitle);
+  const seoDesc = (cleanSeoDescription || cleanDescription).slice(0, 160);
 
   return (
     <div className="relative min-h-screen">
@@ -130,7 +148,7 @@ const DynamicArticle = () => {
               <li>/</li>
               <li><Link to="/blog" className="hover:text-primary transition-colors">Блог</Link></li>
               <li>/</li>
-              <li className="text-foreground line-clamp-1">{article.title}</li>
+              <li className="text-foreground line-clamp-1">{cleanTitle}</li>
             </ol>
           </nav>
 
@@ -143,24 +161,24 @@ const DynamicArticle = () => {
             </time>
           </div>
 
-          <h1 className="editorial-title">{article.title}</h1>
+          <h1 className="editorial-title">{cleanTitle}</h1>
 
           <img
             src={heroImage}
-            alt={`${article.title} - Ракушка65, морепродукты с Сахалина`}
+            alt={`${cleanTitle} - Ракушка65, морепродукты с Сахалина`}
             className="w-full rounded-xl mb-8"
             width={1200}
             height={800}
             loading="eager"
           />
 
-          {article.description && (
-            <p className="editorial-deck">{article.description}</p>
+          {cleanDescription && (
+            <p className="editorial-deck">{cleanDescription}</p>
           )}
 
           <article
             className="editorial"
-            dangerouslySetInnerHTML={{ __html: article.content_html }}
+            dangerouslySetInnerHTML={{ __html: cleanContentHtml }}
           />
 
           <div className="editorial-divider">✦ ✦ ✦</div>
