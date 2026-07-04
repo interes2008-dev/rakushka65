@@ -8,7 +8,6 @@ import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
 import ArticleCTA from "@/components/ArticleCTA";
 import NotFound from "./NotFound";
-import { ArrowLeft } from "lucide-react";
 import { detectProductTag } from "@/lib/blog/productCategories";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 
@@ -47,7 +46,7 @@ const DynamicArticle = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-muted-foreground">Загрузка…</div>
+        <div className="text-muted-foreground">Загрузка...</div>
       </div>
     );
   }
@@ -100,14 +99,13 @@ const DynamicArticle = () => {
     },
   };
 
-  // Build a concise SEO title (target ~55-60 chars)
   const buildShortTitle = (raw: string) => {
     const brand = " | Ракушка65";
     const maxLen = 60;
-    const base = raw.replace(/\s*[—\-–|]\s*Ракушка65\s*$/i, "").trim();
+    const base = raw.replace(/\\s*[-\\-|]\\s*Ракушка65\\s*$/i, "").trim();
     if (base.length + brand.length <= maxLen) return base + brand;
-    const trimmed = base.slice(0, maxLen - brand.length - 1).replace(/[\s,;:.\-—]+$/, "");
-    return trimmed + "…" + brand;
+    const trimmed = base.slice(0, maxLen - brand.length - 1).replace(/[\\s,;:.\\--]+$/, "");
+    return trimmed + "..." + brand;
   };
   const seoTitle = article.seo_title || buildShortTitle(article.title);
   const seoDesc = (article.seo_description || article.description || "").slice(0, 160);
@@ -137,7 +135,7 @@ const DynamicArticle = () => {
           </nav>
 
           <div className="editorial-eyebrow">
-            Журнал Ракушка65 ·{" "}
+            Журнал Ракушка65 .{" "}
             <time dateTime={article.published_at}>
               {new Date(article.published_at).toLocaleDateString("ru-RU", {
                 day: "numeric", month: "long", year: "numeric",
@@ -149,7 +147,7 @@ const DynamicArticle = () => {
 
           <img
             src={heroImage}
-            alt={`${article.title} — Ракушка65, морепродукты с Сахалина`}
+            alt={`${article.title} - Ракушка65, морепродукты с Сахалина`}
             className="w-full rounded-xl mb-8"
             width={1200}
             height={800}

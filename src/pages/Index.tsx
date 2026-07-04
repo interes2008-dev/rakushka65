@@ -16,11 +16,11 @@ const Index = () => {
   const { lang } = useLanguage();
 
   const title = lang === "ru"
-    ? "Ракушка65 — Живые морепродукты с Сахалина | Вонголе, устрицы, гребешок с доставкой"
-    : "Rakushka65 — Live Seafood from Sakhalin | Vongole, Oysters, Scallops Delivery";
+    ? "Ракушка65 - Живые морепродукты с Сахалина | Вонголе, устрицы, гребешок с доставкой"
+    : "Rakushka65 - Live Seafood from Sakhalin | Vongole, Oysters, Scallops Delivery";
 
   const description = lang === "ru"
-    ? "Купить живые морепродукты с Сахалина: вонголе (морской петушок), устрицы, гребешок, спизула, морской ёж. Прямые поставки с Сахалина, доставка за 24 часа по России. Ракушка65 — редкие сахалинские деликатесы."
+    ? "Купить живые морепродукты с Сахалина: вонголе (морской петушок), устрицы, гребешок, спизула, морской ёж. Прямые поставки с Сахалина, доставка за 24 часа по России. Ракушка65 - редкие сахалинские деликатесы."
     : "Buy live seafood from Sakhalin: vongole, oysters, scallops, spizula, sea urchin. Direct supply from Sakhalin, 24-hour delivery across Russia. Rakushka65.";
 
   return (

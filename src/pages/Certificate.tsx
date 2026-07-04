@@ -10,8 +10,8 @@ const Certificate = () => {
   const { t, lang } = useLanguage();
 
   const title = lang === "ru"
-    ? "Сертификат «Сделано в России» — Ракушка65"
-    : "'Made in Russia' Certificate — Rakushka65";
+    ? "Сертификат «Сделано в России» - Ракушка65"
+    : "'Made in Russia' Certificate - Rakushka65";
 
   const description = lang === "ru"
     ? "Сертификат качества «Сделано в России» подтверждает премиальное качество морепродуктов Ракушка65 с Сахалина."
@@ -33,7 +33,7 @@ const Certificate = () => {
           </div>
           <p className="font-body text-muted-foreground leading-relaxed mb-10 max-w-2xl">{t.certificate.description}</p>
           <div className="bg-sand-glass rounded-2xl p-4 md:p-8">
-            <img src="/documents/certificate-page1.jpg" alt={`${t.certificate.title} — Rakushka65`} className="w-full rounded-xl border border-border/30" />
+            <img src="/documents/certificate-page1.jpg" alt={`${t.certificate.title} - Rakushka65`} className="w-full rounded-xl border border-border/30" />
           </div>
         </div>
       </main>

@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ShoppingCart, Star, BookOpen, Truck, Shield, Award, ChevronDown } from "lucide-react";
+import { ShoppingCart, Star, BookOpen, Truck, Shield, Award } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
@@ -31,7 +31,6 @@ const CategoryLanding = () => {
     (p) => !p.hidden && p.category === landing.productCategory,
   );
   const relatedArticles = getRelatedArticles(landing);
-
   const canonical = `${SITE_URL}/category/${landing.slug}`;
 
   const breadcrumb = getBreadcrumbSchema([
@@ -86,7 +85,6 @@ const CategoryLanding = () => {
 
       <main className="relative z-10 pt-28 pb-20">
         <div className="container mx-auto px-4 max-w-6xl">
-          {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-sm font-body text-muted-foreground">
               <li><Link to="/" className="hover:text-primary">Главная</Link></li>
@@ -97,7 +95,6 @@ const CategoryLanding = () => {
             </ol>
           </nav>
 
-          {/* Hero */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,7 +111,6 @@ const CategoryLanding = () => {
             </p>
           </motion.section>
 
-          {/* Intro */}
           <section className="mb-16 max-w-3xl mx-auto space-y-4">
             {landing.intro.map((p, i) => (
               <p key={i} className="font-body text-base md:text-lg leading-relaxed text-foreground/90">
@@ -123,7 +119,6 @@ const CategoryLanding = () => {
             ))}
           </section>
 
-          {/* Trust strip */}
           <section className="mb-16 grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               { icon: Truck, title: "Доставка 24ч", body: "Авиа по всей России с холодовой цепью" },
@@ -140,7 +135,6 @@ const CategoryLanding = () => {
             ))}
           </section>
 
-          {/* Products grid */}
           {categoryProducts.length > 0 && (
             <section className="mb-20">
               <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8 text-center">
@@ -156,7 +150,7 @@ const CategoryLanding = () => {
                     <div className="aspect-square overflow-hidden">
                       <img
                         src={p.image}
-                        alt={`${t.productNames[p.id] || p.name} с Сахалина — купить`}
+                        alt={`${t.productNames[p.id] || p.name} с Сахалина - купить`}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         loading="lazy"
                         width={400}
@@ -194,7 +188,6 @@ const CategoryLanding = () => {
             </section>
           )}
 
-          {/* Buying guide */}
           <section className="mb-20">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8 text-center">
               Гид покупателя
@@ -209,7 +202,6 @@ const CategoryLanding = () => {
             </div>
           </section>
 
-          {/* FAQ */}
           <section className="mb-20 max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8 text-center">
               Частые вопросы
@@ -232,7 +224,6 @@ const CategoryLanding = () => {
             </Accordion>
           </section>
 
-          {/* Related blog articles */}
           {relatedArticles.length > 0 && (
             <section className="mb-20">
               <div className="flex items-center gap-3 mb-8 justify-center">
@@ -270,13 +261,12 @@ const CategoryLanding = () => {
             </section>
           )}
 
-          {/* CTA */}
           <section className="text-center bg-gradient-to-br from-primary/10 via-card to-card rounded-2xl p-8 md:p-12 border border-primary/20">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
               Не нашли нужный вид?
             </h2>
             <p className="font-body text-muted-foreground mb-6 max-w-xl mx-auto">
-              Свяжитесь с нами — поможем подобрать продукт под повод, бюджет и количество гостей.
+              Свяжитесь с нами - поможем подобрать продукт под повод, бюджет и количество гостей.
               Принимаем заказы 24/7.
             </p>
             <Link

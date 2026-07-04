@@ -20,9 +20,7 @@ interface ArticleLayoutProps {
   slug: string;
   children: React.ReactNode;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
-  /** Абсолютный URL обложки 1200×630 для OG/Twitter Card. Если не указан — используется дефолтная. */
   ogImage?: string;
-  /** Альт-текст обложки для шаринга */
   ogImageAlt?: string;
 }
 
@@ -61,7 +59,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
           </motion.nav>
 
           <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <div className="editorial-eyebrow">{isEn ? "Rakushka65 Journal" : "Журнал Ракушка65"} · {breadcrumbName}</div>
+            <div className="editorial-eyebrow">{isEn ? "Rakushka65 Journal" : "Журнал Ракушка65"} . {breadcrumbName}</div>
             <h1 className="editorial-title">{title}</h1>
             <div className="editorial">
               {children}

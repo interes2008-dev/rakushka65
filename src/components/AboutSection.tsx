@@ -13,12 +13,12 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.7 }} className="relative">
             <div className="rounded-2xl overflow-hidden">
-              <img src={aboutImg} alt="Sakhalin coastline" className="w-full h-[400px] lg:h-[500px] object-cover" loading="lazy" />
+              <img src={aboutImg} alt="Берег Сахалина" className="w-full h-[400px] lg:h-[500px] object-cover" loading="lazy" />
             </div>
             <motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }} className="absolute -bottom-6 -right-4 md:right-8 bg-ocean-glass rounded-xl p-5 max-w-[200px]">
               <p className="font-body text-base font-bold text-primary">{t.about.yearsLabel}</p>
               <p className="font-body text-xs text-muted-foreground">{t.about.yearsDesc}</p>
-              <p className="font-body text-xs text-primary/70">{lang === "ru" ? "качество — вне времени" : "quality beyond time"}</p>
+              <p className="font-body text-xs text-primary/70">{lang === "ru" ? "качество - вне времени" : "quality beyond time"}</p>
             </motion.div>
           </motion.div>
 
