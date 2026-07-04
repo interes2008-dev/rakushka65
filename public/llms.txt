@@ -1,6 +1,6 @@
 # Rakushka65
 
-> Rakushka65 — direct supplier of live seafood from Sakhalin, Russia. Live oysters, vongole (Manila clams), scallops, spisula, sea urchin, rapana, trepang and other premium delicacies. Russia-wide delivery within 24 hours.
+> Rakushka65 - direct supplier of live seafood from Sakhalin, Russia. Live oysters, vongole (Manila clams), scallops, spisula, sea urchin, rapana, trepang and other premium delicacies. Russia-wide delivery within 24 hours.
 
 The site is bilingual (Russian default, English) and includes a product catalog, an editorial blog, and a contact form. All deliveries originate from Sakhalin.
 
@@ -21,7 +21,7 @@ The site is bilingual (Russian default, English) and includes a product catalog,
 
 ## Blog
 
-- [Blog](/blog): Editorial articles on Sakhalin seafood — selection, storage, recipes, seasons.
+- [Blog](/blog): Editorial articles on Sakhalin seafood - selection, storage, recipes, seasons.
 - [What is vongole](/blog/chto-takoe-vongole): Manila clam explainer.
 - [Vongole pasta](/blog/pasta-s-vongole): Classic spaghetti alle vongole recipe.
 - [Live scallop from Sakhalin](/blog/zhivoj-morskoj-grebeshok-sahalin): Origin and seasonality.

@@ -47,7 +47,7 @@ const ScallopLiveSakhalin = () => {
       {isEn ? (
         <>
           <p>
-            <strong>Live sea scallop</strong> is the highest tier of this mollusk. Unlike its frozen or vacuum-packed counterpart, the live Sakhalin scallop preserves everything Michelin-starred chefs cherish: the crystalline sweetness of the adductor muscle, springy texture and the unmistakable "oceanic" freshness that simply cannot be faked. <strong>Rakushka65</strong> ships live scallops directly from the Sakhalin coast - from diver to your plate within 24–48 hours.
+            <strong>Live sea scallop</strong> is the highest tier of this mollusk. Unlike its frozen or vacuum-packed counterpart, the live Sakhalin scallop preserves everything Michelin-starred chefs cherish: the crystalline sweetness of the adductor muscle, springy texture and the unmistakable "oceanic" freshness that simply cannot be faked. <strong>Rakushka65</strong> ships live scallops directly from the Sakhalin coast - from diver to your plate within 24-48 hours.
           </p>
 
           <h2>What "live" actually means</h2>
@@ -57,7 +57,7 @@ const ScallopLiveSakhalin = () => {
           </p>
 
           <p>
-            Sakhalin scallop (<em>Mizuhopecten yessoensis</em>) is the largest representative of the Pectinidae family in the north-western Pacific. Shell diameter - 12–20 cm, muscle weight - 60–120 g for an adult. These dimensions are achievable only in the cold, oxygen-rich waters of the Sea of Okhotsk, where the scallop grows for 3–5 years in its natural habitat.
+            Sakhalin scallop (<em>Mizuhopecten yessoensis</em>) is the largest representative of the Pectinidae family in the north-western Pacific. Shell diameter - 12-20 cm, muscle weight - 60-120 g for an adult. These dimensions are achievable only in the cold, oxygen-rich waters of the Sea of Okhotsk, where the scallop grows for 3-5 years in its natural habitat.
           </p>
 
           <h2>Live vs frozen: 7 key differences</h2>
@@ -67,9 +67,9 @@ const ScallopLiveSakhalin = () => {
             <li><strong>Texture.</strong> The live muscle is dense, silky, "springs" under the knife. After freezing, fiber structure breaks down - the flesh becomes loose and watery.</li>
             <li><strong>Raw consumption.</strong> Only live scallop can be eaten in carpaccio, sashimi, tartare, ceviche. Frozen - only after heat treatment.</li>
             <li><strong>Coral (roe).</strong> The live scallop has a bright orange, firm coral - a delicacy in itself. After freezing it darkens and loses shape.</li>
-            <li><strong>Glaze and false weight.</strong> Frozen product often contains 10–30% ice and phosphates "for weight". Live scallop is 100% product.</li>
+            <li><strong>Glaze and false weight.</strong> Frozen product often contains 10-30% ice and phosphates "for weight". Live scallop is 100% product.</li>
             <li><strong>Aroma.</strong> Live smells of fresh sea and cucumber. Frozen - neutral or slightly "fishy".</li>
-            <li><strong>Documents.</strong> Live shipments come with veterinary certificate, an electronic Mercury (VetIS) record, and origin certificate. Frozen product often passes through 3–4 resellers.</li>
+            <li><strong>Documents.</strong> Live shipments come with veterinary certificate, an electronic Mercury (VetIS) record, and origin certificate. Frozen product often passes through 3-4 resellers.</li>
           </ul>
 
           <h2>How we deliver live scallops</h2>
@@ -79,9 +79,9 @@ const ScallopLiveSakhalin = () => {
           </p>
 
           <ol>
-            <li><strong>Coastal holding.</strong> After harvesting, scallops rest for 12–24 hours in flow-through cages with sea water at +2…+4 °C. They purge sediment and rebuild muscle glycogen.</li>
-            <li><strong>Gel-ice packaging.</strong> Scallops are layered into thermo-boxes between damp kelp and gel-ice packs. Inside the box: stable +1…+3 °C for 72 hours.</li>
-            <li><strong>Air freight.</strong> From Yuzhno-Sakhalinsk to Vladivostok, Khabarovsk, Moscow, Saint Petersburg, Yekaterinburg and Krasnodar - flights with controlled temperature regime. Time from pier to recipient: 24–48 hours.</li>
+            <li><strong>Coastal holding.</strong> After harvesting, scallops rest for 12-24 hours in flow-through cages with sea water at +2...+4 °C. They purge sediment and rebuild muscle glycogen.</li>
+            <li><strong>Gel-ice packaging.</strong> Scallops are layered into thermo-boxes between damp kelp and gel-ice packs. Inside the box: stable +1...+3 °C for 72 hours.</li>
+            <li><strong>Air freight.</strong> From Yuzhno-Sakhalinsk to Vladivostok, Khabarovsk, Moscow, Saint Petersburg, Yekaterinburg and Krasnodar - flights with controlled temperature regime. Time from pier to recipient: 24-48 hours.</li>
           </ol>
 
           <h2>Why specifically the Sakhalin live scallop</h2>
@@ -91,8 +91,8 @@ const ScallopLiveSakhalin = () => {
           </p>
 
           <ul>
-            <li><strong>Water temperature +2…+10 °C</strong> - the scallop grows slowly (3–5 years to market size) and accumulates maximum glycogen, amino acids and taurine.</li>
-            <li><strong>Pristine waters.</strong> Sakhalin coastal zones are routinely tested by Rosselkhoznadzor; heavy-metal and microplastic levels are 2–3× lower than European norms.</li>
+            <li><strong>Water temperature +2...+10 °C</strong> - the scallop grows slowly (3-5 years to market size) and accumulates maximum glycogen, amino acids and taurine.</li>
+            <li><strong>Pristine waters.</strong> Sakhalin coastal zones are routinely tested by Rosselkhoznadzor; heavy-metal and microplastic levels are 2-3x lower than European norms.</li>
             <li><strong>Rich plankton.</strong> Cold upwellings bring nutrients from the seabed; the mollusk feeds on diverse phytoplankton - the foundation of its pronounced "oceanic" flavor.</li>
             <li><strong>Wild harvest.</strong> 90% of Sakhalin scallop is dive-harvested in the wild, not aquaculture. The flesh is denser, the coral brighter, the taste deeper.</li>
           </ul>
@@ -100,7 +100,7 @@ const ScallopLiveSakhalin = () => {
           <h2>Health benefits of live scallop</h2>
 
           <p>
-            The muscle of a live Sakhalin scallop is top-tier dietary protein: 18–20 g protein per 100 g, only 88 kcal, minimal fat. The composition is unique even among seafood:
+            The muscle of a live Sakhalin scallop is top-tier dietary protein: 18-20 g protein per 100 g, only 88 kcal, minimal fat. Its nutrient profile stands out even among seafood:
           </p>
 
           <ul>
@@ -185,7 +185,7 @@ const ScallopLiveSakhalin = () => {
           <h2>Польза для здоровья</h2>
 
           <p>
-            Мускул гребешка - это идеальный белок: почти 20 г протеина и всего 88 ккал. Плюс уникальный состав:
+            Мускул гребешка - это легкий белок: почти 20 г протеина и всего 88 ккал. В составе много ценных веществ:
           </p>
 
           <ul>
@@ -198,7 +198,7 @@ const ScallopLiveSakhalin = () => {
           <h2>Кому стоит попробовать</h2>
 
           <ul>
-            <li><strong>Шеф-поварам</strong> - для идеальных авторских блюд.</li>
+            <li><strong>Шеф-поварам</strong> - для сашими, тартара и красивой подачи в раковине.</li>
             <li><strong>Гурманам</strong> - чтобы узнать настоящий вкус океана.</li>
             <li><strong>Спортсменам</strong> - за максимум белка при минимуме калорий.</li>
             <li><strong>Всем, кто ценит качество</strong> - ведь натуральный дикий продукт всегда лучше.</li>

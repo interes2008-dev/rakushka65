@@ -53,7 +53,7 @@ const ScallopLiveStorage = () => {
           <h2>Rule #1: do NOT submerge scallops in water</h2>
 
           <p>
-            The most common buyer mistake is dropping live scallops into a bowl of fresh or even salted water "to keep them alive longer". This kills the mollusk in 2–4 hours. Scallops are marine organisms adapted to stable salinity (30–34 ‰) and temperatures of +2…+6 °C. Tap water - or an incorrectly mixed brine - causes osmotic shock.
+            The most common buyer mistake is dropping live scallops into a bowl of fresh or even salted water "to keep them alive longer". This kills the mollusk in 2-4 hours. Scallops are marine organisms adapted to stable salinity (30-34 ‰) and temperatures of +2...+6 °C. Tap water - or an incorrectly mixed brine - causes osmotic shock.
           </p>
 
           <p>
@@ -64,19 +64,19 @@ const ScallopLiveStorage = () => {
 
           <ol>
             <li><strong>Unbox immediately.</strong> Open the thermo-box and inspect the mollusks. Valves should be slightly open or close when tapped.</li>
-            <li><strong>Quick rinse with cold running water.</strong> 15–20 seconds, no soaking. Goal: remove sand and seaweed from the shell.</li>
+            <li><strong>Quick rinse with cold running water.</strong> 15-20 seconds, no soaking. Goal: remove sand and seaweed from the shell.</li>
             <li><strong>Place in a container.</strong> Use a perforated tray or a container with drainage holes - shells should sit cup-down so internal moisture is retained.</li>
             <li><strong>Cover with damp cotton cloth.</strong> A towel or cheesecloth soaked in cold salted water (1 tbsp salt per 1 L). The cloth keeps the mantle moist.</li>
-            <li><strong>Refrigerate.</strong> Best zone: bottom shelf or vegetable drawer. Temperature +2…+4 °C, never freezer.</li>
+            <li><strong>Refrigerate.</strong> Best zone: bottom shelf or vegetable drawer. Temperature +2...+4 °C, never freezer.</li>
             <li><strong>Refresh the cloth daily.</strong> Rinse in cold salted water, wring out, return.</li>
           </ol>
 
           <h2>Shelf life</h2>
 
           <ul>
-            <li><strong>Live in shell</strong> - up to 5 days at +2…+4 °C with proper care.</li>
-            <li><strong>Shucked muscle (fresh)</strong> - up to 48 hours at 0…+2 °C in a sealed container on ice.</li>
-            <li><strong>Flash-frozen</strong> - up to 6 months at −18 °C. Freeze right after shucking, single layer.</li>
+            <li><strong>Live in shell</strong> - up to 5 days at +2...+4 °C with proper care.</li>
+            <li><strong>Shucked muscle (fresh)</strong> - up to 48 hours at 0...+2 °C in a sealed container on ice.</li>
+            <li><strong>Flash-frozen</strong> - up to 6 months at -18 °C. Freeze right after shucking, single layer.</li>
             <li><strong>Thawed scallop</strong> - use within 24 hours, refreezing not allowed.</li>
           </ul>
 
@@ -85,7 +85,7 @@ const ScallopLiveStorage = () => {
           <p><strong>Fresh live scallop:</strong></p>
 
           <ul>
-            <li>Valves open 2–5 mm, close when tapped</li>
+            <li>Valves open 2-5 mm, close when tapped</li>
             <li>Muscle glossy, cream-white, slightly moist</li>
             <li>Coral bright orange, firm</li>
             <li>Aroma: fresh sea, cucumber, slight sweetness</li>
@@ -112,13 +112,13 @@ const ScallopLiveStorage = () => {
             <li>Open the shells, gently detach the muscle and coral with a knife.</li>
             <li>Rinse with cold salted water, pat dry with paper towel.</li>
             <li>Spread muscles in a single layer on a parchment-lined tray.</li>
-            <li>Freezer for 1–2 hours (flash-freezing at −18…−25 °C).</li>
+            <li>Freezer for 1-2 hours (flash-freezing at -18...-25 °C).</li>
             <li>Transfer frozen muscles to vacuum or zip bags, expel air.</li>
             <li>Label with date. Shelf life - 6 months.</li>
           </ol>
 
           <p>
-            <strong>Thaw only in the fridge</strong> (12–16 hours). Never in water, microwave or at room temperature: this destroys protein structure and activates bacteria.
+            <strong>Thaw only in the fridge</strong> (12-16 hours). Never in water, microwave or at room temperature: this destroys protein structure and activates bacteria.
           </p>
 
           <h2>FAQ</h2>
