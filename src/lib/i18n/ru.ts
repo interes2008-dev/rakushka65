@@ -209,5 +209,4 @@ export const ru: Translations = {
     Настойки: "Настойки",
   },
   unitKg: "кг",
-  unitPiece: "шт",
 };
