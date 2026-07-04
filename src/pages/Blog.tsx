@@ -71,7 +71,6 @@ const Blog = () => {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     const list = allArticles.filter((a) => {
-      // «Настойка трепанга» агрегирует свои статьи + общие материалы о трепанге (контекст для читателя)
       if (activeTag === "trepang-tincture") {
         if (a.productTag !== "trepang-tincture" && a.productTag !== "trepang") return false;
       } else if (activeTag !== "all" && a.productTag !== activeTag) {
@@ -94,8 +93,8 @@ const Blog = () => {
     <div className="relative min-h-screen">
       <SEOHead
         title={isEn
-          ? "Sakhalin seafood blog — recipes, guides, tips | Rakushka65"
-          : "Блог о морепродуктах с Сахалина — рецепты, советы, гиды | Ракушка65"}
+          ? "Sakhalin seafood blog - recipes, guides, tips | Rakushka65"
+          : "Блог о морепродуктах с Сахалина - рецепты, советы, гиды | Ракушка65"}
         description={isEn
           ? "Rakushka65 blog: articles about vongole, oysters, scallop and other Sakhalin seafood. Recipes, selection and cooking guides."
           : "Блог Ракушка65: статьи о вонголе, устрицах, гребешке и других морепродуктах с Сахалина. Рецепты, советы по выбору и приготовлению деликатесов."}
@@ -114,8 +113,8 @@ const Blog = () => {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             name: isEn
-              ? "Rakushka65 Blog — articles about Sakhalin seafood"
-              : "Блог Ракушка65 — статьи о морепродуктах с Сахалина",
+              ? "Rakushka65 Blog - articles about Sakhalin seafood"
+              : "Блог Ракушка65 - статьи о морепродуктах с Сахалина",
             description: isEn
               ? "Expert articles about vongole, oysters, scallop, sea urchin and other Sakhalin delicacies."
               : "Экспертные статьи о вонголе, устрицах, гребешке, морском еже и других деликатесах Сахалина.",
@@ -157,7 +156,6 @@ const Blog = () => {
             </p>
           </motion.div>
 
-          {/* === ВЫБЕРИТЕ ПРОДУКТ === */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -196,7 +194,7 @@ const Blog = () => {
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-1 ring-border/40 group-hover:ring-primary/40 transition-all">
                      <img
                       src={cat.image}
-                      alt={`${isEn ? CATEGORY_LABELS_EN[cat.tag] ?? cat.label : cat.label} — Sakhalin seafood, Rakushka65`}
+                      alt={`${isEn ? CATEGORY_LABELS_EN[cat.tag] ?? cat.label : cat.label} - Sakhalin seafood, Rakushka65`}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
                       width={80}
@@ -211,7 +209,6 @@ const Blog = () => {
             </div>
           </motion.section>
 
-          {/* === ПОИСК + СОРТИРОВКА === */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -251,7 +248,6 @@ const Blog = () => {
             </div>
           </motion.div>
 
-          {/* === СТАТЬИ === */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto min-h-[200px]">
             <AnimatePresence mode="popLayout">
               {filtered.map((article, index) => (
@@ -269,7 +265,6 @@ const Blog = () => {
                     itemScope
                     itemType="https://schema.org/BlogPosting"
                   >
-                    {/* Microdata + Twitter/OG hints per card — позволяют соцсетям и парсерам подхватывать обложку конкретной карточки при шаринге её URL */}
                     <meta itemProp="url" content={`https://rakushka65.ru${article.routePath}`} />
                     <meta itemProp="headline" content={article.title} />
                     <meta itemProp="description" content={article.description} />
@@ -288,7 +283,7 @@ const Blog = () => {
                     <div className="aspect-[3/2] overflow-hidden">
                       <img
                         src={getBlogImage(article.image)}
-                        alt={`${article.title} — ${isEn ? "Rakushka65 blog article" : "статья в блоге Ракушка65"}`}
+                        alt={`${article.title} - ${isEn ? "Rakushka65 blog article" : "статья в блоге Ракушка65"}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                         width={1200}

@@ -27,7 +27,6 @@ export interface Product {
   weight?: string;
   taste?: string;
   fullDescription?: string;
-  /** Скрыть карточку из каталога и главной, но оставить страницу товара доступной по прямой ссылке */
   hidden?: boolean;
 }
 

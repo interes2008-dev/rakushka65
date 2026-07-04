@@ -1,4 +1,3 @@
-// Единый источник: тег продукта ↔ категория каталога ↔ страница товара
 import oystersImg from "@/assets/product-oysters.jpg";
 import scallopImg from "@/assets/product-scallop.jpg";
 import vongoleImg from "@/assets/product-vongole.jpg";
@@ -17,11 +16,8 @@ export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin
 export interface ProductCategory {
   tag: ProductTag;
   label: string;
-  /** Ссылка на конкретный товар в каталоге */
   productLink: string;
-  /** Изображение товара для карточки и блока «Рекомендуем» */
   image: string;
-  /** CTA-фраза в конце статьи */
   cta: string;
   ctaDescription: string;
 }
@@ -33,7 +29,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/oysters",
     image: oystersImg,
     cta: "Купить устрицы с Сахалина",
-    ctaDescription: "Свежие живые устрицы прямо с побережья Сахалина — доставка по России за 24 часа.",
+    ctaDescription: "Свежие живые устрицы прямо с побережья Сахалина - доставка по России за 24 часа.",
   },
   {
     tag: "scallop",
@@ -41,7 +37,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/scallop",
     image: scallopImg,
     cta: "Купить гребешок с Сахалина",
-    ctaDescription: "Живой морской гребешок с Сахалина — нежный, сладковатый вкус океана.",
+    ctaDescription: "Живой морской гребешок с Сахалина - нежный, сладковатый вкус океана.",
   },
   {
     tag: "vongole",
@@ -49,7 +45,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/vongole",
     image: vongoleImg,
     cta: "Купить вонголе с Сахалина",
-    ctaDescription: "Морской петушок с побережья Сахалина — для пасты, ризотто и тушёных блюд.",
+    ctaDescription: "Морской петушок с побережья Сахалина - для пасты, ризотто и тушёных блюд.",
   },
   {
     tag: "spisula",
@@ -57,7 +53,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/spizula",
     image: spizulaImg,
     cta: "Купить спизулу с Сахалина",
-    ctaDescription: "Сахалинская спизула — плотная сладковатая мякоть, идеальна для сашими и гриля.",
+    ctaDescription: "Сахалинская спизула - плотная сладковатая мякоть, идеальна для сашими и гриля.",
   },
   {
     tag: "urchin",
@@ -65,7 +61,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/sea-urchin",
     image: seaurchinImg,
     cta: "Купить морского ежа с Сахалина",
-    ctaDescription: "Свежий сахалинский морской ёж — сливочная икра прямо из Тихого океана.",
+    ctaDescription: "Свежий сахалинский морской ёж - сливочная икра прямо из Тихого океана.",
   },
   {
     tag: "crab",
@@ -73,7 +69,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/crab",
     image: crabImg,
     cta: "Купить краба с Сахалина",
-    ctaDescription: "Дальневосточный краб — сочное мясо с морским сладковатым вкусом.",
+    ctaDescription: "Дальневосточный краб - сочное мясо с морским сладковатым вкусом.",
   },
   {
     tag: "rapany",
@@ -81,7 +77,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/rapany",
     image: rapanyImg,
     cta: "Купить рапаны с Сахалина",
-    ctaDescription: "Сахалинские рапаны — упругая мякоть с дымно-морским вкусом.",
+    ctaDescription: "Сахалинские рапаны - упругая мякоть с дымно-морским вкусом.",
   },
   {
     tag: "snails",
@@ -89,7 +85,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/sea-snails",
     image: snailsImg,
     cta: "Купить морские улитки с Сахалина",
-    ctaDescription: "Морские улитки с Сахалина — пикантный деликатес Тихого океана.",
+    ctaDescription: "Морские улитки с Сахалина - пикантный деликатес Тихого океана.",
   },
   {
     tag: "corbicula",
@@ -97,7 +93,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/corbicula",
     image: corbiculaImg,
     cta: "Купить корбикулу с Сахалина",
-    ctaDescription: "Сахалинская корбикула — нежный, чуть сладковатый моллюск.",
+    ctaDescription: "Сахалинская корбикула - нежный, чуть сладковатый моллюск.",
   },
   {
     tag: "trepang",
@@ -105,7 +101,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/trepang",
     image: trepangImg,
     cta: "Купить трепанг с Сахалина",
-    ctaDescription: "Дальневосточный трепанг — уникальный деликатес с целебными свойствами.",
+    ctaDescription: "Дальневосточный трепанг - уникальный деликатес с целебными свойствами.",
   },
   {
     tag: "trepang-tincture",
@@ -113,7 +109,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/trepang-tincture",
     image: trepangTinctureImg,
     cta: "Купить настойку на трепанге",
-    ctaDescription: "Готовая медовая настойка трепанга — дальневосточный эликсир для иммунитета и тонуса.",
+    ctaDescription: "Готовая медовая настойка трепанга - дальневосточный эликсир для иммунитета и тонуса.",
   },
   {
     tag: "trepang-honey-tincture",
@@ -121,7 +117,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     productLink: "/catalog/trepang-honey-tincture",
     image: trepangHoneyTinctureImg,
     cta: "Купить медовую настойку трепанга без спирта",
-    ctaDescription: "Безалкогольный медовый эликсир из сахалинского трепанга — мягкая поддержка иммунитета без спирта.",
+    ctaDescription: "Безалкогольный медовый эликсир из сахалинского трепанга - мягкая поддержка иммунитета без спирта.",
   },
 ];
 
@@ -130,7 +126,6 @@ const BY_TAG: Record<ProductTag, ProductCategory> = PRODUCT_CATEGORIES.reduce((a
   return acc;
 }, {} as Record<ProductTag, ProductCategory>);
 
-/** Определяет тег продукта по slug статьи или категории из БД */
 export function detectProductTag(input: string): ProductTag {
   const s = input.toLowerCase();
   if (s.includes("ustri") || s.includes("oyster")) return "oysters";
@@ -141,11 +136,9 @@ export function detectProductTag(input: string): ProductTag {
   if (s.includes("rapan")) return "rapany";
   if (s.includes("ulitk") || s.includes("snail")) return "snails";
   if (s.includes("corbicul") || s.includes("korbikul")) return "corbicula";
-  // Сначала проверяем безалкогольную медовую настойку, потом обычную настойку, потом сам трепанг
   if (s.includes("medov") || s.includes("honey") || s.includes("медов") || s.includes("bez-spirt") || s.includes("alcohol-free")) return "trepang-honey-tincture";
   if (s.includes("nastojk") || s.includes("tincture") || s.includes("настойк")) return "trepang-tincture";
   if (s.includes("trepang") || s.includes("трепанг")) return "trepang";
-  if (s.includes("vongol")) return "vongole";
   return "vongole";
 }
 

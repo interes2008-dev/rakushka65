@@ -8,7 +8,6 @@ import FloatingParticles from "@/components/FloatingParticles";
 import SEOHead from "@/components/SEOHead";
 import ArticleCTA from "@/components/ArticleCTA";
 import NotFound from "./NotFound";
-import { ArrowLeft } from "lucide-react";
 import { detectProductTag } from "@/lib/blog/productCategories";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 
@@ -47,7 +46,7 @@ const DynamicArticle = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-muted-foreground">Загрузка…</div>
+        <div className="text-muted-foreground">Загрузка...</div>
       </div>
     );
   }
@@ -65,12 +64,12 @@ const DynamicArticle = () => {
     crab: "/src/assets/blog-vongole-real-1.jpg",
   };
   const heroImage = getBlogImage(FALLBACK_IMG[tag || ""] || FALLBACK_IMG.vongole);
-  const ogImageUrl = heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`;
+  const ogImageUrl = heroImage.startsWith("http") ? heroImage : \`\${SITE_URL}\${heroImage}\`;
 
   const breadcrumb = getBreadcrumbSchema([
     { name: "Главная", url: "/" },
     { name: "Блог", url: "/blog" },
-    { name: article.title, url: `/blog/${article.slug}` },
+    { name: article.title, url: \`/blog/\${article.slug}\` },
   ]);
 
   const articleJsonLd = {
@@ -80,10 +79,10 @@ const DynamicArticle = () => {
     description: article.seo_description || article.description,
     datePublished: article.published_at,
     dateModified: article.published_at,
-    image: heroImage.startsWith("/") ? `${SITE_URL}${heroImage}` : heroImage,
+    image: heroImage.startsWith("/") ? \`\${SITE_URL}\${heroImage}\` : heroImage,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_URL}/blog/${article.slug}`,
+      "@id": \`\${SITE_URL}/blog/\${article.slug}\`,
     },
     author: {
       "@type": "Organization",
@@ -95,19 +94,18 @@ const DynamicArticle = () => {
       name: "Ракушка65",
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/favicon.svg`,
+        url: \`\${SITE_URL}/favicon.svg\`,
       },
     },
   };
 
-  // Build a concise SEO title (target ~55-60 chars)
   const buildShortTitle = (raw: string) => {
     const brand = " | Ракушка65";
     const maxLen = 60;
-    const base = raw.replace(/\s*[—\-–|]\s*Ракушка65\s*$/i, "").trim();
+    const base = raw.replace(/\\s*[—\\-|]\\s*Ракушка65\\s*$/i, "").trim();
     if (base.length + brand.length <= maxLen) return base + brand;
-    const trimmed = base.slice(0, maxLen - brand.length - 1).replace(/[\s,;:.\-—]+$/, "");
-    return trimmed + "…" + brand;
+    const trimmed = base.slice(0, maxLen - brand.length - 1).replace(/[\\s,;:.\\-—]+$/, "");
+    return trimmed + "..." + brand;
   };
   const seoTitle = article.seo_title || buildShortTitle(article.title);
   const seoDesc = (article.seo_description || article.description || "").slice(0, 160);
@@ -137,7 +135,7 @@ const DynamicArticle = () => {
           </nav>
 
           <div className="editorial-eyebrow">
-            Журнал Ракушка65 ·{" "}
+            Журнал Ракушка65 .{" "}
             <time dateTime={article.published_at}>
               {new Date(article.published_at).toLocaleDateString("ru-RU", {
                 day: "numeric", month: "long", year: "numeric",
@@ -149,7 +147,7 @@ const DynamicArticle = () => {
 
           <img
             src={heroImage}
-            alt={`${article.title} — Ракушка65, морепродукты с Сахалина`}
+            alt={\`\${article.title} - Ракушка65, морепродукты с Сахалина\`}
             className="w-full rounded-xl mb-8"
             width={1200}
             height={800}

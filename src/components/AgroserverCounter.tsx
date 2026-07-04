@@ -22,8 +22,8 @@ const AgroserverCounter = () => {
         href="https://agroserver.ru/"
         target="_blank"
         rel="noopener noreferrer nofollow"
-        aria-label="Перейти на agroserver.ru — отраслевой каталог поставщиков (открывается в новой вкладке)"
-        title="agroserver.ru — рейтинг отраслевого каталога"
+        aria-label="Перейти на agroserver.ru - отраслевой каталог поставщиков (открывается в новой вкладке)"
+        title="agroserver.ru - рейтинг отраслевого каталога"
         className="inline-block rounded-sm opacity-60 hover:opacity-100 transition-opacity outline-none focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         <img

@@ -5,29 +5,29 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const reviewsData = {
   ru: [
-    { name: "Команда «Посейдон»", role: "Партнёры, Сочи", text: "Ребята, вы — наши люди! Когда на побережье Чёрного моря подают сахалинские устрицы и гости не верят, что это возможно — мы просто улыбаемся. Ракушка65 — больше чем поставщик, это друзья, которые никогда не подводят. Обнимаем с берега на берег! 🤝", initials: "П" },
-    { name: "Алексей Морозов", role: "Шеф-повар, ресторан «Берег»", text: "Работаем с Ракушка65 уже два года. Качество устриц и гребешков — на высшем уровне. Гости в восторге, а для нас главное — стабильность поставок.", initials: "АМ" },
-    { name: "Марина Светлова", role: "Управляющая, отель «Бриз»", text: "Наконец нашли поставщика, которому можно доверять. Морепродукты всегда свежие, доставка точно в срок. Рекомендую всем коллегам в индустрии.", initials: "МС" },
-    { name: "Дмитрий Волков", role: "Гурман, частный клиент", text: "Заказываю устрицы для семейных ужинов. Впечатляет подход — даже упаковка продумана до мелочей. Чувствуешь, что тебя ценят как клиента.", initials: "ДВ" },
-    { name: "Елена Танака", role: "Владелица суши-бара «Нори»", text: "Перепробовали десяток поставщиков — остановились на Ракушка65. Вонголе и гребешок приходят живыми, клиенты чувствуют разницу. Это другой уровень.", initials: "ЕТ" },
-    { name: "Игорь Сахаров", role: "Ресторатор, сеть «Океан»", text: "Удивляет скорость — заказал вечером, утром уже на кухне. Устрицы раскрываются с характерным щелчком, сок прозрачный. Видно, что продукт не лежал на складе.", initials: "ИС" },
-    { name: "Анна Ким", role: "Фуд-блогер, @sakhalin_food", text: "Снимала обзор сахалинских устриц — ребята из Ракушка65 прислали отборные экземпляры. Подписчики завалили вопросами, где заказать. Теперь только к ним!", initials: "АК" },
-    { name: "Виктор Петренко", role: "Частный клиент, Москва", text: "Живу в Москве, а ем устрицы как будто на берегу Сахалина. Авиадоставка работает как часы. Жена говорит, что это лучший подарок, который я делаю семье каждую пятницу.", initials: "ВП" },
-    { name: "Ольга Никитина", role: "Частный клиент, Москва", text: "Устроила дегустацию для друзей — все были в шоке, что такие устрицы можно получить в Москве. Свежайшие, с запахом моря. Теперь заказываю каждые две недели.", initials: "ОН" },
-    { name: "Сергей Ковалёв", role: "Шеф-повар, Москва", text: "В столице сложно найти живого гребешка такого качества. Ракушка65 решили эту проблему — прилетает за сутки, как будто сам на Сахалин слетал.", initials: "СК" },
-    { name: "Наталья Громова", role: "Частный клиент, Москва", text: "Муж — рыбак, и его не обманешь. Попробовал спизулу от Ракушка65 и сказал: «Как на острове». Для нас это высшая оценка. Спасибо за вкус детства!", initials: "НГ" },
+    { name: "Команда «Посейдон»", role: "Партнёры, Сочи", text: "Ребята, вы - наши люди! Когда на Чёрном море подают сахалинские устрицы и гости не верят, что такое возможно, мы просто улыбаемся. Ракушка65 - больше чем поставщик, это друзья, которые никогда не подводят. Обнимаем с берега на берег! 🤝", initials: "П" },
+    { name: "Алексей Морозов", role: "Шеф-повар, ресторан «Берег»", text: "Работаем с Ракушка65 уже два года. Качество устриц и гребешков на высоте. Гости в восторге, а для нас главное - стабильные поставки.", initials: "АМ" },
+    { name: "Марина Светлова", role: "Управляющая, отель «Бриз»", text: "Наконец нашли поставщика, которому можно доверять. Морепродукты всегда свежие, доставка точно в срок. Рекомендую коллегам по цеху.", initials: "МС" },
+    { name: "Дмитрий Волков", role: "Гурман, частный клиент", text: "Заказываю устрицы для семейных ужинов. Впечатляет подход: даже упаковка продумана до мелочей. Чувствуешь, что тебя ценят как клиента.", initials: "ДВ" },
+    { name: "Елена Танака", role: "Владелица суши-бара «Нори»", text: "Перепробовали десяток поставщиков, остановились на Ракушка65. Вонголе и гребешок приходят живыми, клиенты чувствуют разницу. Это совсем другой уровень.", initials: "ЕТ" },
+    { name: "Игорь Сахаров", role: "Ресторатор, сеть «Океан»", text: "Удивляет скорость: заказал вечером, утром уже на кухне. Устрицы раскрываются с характерным щелчком, сок прозрачный. Видно, что продукт не лежал на складе.", initials: "ИС" },
+    { name: "Анна Ким", role: "Фуд-блогер, @sakhalin_food", text: "Снимала обзор сахалинских устриц - ребята из Ракушка65 прислали отборные экземпляры. Подписчики завалили вопросами, где заказать. Теперь только к ним!", initials: "АК" },
+    { name: "Виктор Петренко", role: "Частный клиент, Москва", text: "Живу в Москве, а ем устрицы так, будто я на берегу Сахалина. Авиадоставка работает как часы. Жена говорит, что это лучший подарок семье на пятницу.", initials: "ВП" },
+    { name: "Ольга Никитина", role: "Частный клиент, Москва", text: "Устроила дегустацию для друзей - все были в шоке, что такие устрицы можно получить в Москве. Свежайшие, пахнут морем. Теперь заказываю каждые две недели.", initials: "ОН" },
+    { name: "Сергей Ковалёв", role: "Шеф-повар, Москва", text: "В столице сложно найти живого гребешка такого качества. Ракушка65 решили проблему: прилетает за сутки, как будто сам на Сахалин слетал.", initials: "СК" },
+    { name: "Наталья Громова", role: "Частный клиент, Москва", text: "Муж - рыбак, его не обманешь. Попробовал спизулу от Ракушка65 и сказал: «Как на острове». Для нас это высшая оценка. Спасибо за вкус детства!", initials: "НГ" },
   ],
   en: [
-    { name: "Team 'Poseidon'", role: "Partners, Sochi", text: "Guys, you're our people! When Sakhalin oysters are served on the Black Sea coast and guests can't believe it's possible — we just smile. Rakushka65 is more than a supplier, they're friends who never let you down. Hugs from coast to coast! 🤝", initials: "P" },
+    { name: "Team 'Poseidon'", role: "Partners, Sochi", text: "Guys, you're our people! When Sakhalin oysters are served on the Black Sea coast and guests can't believe it's possible - we just smile. Rakushka65 is more than a supplier, they're friends who never let you down. Hugs from coast to coast! 🤝", initials: "P" },
     { name: "Alexei Morozov", role: "Head Chef, restaurant 'Bereg'", text: "We've been working with Rakushka65 for two years. The quality of oysters and scallops is top-notch. Guests are delighted, and for us the key is consistency of supply.", initials: "AM" },
-    { name: "Marina Svetlova", role: "Manager, hotel 'Breeze'", text: "Finally found a supplier we can trust. Seafood is always fresh, delivery right on time. I recommend them to all colleagues in the industry.", initials: "MS" },
-    { name: "Dmitry Volkov", role: "Gourmet, private client", text: "I order oysters for family dinners. The attention to detail is impressive — even the packaging is perfectly thought out. You feel valued as a client.", initials: "DV" },
-    { name: "Elena Tanaka", role: "Owner, sushi bar 'Nori'", text: "We tried a dozen suppliers — settled on Rakushka65. Vongole and scallops arrive alive, clients taste the difference. This is another level.", initials: "ET" },
-    { name: "Igor Sakharov", role: "Restaurateur, 'Ocean' chain", text: "The speed is amazing — order in the evening, it's in the kitchen by morning. Oysters open with a satisfying click, juice is clear. You can tell the product hasn't been sitting around.", initials: "IS" },
-    { name: "Anna Kim", role: "Food blogger, @sakhalin_food", text: "I was filming a review of Sakhalin oysters — the team at Rakushka65 sent premium specimens. Subscribers flooded me with questions about where to order. Now it's only them!", initials: "AK" },
+    { name: "Marina Светлова", role: "Manager, hotel 'Breeze'", text: "Finally found a supplier we can trust. Seafood is always fresh, delivery right on time. I recommend them to all colleagues in the industry.", initials: "MS" },
+    { name: "Dmitry Volkov", role: "Gourmet, private client", text: "I order oysters for family dinners. The attention to detail is impressive: even the packaging is perfectly thought out. You feel valued as a client.", initials: "DV" },
+    { name: "Elena Tanaka", role: "Owner, sushi bar 'Nori'", text: "We tried a dozen suppliers, settled on Rakushka65. Vongole and scallops arrive alive, clients taste the difference. This is another level.", initials: "ET" },
+    { name: "Igor Sakharov", role: "Restaurateur, 'Ocean' chain", text: "The speed is amazing: order in the evening, it's in the kitchen by morning. Oysters open with a satisfying click, juice is clear. You can tell the product hasn't been sitting around.", initials: "IS" },
+    { name: "Anna Kim", role: "Food blogger, @sakhalin_food", text: "I was filming a review of Sakhalin oysters - the team at Rakushka65 sent premium specimens. Subscribers flooded me with questions about where to order. Now it's only them!", initials: "AK" },
     { name: "Viktor Petrenko", role: "Private client, Moscow", text: "I live in Moscow but eat oysters as if I'm on the shores of Sakhalin. Air delivery works like clockwork. My wife says it's the best gift I give the family every Friday.", initials: "VP" },
-    { name: "Olga Nikitina", role: "Private client, Moscow", text: "I hosted a tasting for friends — everyone was amazed that you can get such oysters in Moscow. Freshest, with the scent of the sea. Now I order every two weeks.", initials: "ON" },
-    { name: "Sergei Kovalev", role: "Head Chef, Moscow", text: "In Moscow it's hard to find live scallops of this quality. Rakushka65 solved that problem — arrives in a day, as if I flew to Sakhalin myself.", initials: "SK" },
+    { name: "Olga Nikitina", role: "Private client, Moscow", text: "I hosted a tasting for friends - everyone was amazed that you can get such oysters in Moscow. Freshest, with the scent of the sea. Now I order every two weeks.", initials: "ON" },
+    { name: "Sergei Kovalev", role: "Head Chef, Moscow", text: "In Moscow it's hard to find live scallops of this quality. Rakushka65 solved that problem: arrives in a day, as if I flew to Sakhalin myself.", initials: "SK" },
     { name: "Natalia Gromova", role: "Private client, Moscow", text: "My husband is a fisherman, and you can't fool him. He tried spizula from Rakushka65 and said: 'Just like on the island.' For us, that's the highest praise. Thank you for the taste of home!", initials: "NG" },
   ],
 };
@@ -85,8 +85,6 @@ const ReviewsSection = () => {
     setCurrent(i);
   }, [current]);
 
-
-  // Reset current when language changes
   useEffect(() => {
     setCurrent(0);
   }, [lang]);
@@ -105,7 +103,6 @@ const ReviewsSection = () => {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Progress bar */}
           <div className="absolute -top-4 left-0 right-0 h-0.5 bg-muted/30 rounded-full overflow-hidden">
             <motion.div
               key={`${lang}-${current}-${isPaused}`}

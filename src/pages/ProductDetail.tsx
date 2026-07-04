@@ -26,7 +26,7 @@ const ProductDetail = () => {
   if (!product) {
     return (
       <div className="relative min-h-screen">
-        <SEOHead title="404 — Rakushka65" description="Страница не найдена" noindex />
+        <SEOHead title="404 - Rakushka65" description="Страница не найдена" noindex />
         <Header />
         <main className="relative z-10 pt-28 pb-20 container mx-auto px-4 text-center">
           <h1 className="font-heading text-4xl font-bold mb-4">{t.productDetail.notFound}</h1>
@@ -44,8 +44,8 @@ const ProductDetail = () => {
   const related = products.filter((p) => p.id !== product.id).slice(0, 3);
 
   const pageTitle = lang === "ru"
-    ? `${name} с Сахалина — купить | Ракушка65`
-    : `${name} from Sakhalin — Buy | Rakushka65`;
+    ? `${name} с Сахалина - купить | Ракушка65`
+    : `${name} from Sakhalin - Buy | Rakushka65`;
 
   const priceFragmentRu = product.price ? `От ${product.price} ₽/кг. ` : "Цена по запросу. ";
   const priceFragmentEn = product.price ? `From ${product.price} ₽/kg. ` : "Price on request. ";
@@ -76,7 +76,6 @@ const ProductDetail = () => {
     crab: "https://rakushka65.ru/og-image.jpg",
   };
 
-  // Подбираем статьи блога для этого товара по productTag
   const productTag = detectProductTag(product.id);
   const relatedArticles = blogArticles.filter((a) => a.productTag === productTag).slice(0, 4);
 
@@ -87,7 +86,6 @@ const ProductDetail = () => {
       <Header />
       <main className="relative z-10 pt-28 pb-20">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb nav */}
           <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-2 text-sm font-body text-muted-foreground">
               <li><Link to="/" className="hover:text-primary transition-colors">{lang === "ru" ? "Главная" : "Home"}</Link></li>
@@ -100,7 +98,7 @@ const ProductDetail = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="rounded-2xl overflow-hidden">
-              <img src={product.image} alt={`${name} — ${lang === "ru" ? "свежие морепродукты Сахалина" : "fresh Sakhalin seafood"} | Rakushka65`} className="w-full aspect-square object-cover" />
+              <img src={product.image} alt={`${name} - ${lang === "ru" ? "свежие морепродукты Сахалина" : "fresh Sakhalin seafood"} | Ракушка65`} className="w-full aspect-square object-cover" />
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="flex flex-col justify-center">
@@ -173,8 +171,8 @@ const ProductDetail = () => {
               </div>
               <h2 id="recipe-heading" className="font-heading text-2xl md:text-3xl font-bold mb-4">
                 {lang === "ru"
-                  ? "Медовая настойка с трепангом — без спирта"
-                  : "Honey sea cucumber tincture — alcohol-free"}
+                  ? "Медовая настойка с трепангом - без спирта"
+                  : "Honey sea cucumber tincture - alcohol-free"}
               </h2>
               <p className="font-body text-muted-foreground mb-6 max-w-2xl">
                 {lang === "ru"
@@ -239,17 +237,17 @@ const ProductDetail = () => {
                   <ol className="space-y-2 font-body text-sm text-muted-foreground">
                     {(lang === "ru"
                       ? [
-                          "Подготовить трепанг: очистить и промыть (сушёный — замочить на 24–36 ч).",
-                          "Нарезать кусочками 1–2 см.",
-                          "В стерильную банку слоями уложить мёд и трепанг, верхний слой — мёд.",
-                          "Настаивать 21 день в тёмном месте при 18–22 °C, переворачивая раз в 3–4 дня.",
+                          "Подготовить трепанг: очистить и промыть (сушёный - замочить на 24-36 ч).",
+                          "Нарезать кусочками 1-2 см.",
+                          "В стерильную банку слоями уложить мёд и трепанг, верхний слой - мёд.",
+                          "Настаивать 21 день в тёмном месте при 18-22 °C, переворачивая раз в 3-4 дня.",
                           "Хранить в холодильнике до 6 месяцев.",
                         ]
                       : [
-                          "Clean and rinse the sea cucumber (soak dried for 24–36 h).",
-                          "Cut into 1–2 cm pieces.",
+                          "Clean and rinse the sea cucumber (soak dried for 24-36 h).",
+                          "Cut into 1-2 cm pieces.",
                           "Layer honey and sea cucumber in a sterile jar, finishing with honey.",
-                          "Macerate for 21 days in a dark place at 18–22 °C, turning every 3–4 days.",
+                          "Macerate for 21 days in a dark place at 18-22 °C, turning every 3-4 days.",
                           "Keep refrigerated for up to 6 months.",
                         ]
                     ).map((step, i) => (
@@ -274,7 +272,6 @@ const ProductDetail = () => {
             </motion.section>
           )}
 
-
           {relatedArticles.length > 0 && (
             <motion.section
               initial={{ opacity: 0, y: 30 }}
@@ -290,8 +287,8 @@ const ProductDetail = () => {
               </div>
               <p className="font-body text-muted-foreground mb-8 max-w-2xl">
                 {lang === "ru"
-                  ? "Полезные материалы блога: что это, как выбрать, как готовить и применять — перед оформлением заказа."
-                  : "Useful blog reads: what it is, how to choose, cook and use — before ordering."}
+                  ? "Полезные материалы блога: что это, как выбрать, как готовить и применять - перед оформлением заказа."
+                  : "Useful blog reads: what it is, how to choose, cook and use - before ordering."}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {relatedArticles.map((a) => (
@@ -339,7 +336,7 @@ const ProductDetail = () => {
                 {related.map((rp) => (
                   <Link key={rp.id} to={`/catalog/${rp.id}`} className="block bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
                     <div className="relative overflow-hidden aspect-[4/3]">
-                      <img src={rp.image} alt={`${t.productNames[rp.id] || rp.name} — Rakushka65`} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" />
+                      <img src={rp.image} alt={`${t.productNames[rp.id] || rp.name} - Rakushka65`} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" />
                     </div>
                     <div className="p-4">
                       <h3 className="font-heading text-lg font-semibold group-hover:text-primary transition-colors">{t.productNames[rp.id] || rp.name}</h3>

@@ -17,7 +17,7 @@ const ArticleCTA = ({ tag }: ArticleCTAProps) => {
 
   return (
     <div className="not-prose mt-16">
-      {/* Главный CTA — конкретный продукт */}
+      {/* Главный CTA: конкретный продукт */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
