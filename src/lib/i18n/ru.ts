@@ -72,7 +72,7 @@ export const ru: Translations = {
     pickup: "Самовывоз",
     yandexDelivery: "Яндекс-доставка",
     hoursLabel: "Часы работы",
-    hoursValue: "Пн-Вс: 9:00 – 21:00",
+    hoursValue: "Пн-Вс: 9:00 - 21:00",
     deliveryToday: "Доставка в день заказа",
     messengers: "Мы в мессенджерах:",
     formTitle: "Оставить заявку",

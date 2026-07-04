@@ -29,7 +29,7 @@ const ScallopLiveDelivery = () => {
     <ArticleLayout
       title={isEn ? titleEn : titleRu}
       seoTitle={isEn ? "Live Sakhalin Sea Scallop Delivery to Moscow & Regions | Rakushka65" : "Доставка живого гребешка с Сахалина в Москву и регионы | Ракушка65"}
-      seoDescription={isEn ? "How we deliver live Sakhalin sea scallops across Russia: packaging, 24–48h transit, temperature control, Mercury (VetIS) documents, guarantees." : "Как мы доставляем живого сахалинского морского гребешка по России: упаковка, сроки 24-48 часов, температурный режим, документы Меркурий, гарантии."}
+      seoDescription={isEn ? "How we deliver live Sakhalin sea scallops across Russia: packaging, 24-48h transit, temperature control, Mercury (VetIS) documents, guarantees." : "Как мы доставляем живого сахалинского морского гребешка по России: упаковка, сроки 24-48 часов, температурный режим, документы Меркурий, гарантии."}
       breadcrumbName={isEn ? "Live Scallop Delivery" : "Доставка живого гребешка"}
       slug="dostavka-zhivogo-grebeshka-rossiya"
       jsonLd={articleJsonLd}
@@ -55,13 +55,13 @@ const ScallopLiveDelivery = () => {
           <h3>Stage 1. Harvest (day 0)</h3>
 
           <p>
-            Sakhalin scallops are dive-harvested in the coastal zone of the Sea of Okhotsk and Aniva Bay. A vessel's working day is 4–6 morning hours. Each mollusk is inspected on deck: damaged, undersized or sick specimens are returned to the sea. This is a certified harvest under Federal Fishery Agency quotas.
+            Sakhalin scallops are dive-harvested in the coastal zone of the Sea of Okhotsk and Aniva Bay. A vessel's working day is 4-6 morning hours. Each mollusk is inspected on deck: damaged, undersized or sick specimens are returned to the sea. This is a certified harvest under Federal Fishery Agency quotas.
           </p>
 
-          <h3>Stage 2. Holding (day 0–1)</h3>
+          <h3>Stage 2. Holding (day 0-1)</h3>
 
           <p>
-            The catch is delivered to a coastal holding cage - a tank of flow-through sea water at +2…+4 °C. Here the mollusk spends 12–24 hours purging sand from its mantle and rebuilding glycogen after harvest stress. Without this stage live shipping is impossible - the scallop won't make the trip.
+            The catch is delivered to a coastal holding cage - a tank of flow-through sea water at +2...+4 °C. Here the mollusk spends 12-24 hours purging sand from its mantle and rebuilding glycogen after harvest stress. Without this stage live shipping is impossible - the scallop won't make the trip.
           </p>
 
           <h3>Stage 3. Sorting and packaging (day 1)</h3>
@@ -70,32 +70,32 @@ const ScallopLiveDelivery = () => {
 
           <ul>
             <li>Tap test on the valve - reflex check</li>
-            <li>Calibration by size (12–15 cm, 15–18 cm, 18+ cm)</li>
+            <li>Calibration by size (12-15 cm, 15-18 cm, 18+ cm)</li>
             <li>Layered into thermo-boxes between sheets of kelp</li>
             <li>Gel-ice packs around the box perimeter</li>
             <li>Internal temperature logger in every box (report on request after delivery)</li>
           </ul>
 
-          <h3>Stage 4. Air freight (day 1–2)</h3>
+          <h3>Stage 4. Air freight (day 1-2)</h3>
 
           <p>
-            From Yuzhno-Sakhalinsk the boxes ship on direct Aeroflot, S7 or Aurora flights to hub cities: Moscow (Sheremetyevo / Domodedovo), Saint Petersburg (Pulkovo), Vladivostok, Khabarovsk, Novosibirsk. The cargo is declared as "fresh seafood" with priority loading and a fixed +2…+5 °C temperature regime in the hold.
+            From Yuzhno-Sakhalinsk the boxes ship on direct Aeroflot, S7 or Aurora flights to hub cities: Moscow (Sheremetyevo / Domodedovo), Saint Petersburg (Pulkovo), Vladivostok, Khabarovsk, Novosibirsk. The cargo is declared as "fresh seafood" with priority loading and a fixed +2...+5 °C temperature regime in the hold.
           </p>
 
           <h3>Stage 5. Last mile (day 2)</h3>
 
           <p>
-            In Moscow and Saint Petersburg - our own courier with thermo-bag. In the regions - partner express services (CDEK Express, DPD, local operators) with mandatory cold-chain compliance. From airport to your door: no more than 6–12 hours.
+            In Moscow and Saint Petersburg - our own courier with thermo-bag. In the regions - partner express services (CDEK Express, DPD, local operators) with mandatory cold-chain compliance. From airport to your door: no more than 6-12 hours.
           </p>
 
           <h2>Delivery times by city</h2>
 
           <ul>
-            <li><strong>Moscow, Saint Petersburg</strong> - 24–36 hours from dispatch</li>
-            <li><strong>Vladivostok, Khabarovsk</strong> - 12–18 hours</li>
-            <li><strong>Yekaterinburg, Novosibirsk, Kazan</strong> - 36–48 hours</li>
-            <li><strong>Krasnodar, Rostov-on-Don, Sochi</strong> - 36–48 hours</li>
-            <li><strong>Kaliningrad, Murmansk</strong> - 48–60 hours (via Moscow)</li>
+            <li><strong>Moscow, Saint Petersburg</strong> - 24-36 hours from dispatch</li>
+            <li><strong>Vladivostok, Khabarovsk</strong> - 12-18 hours</li>
+            <li><strong>Yekaterinburg, Novosibirsk, Kazan</strong> - 36-48 hours</li>
+            <li><strong>Krasnodar, Rostov-on-Don, Sochi</strong> - 36-48 hours</li>
+            <li><strong>Kaliningrad, Murmansk</strong> - 48-60 hours (via Moscow)</li>
           </ul>
 
           <h2>Documents you receive</h2>
@@ -155,7 +155,7 @@ const ScallopLiveDelivery = () => {
       ) : (
         <>
           <p>
-            Доставить живого моллюска за 7000 км от Сахалина в Москву или Петербург - задача сложная. Но в <strong>Ракушка65</strong> мы наладили логистику так, что каждый гребешок доезжает в идеальном состоянии. Контроль температуры на каждом этапе и полная прозрачность по документам - это наш стандарт.
+            Доставить живого моллюска за 7000 км от Сахалина в Москву или Петербург непросто. В <strong>Ракушка65</strong> маршрут выстроен так, чтобы гребешок доехал живым и холодным. Мы контролируем температуру на каждом этапе и заранее готовим полный пакет документов.
           </p>
 
           <h2>Путь гребешка: от моря до тарелки</h2>
@@ -169,7 +169,7 @@ const ScallopLiveDelivery = () => {
           <h3>2. Передержка (день 0-1)</h3>
 
           <p>
-            Улов едет в береговые садки с проточной морской водой (+2-4 °C). Там гребешок отдыхает после стресса и очищается от песка. Это важный момент: без передержки моллюск просто не переживет долгий перелет.
+            Улов едет в береговые садки с проточной морской водой (+2-4 °C). Там гребешок отдыхает после подъема со дна и очищается от песка. Без такой передержки моллюск хуже переносит долгий перелет.
           </p>
 
           <h3>3. Упаковка (день 1)</h3>

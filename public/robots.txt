@@ -1,4 +1,4 @@
-# https://rakushka65.ru — robots.txt
+# https://rakushka65.ru - robots.txt
 # Allow all major crawlers full access
 
 User-agent: Googlebot
@@ -38,14 +38,14 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# Block AI training crawlers (optional — keep site content protected)
+# Block AI training crawlers (optional - keep site content protected)
 User-agent: GPTBot
 Disallow: /
 
 User-agent: CCBot
 Disallow: /
 
-# Default — allow everything else
+# Default - allow everything else
 User-agent: *
 Allow: /
 Disallow: /api/
