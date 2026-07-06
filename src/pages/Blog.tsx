@@ -248,20 +248,23 @@ const Blog = () => {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto min-h-[200px]">
+          <div className="max-w-[1200px] mx-auto flex flex-col gap-5 min-h-[200px]">
             <AnimatePresence mode="popLayout">
-              {filtered.map((article, index) => (
+              {filtered.map((article, index) => {
+                const words = (article.description || "").split(/\s+/).length + 400;
+                const readMin = Math.max(3, Math.round(words / 200));
+                return (
                 <motion.div
                   key={article.slug}
                   layout
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ delay: Math.min(index * 0.05, 0.4) }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.25, delay: Math.min(index * 0.03, 0.25) }}
                 >
                   <Link
                     to={article.routePath}
-                    className="group block rounded-xl overflow-hidden border border-border/30 bg-card/50 backdrop-blur-sm hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 h-full"
+                    className="group flex flex-col sm:flex-row gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl border border-border/30 bg-card/40 hover:bg-card/70 hover:border-primary/40 hover:shadow-[0_8px_30px_-12px_hsl(var(--primary)/0.25)] transition-all duration-200 cursor-pointer"
                     itemScope
                     itemType="https://schema.org/BlogPosting"
                   >
@@ -270,54 +273,50 @@ const Blog = () => {
                     <meta itemProp="description" content={article.description} />
                     <meta itemProp="datePublished" content={article.date} />
                     <meta itemProp="image" content={`https://rakushka65.ru${getBlogImage(article.image)}`} />
-                    <meta itemProp="twitter:card" content="summary_large_image" />
-                    <meta itemProp="twitter:image" content={`https://rakushka65.ru${getBlogImage(article.image)}`} />
-                    <meta itemProp="twitter:image:width" content="1200" />
-                    <meta itemProp="twitter:image:height" content="630" />
-                    <meta itemProp="twitter:title" content={article.title} />
-                    <meta itemProp="twitter:description" content={article.description} />
-                    <meta itemProp="og:image" content={`https://rakushka65.ru${getBlogImage(article.image)}`} />
-                    <meta itemProp="og:image:width" content="1200" />
-                    <meta itemProp="og:image:height" content="630" />
 
-                    <div className="aspect-[3/2] overflow-hidden">
+                    <div className="shrink-0 w-full sm:w-[160px] h-[180px] sm:h-[100px] overflow-hidden rounded-xl">
                       <img
                         src={getBlogImage(article.image)}
                         alt={`${article.title} - ${isEn ? "Rakushka65 blog article" : "статья в блоге Ракушка65"}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover"
                         loading="lazy"
-                        width={1200}
-                        height={630}
+                        width={320}
+                        height={200}
                         itemProp="image"
                       />
                     </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                        <Calendar className="w-4 h-4" />
-                        <time dateTime={article.date} itemProp="datePublished">
-                          {new Date(article.date).toLocaleDateString(isEn ? "en-US" : "ru-RU", {
-                            day: "numeric",
-                            month: "long",
-                            year: "numeric",
-                          })}
-                        </time>
-                      </div>
+                    <div className="flex-1 min-w-0 flex flex-col justify-center">
                       <h3
-                        className="font-heading text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors mb-3 line-clamp-2 leading-tight"
+                        className="font-heading text-[22px] md:text-[24px] font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2 leading-snug"
                         itemProp="headline"
                       >
                         {article.title}
                       </h3>
                       <p
-                        className="font-body text-base text-muted-foreground line-clamp-3 leading-relaxed"
+                        className="font-body text-base text-muted-foreground/90 line-clamp-3 leading-relaxed mb-3"
                         itemProp="description"
                       >
                         {article.description}
                       </p>
+                      <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
+                        <span className="inline-flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5" />
+                          <time dateTime={article.date} itemProp="datePublished">
+                            {new Date(article.date).toLocaleDateString(isEn ? "en-US" : "ru-RU", {
+                              day: "numeric",
+                              month: "long",
+                              year: "numeric",
+                            })}
+                          </time>
+                        </span>
+                        <span className="opacity-50">·</span>
+                        <span>{readMin} {isEn ? "min read" : "мин чтения"}</span>
+                      </div>
                     </div>
                   </Link>
                 </motion.div>
-              ))}
+                );
+              })}
             </AnimatePresence>
           </div>
 
