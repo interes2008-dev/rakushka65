@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import liveScallopImg from "@/assets/blog-scallop-live-storage.jpg";
+import liveScallopImg from "@/assets/blog-scallop-live-storage.webp";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const ScallopLiveStorage = () => {

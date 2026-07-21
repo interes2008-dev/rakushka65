@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ProductCardImage from "./ProductCardImage";
 import { Star, ShoppingCart } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
-import scallopImg from "@/assets/product-scallop.jpg";
-import oystersImg from "@/assets/product-oysters.jpg";
-import vongoleImg from "@/assets/product-vongole.jpg";
-import spizulaImg from "@/assets/product-spizula.jpg";
-import seaurchinImg from "@/assets/product-seaurchin.png";
-import rapanyImg from "@/assets/product-rapany.png";
-import snailsImg from "@/assets/product-snails.png";
-import corbiculaImg from "@/assets/product-corbicula.png";
-import trepangImg from "@/assets/product-trepang.png";
-import trepangTinctureImg from "@/assets/product-trepang-tincture.png";
-import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.jpg";
-import crabImg from "@/assets/product-crab.png";
+import scallopImg from "@/assets/product-scallop.webp";
+import oystersImg from "@/assets/product-oysters.webp";
+import vongoleImg from "@/assets/product-vongole.webp";
+import spizulaImg from "@/assets/product-spizula.webp";
+import seaurchinImg from "@/assets/product-seaurchin.webp";
+import rapanyImg from "@/assets/product-rapany.webp";
+import snailsImg from "@/assets/product-snails.webp";
+import corbiculaImg from "@/assets/product-corbicula.webp";
+import trepangImg from "@/assets/product-trepang.webp";
+import trepangTinctureImg from "@/assets/product-trepang-tincture.webp";
+import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.webp";
+import crabImg from "@/assets/product-crab.webp";
 
 export interface Product {
   id: string;
@@ -76,10 +77,11 @@ const ProductsSection = () => {
             >
               <Link
                 to={`/catalog/${product.id}`}
+                viewTransition
                 className="flex flex-col h-full bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/5"
               >
                 <div className="relative overflow-hidden aspect-[4/3]">
-                  <img src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" width={400} height={300} />
+                  <ProductCardImage to={`/catalog/${product.id}`} src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" width={400} height={300} />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="flex flex-col flex-1 p-5">

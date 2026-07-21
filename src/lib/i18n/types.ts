@@ -74,6 +74,8 @@ export interface Translations {
     commentPlaceholder: string;
     submitBtn: string;
     submitted: string;
+    sending: string;
+    errorMsg: string;
     privacyText: string;
     privacyLink: string;
   };

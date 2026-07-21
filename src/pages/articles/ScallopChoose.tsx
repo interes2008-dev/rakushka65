@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import scallopImg from "@/assets/blog-scallop-choose.jpg";
+import scallopImg from "@/assets/blog-scallop-choose.webp";
 
 const ScallopChoose = () => {
   const articleJsonLd = {

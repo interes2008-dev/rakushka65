@@ -11,6 +11,9 @@ import SEOHead from "@/components/SEOHead";
 import { getProductSchema, getBreadcrumbSchema } from "@/lib/seo/schemas";
 import { blogArticles } from "@/lib/blog/articles";
 import { detectProductTag } from "@/lib/blog/productCategories";
+import { productFaq } from "@/lib/seo/productFaq";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { reachGoal, GOALS } from "@/lib/metrika";
 import { BookOpen } from "lucide-react";
 
 const ProductDetail = () => {
@@ -19,6 +22,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
+    if (id) reachGoal(GOALS.PRODUCT_VIEW, { product: id });
   }, [id]);
 
   const product = products.find((p) => p.id === id);
@@ -79,9 +83,23 @@ const ProductDetail = () => {
   const productTag = detectProductTag(product.id);
   const relatedArticles = blogArticles.filter((a) => a.productTag === productTag).slice(0, 4);
 
+  const faqItems = productFaq[product.id] || [];
+  const faqJsonLd = faqItems.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
+  const jsonLdList = faqJsonLd ? [productJsonLd, breadcrumb, faqJsonLd] : [productJsonLd, breadcrumb];
+
   return (
     <div className="relative min-h-screen">
-      <SEOHead title={pageTitle} description={pageDesc} lang={lang} ogImage={ogImageMap[product.id]} jsonLd={[productJsonLd, breadcrumb]} />
+      <SEOHead title={pageTitle} description={pageDesc} lang={lang} ogImage={ogImageMap[product.id]} jsonLd={jsonLdList} />
       <FloatingParticles />
       <Header />
       <main className="relative z-10 pt-28 pb-20">
@@ -98,7 +116,7 @@ const ProductDetail = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="rounded-2xl overflow-hidden">
-              <img src={product.image} alt={`${name} - ${lang === "ru" ? "свежие морепродукты Сахалина" : "fresh Sakhalin seafood"} | Ракушка65`} className="w-full aspect-square object-cover" />
+              <img src={product.image} alt={`${name} - ${lang === "ru" ? "свежие морепродукты Сахалина" : "fresh Sakhalin seafood"} | Ракушка65`} className="w-full aspect-square object-cover" style={{ viewTransitionName: "product-hero" }} />
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="flex flex-col justify-center">
@@ -269,6 +287,35 @@ const ProductDetail = () => {
                 {lang === "ru" ? "Полный рецепт и схема приёма" : "Full recipe and dosing schedule"}
                 <ArrowRight className="w-4 h-4" />
               </Link>
+            </motion.section>
+          )}
+
+          {faqItems.length > 0 && (
+            <motion.section
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="mb-20 max-w-3xl mx-auto"
+            >
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8 text-center">
+                {lang === "ru" ? "Частые вопросы" : "FAQ"}
+              </h2>
+              <Accordion type="single" collapsible className="space-y-3">
+                {faqItems.map((f, i) => (
+                  <AccordionItem
+                    key={i}
+                    value={`faq-${i}`}
+                    className="bg-sand-glass rounded-xl border border-border/40 px-5 !border-b"
+                  >
+                    <AccordionTrigger className="font-heading text-base md:text-lg text-left hover:no-underline">
+                      {f.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="font-body text-sm md:text-base text-muted-foreground leading-relaxed pb-4">
+                      {f.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </motion.section>
           )}
 

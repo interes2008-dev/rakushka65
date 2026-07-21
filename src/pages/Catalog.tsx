@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ProductCardImage from "@/components/ProductCardImage";
 import { motion } from "framer-motion";
 import { Star, ShoppingCart, Grid3X3, List, Filter } from "lucide-react";
 import Header from "@/components/Header";
@@ -91,9 +92,9 @@ const Catalog = () => {
           <div className={viewMode === "grid" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6" : "flex flex-col gap-4"}>
             {sorted.map((product, i) => (
               <motion.div key={product.id} className="h-full" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
-                <Link to={`/catalog/${product.id}`} className={`bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 ${viewMode === "list" ? "flex flex-row" : "flex flex-col h-full"}`}>
+                <Link to={`/catalog/${product.id}`} viewTransition className={`bg-card rounded-xl overflow-hidden border border-border/50 group hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 ${viewMode === "list" ? "flex flex-row" : "flex flex-col h-full"}`}>
                   <div className={`relative overflow-hidden ${viewMode === "list" ? "w-40 h-40 flex-shrink-0" : "aspect-square"}`}>
-                    <img src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" width={400} height={400} />
+                    <ProductCardImage to={`/catalog/${product.id}`} src={product.image} alt={t.productNames[product.id] || product.name} className="w-full h-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-115" loading="lazy" width={400} height={400} />
                   </div>
                   <div className="p-5 flex-1 flex flex-col">
                     <div className="flex items-center gap-1 mb-2">

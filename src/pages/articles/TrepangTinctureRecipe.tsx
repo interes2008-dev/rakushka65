@@ -1,7 +1,7 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import tinctureImg from "@/assets/blog-trepang-tincture-pour.jpg";
-import honeyImg from "@/assets/blog-trepang-honey.jpg";
+import tinctureImg from "@/assets/blog-trepang-tincture-pour.webp";
+import honeyImg from "@/assets/blog-trepang-honey.webp";
 
 const TrepangTinctureRecipe = () => {
   const articleJsonLd = {

@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import vongoleStorageImg from "@/assets/blog-vongole-storage.jpg";
+import vongoleStorageImg from "@/assets/blog-vongole-storage.webp";
 
 const VongoleStorage = () => {
   const articleJsonLd = {

@@ -9,6 +9,7 @@ import SEOHead from "@/components/SEOHead";
 import ArticleCTA from "@/components/ArticleCTA";
 import NotFound from "./NotFound";
 import { detectProductTag } from "@/lib/blog/productCategories";
+import ReadingProgress from "@/components/ReadingProgress";
 import { getBreadcrumbSchema } from "@/lib/seo/schemas";
 
 interface DbArticle {
@@ -130,6 +131,7 @@ const DynamicArticle = () => {
 
   return (
     <div className="relative min-h-screen">
+      <ReadingProgress />
       <SEOHead
         title={seoTitle}
         description={seoDesc}

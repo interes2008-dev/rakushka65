@@ -1,15 +1,15 @@
-import oystersImg from "@/assets/product-oysters.jpg";
-import scallopImg from "@/assets/product-scallop.jpg";
-import vongoleImg from "@/assets/product-vongole.jpg";
-import spizulaImg from "@/assets/product-spizula.jpg";
-import seaurchinImg from "@/assets/product-seaurchin.png";
-import crabImg from "@/assets/product-crab.png";
-import rapanyImg from "@/assets/product-rapany.png";
-import snailsImg from "@/assets/product-snails.png";
-import corbiculaImg from "@/assets/product-corbicula.png";
-import trepangImg from "@/assets/product-trepang.png";
-import trepangTinctureImg from "@/assets/product-trepang-tincture.png";
-import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.jpg";
+import oystersImg from "@/assets/product-oysters.webp";
+import scallopImg from "@/assets/product-scallop.webp";
+import vongoleImg from "@/assets/product-vongole.webp";
+import spizulaImg from "@/assets/product-spizula.webp";
+import seaurchinImg from "@/assets/product-seaurchin.webp";
+import crabImg from "@/assets/product-crab.webp";
+import rapanyImg from "@/assets/product-rapany.webp";
+import snailsImg from "@/assets/product-snails.webp";
+import corbiculaImg from "@/assets/product-corbicula.webp";
+import trepangImg from "@/assets/product-trepang.webp";
+import trepangTinctureImg from "@/assets/product-trepang-tincture.webp";
+import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.webp";
 
 export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture" | "trepang-honey-tincture";
 

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import aboutImg from "@/assets/about-coast.jpg";
+import aboutImg from "@/assets/about-coast.webp";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const AboutSection = () => {

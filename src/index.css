@@ -80,21 +80,21 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond Variable', serif;
   }
 }
 
 @layer components {
   .font-heading {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond Variable', serif;
   }
 
   .font-body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
   }
 
   .glow-teal {
@@ -132,7 +132,7 @@
    =========================================== */
 @layer components {
   .editorial {
-    font-family: 'Cormorant Garamond', 'Source Serif 4', Georgia, serif;
+    font-family: 'Cormorant Garamond Variable', 'Source Serif 4', Georgia, serif;
     font-size: 1.375rem;          /* ~22px - комфортный размер для чтения */
     line-height: 1.82;
     letter-spacing: 0.005em;
@@ -145,7 +145,7 @@
 
   /* Подзаголовок-deck под заголовком статьи (lede) */
   .editorial-deck {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Cormorant Garamond Variable', Georgia, serif;
     font-style: italic;
     font-weight: 400;
     font-size: 1.55rem;
@@ -168,7 +168,7 @@
   /* Drop cap у первого параграфа */
   .editorial > p:first-of-type::first-letter,
   .editorial > div > p:first-of-type::first-letter {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Cormorant Garamond Variable', Georgia, serif;
     float: left;
     font-size: 5.2rem;
     line-height: 0.85;
@@ -180,7 +180,7 @@
 
   /* Подзаголовки */
   .editorial h2 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Cormorant Garamond Variable', Georgia, serif;
     font-weight: 600;
     font-size: clamp(1.75rem, 2.2vw, 2.25rem);
     line-height: 1.2;
@@ -199,7 +199,7 @@
   }
 
   .editorial h3 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
     letter-spacing: 0.16em;
@@ -210,7 +210,7 @@
 
   /* Цитата - большая, центрированная, "магазинная" */
   .editorial blockquote {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Cormorant Garamond Variable', Georgia, serif;
     font-style: italic;
     font-weight: 500;
     font-size: clamp(1.6rem, 2.4vw, 2rem);
@@ -267,7 +267,7 @@
     position: absolute;
     left: 0;
     top: 0.1rem;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -291,7 +291,7 @@
     overflow: hidden;
   }
   .editorial figcaption {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -311,7 +311,7 @@
 
   /* META - дата/категория над заголовком */
   .editorial-eyebrow {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.24em;
     text-transform: uppercase;
@@ -322,7 +322,7 @@
 
   /* Большой заголовок статьи */
   .editorial-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Cormorant Garamond Variable', Georgia, serif;
     font-weight: 500;
     font-size: clamp(2.5rem, 5.5vw, 4.5rem);
     line-height: 1.05;
@@ -439,4 +439,97 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(168 72% 50% / 0.5);
+}
+
+/* ============================================================
+   View Transitions (нативный морф между каталогом и товаром)
+   ============================================================ */
+
+/* Мягкий кросс-фейд корня страницы при переходах */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.35s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Морф картинки товара: карточка -> hero страницы товара */
+  ::view-transition-group(product-hero) {
+    animation-duration: 0.45s;
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  ::view-transition-old(product-hero),
+  ::view-transition-new(product-hero) {
+    /* контейнеры разного соотношения сторон совмещаем по заполнению */
+    height: 100%;
+    object-fit: cover;
+    overflow: clip;
+  }
+}
+
+/* Пользователи с reduced-motion: без анимаций перехода */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* ============================================================
+   Scroll-driven анимации (нативный CSS, без JS)
+   ============================================================ */
+
+/* Полоса прогресса чтения на страницах статей */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  z-index: 60;
+  background: linear-gradient(90deg, hsl(168 72% 42%), hsl(168 80% 55%));
+  box-shadow: 0 0 12px hsl(168 72% 50% / 0.5);
+  /* без поддержки scroll-timeline полоса остаётся скрытой (scaleX 0) */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .reading-progress {
+      animation: progress-grow linear both;
+      animation-timeline: scroll(root block);
+    }
+  }
+}
+
+@keyframes progress-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Плавное проявление картинок внутри статей по мере прокрутки.
+   Только там, где view-timeline поддерживается; иначе картинки просто видны. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .editorial img {
+      animation: img-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+  }
+}
+
+@keyframes img-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    clip-path: inset(0 0 8% 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    clip-path: inset(0 0 0 0);
+  }
 }

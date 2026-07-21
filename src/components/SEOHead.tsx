@@ -75,21 +75,9 @@ const SEOHead = ({
 
     setMeta("property", "og:url", canonicalUrl);
 
-    const updateHreflang = (hreflang: string, href: string) => {
-      let el = document.querySelector(`link[hreflang="${hreflang}"]`) as HTMLLinkElement | null;
-      if (!el) {
-        el = document.createElement("link");
-        el.setAttribute("rel", "alternate");
-        el.setAttribute("hreflang", hreflang);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("href", href);
-    };
-    updateHreflang("ru", canonicalUrl);
-    updateHreflang("en", canonicalUrl);
-    updateHreflang("x-default", canonicalUrl);
-
-    const existingScripts = document.querySelectorAll('script[data-seo-jsonld]');
+    // hreflang намеренно не выставляется: RU/EN живут на одном URL (переключение клиентское),
+    // а разные языки обязаны иметь разные URL. Указывать один href для нескольких языков некорректно.
+    const existingScripts = document.querySelectorAll('script[data-seo-jsonld], script[data-seo-prerender]');
     existingScripts.forEach((s) => s.remove());
 
     if (jsonLd) {

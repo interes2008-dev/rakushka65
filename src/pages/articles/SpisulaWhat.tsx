@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import spisulaImg from "@/assets/blog-spisula-real.png";
+import spisulaImg from "@/assets/blog-spisula-real.webp";
 
 const SpisulaWhat = () => {
   const articleJsonLd = {

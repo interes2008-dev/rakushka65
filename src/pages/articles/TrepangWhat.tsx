@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import trepangImg from "@/assets/blog-trepang-fresh.jpg";
+import trepangImg from "@/assets/blog-trepang-fresh.webp";
 
 const TrepangWhat = () => {
   const articleJsonLd = {

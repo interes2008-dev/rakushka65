@@ -1,0 +1,58 @@
+# === Ракушка65 — конфигурация Apache ===
+
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Канонизация: всегда https и без www (canonical указывает на https://rakushka65.ru)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^ https://rakushka65.ru%{REQUEST_URI} [L,R=301]
+
+  # Если для маршрута есть пререндер-файл /path/index.html — отдаём его
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
+  RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+  # SPA-фолбэк: всё, что не файл и не каталог, обслуживает корневой index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ /index.html [L]
+</IfModule>
+
+# === Сжатие ===
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+# === Кеширование ===
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Хешированные ассеты Vite (immutable) — год
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType font/woff2 "access plus 1 year"
+  # HTML — не кешируем агрессивно, чтобы обновления SEO/контента подхватывались
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpg|jpeg|png|svg)$">
+    Header set Cache-Control "public, max-age=15552000"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# UTF-8 по умолчанию
+AddDefaultCharset UTF-8

@@ -1,7 +1,7 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import heroImg from "@/assets/blog-trepang-honey-tincture.jpg";
-import freshImg from "@/assets/blog-trepang-fresh.jpg";
+import heroImg from "@/assets/blog-trepang-honey-tincture.webp";
+import freshImg from "@/assets/blog-trepang-fresh.webp";
 
 const TrepangHoneyTincture = () => {
   const ogImageUrl = "https://rakushka65.ru/og/blog-trepang-honey-tincture.jpg";

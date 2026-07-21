@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import heroImg from "@/assets/hero-oysters.jpg";
+import heroImg from "@/assets/hero-oysters.webp";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const HeroSection = () => {
@@ -20,7 +20,7 @@ const HeroSection = () => {
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <motion.div style={{ y: bgY }} className="absolute inset-0 z-0 will-change-transform">
-        <img src={heroImg} alt="Fresh oysters on ice" className="w-full h-[120%] object-cover opacity-30" />
+        <img src={heroImg} alt="Свежие сахалинские устрицы на льду" className="w-full h-[120%] object-cover opacity-30" fetchPriority="high" decoding="async" width={1600} height={1067} />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
       </motion.div>
 

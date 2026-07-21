@@ -85,6 +85,8 @@ export const en: Translations = {
     commentPlaceholder: "Tell us what you'd like to order...",
     submitBtn: "Request a call",
     submitted: "Request sent!",
+    sending: "Sending...",
+    errorMsg: "Could not send. Please call us or write in a messenger.",
     privacyText: "By clicking the button, you agree to our ",
     privacyLink: "privacy policy",
   },

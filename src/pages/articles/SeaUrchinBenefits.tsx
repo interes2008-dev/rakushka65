@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import seaUrchinImg from "@/assets/blog-urchin-real.png";
+import seaUrchinImg from "@/assets/blog-urchin-real.webp";
 
 const SeaUrchinBenefits = () => {
   const articleJsonLd = {
