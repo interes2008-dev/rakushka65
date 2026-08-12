@@ -12,9 +12,6 @@ The site is bilingual (Russian default, English) and includes a product catalog,
 - [Scallops](/catalog/scallop): Live Sakhalin sea scallops.
 - [Spisula](/catalog/spisula): Sakhalin spisula clams.
 - [Sea urchin](/catalog/sea-urchin): Live Sakhalin sea urchin.
-- [Rapana](/catalog/rapany): Sea snail rapana.
-- [Sea snails](/catalog/sea-snails): Edible sea snails.
-- [Corbicula](/catalog/corbicula): Freshwater clam corbicula.
 - [Trepang](/catalog/trepang): Sea cucumber trepang.
 - [Crab](/catalog/crab): Sakhalin crab.
 - [Trepang tincture](/catalog/trepang-tincture): Honey-based trepang tincture.

@@ -8,9 +8,6 @@ import oystersImg from "@/assets/product-oysters.webp";
 import vongoleImg from "@/assets/product-vongole.webp";
 import spizulaImg from "@/assets/product-spizula.webp";
 import seaurchinImg from "@/assets/product-seaurchin.webp";
-import rapanyImg from "@/assets/product-rapany.webp";
-import snailsImg from "@/assets/product-snails.webp";
-import corbiculaImg from "@/assets/product-corbicula.webp";
 import trepangImg from "@/assets/product-trepang.webp";
 import trepangTinctureImg from "@/assets/product-trepang-tincture.webp";
 import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.webp";
@@ -37,9 +34,6 @@ export const products: Product[] = [
   { id: "vongole", name: "Вонголе", image: vongoleImg, price: "500", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Насыщенный, морской" },
   { id: "spizula", name: "Спизула Сахалинская", image: spizulaImg, price: "500", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "200-400 г / шт", taste: "Плотный, яркий" },
   { id: "sea-urchin", name: "Ёж морской Сахалинский", image: seaurchinImg, price: "500", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "90-200 г / шт", taste: "Сливочный, йодистый" },
-  { id: "rapany", name: "Рапаны Сахалинские", image: rapanyImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "80-200 г / шт", taste: "Упругий, дымно-морской" },
-  { id: "sea-snails", name: "Морские улитки", image: snailsImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 3-5 см", taste: "Упругий, пикантный" },
-  { id: "corbicula", name: "Корбикула Сахалинская", image: corbiculaImg, price: "600", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Нежный, чуть сладковатый" },
   { id: "trepang", name: "Трепанг дальневосточный", image: trepangImg, price: "", unit: "кг", rating: 5, description: "", category: "Деликатесы", weight: "150-500 г / шт", taste: "Нежный, желеобразный" },
   { id: "trepang-tincture", name: "Настойка на трепанге", image: trepangTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Насыщенный, морской с мёдом" },
   { id: "trepang-honey-tincture", name: "Медовая настойка с трепангом без спирта", image: trepangHoneyTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Сладко-медовый, мягкий", hidden: true },
