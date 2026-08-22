@@ -30,8 +30,8 @@ export interface Product {
 
 export const products: Product[] = [
   { id: "scallop", name: "Морской гребешок", image: scallopImg, price: "700", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "от 200 г / шт", taste: "Нежный, сладковатый" },
-  { id: "oysters", name: "Устрицы Сахалинские", image: oystersImg, price: "500", unit: "кг", rating: 5, description: "", category: "Устрицы", weight: "150-350 г / шт", taste: "Морской, солоноватый" },
-  { id: "vongole", name: "Вонголе", image: vongoleImg, price: "500", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Насыщенный, морской" },
+  { id: "oysters", name: "Устрицы Сахалинские", image: oystersImg, price: "600", unit: "кг", rating: 5, description: "", category: "Устрицы", weight: "150-350 г / шт", taste: "Морской, солоноватый" },
+  { id: "vongole", name: "Вонголе", image: vongoleImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Насыщенный, морской" },
   { id: "spizula", name: "Спизула Сахалинская", image: spizulaImg, price: "500", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "200-400 г / шт", taste: "Плотный, яркий" },
   { id: "sea-urchin", name: "Ёж морской Сахалинский", image: seaurchinImg, price: "500", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "90-200 г / шт", taste: "Сливочный, йодистый" },
   { id: "trepang", name: "Трепанг дальневосточный", image: trepangImg, price: "", unit: "кг", rating: 5, description: "", category: "Деликатесы", weight: "150-500 г / шт", taste: "Нежный, желеобразный" },
