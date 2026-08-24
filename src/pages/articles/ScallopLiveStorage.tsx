@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import ScallopPhotoStrip from "@/components/ScallopPhotoStrip";
 import { Link } from "react-router-dom";
 import liveScallopImg from "@/assets/blog-scallop-live-storage.webp";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
@@ -60,6 +61,7 @@ const ScallopLiveStorage = () => {
             The correct method is cold storage in a humid environment that mimics holding-tank conditions.
           </p>
 
+          <ScallopPhotoStrip offset={5} />
           <h2>Step-by-step instructions</h2>
 
           <ol>
@@ -121,6 +123,7 @@ const ScallopLiveStorage = () => {
             <strong>Thaw only in the fridge</strong> (12-16 hours). Never in water, microwave or at room temperature: this destroys protein structure and activates bacteria.
           </p>
 
+          <ScallopPhotoStrip offset={8} />
           <h2>FAQ</h2>
 
           <p>

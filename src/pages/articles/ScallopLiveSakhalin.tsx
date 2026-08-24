@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import ScallopPhotoStrip from "@/components/ScallopPhotoStrip";
 import { Link } from "react-router-dom";
 import liveScallopImg from "@/assets/blog-scallop-live-hero.webp";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
@@ -60,6 +61,7 @@ const ScallopLiveSakhalin = () => {
             Sakhalin scallop (<em>Mizuhopecten yessoensis</em>) is the largest representative of the Pectinidae family in the north-western Pacific. Shell diameter - 12-20 cm, muscle weight - 60-120 g for an adult. These dimensions are achievable only in the cold, oxygen-rich waters of the Sea of Okhotsk, where the scallop grows for 3-5 years in its natural habitat.
           </p>
 
+          <ScallopPhotoStrip offset={4} />
           <h2>Live vs frozen: 7 key differences</h2>
 
           <ul>
@@ -111,6 +113,7 @@ const ScallopLiveSakhalin = () => {
             <li><strong>Glycogen</strong> - fast energy without sugar spikes; valuable for athletes and high-metabolism diets.</li>
           </ul>
 
+          <ScallopPhotoStrip offset={7} />
           <h2>Who should buy live scallops</h2>
 
           <ul>

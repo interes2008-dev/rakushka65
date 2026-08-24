@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import ScallopPhotoStrip from "@/components/ScallopPhotoStrip";
 import { Link } from "react-router-dom";
 import scallopImg from "@/assets/blog-scallop.webp";
 
@@ -63,6 +64,7 @@ const ScallopCooking = () => {
         <strong>Это важно</strong>: перед жаркой мускул должен быть сухим. Лишняя влага - враг золотистой корочки. Промокните гребешок бумажным полотенцем и дайте ему «подышать» 5 минут.
       </p>
 
+      <ScallopPhotoStrip offset={3} />
       <h2>Рецепт №1: Идеальный обжаренный гребешок (сир)</h2>
 
       <p>
@@ -150,6 +152,7 @@ const ScallopCooking = () => {
         <li><strong>Лишние специи</strong>: гребешку достаточно соли, перца и лимона. Не перебивайте его вкус.</li>
       </ul>
 
+      <ScallopPhotoStrip offset={6} />
       <h2>С чем подавать</h2>
 
       <p>

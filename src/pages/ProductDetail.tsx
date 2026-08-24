@@ -15,6 +15,8 @@ import { productFaq } from "@/lib/seo/productFaq";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { reachGoal, GOALS } from "@/lib/metrika";
 import { BookOpen } from "lucide-react";
+import PhotoGallery from "@/components/PhotoGallery";
+import { scallopPhotos } from "@/lib/media/scallopPhotos";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -172,6 +174,17 @@ const ProductDetail = () => {
               </div>
             </motion.div>
           </div>
+
+          {product.id === "scallop" && (
+            <div className="mt-16">
+              <PhotoGallery
+                photos={scallopPhotos}
+                title={lang === "ru" ? "Фотогалерея: живой гребешок с Сахалина" : "Photo gallery: live Sakhalin scallop"}
+              />
+            </div>
+          )}
+
+
 
           {product.id === "trepang-tincture" && (
             <motion.section

@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import ScallopPhotoStrip from "@/components/ScallopPhotoStrip";
 import { Link } from "react-router-dom";
 import scallopImg from "@/assets/blog-scallop-royal.webp";
 
@@ -47,6 +48,7 @@ const ScallopWhat = () => {
         В пищу идет сам мускул (плотный белый цилиндр), а также мантия и икра (корал).
       </p>
 
+      <ScallopPhotoStrip offset={1} />
       <h2>Какой он на вкус?</h2>
 
       <p>
@@ -110,6 +112,7 @@ const ScallopWhat = () => {
         <li>Никогда не кладите его в пресную воду - он сразу погибнет.</li>
       </ul>
 
+      <ScallopPhotoStrip offset={4} />
       <h2>Как готовить?</h2>
 
       <p>
