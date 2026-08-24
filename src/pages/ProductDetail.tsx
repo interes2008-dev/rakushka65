@@ -173,6 +173,17 @@ const ProductDetail = () => {
             </motion.div>
           </div>
 
+          {product.id === "scallop" && (
+            <div className="mt-16">
+              <PhotoGallery
+                photos={scallopPhotos}
+                title={lang === "ru" ? "Фотогалерея: живой гребешок с Сахалина" : "Photo gallery: live Sakhalin scallop"}
+              />
+            </div>
+          )}
+
+
+
           {product.id === "trepang-tincture" && (
             <motion.section
               initial={{ opacity: 0, y: 30 }}
