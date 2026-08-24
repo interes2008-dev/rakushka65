@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import ScallopPhotoStrip from "@/components/ScallopPhotoStrip";
 import { Link } from "react-router-dom";
 import scallopImg from "@/assets/blog-scallop-choose.webp";
 
@@ -50,6 +51,7 @@ const ScallopChoose = () => {
         Если раковина захлопнута намертво и не реагирует - гребешок уже мертв. Если она широко открыта и не закрывается - тоже. В обоих случаях брать такой продукт не стоит.
       </p>
 
+      <ScallopPhotoStrip offset={2} />
       <h2>Очищенный мускул: на что смотреть</h2>
 
       <p>
@@ -114,6 +116,7 @@ const ScallopChoose = () => {
         <li><strong>Употребление</strong>: свежий можно есть сырым (сашими, карпаччо), замороженный - только после плиты или гриля.</li>
       </ul>
 
+      <ScallopPhotoStrip offset={5} />
       <h2>Сезонность</h2>
 
       <p>

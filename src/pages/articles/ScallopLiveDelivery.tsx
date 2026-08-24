@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import ScallopPhotoStrip from "@/components/ScallopPhotoStrip";
 import { Link } from "react-router-dom";
 import liveScallopImg from "@/assets/blog-scallop-live-delivery.webp";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
@@ -88,6 +89,7 @@ const ScallopLiveDelivery = () => {
             In Moscow and Saint Petersburg - our own courier with thermo-bag. In the regions - partner express services (CDEK Express, DPD, local operators) with mandatory cold-chain compliance. From airport to your door: no more than 6-12 hours.
           </p>
 
+          <ScallopPhotoStrip offset={6} />
           <h2>Delivery times by city</h2>
 
           <ul>
@@ -134,6 +136,7 @@ const ScallopLiveDelivery = () => {
             Condition - photo and video evidence on opening the box in the courier's presence within 30 minutes of delivery.
           </p>
 
+          <ScallopPhotoStrip offset={9} />
           <h2>How to place an order</h2>
 
           <ol>
