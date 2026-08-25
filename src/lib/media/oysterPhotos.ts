@@ -93,7 +93,7 @@ export const oysterPhotos: OysterPhoto[] = [
   },
   {
     url: p15.url,
-    attrPlaceholder: undefined as never,
+    
     altRu: "Живые устрицы в промысловом ящике сразу после подъёма",
     altEn: "Live oysters in a harvest crate right after lifting",
   },
