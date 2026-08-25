@@ -3,7 +3,6 @@ import scallopImg from "@/assets/product-scallop.webp";
 import vongoleImg from "@/assets/product-vongole.webp";
 import spizulaImg from "@/assets/product-spizula.webp";
 import seaurchinImg from "@/assets/product-seaurchin.webp";
-import crabImg from "@/assets/product-crab.webp";
 import rapanyImg from "@/assets/product-rapany.webp";
 import snailsImg from "@/assets/product-snails.webp";
 import corbiculaImg from "@/assets/product-corbicula.webp";
@@ -62,14 +61,6 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     image: seaurchinImg,
     cta: "Купить морского ежа с Сахалина",
     ctaDescription: "Свежий сахалинский морской ёж - сливочная икра прямо из Тихого океана.",
-  },
-  {
-    tag: "crab",
-    label: "Крабы",
-    productLink: "/catalog/crab",
-    image: crabImg,
-    cta: "Купить краба с Сахалина",
-    ctaDescription: "Дальневосточный краб - сочное мясо с морским сладковатым вкусом.",
   },
   {
     tag: "rapany",

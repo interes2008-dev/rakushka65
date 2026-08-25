@@ -37,7 +37,6 @@ const Catalog = () => {
     { key: "Устрицы", label: t.catalog.oysters },
     { key: "Моллюски", label: t.catalog.mollusks },
     { key: "Деликатесы", label: t.catalog.delicacies },
-    { key: "Ракообразные", label: t.catalog.crustaceans },
     { key: "Настойки", label: t.catalog.tinctures },
   ];
 
