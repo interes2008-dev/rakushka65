@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import VongolePhotoStrip from "@/components/VongolePhotoStrip";
 import { Link } from "react-router-dom";
 
 const articleSchema = {
@@ -23,6 +24,9 @@ const VongoleCooking = () => (
     <p>
       Считаете, что <strong>вонголе</strong> - это сложно? На самом деле приготовить их дома проще, чем пожарить яичницу. Главный секрет успеха в качестве самих моллюсков. <strong>Сахалинские вонголе</strong> от <Link to="/">Ракушка65</Link> прилетают к вам живыми, а это уже 90% вкуса.
     </p>
+
+
+    <VongolePhotoStrip offset={3} />
 
     <h2>Готовим ракушки к плите</h2>
     <p>Перед тем как закинуть сахалинские вонголе в сковородку, сделайте несколько простых шагов:</p>
@@ -54,6 +58,9 @@ const VongoleCooking = () => (
     <p>
       Просто разложите свежие вонголе на решетке. 3-4 минуты, и они сами откроются. Сбрызните лимоном, добавьте каплю сливочного масла. Это самый честный вкус моря, который только можно представить.
     </p>
+
+
+    <VongolePhotoStrip offset={6} />
 
     <h2>Как хранить остатки</h2>
     <p>

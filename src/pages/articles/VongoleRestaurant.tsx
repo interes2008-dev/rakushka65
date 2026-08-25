@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import VongolePhotoStrip from "@/components/VongolePhotoStrip";
 import { Link } from "react-router-dom";
 
 const articleSchema = {
@@ -24,6 +25,9 @@ const VongoleRestaurant = () => (
       Бытует мнение, что приготовить вонголе как в крутом заведении дома невозможно. На самом деле секрет прост: <strong>90% успеха - это исходный продукт</strong>. Когда на кухне есть <strong>живые вонголе прямо с Сахалина</strong> от <Link to="/">Ракушка65</Link>, вы уже наполовину шеф-повар.
     </p>
 
+
+    <VongolePhotoStrip offset={1} />
+
     <h2>Секрет первый: Только живой продукт</h2>
     <p>
       На кухнях лучших ресторанов не бывает замороженных вонголе. Лёд убивает 60% вкуса и портит текстуру. Мы привозим сахалинские вонголе живыми по всей стране за сутки. Это именно тот уровень качества, с которым работают профессионалы.
@@ -46,6 +50,9 @@ const VongoleRestaurant = () => (
       <li><strong>На горячем камне</strong>: ракушки раскрываются прямо при вас, достаточно капли лимона.</li>
       <li><strong>Крем-суп</strong>: изысканный велюте с тонким ароматом океана.</li>
     </ul>
+
+
+    <VongolePhotoStrip offset={4} />
 
     <h2>Что налить в бокал?</h2>
     <p>

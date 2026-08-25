@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import VongolePhotoStrip from "@/components/VongolePhotoStrip";
 import { Link } from "react-router-dom";
 import vongoleStorageImg from "@/assets/blog-vongole-storage.webp";
 
@@ -52,6 +53,9 @@ const VongoleStorage = () => {
       <p>
         Курьер привез вам пакет с живыми вонголе от <strong>Ракушка65</strong>. Что делать теперь? Как не дать им испортиться до ужина и правильно избавить от песка? Рассказываем, как обращаться с сахалинским деликатесом на обычной кухне.
       </p>
+
+
+      <VongolePhotoStrip offset={5} />
 
       <h2>Первым делом</h2>
 
@@ -114,6 +118,9 @@ const VongoleStorage = () => {
       <p>
         <strong>Совет от Ракушка65</strong>: киньте в воду ложку кукурузной муки. Моллюски начнут ее есть и очистятся еще быстрее.
       </p>
+
+
+      <VongolePhotoStrip offset={8} />
 
       <h2>Про заморозку</h2>
 

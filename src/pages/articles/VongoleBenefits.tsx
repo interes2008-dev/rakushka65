@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import VongolePhotoStrip from "@/components/VongolePhotoStrip";
 import { Link } from "react-router-dom";
 
 const VongoleBenefits = () => {
@@ -34,6 +35,9 @@ const VongoleBenefits = () => {
       <p>
         Вонголе, или морской петушок, дают редкое сочетание вкуса и пользы. Пока все смотрят на лосося или креветки, эти небольшие ракушки набирают внушительные дозы железа и витамина B12. В <strong>Ракушка65</strong> мы ценим сахалинские вонголе за чистый морской вкус и плотную пищевую ценность.
       </p>
+
+
+      <VongolePhotoStrip offset={6} />
 
       <h2>Пищевая ценность вонголе</h2>
 
@@ -107,6 +111,9 @@ const VongoleBenefits = () => {
         <li>Помогают сердцу работать без сбоев.</li>
         <li>Делают кожу и волосы сияющими.</li>
       </ul>
+
+
+      <VongolePhotoStrip offset={9} />
 
       <h2>Минеральный коктейль</h2>
 

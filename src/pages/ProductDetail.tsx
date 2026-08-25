@@ -17,6 +17,8 @@ import { reachGoal, GOALS } from "@/lib/metrika";
 import { BookOpen } from "lucide-react";
 import PhotoGallery from "@/components/PhotoGallery";
 import { scallopPhotos } from "@/lib/media/scallopPhotos";
+import { vongolePhotos } from "@/lib/media/vongolePhotos";
+
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -183,6 +185,16 @@ const ProductDetail = () => {
               />
             </div>
           )}
+
+          {product.id === "vongole" && (
+            <div className="mt-16">
+              <PhotoGallery
+                photos={vongolePhotos}
+                title={lang === "ru" ? "Фотогалерея: живые вонголе с Сахалина" : "Photo gallery: live Sakhalin vongole"}
+              />
+            </div>
+          )}
+
 
 
 

@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import VongolePhotoStrip from "@/components/VongolePhotoStrip";
 import { Link } from "react-router-dom";
 
 const recipeSchema = {
@@ -48,6 +49,9 @@ const VongolePasta = () => (
       <strong>Паста с вонголе</strong> (Spaghetti alle Vongole) - это вкус моря в одной тарелке. Главный секрет блюда прост: нужны <strong>живые вонголе прямо с Сахалина</strong>. С ними соус получается насыщенным, а ракушки остаются нежными. В <Link to="/">Ракушка65</Link> мы доставляем именно таких моллюсков - свежих и ароматных.
     </p>
 
+
+    <VongolePhotoStrip offset={4} />
+
     <h2>Что понадобится на две порции</h2>
     <ul>
       <li>500 г <Link to="/catalog/vongole">живых сахалинских вонголе</Link>.</li>
@@ -84,6 +88,9 @@ const VongolePasta = () => (
     <p>
       Ешьте сразу, паста с вонголе не любит ждать. Бокал белого вина отлично дополнит этот сахалинский ужин.
     </p>
+
+
+    <VongolePhotoStrip offset={7} />
 
     <h2>Пара хитростей</h2>
     <ul>

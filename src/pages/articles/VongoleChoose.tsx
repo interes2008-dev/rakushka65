@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/ArticleLayout";
+import VongolePhotoStrip from "@/components/VongolePhotoStrip";
 import { Link } from "react-router-dom";
 
 const articleSchema = {
@@ -23,6 +24,9 @@ const VongoleChoose = () => (
     <p>
       Найти по-настоящему свежие <strong>вонголе</strong> - дело тонкое, если не знать пару хитростей. Мы в <Link to="/">Ракушка65</Link> возим <strong>сахалинские вонголе</strong> уже десять лет и знаем о них всё. Делимся секретами, как не прогадать с покупкой.
     </p>
+
+
+    <VongolePhotoStrip offset={2} />
 
     <h2>5 признаков качества вонголе</h2>
 
@@ -64,6 +68,9 @@ const VongoleChoose = () => (
       <li>Лучше съесть их в первые 1-3 дня после покупки.</li>
       <li>Перед готовкой дайте им полежать полчаса в соленой воде, чтобы вышел лишний песок.</li>
     </ul>
+
+
+    <VongolePhotoStrip offset={5} />
 
     <h2>Почему Сахалин - это знак качества?</h2>
     <p>
