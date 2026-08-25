@@ -71,6 +71,43 @@ export const oysterPhotos: OysterPhoto[] = [
     altRu: "Свежевыловленные устрицы в промысловом садке",
     altEn: "Freshly harvested oysters in a fishing net bag",
   },
+  {
+    url: p11.url,
+    altRu: "Крупные сахалинские устрицы на песке рядом с зажигалкой для масштаба",
+    altEn: "Large Sakhalin oysters on sand next to a lighter for scale",
+  },
+  {
+    url: p12.url,
+    altRu: "Живые устрицы разложены на мокром песке во время отлива",
+    altEn: "Live oysters laid out on wet sand at low tide",
+  },
+  {
+    url: p13.url,
+    altRu: "Устрицы у самой кромки прибоя на сахалинском берегу",
+    altEn: "Oysters at the water's edge on a Sakhalin beach",
+  },
+  {
+    url: p14.url,
+    altRu: "Партия отобранных устриц одного калибра на берегу",
+    altEn: "A batch of selected same-grade oysters on the shore",
+  },
+  {
+    url: p15.url,
+    attrPlaceholder: undefined as never,
+    altRu: "Живые устрицы в промысловом ящике сразу после подъёма",
+    altEn: "Live oysters in a harvest crate right after lifting",
+  },
+  {
+    url: p16.url,
+    altRu: "Устрицы уложены в термоящик из пенопласта для отправки",
+    altEn: "Oysters packed in a styrofoam thermal box for shipping",
+  },
+  {
+    url: p17.url,
+    altRu: "Открытые сахалинские устрицы в котелке на берегу моря",
+    altEn: "Shucked Sakhalin oysters in a pot by the seashore",
+  },
+
 ];
 
 /** Стабильная выборка нескольких фото со сдвигом (для разнообразия в статьях). */
