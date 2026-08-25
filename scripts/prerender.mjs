@@ -98,7 +98,6 @@ const PRODUCTS = {
   "sea-urchin": { name: "Ёж морской сахалинский", price: "500", rating: 5, og: "og-sea-urchin.jpg" },
   trepang: { name: "Трепанг дальневосточный", price: "", rating: 5, og: "og-image.jpg" },
   "trepang-tincture": { name: "Настойка на трепанге", price: "", rating: 5, og: "og-image.jpg" },
-  crab: { name: "Краб колючий сахалинский", price: "", rating: 5, og: "og-image.jpg" },
 };
 
 // --- Схемы (копии из src/lib/seo/schemas.ts) ---

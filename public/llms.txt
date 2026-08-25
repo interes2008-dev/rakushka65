@@ -13,7 +13,6 @@ The site is bilingual (Russian default, English) and includes a product catalog,
 - [Spisula](/catalog/spisula): Sakhalin spisula clams.
 - [Sea urchin](/catalog/sea-urchin): Live Sakhalin sea urchin.
 - [Trepang](/catalog/trepang): Sea cucumber trepang.
-- [Crab](/catalog/crab): Sakhalin crab.
 - [Trepang tincture](/catalog/trepang-tincture): Honey-based trepang tincture.
 
 ## Blog
