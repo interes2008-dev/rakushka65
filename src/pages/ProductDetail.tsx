@@ -18,6 +18,8 @@ import { BookOpen } from "lucide-react";
 import PhotoGallery from "@/components/PhotoGallery";
 import { scallopPhotos } from "@/lib/media/scallopPhotos";
 import { vongolePhotos } from "@/lib/media/vongolePhotos";
+import { oysterPhotos } from "@/lib/media/oysterPhotos";
+
 
 
 const ProductDetail = () => {
@@ -194,6 +196,16 @@ const ProductDetail = () => {
               />
             </div>
           )}
+
+          {product.id === "oysters" && (
+            <div className="mt-16">
+              <PhotoGallery
+                photos={oysterPhotos}
+                title={lang === "ru" ? "Фотогалерея: живые устрицы с Сахалина" : "Photo gallery: live Sakhalin oysters"}
+              />
+            </div>
+          )}
+
 
 
 

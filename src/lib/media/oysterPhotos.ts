@@ -1,0 +1,73 @@
+import p1 from "@/assets/oyster-photo-1.webp.asset.json";
+import p2 from "@/assets/oyster-photo-2.webp.asset.json";
+import p3 from "@/assets/oyster-photo-3.webp.asset.json";
+import p4 from "@/assets/oyster-photo-4.webp.asset.json";
+import p5 from "@/assets/oyster-photo-5.webp.asset.json";
+import p6 from "@/assets/oyster-photo-6.webp.asset.json";
+import p7 from "@/assets/oyster-photo-7.webp.asset.json";
+import p8 from "@/assets/oyster-photo-8.webp.asset.json";
+import p9 from "@/assets/oyster-photo-9.webp.asset.json";
+import p10 from "@/assets/oyster-photo-10.webp.asset.json";
+import { ScallopPhoto } from "@/lib/media/scallopPhotos";
+
+export type OysterPhoto = ScallopPhoto;
+
+export const oysterPhotos: OysterPhoto[] = [
+  {
+    url: p1.url,
+    altRu: "Плантация сахалинских устриц на мелководье в прозрачной воде",
+    altEn: "Sakhalin oyster beds in shallow, clear seawater",
+  },
+  {
+    url: p2.url,
+    altRu: "Дегустация свежих устриц прямо на устричной банке",
+    altEn: "Tasting fresh oysters right on the oyster bed",
+  },
+  {
+    url: p3.url,
+    altRu: "Открытые сахалинские устрицы с полным мясом и линейкой для замера",
+    altEn: "Opened Sakhalin oysters with full meat and a size gauge",
+  },
+  {
+    url: p4.url,
+    altRu: "Живые устрицы на льду после зимней добычи",
+    altEn: "Live oysters on ice after a winter harvest",
+  },
+  {
+    url: p5.url,
+    altRu: "Сахалинские устрицы на льду в лучах закатного солнца",
+    altEn: "Sakhalin oysters on ice in the sunset light",
+  },
+  {
+    url: p6.url,
+    altRu: "Партия живых устриц у кромки воды перед сортировкой",
+    altEn: "A batch of live oysters at the waterline before sorting",
+  },
+  {
+    url: p7.url,
+    altRu: "Крупные устрицы одного калибра на снегу",
+    altEn: "Large oysters of the same grade on snow",
+  },
+  {
+    url: p8.url,
+    altRu: "Садки с устрицами в море на приливной воде",
+    altEn: "Oyster cages in the sea on tidal water",
+  },
+  {
+    url: p9.url,
+    altRu: "Сетные мешки с устрицами на выдержке в морской воде",
+    altEn: "Mesh sacks of oysters held in seawater",
+  },
+  {
+    url: p10.url,
+    altRu: "Свежевыловленные устрицы в промысловом садке",
+    altEn: "Freshly harvested oysters in a fishing net bag",
+  },
+];
+
+/** Стабильная выборка нескольких фото со сдвигом (для разнообразия в статьях). */
+export function pickOysterPhotos(count: number, offset = 0): OysterPhoto[] {
+  return Array.from({ length: Math.min(count, oysterPhotos.length) }, (_, i) =>
+    oysterPhotos[(offset + i) % oysterPhotos.length]
+  );
+}
