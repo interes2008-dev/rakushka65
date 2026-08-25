@@ -195,6 +195,16 @@ const ProductDetail = () => {
             </div>
           )}
 
+          {product.id === "oysters" && (
+            <div className="mt-16">
+              <PhotoGallery
+                photos={oysterPhotos}
+                title={lang === "ru" ? "Фотогалерея: живые устрицы с Сахалина" : "Photo gallery: live Sakhalin oysters"}
+              />
+            </div>
+          )}
+
+
 
 
 
