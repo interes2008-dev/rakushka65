@@ -17,6 +17,8 @@ import { reachGoal, GOALS } from "@/lib/metrika";
 import { BookOpen } from "lucide-react";
 import PhotoGallery from "@/components/PhotoGallery";
 import { scallopPhotos } from "@/lib/media/scallopPhotos";
+import { vongolePhotos } from "@/lib/media/vongolePhotos";
+
 
 const ProductDetail = () => {
   const { id } = useParams();
