@@ -184,6 +184,16 @@ const ProductDetail = () => {
             </div>
           )}
 
+          {product.id === "vongole" && (
+            <div className="mt-16">
+              <PhotoGallery
+                photos={vongolePhotos}
+                title={lang === "ru" ? "Фотогалерея: живые вонголе с Сахалина" : "Photo gallery: live Sakhalin vongole"}
+              />
+            </div>
+          )}
+
+
 
 
           {product.id === "trepang-tincture" && (
