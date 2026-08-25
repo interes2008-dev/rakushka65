@@ -18,6 +18,8 @@ import { BookOpen } from "lucide-react";
 import PhotoGallery from "@/components/PhotoGallery";
 import { scallopPhotos } from "@/lib/media/scallopPhotos";
 import { vongolePhotos } from "@/lib/media/vongolePhotos";
+import { oysterPhotos } from "@/lib/media/oysterPhotos";
+
 
 
 const ProductDetail = () => {
