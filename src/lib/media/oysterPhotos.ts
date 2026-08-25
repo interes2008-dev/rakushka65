@@ -8,6 +8,14 @@ import p7 from "@/assets/oyster-photo-7.webp.asset.json";
 import p8 from "@/assets/oyster-photo-8.webp.asset.json";
 import p9 from "@/assets/oyster-photo-9.webp.asset.json";
 import p10 from "@/assets/oyster-photo-10.webp.asset.json";
+import p11 from "@/assets/oyster-photo-11.webp.asset.json";
+import p12 from "@/assets/oyster-photo-12.webp.asset.json";
+import p13 from "@/assets/oyster-photo-13.webp.asset.json";
+import p14 from "@/assets/oyster-photo-14.webp.asset.json";
+import p15 from "@/assets/oyster-photo-15.webp.asset.json";
+import p16 from "@/assets/oyster-photo-16.webp.asset.json";
+import p17 from "@/assets/oyster-photo-17.webp.asset.json";
+
 import { ScallopPhoto } from "@/lib/media/scallopPhotos";
 
 export type OysterPhoto = ScallopPhoto;
