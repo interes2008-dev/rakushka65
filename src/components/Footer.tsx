@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import WaveLogo from "@/components/WaveLogo";
+import ebisuImg from "@/assets/footer-ebisu.webp";
 import AgroserverCounter from "@/components/AgroserverCounter";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -10,6 +11,7 @@ const Footer = () => {
   const navLinks = [
     { to: "/", label: t.nav.home },
     { to: "/catalog", label: t.nav.catalog },
+    { to: "/opt/mohnatorukij-krab", label: lang === "ru" ? "Краб оптом" : "Crab wholesale" },
     { to: "/#about", label: t.nav.about },
     { to: "/#reviews", label: t.nav.reviews },
     { to: "/#contact", label: t.nav.contacts },
@@ -18,26 +20,59 @@ const Footer = () => {
   return (
     <footer className="border-t border-border/30 bg-ocean-mid/50 pb-16 md:pb-0">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
-            <Link to="/" className="inline-flex items-center gap-2 mb-4">
-              <WaveLogo className="w-8 h-8" />
-              <span className="font-heading text-2xl font-bold">{lang === "ru" ? "Ракушка" : "Rakushka"}<span className="text-primary">65</span></span>
-            </Link>
-            <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs">{t.footer.description}</p>
+        <div className="relative">
+          <div
+            className="hidden md:block absolute left-1/2 top-1/2 z-0 pointer-events-none"
+            style={{ transform: "translate(-50%, -60%)" }}
+            aria-hidden="true"
+          >
+            <img
+              src={ebisuImg}
+              alt=""
+              className="ebisu-figure w-56 lg:w-64 h-56 lg:h-64 object-contain select-none"
+              loading="lazy"
+              width={288}
+              height={288}
+              style={{
+                WebkitMaskImage: "radial-gradient(ellipse at center, #000 50%, transparent 76%)",
+                maskImage: "radial-gradient(ellipse at center, #000 50%, transparent 76%)",
+              }}
+            />
           </div>
 
-          <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">{t.footer.navigation}</h4>
-            <nav aria-label="Footer navigation" className="flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <Link key={link.to} to={link.to} className="font-body text-sm text-muted-foreground hover:text-primary transition-colors">{link.label}</Link>
-              ))}
-            </nav>
-          </div>
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12 items-start w-full">
+            <div>
+              <Link to="/" className="inline-flex items-center gap-2 mb-4">
+                <WaveLogo className="w-8 h-8" />
+                <span className="font-heading text-2xl font-bold">{lang === "ru" ? "Ракушка" : "Rakushka"}<span className="text-primary">65</span></span>
+              </Link>
+              <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xs">{t.footer.description}</p>
+              <img
+                src={ebisuImg}
+                aria-hidden="true"
+                alt=""
+                className="ebisu-figure md:hidden mt-8 mx-auto w-52 h-52 object-contain select-none pointer-events-none"
+                loading="lazy"
+                width={320}
+                height={320}
+                style={{
+                  WebkitMaskImage: "radial-gradient(ellipse at center, #000 54%, transparent 78%)",
+                  maskImage: "radial-gradient(ellipse at center, #000 54%, transparent 78%)",
+                }}
+              />
+            </div>
 
-          <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">{t.footer.contactsTitle}</h4>
+            <div>
+              <h4 className="font-heading text-lg font-semibold mb-4">{t.footer.navigation}</h4>
+              <nav aria-label="Footer navigation" className="flex flex-col gap-3">
+                {navLinks.map((link) => (
+                  <Link key={link.to} to={link.to} className="font-body text-sm text-muted-foreground hover:text-primary transition-colors">{link.label}</Link>
+                ))}
+              </nav>
+            </div>
+
+            <div>
+              <h4 className="font-heading text-lg font-semibold mb-4">{t.footer.contactsTitle}</h4>
             <div className="space-y-3">
               <a href="tel:+79147690097" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors"><Phone className="w-4 h-4 text-primary" />+7 (914) 769-00-97</a>
               <a href="mailto:interes2015@gmail.com" className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors"><Mail className="w-4 h-4 text-primary" />interes2015@gmail.com</a>
@@ -50,8 +85,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        </div>
 
-        <div className="border-t border-border/20 mt-12 pt-8 flex flex-col items-center gap-4">
+        <div className="relative z-10 border-t border-border/20 mt-8 pt-8 flex flex-col items-center gap-4">
           <p className="font-body text-xs text-muted-foreground">{t.footer.copyright}</p>
           <div className="flex items-center gap-4">
             <Link to="/privacy" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">{t.footer.privacy}</Link>

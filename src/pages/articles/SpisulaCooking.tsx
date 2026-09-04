@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import spisulaImg from "@/assets/blog-spisula-real.webp";
+import spisulaImg from "@/assets/blog-spisula-plated.webp";
 
 const SpisulaCooking = () => {
   const recipeJsonLd = {
@@ -37,7 +37,7 @@ const SpisulaCooking = () => {
       slug="kak-prigotovit-spisulu"
       jsonLd={recipeJsonLd}
     >
-      <img src={spisulaImg} alt="Приготовление спизулы сахалинской - свежие моллюски для сашими и гриля" className="w-full rounded-xl mb-8" width={1200} height={800} />
+      <img src={spisulaImg} alt="Свежая спизула сахалинская с лимоном и травами на тёмном сланце" className="w-full rounded-xl mb-8" width={1200} height={800} />
 
       <p>
         Сахалинская спизула (<em>Spisula sachalinensis</em>) - настоящий подарок для кулинара. Из нее можно сделать и тонкое японское сашими, и сытный клэм-чаудер, и пряное блюдо в воке. Она универсальна, но требует правильного подхода. Если знать несколько правил, результат будет не хуже, чем в дорогом ресторане.

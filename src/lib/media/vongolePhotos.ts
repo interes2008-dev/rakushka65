@@ -1,59 +1,22 @@
-import p1 from "@/assets/vongole-photo-1.webp.asset.json";
-import p2 from "@/assets/vongole-photo-2.webp.asset.json";
-import p3 from "@/assets/vongole-photo-3.webp.asset.json";
-import p4 from "@/assets/vongole-photo-4.webp.asset.json";
-import p5 from "@/assets/vongole-photo-5.webp.asset.json";
-import p6 from "@/assets/vongole-photo-6.webp.asset.json";
-import p7 from "@/assets/vongole-photo-7.webp.asset.json";
-import p8 from "@/assets/vongole-photo-8.webp.asset.json";
-import { ScallopPhoto } from "@/lib/media/scallopPhotos";
+import type { ScallopPhoto } from "@/lib/media/scallopPhotos";
+import v1 from "@/assets/blog-vongole-photo-1.webp";
+import v2 from "@/assets/blog-vongole-photo-2.webp";
+import v3 from "@/assets/blog-vongole-photo-3.webp";
+import v4 from "@/assets/blog-vongole-photo-4.webp";
+import v5 from "@/assets/blog-vongole-photo-5.webp";
+import v6 from "@/assets/blog-vongole-photo-6.webp";
 
 export type VongolePhoto = ScallopPhoto;
 
 export const vongolePhotos: VongolePhoto[] = [
-  {
-    url: p1.url,
-    altRu: "Свежевыловленные живые вонголе с морской травой крупным планом",
-    altEn: "Freshly harvested live vongole clams with sea grass, close-up",
-  },
-  {
-    url: p2.url,
-    altRu: "Отсортированные вонголе одного калибра перед упаковкой",
-    altEn: "Sorted vongole clams of one grade before packing",
-  },
-  {
-    url: p3.url,
-    altRu: "Живые вонголе в промысловом ящике после промывки",
-    altEn: "Live vongole clams in a fishing crate after rinsing",
-  },
-  {
-    url: p4.url,
-    altRu: "Вонголе на деревянном настиле цеха на Сахалине",
-    altEn: "Vongole clams on the wooden deck of our Sakhalin facility",
-  },
-  {
-    url: p5.url,
-    altRu: "Калиброванные сахалинские вонголе, вид сверху",
-    altEn: "Graded Sakhalin vongole clams, top view",
-  },
-  {
-    url: p6.url,
-    altRu: "Мешки с живыми вонголе на мелководье после добычи",
-    altEn: "Sacks of live vongole in shallow water right after harvest",
-  },
-  {
-    url: p7.url,
-    altRu: "Синий ящик с живыми вонголе на приёмке",
-    altEn: "Blue crate with live vongole at the intake point",
-  },
-  {
-    url: p8.url,
-    altRu: "Термоконтейнер с живыми вонголе, подготовленный к отправке",
-    altEn: "Thermal box packed with live vongole ready for shipment",
-  },
+  { url: v1, altRu: "Улов вонголе с Сахалина в мешках и вёдрах у воды", altEn: "Sakhalin vongole catch in bags and buckets by the water" },
+  { url: v2, altRu: "Полный ящик свежих вонголе с Сахалина", altEn: "A full crate of fresh Sakhalin vongole" },
+  { url: v3, altRu: "Замер сахалинских вонголе линейкой, калибр раковины", altEn: "Measuring Sakhalin vongole with a ruler, shell size" },
+  { url: v4, altRu: "Свежие вонголе с Сахалина, отборные раковины", altEn: "Fresh Sakhalin vongole, graded shells" },
+  { url: v5, altRu: "Живые вонголе на палубе после промысла", altEn: "Live vongole on deck after the catch" },
+  { url: v6, altRu: "Свежий улов вонголе с Сахалина крупным планом", altEn: "Fresh Sakhalin vongole catch, close-up" },
 ];
 
-/** Стабильная выборка нескольких фото со сдвигом (для разнообразия в статьях). */
 export function pickVongolePhotos(count: number, offset = 0): VongolePhoto[] {
   return Array.from({ length: Math.min(count, vongolePhotos.length) }, (_, i) =>
     vongolePhotos[(offset + i) % vongolePhotos.length]

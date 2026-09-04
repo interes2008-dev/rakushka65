@@ -43,7 +43,7 @@ const ArticleLayout = ({ title, seoTitle, seoDescription, breadcrumbName, slug, 
   const related = sameTag.length >= 2 ? sameTag : fallback;
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       <SEOHead title={seoTitle} description={seoDescription} lang={lang} jsonLd={allJsonLd} ogImage={ogImage} ogImageAlt={ogImageAlt} ogType="article" />
       <ReadingProgress />
       <FloatingParticles />

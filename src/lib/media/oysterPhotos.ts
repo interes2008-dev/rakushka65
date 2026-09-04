@@ -1,118 +1,32 @@
-import p1 from "@/assets/oyster-photo-1.webp.asset.json";
-import p2 from "@/assets/oyster-photo-2.webp.asset.json";
-import p3 from "@/assets/oyster-photo-3.webp.asset.json";
-import p4 from "@/assets/oyster-photo-4.webp.asset.json";
-import p5 from "@/assets/oyster-photo-5.webp.asset.json";
-import p6 from "@/assets/oyster-photo-6.webp.asset.json";
-import p7 from "@/assets/oyster-photo-7.webp.asset.json";
-import p8 from "@/assets/oyster-photo-8.webp.asset.json";
-import p9 from "@/assets/oyster-photo-9.webp.asset.json";
-import p10 from "@/assets/oyster-photo-10.webp.asset.json";
-import p11 from "@/assets/oyster-photo-11.webp.asset.json";
-import p12 from "@/assets/oyster-photo-12.webp.asset.json";
-import p13 from "@/assets/oyster-photo-13.webp.asset.json";
-import p14 from "@/assets/oyster-photo-14.webp.asset.json";
-import p15 from "@/assets/oyster-photo-15.webp.asset.json";
-import p16 from "@/assets/oyster-photo-16.webp.asset.json";
-import p17 from "@/assets/oyster-photo-17.webp.asset.json";
-
-import { ScallopPhoto } from "@/lib/media/scallopPhotos";
+import type { ScallopPhoto } from "@/lib/media/scallopPhotos";
+import o1 from "@/assets/blog-oyster-photo-1.webp";
+import o2 from "@/assets/blog-oyster-photo-2.webp";
+import o3 from "@/assets/blog-oyster-photo-3.webp";
+import o4 from "@/assets/blog-oyster-photo-4.webp";
+import o5 from "@/assets/blog-oyster-photo-5.webp";
+import o6 from "@/assets/blog-oyster-photo-6.webp";
+import o7 from "@/assets/blog-oyster-photo-7.webp";
+import o8 from "@/assets/blog-oyster-photo-8.webp";
+import o9 from "@/assets/blog-oyster-photo-9.webp";
+import o10 from "@/assets/blog-oyster-photo-10.webp";
+import o11 from "@/assets/blog-oyster-photo-11.webp";
+import o12 from "@/assets/blog-oyster-photo-12.webp";
+import o13 from "@/assets/blog-oyster-photo-13.webp";
 
 export type OysterPhoto = ScallopPhoto;
 
 export const oysterPhotos: OysterPhoto[] = [
-  {
-    url: p1.url,
-    altRu: "Плантация сахалинских устриц на мелководье в прозрачной воде",
-    altEn: "Sakhalin oyster beds in shallow, clear seawater",
-  },
-  {
-    url: p2.url,
-    altRu: "Дегустация свежих устриц прямо на устричной банке",
-    altEn: "Tasting fresh oysters right on the oyster bed",
-  },
-  {
-    url: p3.url,
-    altRu: "Открытые сахалинские устрицы с полным мясом и линейкой для замера",
-    altEn: "Opened Sakhalin oysters with full meat and a size gauge",
-  },
-  {
-    url: p4.url,
-    altRu: "Живые устрицы на льду после зимней добычи",
-    altEn: "Live oysters on ice after a winter harvest",
-  },
-  {
-    url: p5.url,
-    altRu: "Сахалинские устрицы на льду в лучах закатного солнца",
-    altEn: "Sakhalin oysters on ice in the sunset light",
-  },
-  {
-    url: p6.url,
-    altRu: "Партия живых устриц у кромки воды перед сортировкой",
-    altEn: "A batch of live oysters at the waterline before sorting",
-  },
-  {
-    url: p7.url,
-    altRu: "Крупные устрицы одного калибра на снегу",
-    altEn: "Large oysters of the same grade on snow",
-  },
-  {
-    url: p8.url,
-    altRu: "Садки с устрицами в море на приливной воде",
-    altEn: "Oyster cages in the sea on tidal water",
-  },
-  {
-    url: p9.url,
-    altRu: "Сетные мешки с устрицами на выдержке в морской воде",
-    altEn: "Mesh sacks of oysters held in seawater",
-  },
-  {
-    url: p10.url,
-    altRu: "Свежевыловленные устрицы в промысловом садке",
-    altEn: "Freshly harvested oysters in a fishing net bag",
-  },
-  {
-    url: p11.url,
-    altRu: "Крупные сахалинские устрицы на песке рядом с зажигалкой для масштаба",
-    altEn: "Large Sakhalin oysters on sand next to a lighter for scale",
-  },
-  {
-    url: p12.url,
-    altRu: "Живые устрицы разложены на мокром песке во время отлива",
-    altEn: "Live oysters laid out on wet sand at low tide",
-  },
-  {
-    url: p13.url,
-    altRu: "Устрицы у самой кромки прибоя на сахалинском берегу",
-    altEn: "Oysters at the water's edge on a Sakhalin beach",
-  },
-  {
-    url: p14.url,
-    altRu: "Партия отобранных устриц одного калибра на берегу",
-    altEn: "A batch of selected same-grade oysters on the shore",
-  },
-  {
-    url: p15.url,
-    
-    altRu: "Живые устрицы в промысловом ящике сразу после подъёма",
-    altEn: "Live oysters in a harvest crate right after lifting",
-  },
-  {
-    url: p16.url,
-    altRu: "Устрицы уложены в термоящик из пенопласта для отправки",
-    altEn: "Oysters packed in a styrofoam thermal box for shipping",
-  },
-  {
-    url: p17.url,
-    altRu: "Открытые сахалинские устрицы в котелке на берегу моря",
-    altEn: "Shucked Sakhalin oysters in a pot by the seashore",
-  },
-
+  { url: o1, altRu: "Вскрытые сахалинские устрицы в котелке на берегу моря", altEn: "Shucked Sakhalin oysters in a pot by the sea" },
+  { url: o2, altRu: "Свежие сахалинские устрицы на льду крупным планом", altEn: "Fresh Sakhalin oysters on ice, close-up" },
+  { url: o3, altRu: "Устрицы с Сахалина на снегу, зимний улов", altEn: "Sakhalin oysters on snow, winter catch" },
+  { url: o4, altRu: "Устрицы на льду на закате, рядом устричный нож", altEn: "Oysters on ice at sunset with an oyster knife" },
+  { url: o5, altRu: "Свежий улов устриц на льду у кромки воды", altEn: "Fresh oyster catch on ice at the water's edge" },
+  { url: o6, altRu: "Сахалинские устрицы в тёплом свете заката", altEn: "Sakhalin oysters in warm sunset light" },
+  { url: o7, altRu: "Вскрытые устрицы с полным мясом на льду", altEn: "Opened oysters with full meat on ice" },
+  { url: o8, altRu: "Раскрытые сахалинские устрицы, свежее мясо", altEn: "Opened Sakhalin oysters, fresh meat" },
+  { url: o9, altRu: "Устрицы на половинке раковины на льду", altEn: "Oysters on the half shell on ice" },
+  { url: o10, altRu: "Свежевскрытые устрицы с Сахалина", altEn: "Freshly shucked Sakhalin oysters" },
+  { url: o11, altRu: "Передержка живых устриц в бассейнах цеха", altEn: "Live oysters held in facility tanks" },
+  { url: o12, altRu: "Устричная плантация на Сахалине, снасти в воде", altEn: "Sakhalin oyster farm, gear in the water" },
+  { url: o13, altRu: "Дегустация устриц прямо на устричной банке", altEn: "Tasting oysters right on the oyster bed" },
 ];
-
-/** Стабильная выборка нескольких фото со сдвигом (для разнообразия в статьях). */
-export function pickOysterPhotos(count: number, offset = 0): OysterPhoto[] {
-  return Array.from({ length: Math.min(count, oysterPhotos.length) }, (_, i) =>
-    oysterPhotos[(offset + i) % oysterPhotos.length]
-  );
-}

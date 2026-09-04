@@ -19,8 +19,8 @@ const VongolePhotoStrip = ({ offset = 0, count = 3, caption }: VongolePhotoStrip
       <figcaption className="mt-3 text-sm text-muted-foreground font-body text-center">
         {caption ||
           (lang === "ru"
-            ? "Живые вонголе с Сахалина: добыча, промывка, калибровка и упаковка"
-            : "Live Sakhalin vongole: harvest, rinsing, grading and packing")}
+            ? "Наши вонголе с Сахалина: промысел, приёмка и калибровка раковины"
+            : "Our Sakhalin vongole: harvest, intake and grading")}
       </figcaption>
     </figure>
   );

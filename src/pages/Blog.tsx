@@ -64,7 +64,9 @@ const Blog = () => {
           routePath: `/blog/${a.slug}`,
           productTag: detectProductTag(a.category || a.slug),
         }));
-        setAllArticles([...dbArticles, ...blogArticles]);
+        const staticSlugs = new Set(blogArticles.map((a) => a.slug));
+        const dbOnly = dbArticles.filter((a) => !staticSlugs.has(a.slug));
+        setAllArticles([...dbOnly, ...blogArticles]);
       });
   }, []);
 
@@ -90,7 +92,7 @@ const Blog = () => {
   }, [allArticles, activeTag, search, sortBy]);
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       <SEOHead
         title={isEn
           ? "Sakhalin seafood blog - recipes, guides, tips | Rakushka65"

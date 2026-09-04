@@ -53,6 +53,17 @@ const TrepangHoneyTincture = lazy(() => import("./pages/articles/TrepangHoneyTin
 const DynamicArticle = lazy(() => import("./pages/DynamicArticle"));
 const SeoCheck = lazy(() => import("./pages/SeoCheck"));
 const CategoryLanding = lazy(() => import("./pages/CategoryLanding"));
+const HairyCrabWholesale = lazy(() => import("./pages/articles/HairyCrabWholesale"));
+const HairyCrabLiveDelivery = lazy(() => import("./pages/articles/HairyCrabLiveDelivery"));
+const HairyCrabWhatIs = lazy(() => import("./pages/articles/HairyCrabWhatIs"));
+const HairyCrabWholesaleLanding = lazy(() => import("./pages/HairyCrabWholesaleLanding"));
+// Бывшие динамические статьи, переведённые в статику (полный контент в пререндере)
+const SeaUrchin5Myths = lazy(() => import("./pages/articles/SeaUrchin5Myths"));
+const SeaUrchinServing = lazy(() => import("./pages/articles/SeaUrchinServing"));
+const SeaUrchinVsAnalogs = lazy(() => import("./pages/articles/SeaUrchinVsAnalogs"));
+const OystersNutrition = lazy(() => import("./pages/articles/OystersNutrition"));
+const ScallopNutrition = lazy(() => import("./pages/articles/ScallopNutrition"));
+const VongoleVsPetushki = lazy(() => import("./pages/articles/VongoleVsPetushki"));
 
 const queryClient = new QueryClient();
 
@@ -81,6 +92,7 @@ const App = () => (
               <Route path="/certificate" element={<Certificate />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/seo-check" element={<SeoCheck />} />
+              <Route path="/opt/mohnatorukij-krab" element={<HairyCrabWholesaleLanding />} />
               {/* Sea urchin */}
               <Route path="/blog/morskoj-ezh-sahalin" element={<SeaUrchinWhat />} />
               <Route path="/blog/kak-vybrat-morskogo-ezha" element={<SeaUrchinChoose />} />
@@ -114,12 +126,22 @@ const App = () => (
               <Route path="/blog/nastojka-na-trepange-recept" element={<TrepangTinctureRecipe />} />
               <Route path="/blog/trepang-primenenie" element={<TrepangBenefits />} />
               <Route path="/blog/medovaya-nastojka-trepanga" element={<TrepangHoneyTincture />} />
+              <Route path="/blog/mohnatorukij-krab-optom" element={<HairyCrabWholesale />} />
+              <Route path="/blog/zhivoj-mohnatorukij-krab-dostavka" element={<HairyCrabLiveDelivery />} />
+              <Route path="/blog/chto-takoe-mohnatorukij-krab" element={<HairyCrabWhatIs />} />
               {/* Legacy redirects */}
               <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
               <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />
               <Route path="/articles/pasta-s-vongole" element={<VongolePasta />} />
               <Route path="/articles/kak-vybrat-vongole" element={<VongoleChoose />} />
               <Route path="/articles/vongole-kak-v-restorane" element={<VongoleRestaurant />} />
+              {/* Бывшие динамические статьи, теперь статические (до catch-all) */}
+              <Route path="/blog/morskoy-ezh-5-mifov-i-vsya-pravda-o-glavnom-delikatese-sahalina-2026-04-17" element={<SeaUrchin5Myths />} />
+              <Route path="/blog/morskoy-ezh-s-sahalina-iskusstvo-podachi-i-idealnye-vinnye-pary-2026-04-22" element={<SeaUrchinServing />} />
+              <Route path="/blog/sahalinskiy-morskoy-ezh-chem-on-luchshe-yaponskih-i-chiliyskih-analogov-2026-04-21" element={<SeaUrchinVsAnalogs />} />
+              <Route path="/blog/ustricy-dlya-detoksa-i-diety-polza-sahalinskih-mollyuskov-2026-04-19" element={<OystersNutrition />} />
+              <Route path="/blog/sahalinskiy-grebeshok-kak-vklyuchit-v-dietu-i-programmu-detoks-2026-04-23" element={<ScallopNutrition />} />
+              <Route path="/blog/vongole-ili-petushki-v-chem-raznica-i-kak-vybrat-luchshie-mollyuski-2026-04-18" element={<VongoleVsPetushki />} />
               {/* Auto-generated articles (fallback for any /blog/:slug not matched above) */}
               <Route path="/blog/:slug" element={<DynamicArticle />} />
               <Route path="*" element={<NotFound />} />

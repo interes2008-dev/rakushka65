@@ -11,6 +11,89 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  // === Бывшие динамические статьи, теперь статические ===
+  {
+    slug: "morskoy-ezh-5-mifov-i-vsya-pravda-o-glavnom-delikatese-sahalina-2026-04-17",
+    title: "Морской ёж: 5 мифов и вся правда о главном деликатесе Сахалина",
+    description: "Пять популярных мифов о морском еже и правда о нём: вкус, польза икры, свежесть и как его правильно есть.",
+    date: "2026-04-17",
+    image: "/src/assets/blog-urchin-1.jpg",
+    routePath: "/blog/morskoy-ezh-5-mifov-i-vsya-pravda-o-glavnom-delikatese-sahalina-2026-04-17",
+    productTag: "urchin" as ProductTag,
+  },
+  {
+    slug: "morskoy-ezh-s-sahalina-iskusstvo-podachi-i-idealnye-vinnye-pary-2026-04-22",
+    title: "Морской ёж с Сахалина: искусство подачи и идеальные винные пары",
+    description: "Как красиво подать морского ежа и с каким вином сочетать. Идеальные пары к икре морского ежа.",
+    date: "2026-04-22",
+    image: "/src/assets/blog-urchin-2.jpg",
+    routePath: "/blog/morskoy-ezh-s-sahalina-iskusstvo-podachi-i-idealnye-vinnye-pary-2026-04-22",
+    productTag: "urchin" as ProductTag,
+  },
+  {
+    slug: "sahalinskiy-morskoy-ezh-chem-on-luchshe-yaponskih-i-chiliyskih-analogov-2026-04-21",
+    title: "Сахалинский морской ёж: чем он лучше японских и чилийских аналогов",
+    description: "Честное сравнение сахалинского морского ежа с японским и чилийским: свежесть, вкус, логистика и цена.",
+    date: "2026-04-21",
+    image: "/src/assets/blog-urchin-3.jpg",
+    routePath: "/blog/sahalinskiy-morskoy-ezh-chem-on-luchshe-yaponskih-i-chiliyskih-analogov-2026-04-21",
+    productTag: "urchin" as ProductTag,
+  },
+  {
+    slug: "ustricy-dlya-detoksa-i-diety-polza-sahalinskih-mollyuskov-2026-04-19",
+    title: "Устрицы для лёгкого рациона: польза сахалинских моллюсков",
+    description: "Чем полезны сахалинские устрицы: много белка и цинка при низкой калорийности. Как включить в меню.",
+    date: "2026-04-19",
+    image: "/src/assets/blog-oysters-real-1.jpg",
+    routePath: "/blog/ustricy-dlya-detoksa-i-diety-polza-sahalinskih-mollyuskov-2026-04-19",
+    productTag: "oysters" as ProductTag,
+  },
+  {
+    slug: "sahalinskiy-grebeshok-kak-vklyuchit-v-dietu-i-programmu-detoks-2026-04-23",
+    title: "Сахалинский гребешок в лёгком рационе: белок без лишних калорий",
+    description: "Как включить гребешок в лёгкое меню: чистый белок при низкой калорийности, минералы и быстрая готовка.",
+    date: "2026-04-23",
+    image: "/src/assets/blog-scallop-real.jpg",
+    routePath: "/blog/sahalinskiy-grebeshok-kak-vklyuchit-v-dietu-i-programmu-detoks-2026-04-23",
+    productTag: "scallop" as ProductTag,
+  },
+  {
+    slug: "vongole-ili-petushki-v-chem-raznica-i-kak-vybrat-luchshie-mollyuski-2026-04-18",
+    title: "Вонголе или петушки: в чём разница и как выбрать лучшие моллюски",
+    description: "Вонголе и петушки: в чём разница между моллюсками, как отличить и выбрать свежих. Понятный гид.",
+    date: "2026-04-18",
+    image: "/src/assets/blog-vongole-real-1.jpg",
+    routePath: "/blog/vongole-ili-petushki-v-chem-raznica-i-kak-vybrat-luchshie-mollyuski-2026-04-18",
+    productTag: "vongole" as ProductTag,
+  },
+  // === Мохнаторукий краб (опт) ===
+  {
+    slug: "mohnatorukij-krab-optom",
+    title: "Мохнаторукий краб оптом с Сахалина: живые поставки для ресторанов",
+    description: "Оптовые поставки живого мохнаторукого краба с Сахалина. Калибровка партий, самки с икрой отдельно, доставка живым в термобоксе, документы.",
+    date: "2026-07-22",
+    image: "/src/assets/blog-hairy-crab-underwater.jpg",
+    routePath: "/blog/mohnatorukij-krab-optom",
+    productTag: "hairy-crab" as ProductTag,
+  },
+  {
+    slug: "zhivoj-mohnatorukij-krab-dostavka",
+    title: "Доставка живого мохнаторукого краба по России: как мы возим его живым",
+    description: "Передержка, кислородная упаковка, термобокс, сроки 24-48 часов и документы. Как довезти живого краба через всю страну.",
+    date: "2026-07-22",
+    image: "/src/assets/product-hairy-crab.jpg",
+    routePath: "/blog/zhivoj-mohnatorukij-krab-dostavka",
+    productTag: "hairy-crab" as ProductTag,
+  },
+  {
+    slug: "chto-takoe-mohnatorukij-krab",
+    title: "Что такое мохнаторукий краб: волосатый, шанхайский, ради чего его берут",
+    description: "Как выглядит, почему «мохнаторукий», в чём ценность икры, когда сезон и как готовят. Понятный гид поставщика с Сахалина.",
+    date: "2026-07-22",
+    image: "/src/assets/blog-hairy-crab-cooked.jpg",
+    routePath: "/blog/chto-takoe-mohnatorukij-krab",
+    productTag: "hairy-crab" as ProductTag,
+  },
   // === Морской ёж ===
   {
     slug: "morskoj-ezh-sahalin",
@@ -148,7 +231,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Спизула сахалинская: что это за моллюск и почему он популярен",
     description: "Гид по сахалинской спизуле: вкус, текстура, способы готовки и чем она отличается от других.",
     date: "2026-04-12",
-    image: "/src/assets/blog-spisula-v2.jpg",
+    image: "/src/assets/blog-spisula-beach.jpg",
     routePath: "/blog/spisula-sahalinskaya",
   },
   {
@@ -156,7 +239,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Как приготовить спизулу сахалинскую: техники и рецепты",
     description: "Пошаговые способы: сашими, гриль, суп или жарка в воке. Раскрываем вкус моллюска.",
     date: "2026-04-12",
-    image: "/src/assets/blog-spisula-v2.jpg",
+    image: "/src/assets/blog-spisula-ice.jpg",
     routePath: "/blog/kak-prigotovit-spisulu",
   },
   {
@@ -164,7 +247,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Спизула против вонголе: чем отличаются сахалинские моллюски",
     description: "Сравниваем вкус, текстуру, размер и способы приготовления двух популярных ракушек.",
     date: "2026-04-12",
-    image: "/src/assets/blog-spisula-v2.jpg",
+    image: "/src/assets/blog-spisula-plated.jpg",
     routePath: "/blog/spisula-vs-vongole",
   },
   // === Устрицы ===

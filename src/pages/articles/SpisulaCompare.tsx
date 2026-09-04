@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import spisulaImg from "@/assets/blog-spisula-real.webp";
+import spisulaImg from "@/assets/blog-spisula-rocks.webp";
 
 const SpisulaCompare = () => {
   const articleJsonLd = {
@@ -23,7 +23,7 @@ const SpisulaCompare = () => {
       slug="spisula-vs-vongole"
       jsonLd={articleJsonLd}
     >
-      <img src={spisulaImg} alt="Сравнение спизулы и вонголе - два сахалинских моллюска" className="w-full rounded-xl mb-8" width={1200} height={800} />
+      <img src={spisulaImg} alt="Живая спизула сахалинская на мокрых прибрежных камнях у воды" className="w-full rounded-xl mb-8" width={1200} height={800} />
 
       <p>
         В каталоге <strong>Ракушка65</strong> вы найдете два похожих на первый взгляд продукта: сахалинскую спизулу и вонголе (их еще называют морскими петушками). Оба моллюска живут в раковинах, оба приезжают к нам живыми с берегов Сахалина. Но на деле это совершенно разные гастрономические истории. Разберемся, в чем их главные отличия и что лучше выбрать для вашего ужина.

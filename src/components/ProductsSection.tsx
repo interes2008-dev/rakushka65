@@ -8,9 +8,9 @@ import oystersImg from "@/assets/product-oysters.webp";
 import vongoleImg from "@/assets/product-vongole.webp";
 import spizulaImg from "@/assets/product-spizula.webp";
 import seaurchinImg from "@/assets/product-seaurchin.webp";
-import trepangImg from "@/assets/product-trepang.webp";
 import trepangTinctureImg from "@/assets/product-trepang-tincture.webp";
 import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.webp";
+import hairyCrabImg from "@/assets/product-hairy-crab.webp";
 
 export interface Product {
   id: string;
@@ -33,9 +33,9 @@ export const products: Product[] = [
   { id: "vongole", name: "Вонголе", image: vongoleImg, price: "600", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "мелкие, 2-5 см", taste: "Насыщенный, морской" },
   { id: "spizula", name: "Спизула Сахалинская", image: spizulaImg, price: "500", unit: "кг", rating: 4, description: "", category: "Моллюски", weight: "200-400 г / шт", taste: "Плотный, яркий" },
   { id: "sea-urchin", name: "Ёж морской Сахалинский", image: seaurchinImg, price: "500", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "90-200 г / шт", taste: "Сливочный, йодистый" },
-  { id: "trepang", name: "Трепанг дальневосточный", image: trepangImg, price: "", unit: "кг", rating: 5, description: "", category: "Деликатесы", weight: "150-500 г / шт", taste: "Нежный, желеобразный" },
   { id: "trepang-tincture", name: "Настойка на трепанге", image: trepangTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Насыщенный, морской с мёдом" },
   { id: "trepang-honey-tincture", name: "Медовая настойка с трепангом без спирта", image: trepangHoneyTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Сладко-медовый, мягкий", hidden: true },
+  { id: "hairy-crab", name: "Краб мохнаторукий", image: hairyCrabImg, price: "", unit: "кг", rating: 5, description: "", category: "Ракообразные", weight: "80-250 г / шт", taste: "Сливочная икра, сладкое мясо" },
 ];
 
 const ProductsSection = () => {

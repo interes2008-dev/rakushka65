@@ -3,14 +3,12 @@ import scallopImg from "@/assets/product-scallop.webp";
 import vongoleImg from "@/assets/product-vongole.webp";
 import spizulaImg from "@/assets/product-spizula.webp";
 import seaurchinImg from "@/assets/product-seaurchin.webp";
-import rapanyImg from "@/assets/product-rapany.webp";
-import snailsImg from "@/assets/product-snails.webp";
-import corbiculaImg from "@/assets/product-corbicula.webp";
+import hairyCrabImg from "@/assets/product-hairy-crab.webp";
 import trepangImg from "@/assets/product-trepang.webp";
 import trepangTinctureImg from "@/assets/product-trepang-tincture.webp";
 import trepangHoneyTinctureImg from "@/assets/product-trepang-honey-tincture.webp";
 
-export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture" | "trepang-honey-tincture";
+export type ProductTag = "oysters" | "scallop" | "vongole" | "spisula" | "urchin" | "crab" | "hairy-crab" | "rapany" | "snails" | "corbicula" | "trepang" | "trepang-tincture" | "trepang-honey-tincture";
 
 export interface ProductCategory {
   tag: ProductTag;
@@ -63,36 +61,20 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     ctaDescription: "Свежий сахалинский морской ёж - сливочная икра прямо из Тихого океана.",
   },
   {
-    tag: "rapany",
-    label: "Рапаны",
-    productLink: "/catalog/rapany",
-    image: rapanyImg,
-    cta: "Купить рапаны с Сахалина",
-    ctaDescription: "Сахалинские рапаны - упругая мякоть с дымно-морским вкусом.",
-  },
-  {
-    tag: "snails",
-    label: "Морские улитки",
-    productLink: "/catalog/sea-snails",
-    image: snailsImg,
-    cta: "Купить морские улитки с Сахалина",
-    ctaDescription: "Морские улитки с Сахалина - пикантный деликатес Тихого океана.",
-  },
-  {
-    tag: "corbicula",
-    label: "Корбикула",
-    productLink: "/catalog/corbicula",
-    image: corbiculaImg,
-    cta: "Купить корбикулу с Сахалина",
-    ctaDescription: "Сахалинская корбикула - нежный, чуть сладковатый моллюск.",
+    tag: "hairy-crab",
+    label: "Краб мохнаторукий",
+    productLink: "/catalog/hairy-crab",
+    image: hairyCrabImg,
+    cta: "Заказать мохнаторукого краба оптом",
+    ctaDescription: "Живой мохнаторукий краб с Сахалина оптом. Доставка живым в термобоксе, калибровка по размеру и полу, документы на партию.",
   },
   {
     tag: "trepang",
     label: "Трепанг",
-    productLink: "/catalog/trepang",
+    productLink: "/catalog/trepang-tincture",
     image: trepangImg,
-    cta: "Купить трепанг с Сахалина",
-    ctaDescription: "Дальневосточный трепанг - морской деликатес, который ценят за состав и плотную текстуру.",
+    cta: "Купить настойку на трепанге",
+    ctaDescription: "Настойка на дальневосточном трепанге, ценят за состав и пользу морского деликатеса.",
   },
   {
     tag: "trepang-tincture",
@@ -123,6 +105,7 @@ export function detectProductTag(input: string): ProductTag {
   if (s.includes("grebesh") || s.includes("scallop")) return "scallop";
   if (s.includes("spisul") || s.includes("spizul")) return "spisula";
   if (s.includes("ezh") || s.includes("urchin")) return "urchin";
+  if (s.includes("mohnatoruk") || s.includes("hairy") || s.includes("mitten") || s.includes("volosat") || s.includes("shanhaj")) return "hairy-crab";
   if (s.includes("krab") || s.includes("crab")) return "crab";
   if (s.includes("rapan")) return "rapany";
   if (s.includes("ulitk") || s.includes("snail")) return "snails";

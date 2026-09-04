@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/ArticleLayout";
 import { Link } from "react-router-dom";
-import spisulaImg from "@/assets/blog-spisula-real.webp";
+import spisulaImg from "@/assets/blog-spisula-water.webp";
 
 const SpisulaWhat = () => {
   const articleJsonLd = {
@@ -40,7 +40,7 @@ const SpisulaWhat = () => {
       slug="spisula-sahalinskaya"
       jsonLd={[articleJsonLd, faqJsonLd]}
     >
-      <img src={spisulaImg} alt="Свежая спизула сахалинская - крупные раковины на тёмном сланце" className="w-full rounded-xl mb-8" width={1200} height={800} />
+      <img src={spisulaImg} alt="Живая спизула сахалинская в прозрачной морской воде на камнях" className="w-full rounded-xl mb-8" width={1200} height={800} />
 
       <p>
         Среди морепродуктов есть свои звезды: устрицы, гребешки, крабы. Но есть и те, чья популярность только начинает расти. Спизула сахалинская (<em>Spisula sachalinensis</em>) - именно такой случай. Этот крупный моллюск с Сахалина удивляет своим ярким вкусом и необычной текстурой. В Японии и Корее его обожают десятилетиями, а у нас он только-только выходит из тени своих знаменитых собратьев.

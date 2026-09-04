@@ -141,6 +141,8 @@
     font-feature-settings: "kern", "liga", "onum", "pnum";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   /* Подзаголовок-deck под заголовком статьи (lede) */
@@ -531,5 +533,23 @@
     opacity: 1;
     transform: translateY(0) scale(1);
     clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Статуэтка Эбису в футере: плавное покачивание и пульсация свечения */
+@keyframes ebisu-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes ebisu-glow {
+  0%, 100% { filter: drop-shadow(0 6px 18px hsl(168 72% 50% / 0.25)) drop-shadow(0 0 26px hsl(168 72% 50% / 0.18)); }
+  50% { filter: drop-shadow(0 10px 26px hsl(168 72% 50% / 0.45)) drop-shadow(0 0 44px hsl(168 72% 50% / 0.32)); }
+}
+.ebisu-figure {
+  filter: drop-shadow(0 6px 18px hsl(168 72% 50% / 0.25)) drop-shadow(0 0 26px hsl(168 72% 50% / 0.18));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ebisu-figure {
+    animation: ebisu-float 6s ease-in-out infinite, ebisu-glow 4.5s ease-in-out infinite;
   }
 }

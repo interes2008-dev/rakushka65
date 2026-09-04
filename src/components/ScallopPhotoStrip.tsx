@@ -19,8 +19,8 @@ const ScallopPhotoStrip = ({ offset = 0, count = 3, caption }: ScallopPhotoStrip
       <figcaption className="mt-3 text-sm text-muted-foreground font-body text-center">
         {caption ||
           (lang === "ru"
-            ? "Фото с нашего цеха на Сахалине: приёмка, калибровка и взвешивание живого гребешка"
-            : "Photos from our Sakhalin facility: intake, grading and weighing of live scallops")}
+            ? "Наш гребешок с Сахалина: приёмка, калибровка и взвешивание живой раковины"
+            : "Our Sakhalin scallops: intake, grading and weighing of live shells")}
       </figcaption>
     </figure>
   );

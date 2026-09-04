@@ -6,6 +6,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import { products } from "@/components/ProductsSection";
+import PhotoGallery from "@/components/PhotoGallery";
+import { scallopPhotos } from "@/lib/media/scallopPhotos";
+import { oysterPhotos } from "@/lib/media/oysterPhotos";
+import { vongolePhotos } from "@/lib/media/vongolePhotos";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import { getProductSchema, getBreadcrumbSchema } from "@/lib/seo/schemas";
@@ -15,10 +19,6 @@ import { productFaq } from "@/lib/seo/productFaq";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { reachGoal, GOALS } from "@/lib/metrika";
 import { BookOpen } from "lucide-react";
-import PhotoGallery from "@/components/PhotoGallery";
-import { scallopPhotos } from "@/lib/media/scallopPhotos";
-import { vongolePhotos } from "@/lib/media/vongolePhotos";
-import { oysterPhotos } from "@/lib/media/oysterPhotos";
 
 
 
@@ -35,7 +35,7 @@ const ProductDetail = () => {
 
   if (!product) {
     return (
-      <div className="relative min-h-screen">
+      <div className="relative min-h-screen overflow-x-hidden">
         <SEOHead title="404 - Rakushka65" description="Страница не найдена" noindex />
         <Header />
         <main className="relative z-10 pt-28 pb-20 container mx-auto px-4 text-center">
@@ -84,6 +84,7 @@ const ProductDetail = () => {
     "trepang-tincture": "https://rakushka65.ru/og-image.jpg",
     "trepang-honey-tincture": "https://rakushka65.ru/og/blog-trepang-honey-tincture.jpg",
     crab: "https://rakushka65.ru/og-image.jpg",
+    "hairy-crab": "https://rakushka65.ru/og-hairy-crab.jpg",
   };
 
   const productTag = detectProductTag(product.id);
@@ -183,16 +184,7 @@ const ProductDetail = () => {
             <div className="mt-16">
               <PhotoGallery
                 photos={scallopPhotos}
-                title={lang === "ru" ? "Фотогалерея: живой гребешок с Сахалина" : "Photo gallery: live Sakhalin scallop"}
-              />
-            </div>
-          )}
-
-          {product.id === "vongole" && (
-            <div className="mt-16">
-              <PhotoGallery
-                photos={vongolePhotos}
-                title={lang === "ru" ? "Фотогалерея: живые вонголе с Сахалина" : "Photo gallery: live Sakhalin vongole"}
+                title={lang === "ru" ? "Фотогалерея: наш гребешок с Сахалина" : "Photo gallery: our Sakhalin scallops"}
               />
             </div>
           )}
@@ -201,12 +193,19 @@ const ProductDetail = () => {
             <div className="mt-16">
               <PhotoGallery
                 photos={oysterPhotos}
-                title={lang === "ru" ? "Фотогалерея: живые устрицы с Сахалина" : "Photo gallery: live Sakhalin oysters"}
+                title={lang === "ru" ? "Фотогалерея: наши устрицы с Сахалина" : "Photo gallery: our Sakhalin oysters"}
               />
             </div>
           )}
 
-
+          {product.id === "vongole" && (
+            <div className="mt-16">
+              <PhotoGallery
+                photos={vongolePhotos}
+                title={lang === "ru" ? "Фотогалерея: наши вонголе с Сахалина" : "Photo gallery: our Sakhalin vongole"}
+              />
+            </div>
+          )}
 
 
 
@@ -324,6 +323,70 @@ const ProductDetail = () => {
                 {lang === "ru" ? "Полный рецепт и схема приёма" : "Full recipe and dosing schedule"}
                 <ArrowRight className="w-4 h-4" />
               </Link>
+            </motion.section>
+          )}
+
+          {product.id === "hairy-crab" && (
+            <motion.section
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="mt-20 rounded-2xl p-6 md:p-10 border border-primary/30 bg-gradient-to-br from-primary/5 via-card to-card"
+              aria-labelledby="wholesale-heading"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <Truck className="w-6 h-6 text-primary" />
+                <span className="text-primary font-body text-sm tracking-widest uppercase">
+                  {lang === "ru" ? "Оптом и для HoReCa" : "Wholesale & HoReCa"}
+                </span>
+              </div>
+              <h2 id="wholesale-heading" className="font-heading text-2xl md:text-3xl font-bold mb-4">
+                {lang === "ru"
+                  ? "Живой мохнаторукий краб оптом с Сахалина"
+                  : "Live hairy crab, wholesale from Sakhalin"}
+              </h2>
+              <p className="font-body text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+                {lang === "ru"
+                  ? "Работаем с ресторанами, рынками и оптовыми закупщиками. Отгружаем живого краба партиями, с калибровкой по размеру и полом (самки с икрой отдельно). Держим холодовую цепь от бассейна до вашего города, даём документы и стабильный объём в сезон."
+                  : "We work with restaurants, markets and wholesale buyers. Live crab shipped in graded batches, sized and sorted by sex (roe-bearing females separately). Cold chain from tank to your city, full documents and steady volume in season."}
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                {(lang === "ru"
+                  ? [
+                      { t: "Живым в термобоксе", d: "Кислородная упаковка, датчики температуры, выживаемость под контролем" },
+                      { t: "Калибровка партий", d: "Сортировка по размеру и полу, самки с икрой отдельным лотом" },
+                      { t: "Документы и объём", d: "Ветеринарные документы, стабильные поставки в осенний сезон" },
+                    ]
+                  : [
+                      { t: "Alive in thermobox", d: "Oxygen packing, temperature sensors, survival under control" },
+                      { t: "Graded batches", d: "Sorted by size and sex, roe females as a separate lot" },
+                      { t: "Docs and volume", d: "Veterinary papers, steady supply through the autumn season" },
+                    ]
+                ).map((f) => (
+                  <div key={f.t} className="p-4 rounded-xl bg-sand-glass border border-border/40">
+                    <div className="font-heading font-semibold mb-1">{f.t}</div>
+                    <div className="font-body text-sm text-muted-foreground leading-relaxed">{f.d}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/opt/mohnatorukij-krab#zayavka"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105"
+                >
+                  <Truck className="w-4 h-4" />
+                  {lang === "ru" ? "Запросить оптовый прайс" : "Request wholesale price list"}
+                </Link>
+                <Link
+                  to="/opt/mohnatorukij-krab"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border/50 font-body font-semibold rounded-lg hover:border-primary/50 hover:text-primary transition-colors"
+                >
+                  {lang === "ru" ? "Условия оптовой поставки" : "Wholesale terms"}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </motion.section>
           )}
 
