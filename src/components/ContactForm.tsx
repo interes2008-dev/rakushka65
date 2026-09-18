@@ -3,6 +3,7 @@ import { Send, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { reachGoal, GOALS } from "@/lib/metrika";
+import { TelegramIcon, MaxIcon, WhatsAppIcon } from "@/components/BrandIcons";
 
 const ContactSection = () => {
   const { t } = useLanguage();
@@ -60,9 +61,9 @@ const ContactSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-sand-glass rounded-2xl p-6 text-center flex flex-col items-center"
+              className="bg-sand-glass rounded-2xl p-6 text-center flex flex-col items-center group hover:bg-[hsl(168_72%_50%/0.08)] hover:border-primary/30 hover:shadow-[0_0_30px_hsl(168_72%_50%/0.12)] transition-all duration-500 ease-out"
             >
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-500">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
               <p className="font-body text-xs text-muted-foreground mb-2 uppercase tracking-wider">{item.label}</p>
@@ -90,7 +91,7 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="flex justify-center gap-4 mt-10"
+          className="flex flex-wrap justify-center gap-3 md:gap-4 mt-10"
         >
           <a
             href="https://t.me/+79147690097"
@@ -99,7 +100,7 @@ const ContactSection = () => {
             onClick={() => reachGoal(GOALS.TELEGRAM_CLICK)}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border/50 font-body text-sm hover:border-primary/50 hover:text-primary transition-colors"
           >
-            <Send className="w-4 h-4" /> Telegram
+            <TelegramIcon className="w-5 h-5" /> Telegram
           </a>
           <a
             href="https://max.ru/+79147690097"
@@ -108,7 +109,16 @@ const ContactSection = () => {
             onClick={() => reachGoal(GOALS.MAX_CLICK)}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border/50 font-body text-sm hover:border-primary/50 hover:text-primary transition-colors"
           >
-            <MessageCircle className="w-4 h-4" /> Max
+            <MaxIcon className="w-5 h-5" /> Max
+          </a>
+          <a
+            href="https://wa.me/79147690097"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => reachGoal(GOALS.WHATSAPP_CLICK)}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border/50 font-body text-sm hover:border-primary/50 hover:text-primary transition-colors"
+          >
+            <WhatsAppIcon className="w-5 h-5" /> WhatsApp
           </a>
         </motion.div>
 

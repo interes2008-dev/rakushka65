@@ -35,7 +35,7 @@ export const products: Product[] = [
   { id: "sea-urchin", name: "Ёж морской Сахалинский", image: seaurchinImg, price: "500", unit: "кг", rating: 5, description: "", category: "Моллюски", weight: "90-200 г / шт", taste: "Сливочный, йодистый" },
   { id: "trepang-tincture", name: "Настойка на трепанге", image: trepangTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Насыщенный, морской с мёдом" },
   { id: "trepang-honey-tincture", name: "Медовая настойка с трепангом без спирта", image: trepangHoneyTinctureImg, price: "", unit: "шт", rating: 5, description: "", category: "Настойки", weight: "250-500 мл", taste: "Сладко-медовый, мягкий", hidden: true },
-  { id: "hairy-crab", name: "Краб мохнаторукий", image: hairyCrabImg, price: "", unit: "кг", rating: 5, description: "", category: "Ракообразные", weight: "80-250 г / шт", taste: "Сливочная икра, сладкое мясо" },
+  { id: "hairy-crab", name: "Краб мохнаторукий", image: hairyCrabImg, price: "1200", unit: "кг", rating: 5, description: "", category: "Ракообразные", weight: "80-250 г / шт", taste: "Сливочная икра, сладкое мясо" },
 ];
 
 const ProductsSection = () => {

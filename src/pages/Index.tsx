@@ -3,6 +3,9 @@ import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ProductsSection from "@/components/ProductsSection";
 import AboutSection from "@/components/AboutSection";
+import JourneySection from "@/components/JourneySection";
+import StatsSection from "@/components/StatsSection";
+import DeliveryMapSection from "@/components/DeliveryMapSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -24,7 +27,7 @@ const Index = () => {
     : "Buy live seafood from Sakhalin: vongole, oysters, scallops, spizula, sea urchin. Direct supply from Sakhalin, 24-hour delivery across Russia. Rakushka65.";
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-clip">
       <SEOHead title={title} description={description} lang={lang} jsonLd={[organizationSchema, websiteSchema, localBusinessSchema]} />
       <WaveBackground />
       <FloatingParticles />
@@ -34,6 +37,9 @@ const Index = () => {
         <BenefitsSection />
         <ProductsSection />
         <AboutSection />
+        <JourneySection />
+        <StatsSection />
+        <DeliveryMapSection />
         <ReviewsSection />
         <ContactForm />
       </main>

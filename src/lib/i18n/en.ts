@@ -42,7 +42,7 @@ export const en: Translations = {
     badge: "About us and our craft",
     title: "Rakushka65, ",
     titleAccent: "Home of live seafood",
-    yearsLabel: "10+",
+    yearsLabel: "25+",
     yearsDesc: "years in the market",
     paragraphs: [
       "We live on Sakhalin and harvest seafood in the pristine waters off the island's coast, where the ocean is at its purest.",

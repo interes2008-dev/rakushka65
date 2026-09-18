@@ -31,6 +31,7 @@ export const GOALS = {
   EMAIL_CLICK: "email_click",       // клик по email
   TELEGRAM_CLICK: "telegram_click", // клик по Telegram
   MAX_CLICK: "max_click",           // клик по MAX
+  WHATSAPP_CLICK: "whatsapp_click", // клик по WhatsApp
   CATALOG_CLICK: "catalog_click",   // переход в каталог из hero
   PRODUCT_VIEW: "product_view",     // просмотр карточки товара
 } as const;

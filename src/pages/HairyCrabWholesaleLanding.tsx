@@ -1,13 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Truck, Thermometer, FileCheck, Snowflake, Send, ShieldCheck, PackageCheck, CalendarClock } from "lucide-react";
+import { Truck, Thermometer, FileCheck, Snowflake, Send, ShieldCheck, PackageCheck, CalendarClock, Phone, MessageCircle, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
-import { supabase } from "@/integrations/supabase/client";
 import { reachGoal, GOALS } from "@/lib/metrika";
 import heroImg from "@/assets/blog-hairy-crab-underwater.webp";
 import cookedImg from "@/assets/blog-hairy-crab-cooked.webp";
@@ -17,49 +15,6 @@ const SITE = "https://rakushka65.ru";
 const HairyCrabWholesaleLanding = () => {
   const { lang } = useLanguage();
   const isEn = lang === "en";
-
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [city, setCity] = useState("");
-  const [volume, setVolume] = useState("");
-  const [kind, setKind] = useState("");
-  const [comment, setComment] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
-
-  const kindOptions = isEn
-    ? ["Roe females", "Males", "Mix", "Not sure yet"]
-    : ["Самки с икрой", "Самцы", "Микс", "Пока не решил"];
-  const volumeOptions = isEn
-    ? ["up to 20 kg / week", "20-50 kg / week", "50-100 kg / week", "over 100 kg / week"]
-    : ["до 20 кг / нед", "20-50 кг / нед", "50-100 кг / нед", "более 100 кг / нед"];
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (status === "sending") return;
-    if (!name.trim() || !/^[\d\s\-+()]{5,20}$/.test(phone.trim())) {
-      setStatus("error");
-      return;
-    }
-    setStatus("sending");
-    const composed = [
-      "ОПТ: краб мохнаторукий",
-      city.trim() ? `Город: ${city.trim()}` : "",
-      volume ? `Объём: ${volume}` : "",
-      kind ? `Тип: ${kind}` : "",
-      comment.trim() ? `Комментарий: ${comment.trim()}` : "",
-    ].filter(Boolean).join(". ");
-    try {
-      const { error } = await supabase.functions.invoke("send-max", {
-        body: { name: name.trim(), phone: phone.trim(), comment: composed },
-      });
-      if (error) throw error;
-      reachGoal(GOALS.FORM_SUBMIT, { source: "hairy_crab_wholesale" });
-      setStatus("sent");
-      setName(""); setPhone(""); setCity(""); setVolume(""); setKind(""); setComment("");
-    } catch {
-      setStatus("error");
-    }
-  };
 
   const faq = isEn
     ? [
@@ -137,7 +92,7 @@ const HairyCrabWholesaleLanding = () => {
       ];
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-clip">
       <SEOHead
         title={isEn ? "Hairy Crab Wholesale from Sakhalin, Live Supply for Restaurants | Rakushka65" : "Мохнаторукий краб оптом с Сахалина, живая поставка ресторанам | Ракушка65"}
         description={isEn ? "Order live hairy crab wholesale from Sakhalin. Graded batches, roe females separately, cold-chain delivery, documents. Send a request and get the price list." : "Заказать живого мохнаторукого краба оптом с Сахалина. Калибровка, самки с икрой отдельно, живая доставка, документы. Оставьте заявку и получите прайс."}
@@ -225,80 +180,60 @@ const HairyCrabWholesaleLanding = () => {
               <img src={cookedImg} alt={isEn ? "Steamed hairy crab served in a restaurant" : "Мохнаторукий краб на пару, ресторанная подача"} className="w-full h-full object-cover" width={1200} height={800} />
             </div>
 
-            <div className="bg-sand-glass rounded-2xl p-6 sm:p-8 border border-border/40">
+            <div className="bg-sand-glass rounded-2xl p-6 sm:p-8 border border-border/40 flex flex-col justify-center">
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-2">
-                {isEn ? "Wholesale request" : "Оптовая заявка"}
+                {isEn ? "Get the wholesale price list" : "Получить оптовый прайс"}
               </h2>
               <p className="font-body text-sm text-muted-foreground mb-6">
-                {isEn ? "Send your details and we reply with a price list within a day." : "Оставьте данные, пришлём прайс в течение дня."}
+                {isEn
+                  ? "Call or write in a messenger: tell us your city, weekly volume and whether you need roe females, males or a mix. We reply with a price list the same day."
+                  : "Позвоните или напишите в мессенджер: назовите город, объём в неделю и что нужно (самки с икрой, самцы или микс). Прайс пришлём в тот же день."}
               </p>
 
-              {status === "sent" ? (
-                <div className="text-center py-10">
-                  <div className="w-14 h-14 rounded-full bg-primary/15 flex items-center justify-center mx-auto mb-4">
-                    <ShieldCheck className="w-6 h-6 text-primary" />
-                  </div>
-                  <p className="font-heading text-lg font-semibold text-primary">
-                    {isEn ? "Request sent, we will reply soon!" : "Заявка ушла, скоро свяжемся!"}
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="w-name" className="block font-body text-sm text-muted-foreground mb-1.5">{isEn ? "Name" : "Имя"}</label>
-                      <input id="w-name" type="text" value={name} onChange={(e) => { setName(e.target.value); if (status === "error") setStatus("idle"); }} maxLength={100} required placeholder={isEn ? "How to address you" : "Как к вам обращаться"} className="w-full rounded-lg bg-background/60 border border-border/50 px-4 py-3 font-body text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 transition-colors" />
-                    </div>
-                    <div>
-                      <label htmlFor="w-phone" className="block font-body text-sm text-muted-foreground mb-1.5">{isEn ? "Phone" : "Телефон"}</label>
-                      <input id="w-phone" type="tel" value={phone} onChange={(e) => { setPhone(e.target.value); if (status === "error") setStatus("idle"); }} maxLength={20} required placeholder="+7 (___) ___-__-__" className="w-full rounded-lg bg-background/60 border border-border/50 px-4 py-3 font-body text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 transition-colors" />
-                    </div>
-                  </div>
+              <div className="space-y-3">
+                <a
+                  href="tel:+79147690097"
+                  onClick={() => reachGoal(GOALS.PHONE_CLICK)}
+                  className="flex items-center gap-3 w-full px-5 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-[1.02]"
+                >
+                  <Phone className="w-5 h-5 shrink-0" />
+                  <span>+7 (914) 769-00-97</span>
+                </a>
 
-                  <div>
-                    <label htmlFor="w-city" className="block font-body text-sm text-muted-foreground mb-1.5">{isEn ? "City / region" : "Город / регион"}</label>
-                    <input id="w-city" type="text" value={city} onChange={(e) => setCity(e.target.value)} maxLength={100} placeholder={isEn ? "Where to deliver" : "Куда доставлять"} className="w-full rounded-lg bg-background/60 border border-border/50 px-4 py-3 font-body text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 transition-colors" />
-                  </div>
+                <a
+                  href="https://t.me/+79147690097"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => reachGoal(GOALS.TELEGRAM_CLICK)}
+                  className="flex items-center gap-3 w-full px-5 py-4 border border-border/50 font-body font-semibold rounded-lg hover:border-primary/50 hover:text-primary transition-colors"
+                >
+                  <Send className="w-5 h-5 shrink-0" />
+                  <span>Telegram</span>
+                </a>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="w-volume" className="block font-body text-sm text-muted-foreground mb-1.5">{isEn ? "Volume" : "Объём"}</label>
-                      <select id="w-volume" value={volume} onChange={(e) => setVolume(e.target.value)} className="w-full rounded-lg bg-background/60 border border-border/50 px-4 py-3 font-body text-foreground focus:outline-none focus:border-primary/60 transition-colors">
-                        <option value="">{isEn ? "Select volume" : "Выберите объём"}</option>
-                        {volumeOptions.map((v) => <option key={v} value={v}>{v}</option>)}
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="w-kind" className="block font-body text-sm text-muted-foreground mb-1.5">{isEn ? "Type" : "Тип"}</label>
-                      <select id="w-kind" value={kind} onChange={(e) => setKind(e.target.value)} className="w-full rounded-lg bg-background/60 border border-border/50 px-4 py-3 font-body text-foreground focus:outline-none focus:border-primary/60 transition-colors">
-                        <option value="">{isEn ? "Select type" : "Выберите тип"}</option>
-                        {kindOptions.map((k) => <option key={k} value={k}>{k}</option>)}
-                      </select>
-                    </div>
-                  </div>
+                <a
+                  href="https://max.ru/+79147690097"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => reachGoal(GOALS.MAX_CLICK)}
+                  className="flex items-center gap-3 w-full px-5 py-4 border border-border/50 font-body font-semibold rounded-lg hover:border-primary/50 hover:text-primary transition-colors"
+                >
+                  <MessageCircle className="w-5 h-5 shrink-0" />
+                  <span>MAX</span>
+                </a>
 
-                  <div>
-                    <label htmlFor="w-comment" className="block font-body text-sm text-muted-foreground mb-1.5">{isEn ? "Comment" : "Комментарий"}</label>
-                    <textarea id="w-comment" value={comment} onChange={(e) => setComment(e.target.value)} maxLength={1000} rows={3} placeholder={isEn ? "Frequency, packaging, questions" : "Периодичность, упаковка, вопросы"} className="w-full rounded-lg bg-background/60 border border-border/50 px-4 py-3 font-body text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 transition-colors resize-none" />
-                  </div>
+                <a
+                  href="mailto:interes2015@gmail.com"
+                  className="flex items-center gap-3 w-full px-5 py-4 border border-border/50 font-body font-semibold rounded-lg hover:border-primary/50 hover:text-primary transition-colors"
+                >
+                  <Mail className="w-5 h-5 shrink-0" />
+                  <span>interes2015@gmail.com</span>
+                </a>
+              </div>
 
-                  {status === "error" && (
-                    <p className="font-body text-sm text-destructive text-center">
-                      {isEn ? "Could not send. Please check the phone or write in a messenger." : "Не удалось отправить. Проверьте телефон или напишите в мессенджер."}
-                    </p>
-                  )}
-
-                  <button type="submit" disabled={status === "sending"} className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-[1.02] disabled:opacity-60 disabled:hover:scale-100">
-                    <Send className="w-5 h-5" />
-                    {status === "sending" ? (isEn ? "Sending..." : "Отправляем...") : (isEn ? "Request the price list" : "Запросить прайс")}
-                  </button>
-
-                  <p className="font-body text-xs text-muted-foreground text-center">
-                    {isEn ? "By clicking the button you agree to our " : "Нажимая кнопку, вы принимаете "}
-                    <Link to="/privacy" className="text-primary hover:underline">{isEn ? "privacy policy" : "политику конфиденциальности"}</Link>
-                  </p>
-                </form>
-              )}
+              <p className="font-body text-xs text-muted-foreground mt-5">
+                {isEn ? "We take orders 24/7 and usually reply within an hour." : "Принимаем заказы 24/7, обычно отвечаем в течение часа."}
+              </p>
             </div>
           </section>
 

@@ -6,6 +6,8 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 const reviewsData = {
   ru: [
     { name: "Команда «Посейдон»", role: "Партнёры, Сочи", text: "Ребята, вы - наши люди! Когда на Чёрном море подают сахалинские устрицы и гости не верят, что такое возможно, мы просто улыбаемся. Ракушка65 - больше чем поставщик, это друзья, которые никогда не подводят. Обнимаем с берега на берег! 🤝", initials: "П" },
+    { name: "Алексей", role: "«Наутилус Групп», Москва", text: "Заказали пробную партию гребешка на юбилей шефа, а теперь он требует его каждую неделю, спасибо за нового зависимого 😄 Приезжает живой и бодрый, будто только что из моря вытащили. Наутилус одобряет, берём ещё!", initials: "А" },
+    { name: "Евгений", role: "«Деликатес 74», Москва", text: "Работаем не первый месяц, и ни разу осечки: сказали, что приедет живым, значит живым и приедет. Устрицы и вонголе у наших клиентов улетают на ура. Ребята, вы нам продажи делаете, так держать!", initials: "Е" },
     { name: "Алексей Морозов", role: "Шеф-повар, ресторан «Берег»", text: "Работаем с Ракушка65 уже два года. Качество устриц и гребешков на высоте. Гости в восторге, а для нас главное - стабильные поставки.", initials: "АМ" },
     { name: "Марина Светлова", role: "Управляющая, отель «Бриз»", text: "Наконец нашли поставщика, которому можно доверять. Морепродукты всегда свежие, доставка точно в срок. Рекомендую коллегам по цеху.", initials: "МС" },
     { name: "Дмитрий Волков", role: "Гурман, частный клиент", text: "Заказываю устрицы для семейных ужинов. Впечатляет подход: даже упаковка продумана до мелочей. Чувствуешь, что тебя ценят как клиента.", initials: "ДВ" },
@@ -19,6 +21,8 @@ const reviewsData = {
   ],
   en: [
     { name: "Team 'Poseidon'", role: "Partners, Sochi", text: "Guys, you're our people! When Sakhalin oysters are served on the Black Sea coast and guests can't believe it's possible - we just smile. Rakushka65 is more than a supplier, they're friends who never let you down. Hugs from coast to coast! 🤝", initials: "P" },
+    { name: "Alexei", role: "'Nautilus Group', Moscow", text: "We ordered a trial batch of scallops for the chef's birthday, and now he wants them every week, thanks for the new addiction 😄 They arrive alive and lively, like straight out of the sea. Nautilus approves, we're taking more!", initials: "A" },
+    { name: "Evgeny", role: "'Delikates 74', Moscow", text: "We've been working together for a few months, not a single miss: if they say it'll come alive, it comes alive. Oysters and vongole fly off with our clients. Guys, you're making our sales, keep it up!", initials: "E" },
     { name: "Alexei Morozov", role: "Head Chef, restaurant 'Bereg'", text: "We've been working with Rakushka65 for two years. The quality of oysters and scallops is top-notch. Guests are delighted, and for us the key is consistency of supply.", initials: "AM" },
     { name: "Marina Светлова", role: "Manager, hotel 'Breeze'", text: "Finally found a supplier we can trust. Seafood is always fresh, delivery right on time. I recommend them to all colleagues in the industry.", initials: "MS" },
     { name: "Dmitry Volkov", role: "Gourmet, private client", text: "I order oysters for family dinners. The attention to detail is impressive: even the packaging is perfectly thought out. You feel valued as a client.", initials: "DV" },

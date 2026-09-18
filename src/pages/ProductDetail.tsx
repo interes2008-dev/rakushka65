@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import { products } from "@/components/ProductsSection";
+import { getBlogImage } from "@/lib/blog/images";
 import PhotoGallery from "@/components/PhotoGallery";
 import { scallopPhotos } from "@/lib/media/scallopPhotos";
 import { oysterPhotos } from "@/lib/media/oysterPhotos";
@@ -35,7 +36,7 @@ const ProductDetail = () => {
 
   if (!product) {
     return (
-      <div className="relative min-h-screen overflow-x-hidden">
+      <div className="relative min-h-screen overflow-x-clip">
         <SEOHead title="404 - Rakushka65" description="Страница не найдена" noindex />
         <Header />
         <main className="relative z-10 pt-28 pb-20 container mx-auto px-4 text-center">
@@ -446,7 +447,7 @@ const ProductDetail = () => {
                   >
                     <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden">
                       <img
-                        src={a.image}
+                        src={getBlogImage(a.image)}
                         alt={a.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         loading="lazy"

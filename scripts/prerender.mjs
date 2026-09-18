@@ -185,7 +185,7 @@ const PRODUCTS = {
   spizula: { name: "Спизула сахалинская", price: "500", rating: 4, og: "og-spizula.jpg" },
   "sea-urchin": { name: "Ёж морской сахалинский", price: "500", rating: 5, og: "og-sea-urchin.jpg" },
   "trepang-tincture": { name: "Настойка на трепанге", price: "", rating: 5, og: "og-image.jpg" },
-  "hairy-crab": { name: "Краб мохнаторукий живой", price: "", rating: 5, og: "og-hairy-crab.jpg" },
+  "hairy-crab": { name: "Краб мохнаторукий живой", price: "1200", rating: 5, og: "og-hairy-crab.jpg" },
 };
 
 // --- Схемы (копии из src/lib/seo/schemas.ts) ---

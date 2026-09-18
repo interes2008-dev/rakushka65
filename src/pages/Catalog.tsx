@@ -52,7 +52,7 @@ const Catalog = () => {
   });
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-clip">
       <SEOHead title={title} description={description} lang={lang} ogImage="https://rakushka65.ru/og-catalog.jpg" jsonLd={[breadcrumb, itemList]} />
       <FloatingParticles />
       <Header />

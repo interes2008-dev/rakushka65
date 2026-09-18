@@ -70,7 +70,7 @@ const HairyCrabWholesale = () => {
 
           <h2>How to start</h2>
           <p>
-            Tell us your city, target volume and whether you need roe females, males or a mix. We send a wholesale price list tied to volume and season, agree the route and timing, and lock the first shipment. The fastest way is the <Link to="/opt/mohnatorukij-krab#zayavka">wholesale request form</Link>. See the product page for <Link to="/catalog/hairy-crab">live hairy crab</Link>, and read how we keep it alive across the country in <Link to="/blog/zhivoj-mohnatorukij-krab-dostavka">live hairy crab delivery</Link>. New to the species? Start with <Link to="/blog/chto-takoe-mohnatorukij-krab">what the hairy crab is</Link>.
+            Tell us your city, target volume and whether you need roe females, males or a mix. We send a wholesale price list tied to volume and season, agree the route and timing, and lock the first shipment. The fastest way is to <Link to="/opt/mohnatorukij-krab#zayavka">call or message us</Link>. See the product page for <Link to="/catalog/hairy-crab">live hairy crab</Link>, and read how we keep it alive across the country in <Link to="/blog/zhivoj-mohnatorukij-krab-dostavka">live hairy crab delivery</Link>. New to the species? Start with <Link to="/blog/chto-takoe-mohnatorukij-krab">what the hairy crab is</Link>.
           </p>
           <p>
             <strong>Rakushka65</strong>, direct wholesale from Sakhalin. Live, graded, documented.
@@ -102,7 +102,7 @@ const HairyCrabWholesale = () => {
 
           <h2>Как начать работать</h2>
           <p>
-            Напишите город, целевой объём и что нужно: самки с икрой, самцы или микс. Мы пришлём оптовый прайс, привязанный к объёму и сезону, согласуем маршрут и сроки и закрепим первую отгрузку. Быстрее всего через <Link to="/opt/mohnatorukij-krab#zayavka">форму оптовой заявки</Link>. Страница товара: <Link to="/catalog/hairy-crab">живой мохнаторукий краб</Link>. Как мы довозим его живым через всю страну, читайте в статье <Link to="/blog/zhivoj-mohnatorukij-krab-dostavka">доставка живого мохнаторукого краба</Link>. Если краб для вас новый, начните с материала <Link to="/blog/chto-takoe-mohnatorukij-krab">что такое мохнаторукий краб</Link>.
+            Напишите город, целевой объём и что нужно: самки с икрой, самцы или микс. Мы пришлём оптовый прайс, привязанный к объёму и сезону, согласуем маршрут и сроки и закрепим первую отгрузку. Быстрее всего <Link to="/opt/mohnatorukij-krab#zayavka">позвонить или написать в мессенджер</Link>. Страница товара: <Link to="/catalog/hairy-crab">живой мохнаторукий краб</Link>. Как мы довозим его живым через всю страну, читайте в статье <Link to="/blog/zhivoj-mohnatorukij-krab-dostavka">доставка живого мохнаторукого краба</Link>. Если краб для вас новый, начните с материала <Link to="/blog/chto-takoe-mohnatorukij-krab">что такое мохнаторукий краб</Link>.
           </p>
           <p>
             <strong>Ракушка65</strong>, прямой опт с Сахалина. Живой, с калибровкой, с документами.

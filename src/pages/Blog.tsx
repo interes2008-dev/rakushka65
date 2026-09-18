@@ -92,7 +92,7 @@ const Blog = () => {
   }, [allArticles, activeTag, search, sortBy]);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-clip">
       <SEOHead
         title={isEn
           ? "Sakhalin seafood blog - recipes, guides, tips | Rakushka65"

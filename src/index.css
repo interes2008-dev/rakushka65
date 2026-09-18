@@ -553,3 +553,31 @@
     animation: ebisu-float 6s ease-in-out infinite, ebisu-glow 4.5s ease-in-out infinite;
   }
 }
+
+/* Карта доставки: прорисовка маршрутов и пульс точки отправления */
+@keyframes route-draw {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes route-pulse {
+  0%, 100% { r: 6; opacity: 0.55; }
+  50% { r: 14; opacity: 0; }
+}
+@keyframes city-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.route-arc {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+.route-city { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .route-arc { animation: route-draw 1.6s ease-out forwards; }
+  .route-city { animation: city-in 0.5s ease-out forwards; }
+  .route-ping { animation: route-pulse 2.4s ease-out infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .route-arc { stroke-dashoffset: 0; }
+  .route-city { opacity: 1; }
+}

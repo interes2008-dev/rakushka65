@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Play } from "lucide-react";
 import { ScallopPhoto } from "@/lib/media/scallopPhotos";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -43,6 +43,13 @@ const PhotoGallery = ({ photos, title, className = "" }: PhotoGalleryProps) => {
               height={600}
               className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
             />
+            {p.video && (
+              <span className="absolute inset-0 flex items-center justify-center bg-background/25 transition-colors group-hover:bg-background/10">
+                <span className="w-14 h-14 rounded-full bg-primary/90 text-primary-foreground flex items-center justify-center shadow-lg">
+                  <Play className="w-6 h-6 ml-0.5" fill="currentColor" />
+                </span>
+              </span>
+            )}
           </motion.button>
         ))}
       </div>
@@ -66,14 +73,32 @@ const PhotoGallery = ({ photos, title, className = "" }: PhotoGalleryProps) => {
             >
               <X className="w-5 h-5" />
             </button>
-            <motion.img
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.95 }}
-              src={photos[active].url}
-              alt={alt(photos[active])}
-              className="max-h-[85vh] max-w-full rounded-xl object-contain"
-            />
+            {photos[active].video ? (
+              <motion.video
+                initial={{ scale: 0.95 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.95 }}
+                poster={photos[active].url}
+                controls
+                autoPlay
+                loop
+                playsInline
+                onClick={(e) => e.stopPropagation()}
+                className="max-h-[85vh] max-w-full rounded-xl"
+              >
+                <source src={photos[active].video!.replace(/\.mp4$/, ".webm")} type="video/webm" />
+                <source src={photos[active].video} type="video/mp4" />
+              </motion.video>
+            ) : (
+              <motion.img
+                initial={{ scale: 0.95 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.95 }}
+                src={photos[active].url}
+                alt={alt(photos[active])}
+                className="max-h-[85vh] max-w-full rounded-xl object-contain"
+              />
+            )}
           </motion.div>
         )}
       </AnimatePresence>

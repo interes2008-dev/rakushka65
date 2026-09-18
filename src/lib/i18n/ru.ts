@@ -42,7 +42,7 @@ export const ru: Translations = {
     badge: "О нас",
     title: "Ракушка65: ",
     titleAccent: "территория живых морепродуктов с Сахалина",
-    yearsLabel: "10+",
+    yearsLabel: "25+",
     yearsDesc: "лет в деле",
     paragraphs: [
       "Мы живем на Сахалине и добываем морепродукты в чистых прибрежных водах, где океан полон сил.",
