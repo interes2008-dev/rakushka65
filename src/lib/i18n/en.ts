@@ -160,7 +160,7 @@ export const en: Translations = {
     "trepang-tincture": "Sea cucumber tincture with raw honey, a traditional Far Eastern elixir. A natural source of collagen, iodine and 40+ trace elements.",
     "trepang-honey-tincture": "Alcohol-free honey sea cucumber elixir, gentle Far Eastern remedy for immunity and vitality. Suitable for children, seniors and those who avoid alcohol.",
     crab: "Sakhalin spiny crab, powerful claws conceal incredibly tender, sweet meat with a delicate aroma of the cold ocean. The true king of Far Eastern cuisine.",
-    "hairy-crab": "Live hairy crab with rich roe and sweet meat. Wholesale supply for restaurants, delivered alive.",
+    "hairy-crab": "Live hairy crab from Sakhalin. Wholesale supply for restaurants, delivered alive in thermoboxes.",
   },
   productFullDescriptions: {
     scallop: "Sakhalin scallop, renowned for its delicate, slightly sweet flesh and impressive size. A true delicacy with incredibly tender texture and a sweet aftertaste. Perfect for tartare, ceviche, or quick grilling.",
@@ -174,7 +174,7 @@ export const en: Translations = {
     "trepang-tincture": "Sea cucumber tincture with natural honey, a traditional Far Eastern elixir, known in Eastern medicine for over 2,000 years. Made from fresh Sakhalin sea cucumber through long maceration in alcohol with the addition of taiga honey. Rich in collagen, chondroitin, iodine, selenium, echinochrome and more than 40 biologically active trace elements. Used as a general tonic to boost immunity, restore energy, normalize metabolism and support cardiovascular health. An alcohol-free honey version is also available, a gentle option for children, seniors and those who must avoid alcohol (recipe and dosing schedule available in our blog). Has contraindications, consult your doctor before use.",
     "trepang-honey-tincture": "Alcohol-free honey sea cucumber elixir, a gentle Far Eastern remedy made from fresh Sakhalin sea cucumber and natural taiga honey, with no alcohol at all. Minced trepang is slowly macerated in liquid honey, preserving collagen, chondroitin, iodine, selenium, echinochrome and over 40 bioactive trace elements, complemented by the enzymes and antioxidants of raw honey. Suitable for children aged 12+, seniors, athletes and anyone who must avoid alcohol. Supports immunity, accelerates recovery, and benefits joints, skin and blood vessels. Consult your doctor before use, possible allergy to bee products.",
     crab: "Sakhalin spiny crab, one of the most coveted delicacies of the Far Eastern seas. Its powerful shell, covered in spines, conceals remarkably tender and juicy meat with natural sweetness. Every claw is a concentrate of pure oceanic flavor. Serve with melted butter and a wedge of lemon, or steam to preserve all the pristine juiciness of cold Sakhalin waters.",
-    "hairy-crab": "The hairy crab, also called the mitten or Shanghai crab, is instantly recognizable by the dark furry mittens on its claws. Its true value is the roe: in autumn, females carry dense, orange, nutty roe that made this crab a delicacy across Asia. Males offer more sweet, jelly-like fat. We ship it alive in temperature-controlled boxes and keep a separate price list for restaurants and wholesale buyers. Autumn is peak season, so reserve volumes early.",
+    "hairy-crab": "The hairy crab, also called the mitten or Shanghai crab, is instantly recognizable by the dark furry mittens on its claws. We ship it alive in temperature-controlled thermoboxes, so it arrives active with a firm shell. Batches are graded by size and every shipment comes with veterinary documents. We keep a separate price list for restaurants and wholesale buyers, and in season volumes should be reserved in advance.",
   },
   productCategories: {
     "Моллюски": "Mollusks",
@@ -209,7 +209,7 @@ export const en: Translations = {
     "trepang-tincture": "Rich, oceanic with honey",
     "trepang-honey-tincture": "Sweet honey, gentle",
     crab: "Sweet, juicy",
-    "hairy-crab": "Creamy roe, sweet meat",
+    "hairy-crab": "Firm meat, clean sea flavour",
   },
   unitKg: "kg",
 };

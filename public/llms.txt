@@ -1,34 +1,67 @@
-# Rakushka65
+# Ракушка65 (Rakushka65)
 
-> Rakushka65 - direct supplier of live seafood from Sakhalin, Russia. Live oysters, vongole (Manila clams), scallops, spisula, sea urchin, rapana, trepang and other premium delicacies. Russia-wide delivery within 24 hours.
+> Прямой поставщик живых морепродуктов с Сахалина. Собственный промысел, свои бассейны передержки, отгрузка авиарейсами по России. Работаем с 2000 года, без посредников, ветеринарные документы и «Меркурий» на каждую партию.
 
-The site is bilingual (Russian default, English) and includes a product catalog, an editorial blog, and a contact form. All deliveries originate from Sakhalin.
+> Direct supplier of live seafood from Sakhalin, Russia. Own harvesting, own holding tanks, shipping by air across Russia. Working since 2000, no middlemen, veterinary documents with every batch.
 
-## Catalog
+Сайт: https://rakushka65.ru
+Город: Южно-Сахалинск, ул. 4-Железнодорожная, 18, стр. 1
+Телефон: +7 (914) 769-00-97
+Почта: interes2015@gmail.com
+Мессенджеры: Telegram, MAX, WhatsApp (тот же номер)
+Приём заказов: круглосуточно, ответ обычно в течение часа
+Языки сайта: русский (по умолчанию) и английский
 
-- [Catalog](/catalog): Full product list with prices and categories.
-- [Live oysters](/catalog/oysters): Sakhalin live Pacific oysters.
-- [Vongole](/catalog/vongole): Live Manila clams (Ruditapes philippinarum).
-- [Scallops](/catalog/scallop): Live Sakhalin sea scallops.
-- [Spisula](/catalog/spisula): Sakhalin spisula clams.
-- [Sea urchin](/catalog/sea-urchin): Live Sakhalin sea urchin.
-- [Trepang](/catalog/trepang): Sea cucumber trepang.
-- [Trepang tincture](/catalog/trepang-tincture): Honey-based trepang tincture.
+## Ключевые факты
 
-## Blog
+- Доставка авиарейсами в любой город России. Прямые рейсы с Сахалина: Москва, Новосибирск, Хабаровск, Владивосток. Дальше по стране через московский хаб.
+- Срок от бассейна до получателя обычно 24-48 часов.
+- Продукт живой, едет в термобоксах с хладагентом и контролем температуры.
+- Партии калибруются по размеру. Слабые и повреждённые экземпляры в отгрузку не идут.
+- Есть самовывоз со склада в Южно-Сахалинске и отправка Яндекс-доставкой по городу.
+- Работаем и с частными заказами, и оптом с ресторанами, рынками, закупщиками.
 
-- [Blog](/blog): Editorial articles on Sakhalin seafood - selection, storage, recipes, seasons.
-- [What is vongole](/blog/chto-takoe-vongole): Manila clam explainer.
-- [Vongole pasta](/blog/pasta-s-vongole): Classic spaghetti alle vongole recipe.
-- [Live scallop from Sakhalin](/blog/zhivoj-morskoj-grebeshok-sahalin): Origin and seasonality.
-- [How to store live scallop](/blog/kak-hranit-zhivogo-grebeshka): Step-by-step storage guide.
-- [Live scallop delivery across Russia](/blog/dostavka-zhivogo-grebeshka-rossiya): Logistics and packaging.
-- [Sakhalin oysters](/blog/ustritsy-sahalin): About Sakhalin Pacific oysters.
-- [How to open an oyster](/blog/kak-otkryt-ustritsu): Shucking guide.
-- [Trepang honey tincture](/blog/medovaya-nastojka-trepanga): Recipe and benefits.
+## Каталог
 
-## Optional
+- [Каталог](https://rakushka65.ru/catalog): все позиции с ценами и категориями.
+- [Морской гребешок живой](https://rakushka65.ru/catalog/scallop): сахалинский гребешок, фотогалерея и видео с производства.
+- [Устрицы живые](https://rakushka65.ru/catalog/oysters): тихоокеанские устрицы с Сахалина, 600 руб за штуку.
+- [Вонголе живые](https://rakushka65.ru/catalog/vongole): Ruditapes philippinarum, 600 руб за кг.
+- [Спизула](https://rakushka65.ru/catalog/spizula): сахалинская спизула.
+- [Морской ёж](https://rakushka65.ru/catalog/sea-urchin): живой сахалинский морской ёж.
+- [Краб мохнаторукий живой](https://rakushka65.ru/catalog/hairy-crab): Eriocheir japonica, 1200 руб за кг, обычный вес 80-250 г штука.
+- [Настойка на трепанге](https://rakushka65.ru/catalog/trepang-tincture): настойка на дальневосточном трепанге.
+- [Медовая настойка с трепангом](https://rakushka65.ru/catalog/trepang-honey-tincture).
 
-- [Certificate](/certificate): Quality certificates.
-- [Privacy](/privacy): Privacy policy.
-- [Offer](/offer): Public offer / terms.
+## Оптовые поставки
+
+- [Мохнаторукий краб оптом](https://rakushka65.ru/opt/mohnatorukij-krab): условия для ресторанов и закупщиков, калибровка по размеру, холодовая цепь, документы, прайс по запросу.
+
+## Статьи о мохнаторуком крабе
+
+- [Что такое мохнаторукий краб](https://rakushka65.ru/blog/chto-takoe-mohnatorukij-krab): как выглядит, размер, сезон, как понять, что краб хороший.
+- [Японский или китайский](https://rakushka65.ru/blog/yaponskiy-ili-kitayskiy-mohnatorukij-krab): Eriocheir japonica против Eriocheir sinensis, ареал, размеры, промысел с 1998 года.
+- [Краб, который живёт в реке](https://rakushka65.ru/blog/mohnatorukij-krab-iz-reki-v-more): жизнь между рекой и морем, миграции до 50 км вверх по рекам, ареал от Амурского лимана до Тайваня.
+- [Деликатес у нас, стихийное бедствие в Европе](https://rakushka65.ru/blog/mohnatorukij-krab-v-evrope): вторжение в Европу с 1912 года, ущерб около 80 млн евро, вид в списке ста худших инвазивных.
+- [Как готовить мохнаторукого краба](https://rakushka65.ru/blog/kak-gotovit-mohnatorukogo-kraba): пар против варки, почему нельзя бросать живого в кипяток, температуры безопасности для речного краба.
+- [Кани-маки-дзиру](https://rakushka65.ru/blog/sup-iz-mohnatorukogo-kraba): японский суп, где краба толкут вместе с панцирем, приём с заморозкой для густого бульона.
+- [Шанхайская классика](https://rakushka65.ru/blog/shanhajskaya-podacha-mohnatorukogo-kraba): пар и соус из чёрного уксуса с имбирём, порядок разбора, почему «пьяный краб» рискован.
+
+## Статьи о гребешке, устрицах и вонголе
+
+- [Блог](https://rakushka65.ru/blog): все материалы о выборе, хранении, доставке и готовке.
+- [Морской гребешок с Сахалина](https://rakushka65.ru/blog/morskoj-grebeshok-sahalin): что это за гребешок и чем отличается.
+- [Как хранить живого гребешка](https://rakushka65.ru/blog/kak-hranit-zhivogo-grebeshka): пошагово.
+- [Что такое вонголе](https://rakushka65.ru/blog/chto-takoe-vongole): Ruditapes philippinarum простыми словами.
+- [Паста с вонголе](https://rakushka65.ru/blog/pasta-s-vongole): классический рецепт.
+- [Как открыть устрицу](https://rakushka65.ru/blog/kak-otkryt-ustritsu): техника вскрытия.
+
+## Как заказать
+
+Формы заявки на сайте нет намеренно. Заказ оформляется звонком или сообщением в мессенджер: назовите город, объём и нужный размер, в ответ придёт цена и сроки. Для опта прайс присылается в тот же день.
+
+## О компании
+
+- [О нас](https://rakushka65.ru/#about): кто мы и как работаем.
+- [Отзывы](https://rakushka65.ru/#reviews): отзывы партнёров и клиентов.
+- [Контакты](https://rakushka65.ru/#contact): телефон, почта, адрес, мессенджеры.

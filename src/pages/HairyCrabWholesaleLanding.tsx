@@ -19,13 +19,13 @@ const HairyCrabWholesaleLanding = () => {
   const faq = isEn
     ? [
         { q: "What is the minimum wholesale order?", a: "We agree the minimum per city and route, since live delivery is planned around a flight. Tell us your target weekly volume and we will confirm what works for your region." },
-        { q: "Can I order only roe females?", a: "Yes. Females with roe ship as a separate graded lot. In the autumn season this is the most requested option, so reserve volumes ahead." },
+        { q: "Can I choose the size?", a: "Yes. Batches are graded by size, usually 80 to 250 grams per piece. Tell us the calibre you need and we will hold it for your shipment." },
         { q: "Do you provide documents?", a: "Every batch ships with veterinary papers and traceability, ready for chain and audit requirements." },
         { q: "How fast is delivery?", a: "Typically 24 to 48 hours from the Sakhalin holding tank to your city by temperature-controlled air freight." },
       ]
     : [
         { q: "Какой минимальный объём опта?", a: "Минимум согласуем под город и маршрут, живая доставка планируется под рейс. Напишите целевой объём в неделю, подтвердим, что реально по вашему региону." },
-        { q: "Можно заказать только самок с икрой?", a: "Да. Самки с икрой идут отдельным откалиброванным лотом. В осенний сезон это самый частый запрос, объёмы лучше бронировать заранее." },
+        { q: "Можно выбрать размер?", a: "Да. Партии калибруем по размеру, обычно 80-250 граммов штука. Скажите нужный калибр, закрепим его за вашей отгрузкой." },
         { q: "Даёте документы на партию?", a: "Каждая партия едет с ветеринарными документами и прослеживаемостью, под требования сетей и аудита." },
         { q: "Как быстро доставка?", a: "Обычно 24-48 часов от сахалинского бассейна до вашего города авиа с температурным контролем." },
       ];
@@ -36,8 +36,8 @@ const HairyCrabWholesaleLanding = () => {
       "@type": "Product",
       name: isEn ? "Live hairy crab, wholesale from Sakhalin" : "Живой мохнаторукий краб оптом с Сахалина",
       description: isEn
-        ? "Wholesale live hairy crab from Sakhalin for restaurants: graded batches, roe females separately, cold-chain live delivery, documents."
-        : "Оптовые поставки живого мохнаторукого краба с Сахалина для ресторанов: калибровка, самки с икрой отдельно, живая доставка, документы.",
+        ? "Wholesale live hairy crab from Sakhalin for restaurants: batches graded by size, cold-chain live delivery, full documents."
+        : "Оптовые поставки живого мохнаторукого краба с Сахалина для ресторанов: калибровка по размеру, живая доставка, документы.",
       image: `${SITE}/og-hairy-crab.jpg`,
       brand: { "@type": "Brand", name: isEn ? "Rakushka65" : "Ракушка65" },
       offers: {
@@ -66,26 +66,26 @@ const HairyCrabWholesaleLanding = () => {
   const benefits = isEn
     ? [
         { icon: Truck, t: "Live delivery", d: "Oxygen packing and temperature sensors, cold chain from tank to your city." },
-        { icon: PackageCheck, t: "Graded batches", d: "Sorted by size and sex, roe females as a separate lot." },
+        { icon: PackageCheck, t: "Graded batches", d: "Sorted by size, consistent calibre in every shipment." },
         { icon: FileCheck, t: "Full documents", d: "Veterinary papers and traceability on every shipment." },
-        { icon: CalendarClock, t: "Season volumes", d: "Autumn roe peak, reserve quantities ahead for steady supply." },
+        { icon: CalendarClock, t: "Season volumes", d: "Volumes peak in autumn, reserve quantities ahead for steady supply." },
       ]
     : [
         { icon: Truck, t: "Живая доставка", d: "Кислородная упаковка и датчики температуры, холодовая цепь от бассейна до города." },
-        { icon: PackageCheck, t: "Калибровка партий", d: "Сортировка по размеру и полу, самки с икрой отдельным лотом." },
+        { icon: PackageCheck, t: "Калибровка партий", d: "Сортировка по размеру, ровный калибр в каждой отгрузке." },
         { icon: FileCheck, t: "Документы на партию", d: "Ветеринарные документы и прослеживаемость на каждой отгрузке." },
-        { icon: CalendarClock, t: "Сезонные объёмы", d: "Осенний пик икры, бронь объёмов заранее для стабильных поставок." },
+        { icon: CalendarClock, t: "Сезонные объёмы", d: "Осенью объёмы максимальные, бронь заранее для стабильных поставок." },
       ];
 
   const steps = isEn
     ? [
-        { t: "Request", d: "You send city, weekly volume and type (females, males or mix)." },
+        { t: "Request", d: "You send city, weekly volume and the size you need." },
         { t: "Price list", d: "We reply with a wholesale price tied to volume and season." },
         { t: "Test batch", d: "First shipment to check quality, packing and timing on your route." },
         { t: "Regular supply", d: "We lock the calibration and schedule for the season." },
       ]
     : [
-        { t: "Заявка", d: "Вы присылаете город, объём в неделю и тип (самки, самцы или микс)." },
+        { t: "Заявка", d: "Вы присылаете город, объём в неделю и нужный размер." },
         { t: "Прайс", d: "Мы отвечаем оптовой ценой под объём и сезон." },
         { t: "Пробная партия", d: "Первая отгрузка, чтобы проверить качество, упаковку и сроки на вашем маршруте." },
         { t: "Регулярные поставки", d: "Закрепляем калибровку и график на сезон." },
@@ -95,7 +95,7 @@ const HairyCrabWholesaleLanding = () => {
     <div className="relative min-h-screen overflow-x-clip">
       <SEOHead
         title={isEn ? "Hairy Crab Wholesale from Sakhalin, Live Supply for Restaurants | Rakushka65" : "Мохнаторукий краб оптом с Сахалина, живая поставка ресторанам | Ракушка65"}
-        description={isEn ? "Order live hairy crab wholesale from Sakhalin. Graded batches, roe females separately, cold-chain delivery, documents. Send a request and get the price list." : "Заказать живого мохнаторукого краба оптом с Сахалина. Калибровка, самки с икрой отдельно, живая доставка, документы. Оставьте заявку и получите прайс."}
+        description={isEn ? "Order live hairy crab wholesale from Sakhalin. Batches graded by size, cold-chain delivery, full documents. Send a request and get the price list." : "Заказать живого мохнаторукого краба оптом с Сахалина. Калибровка по размеру, живая доставка, документы. Оставьте заявку и получите прайс."}
         lang={lang}
         ogImage={`${SITE}/og-hairy-crab.jpg`}
         jsonLd={jsonLd}
@@ -128,8 +128,8 @@ const HairyCrabWholesaleLanding = () => {
               </h1>
               <p className="font-body text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
                 {isEn
-                  ? "Live delivery for restaurants and buyers. Graded batches, roe females sorted separately, cold chain and documents on every shipment. Peak roe season is autumn, reserve early."
-                  : "Живая поставка ресторанам и закупщикам. Калибровка партий, самки с икрой отдельно, холодовая цепь и документы на каждой отгрузке. Пик икры это осень, бронируйте заранее."}
+                  ? "Live delivery for restaurants and buyers. Batches graded by size, cold chain and documents on every shipment. Volumes peak in autumn, so reserve early."
+                  : "Живая поставка ресторанам и закупщикам. Калибровка партий по размеру, холодовая цепь и документы на каждой отгрузке. Осенью объёмы максимальные, бронируйте заранее."}
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a href="#zayavka" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-lg glow-teal glow-teal-hover transition-all duration-300 hover:scale-105">
@@ -186,8 +186,8 @@ const HairyCrabWholesaleLanding = () => {
               </h2>
               <p className="font-body text-sm text-muted-foreground mb-6">
                 {isEn
-                  ? "Call or write in a messenger: tell us your city, weekly volume and whether you need roe females, males or a mix. We reply with a price list the same day."
-                  : "Позвоните или напишите в мессенджер: назовите город, объём в неделю и что нужно (самки с икрой, самцы или микс). Прайс пришлём в тот же день."}
+                  ? "Call or write in a messenger: tell us your city, weekly volume and the size you need. We reply with a price list the same day."
+                  : "Позвоните или напишите в мессенджер: назовите город, объём в неделю и нужный размер. Прайс пришлём в тот же день."}
               </p>
 
               <div className="space-y-3">

@@ -34,11 +34,11 @@ const HairyCrabLiveDelivery = () => {
       slug="zhivoj-mohnatorukij-krab-dostavka"
       jsonLd={articleJsonLd}
       ogImage="https://rakushka65.ru/og-hairy-crab.jpg"
-      ogImageAlt={isEn ? "Live hairy crab close-up before packing" : "Живой мохнаторукий краб крупным планом перед упаковкой"}
+      ogImageAlt={isEn ? "Live hairy crab on ice before packing" : "Живой мохнаторукий краб на льду перед упаковкой"}
     >
       <img
         src={heroImg}
-        alt={isEn ? "Live hairy crab, hairy claws, ready for live shipping" : "Живой мохнаторукий краб с мохнатыми клешнями, готов к живой отгрузке"}
+        alt={isEn ? "Live hairy crab on crushed ice, ready for shipping" : "Живой мохнаторукий краб на колотом льду, подготовлен к отгрузке"}
         className="w-full rounded-xl mb-8"
         width={1200}
         height={800}
@@ -70,12 +70,12 @@ const HairyCrabLiveDelivery = () => {
             <li>Open the box in a cool room, do not shock the crab with heat.</li>
             <li>Keep it cold and damp, covered with a wet cloth, never submerged in fresh water.</li>
             <li>A light touch should trigger a reflex, that is your live check.</li>
-            <li>Cook the same day for the best roe and texture.</li>
+            <li>Cook the same day, that is when texture is at its best.</li>
           </ul>
 
           <h2>Documents and volume</h2>
           <p>
-            Every wholesale batch ships with veterinary papers and traceability, which chains and audited kitchens require. Volumes and calibration are agreed in advance, especially in the autumn roe season when demand peaks.
+            Every wholesale batch ships with veterinary papers and traceability, which chains and audited kitchens require. Volumes and calibre are agreed in advance, especially in autumn when demand peaks.
           </p>
 
           <p>
@@ -108,12 +108,12 @@ const HairyCrabLiveDelivery = () => {
             <li>Вскрывайте коробку в прохладном помещении, не устраивайте крабу тепловой шок.</li>
             <li>Держите холодным и влажным, под мокрой тканью, не топите в пресной воде.</li>
             <li>Лёгкое касание должно вызвать реакцию, это и есть проверка на живость.</li>
-            <li>Готовьте в тот же день, так икра и текстура будут на пике.</li>
+            <li>Готовьте в тот же день, так текстура будет на пике.</li>
           </ul>
 
           <h2>Документы и объём</h2>
           <p>
-            Каждая оптовая партия едет с ветеринарными документами и прослеживаемостью, это требуют сети и кухни с аудитом. Объёмы и калибровку согласуем заранее, особенно в осенний сезон икры, когда спрос на пике.
+            Каждая оптовая партия едет с ветеринарными документами и прослеживаемостью, это требуют сети и кухни с аудитом. Объёмы и калибр согласуем заранее, особенно осенью, когда спрос на пике.
           </p>
 
           <p>

@@ -56,6 +56,12 @@ const CategoryLanding = lazy(() => import("./pages/CategoryLanding"));
 const HairyCrabWholesale = lazy(() => import("./pages/articles/HairyCrabWholesale"));
 const HairyCrabLiveDelivery = lazy(() => import("./pages/articles/HairyCrabLiveDelivery"));
 const HairyCrabWhatIs = lazy(() => import("./pages/articles/HairyCrabWhatIs"));
+const HairyCrabRiverToSea = lazy(() => import("./pages/articles/HairyCrabRiverToSea"));
+const HairyCrabInEurope = lazy(() => import("./pages/articles/HairyCrabInEurope"));
+const HairyCrabJapaneseVsChinese = lazy(() => import("./pages/articles/HairyCrabJapaneseVsChinese"));
+const HairyCrabHowToCook = lazy(() => import("./pages/articles/HairyCrabHowToCook"));
+const HairyCrabSoup = lazy(() => import("./pages/articles/HairyCrabSoup"));
+const HairyCrabShanghaiStyle = lazy(() => import("./pages/articles/HairyCrabShanghaiStyle"));
 const HairyCrabWholesaleLanding = lazy(() => import("./pages/HairyCrabWholesaleLanding"));
 // Бывшие динамические статьи, переведённые в статику (полный контент в пререндере)
 const SeaUrchin5Myths = lazy(() => import("./pages/articles/SeaUrchin5Myths"));
@@ -129,6 +135,12 @@ const App = () => (
               <Route path="/blog/mohnatorukij-krab-optom" element={<HairyCrabWholesale />} />
               <Route path="/blog/zhivoj-mohnatorukij-krab-dostavka" element={<HairyCrabLiveDelivery />} />
               <Route path="/blog/chto-takoe-mohnatorukij-krab" element={<HairyCrabWhatIs />} />
+              <Route path="/blog/mohnatorukij-krab-iz-reki-v-more" element={<HairyCrabRiverToSea />} />
+              <Route path="/blog/mohnatorukij-krab-v-evrope" element={<HairyCrabInEurope />} />
+              <Route path="/blog/yaponskiy-ili-kitayskiy-mohnatorukij-krab" element={<HairyCrabJapaneseVsChinese />} />
+              <Route path="/blog/kak-gotovit-mohnatorukogo-kraba" element={<HairyCrabHowToCook />} />
+              <Route path="/blog/sup-iz-mohnatorukogo-kraba" element={<HairyCrabSoup />} />
+              <Route path="/blog/shanhajskaya-podacha-mohnatorukogo-kraba" element={<HairyCrabShanghaiStyle />} />
               {/* Legacy redirects */}
               <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
               <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />

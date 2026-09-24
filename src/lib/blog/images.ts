@@ -21,6 +21,12 @@ import blogSpisulaIce from "@/assets/blog-spisula-ice.webp";
 import blogSpisulaPlated from "@/assets/blog-spisula-plated.webp";
 import hairyCrabWhite from "@/assets/product-hairy-crab.webp";
 import hairyCrabCooked from "@/assets/blog-hairy-crab-cooked.webp";
+import crabPhoto1 from "@/assets/crab-photo-1.webp";
+import crabPhoto2 from "@/assets/crab-photo-2.webp";
+import crabPhoto3 from "@/assets/crab-photo-3.webp";
+import crabPhoto6 from "@/assets/crab-photo-6.webp";
+import crabPhoto7 from "@/assets/crab-photo-7.webp";
+import crabPhoto8 from "@/assets/crab-photo-8.webp";
 import hairyCrabUnderwater from "@/assets/blog-hairy-crab-underwater.webp";
 import blogScallopReal from "@/assets/blog-scallop-real.webp";
 import blogOysters from "@/assets/blog-oysters-new.webp";
@@ -58,6 +64,12 @@ export const blogImages: Record<string, string> = {
   "/src/assets/blog-spisula-plated.jpg": blogSpisulaPlated,
   "/src/assets/product-hairy-crab.jpg": hairyCrabWhite,
   "/src/assets/blog-hairy-crab-cooked.jpg": hairyCrabCooked,
+  "/src/assets/crab-photo-1.jpg": crabPhoto1,
+  "/src/assets/crab-photo-2.jpg": crabPhoto2,
+  "/src/assets/crab-photo-3.jpg": crabPhoto3,
+  "/src/assets/crab-photo-6.jpg": crabPhoto6,
+  "/src/assets/crab-photo-7.jpg": crabPhoto7,
+  "/src/assets/crab-photo-8.jpg": crabPhoto8,
   "/src/assets/blog-hairy-crab-underwater.jpg": hairyCrabUnderwater,
   "/src/assets/blog-scallop-real.jpg": blogScallopReal,
   "/src/assets/blog-oysters-new.jpg": blogOysters,

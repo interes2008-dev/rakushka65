@@ -11,6 +11,7 @@ import PhotoGallery from "@/components/PhotoGallery";
 import { scallopPhotos } from "@/lib/media/scallopPhotos";
 import { oysterPhotos } from "@/lib/media/oysterPhotos";
 import { vongolePhotos } from "@/lib/media/vongolePhotos";
+import { crabPhotos } from "@/lib/media/crabPhotos";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import { getProductSchema, getBreadcrumbSchema } from "@/lib/seo/schemas";
@@ -199,6 +200,15 @@ const ProductDetail = () => {
             </div>
           )}
 
+          {product.id === "hairy-crab" && (
+            <div className="mt-16">
+              <PhotoGallery
+                photos={crabPhotos}
+                title={lang === "ru" ? "Фотогалерея: наш мохнаторукий краб" : "Photo gallery: our hairy crab"}
+              />
+            </div>
+          )}
+
           {product.id === "vongole" && (
             <div className="mt-16">
               <PhotoGallery
@@ -348,20 +358,20 @@ const ProductDetail = () => {
               </h2>
               <p className="font-body text-muted-foreground mb-8 max-w-2xl leading-relaxed">
                 {lang === "ru"
-                  ? "Работаем с ресторанами, рынками и оптовыми закупщиками. Отгружаем живого краба партиями, с калибровкой по размеру и полом (самки с икрой отдельно). Держим холодовую цепь от бассейна до вашего города, даём документы и стабильный объём в сезон."
-                  : "We work with restaurants, markets and wholesale buyers. Live crab shipped in graded batches, sized and sorted by sex (roe-bearing females separately). Cold chain from tank to your city, full documents and steady volume in season."}
+                  ? "Работаем с ресторанами, рынками и оптовыми закупщиками. Отгружаем живого краба партиями, с калибровкой по размеру. Держим холодовую цепь от бассейна до вашего города, даём документы и стабильный объём в сезон."
+                  : "We work with restaurants, markets and wholesale buyers. Live crab shipped in batches graded by size. Cold chain from tank to your city, full documents and steady volume in season."}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 {(lang === "ru"
                   ? [
                       { t: "Живым в термобоксе", d: "Кислородная упаковка, датчики температуры, выживаемость под контролем" },
-                      { t: "Калибровка партий", d: "Сортировка по размеру и полу, самки с икрой отдельным лотом" },
+                      { t: "Калибровка партий", d: "Сортировка по размеру, ровный калибр в отгрузке" },
                       { t: "Документы и объём", d: "Ветеринарные документы, стабильные поставки в осенний сезон" },
                     ]
                   : [
                       { t: "Alive in thermobox", d: "Oxygen packing, temperature sensors, survival under control" },
-                      { t: "Graded batches", d: "Sorted by size and sex, roe females as a separate lot" },
+                      { t: "Graded batches", d: "Sorted by size, consistent calibre in every shipment" },
                       { t: "Docs and volume", d: "Veterinary papers, steady supply through the autumn season" },
                     ]
                 ).map((f) => (

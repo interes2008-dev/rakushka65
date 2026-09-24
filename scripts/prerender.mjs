@@ -69,6 +69,54 @@ const DYNAMIC_FALLBACK = {
 };
 
 // Article JSON-LD для страниц статей
+// Пошаговая разметка для рецептов: ИИ-поисковики и Google разбирают её отдельно.
+const HOWTO = {
+  "kak-gotovit-mohnatorukogo-kraba": {
+    name: "Как приготовить живого мохнаторукого краба на пару",
+    description: "Безопасный пар для речного краба: холодный старт, пар вместо варки, время и температура прогрева.",
+    totalTime: "PT25M",
+    supply: ["Живой мохнаторукий краб, 80-250 г штука", "Рисовое вино или сухое белое", "Чёрный уксус, имбирь, щепотка сахара"],
+    tool: ["Пароварка"],
+    steps: [
+      ["Охладить краба", "Подержите краба во льду до оцепенения либо планируйте старт с холодной воды. Живой краб, брошенный в кипяток, сбрасывает клешни и ноги."],
+      ["Подготовить пароварку", "Налейте воду в пароварку и добавьте рисовое вино или сухое белое. Долька лимона или пара веточек трав убирают речной запах."],
+      ["Пропарить насквозь", "Держите на пару 12-18 минут в зависимости от размера, считая от нормального пара. Речного краба нужно прогревать полностью: личинки паразита гибнут при 56 °C через 20 минут или при 70 °C через 5 минут."],
+      ["Сделать соус", "Натрите имбирь мелко в чёрный уксус, добавьте щепотку сахара и слегка подогрейте."],
+      ["Подать сразу", "Подавайте горячим с тёплым соусом и чайником горячего чая."],
+    ],
+  },
+  "sup-iz-mohnatorukogo-kraba": {
+    name: "Кани-маки-дзиру: суп из мохнаторукого краба",
+    description: "Краба замораживают, толкут вместе с панцирем, процеживают и варят с мисо.",
+    totalTime: "PT3H30M",
+    supply: ["Живой мохнаторукий краб", "Паста мисо", "Зелёный лук"],
+    tool: ["Ступка или тяжёлый пестик", "Мелкое сито или ткань"],
+    steps: [
+      ["Заморозить краба", "Заморозьте краба насквозь, несколько часов. Лёд рвёт клеточные стенки, и экстракт выходит гораздо охотнее."],
+      ["Почистить", "Промойте краба и удалите жабры."],
+      ["Растолочь", "Растолките краба вместе с панцирем в ступке до грубой массы."],
+      ["Процедить", "Влейте холодную воду, размешайте и процедите через мелкое сито или ткань."],
+      ["Уварить", "Нагревайте сначала слабо, чтобы вкус растворился, затем доведите и уваривайте. Нормальное кипение заодно делает речного краба безопасным."],
+      ["Заправить", "Заправьте мисо по вкусу и посыпьте зелёным луком."],
+    ],
+  },
+};
+const howToSchema = (slug) => {
+  const h = HOWTO[slug];
+  if (!h) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    inLanguage: "ru",
+    name: h.name,
+    description: h.description,
+    totalTime: h.totalTime,
+    supply: h.supply.map((name) => ({ "@type": "HowToSupply", name })),
+    tool: h.tool.map((name) => ({ "@type": "HowToTool", name })),
+    step: h.steps.map(([name, text], i) => ({ "@type": "HowToStep", position: i + 1, name, text })),
+  };
+};
+
 const articleSchema = (h1, description, path, image) => ({
   "@context": "https://schema.org",
   "@type": "Article",
@@ -133,6 +181,10 @@ function extractBody(src) {
   const imgEnd = src.indexOf("/>", src.indexOf("<img"));
   const layoutEnd = src.lastIndexOf("</ArticleLayout>");
   if (imgEnd !== -1 && layoutEnd !== -1) body = src.slice(imgEnd + 2, layoutEnd);
+  // Двуязычная статья: структура {isEn ? (<>...EN...</>) : (<>...RU...</>)}.
+  // Берём только русскую ветку, чтобы в HTML не смешались языки.
+  const ruBranch = body.lastIndexOf(") : (");
+  if (ruBranch !== -1) body = body.slice(ruBranch + 5);
   const clean = (t) =>
     t
       .replace(/<Link[^>]*>/g, "").replace(/<\/Link>/g, "")
@@ -173,7 +225,7 @@ for (const file of readdirSync(articlesDir).filter((f) => f.endsWith(".tsx"))) {
     seoDescription: parseProp(src, "seoDescription") || "",
     h1: parseProp(src, "title") || "",
     ogImage: `${SITE_URL}/og-image.jpg`,
-    body: src.includes("isEn") ? "" : extractBody(src),
+    body: extractBody(src),
   };
 }
 
@@ -311,6 +363,7 @@ function metaFor(path) {
       jsonLd: [
         articleSchema(a.h1, a.seoDescription, path, a.ogImage),
         breadcrumb([{ name: "Главная", url: "/" }, { name: "Блог", url: "/blog" }, { name: a.h1, url: path }]),
+        ...(howToSchema(m[1]) ? [howToSchema(m[1])] : []),
       ],
       h1: a.h1, intro: a.seoDescription, extraHtml: a.body || "",
     };

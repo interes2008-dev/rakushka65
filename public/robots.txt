@@ -1,6 +1,6 @@
 # https://rakushka65.ru - robots.txt
-# Allow all major crawlers full access
 
+# --- Классические поисковики ---
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
@@ -23,6 +23,74 @@ Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gcli
 User-agent: YandexImages
 Allow: /
 
+# --- ИИ-поисковики и ассистенты: доступ открыт ---
+# OpenAI: обход для поиска, обучения и переходов из ChatGPT
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Gemini и обзоры от ИИ
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Прочие ИИ-краулеры
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+
+# --- Соцсети и мессенджеры (превью ссылок) ---
 User-agent: Twitterbot
 Allow: /
 
@@ -38,19 +106,11 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# Block AI training crawlers (optional - keep site content protected)
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-# Default - allow everything else
+# --- Все остальные ---
 User-agent: *
 Allow: /
 Disallow: /api/
 
-# Host (legacy Yandex hint)
 Host: https://rakushka65.ru
 
 Sitemap: https://rakushka65.ru/sitemap.xml
