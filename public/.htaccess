@@ -15,6 +15,8 @@ DirectoryIndex index.html
   AddType image/webp .webp
 </IfModule>
 
+ErrorDocument 404 /404.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -34,8 +36,9 @@ DirectoryIndex index.html
   RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
   RewriteRule ^(.+?)/?$ /$1/index.html [L]
 
-  # SPA-фолбэк: всё остальное обслуживает корневой index.html
-  RewriteRule ^ /index.html [L]
+  # Все реальные маршруты пререндерятся в /path/index.html, поэтому всё остальное
+  # это несуществующий адрес: отдаём честный 404, а не главную с кодом 200.
+  RewriteRule ^ - [R=404,L]
 </IfModule>
 
 # === Сжатие ===

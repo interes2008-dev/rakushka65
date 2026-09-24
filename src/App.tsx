@@ -62,6 +62,12 @@ const HairyCrabJapaneseVsChinese = lazy(() => import("./pages/articles/HairyCrab
 const HairyCrabHowToCook = lazy(() => import("./pages/articles/HairyCrabHowToCook"));
 const HairyCrabSoup = lazy(() => import("./pages/articles/HairyCrabSoup"));
 const HairyCrabShanghaiStyle = lazy(() => import("./pages/articles/HairyCrabShanghaiStyle"));
+const ScallopMoscow = lazy(() => import("./pages/articles/ScallopMoscow"));
+const ScallopMoscowDelivery = lazy(() => import("./pages/articles/ScallopMoscowDelivery"));
+const ScallopWholesaleMoscow = lazy(() => import("./pages/articles/ScallopWholesaleMoscow"));
+const OystersYuzhnoSakhalinsk = lazy(() => import("./pages/articles/OystersYuzhnoSakhalinsk"));
+const SakhalinSeafoodGuide = lazy(() => import("./pages/articles/SakhalinSeafoodGuide"));
+const TakeSeafoodFromSakhalin = lazy(() => import("./pages/articles/TakeSeafoodFromSakhalin"));
 const HairyCrabWholesaleLanding = lazy(() => import("./pages/HairyCrabWholesaleLanding"));
 // Бывшие динамические статьи, переведённые в статику (полный контент в пререндере)
 const SeaUrchin5Myths = lazy(() => import("./pages/articles/SeaUrchin5Myths"));
@@ -141,6 +147,12 @@ const App = () => (
               <Route path="/blog/kak-gotovit-mohnatorukogo-kraba" element={<HairyCrabHowToCook />} />
               <Route path="/blog/sup-iz-mohnatorukogo-kraba" element={<HairyCrabSoup />} />
               <Route path="/blog/shanhajskaya-podacha-mohnatorukogo-kraba" element={<HairyCrabShanghaiStyle />} />
+              <Route path="/blog/zhivoj-grebeshok-v-moskve" element={<ScallopMoscow />} />
+              <Route path="/blog/dostavka-grebeshka-v-moskvu" element={<ScallopMoscowDelivery />} />
+              <Route path="/blog/grebeshok-optom-moskva" element={<ScallopWholesaleMoscow />} />
+              <Route path="/blog/ustritsy-yuzhno-sahalinsk" element={<OystersYuzhnoSakhalinsk />} />
+              <Route path="/blog/chto-poprobovat-na-sahaline" element={<SakhalinSeafoodGuide />} />
+              <Route path="/blog/uvezti-moreprodukty-s-sahalina" element={<TakeSeafoodFromSakhalin />} />
               {/* Legacy redirects */}
               <Route path="/articles/chto-takoe-vongole" element={<VongoleWhatIs />} />
               <Route path="/articles/kak-prigotovit-vongole" element={<VongoleCooking />} />
